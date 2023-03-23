@@ -10,7 +10,7 @@
   "name" : "GestiondAgendaPartag",
   "title" : "Gestion d'Agenda PArtagé (GAP)",
   "status" : "draft",
-  "date" : "2023-03-23T09:05:09+00:00",
+  "date" : "2023-03-23T14:43:50+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,6 +31,12 @@
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
     "version" : "5.0.0"
+  },
+  {
+    "id" : "hl7_fhir_fr_core",
+    "uri" : "https://simplifier.net/packages/hl7.fhir.fr.core/1.1.0/snapshots/$download",
+    "packageId" : "hl7.fhir.fr.core",
+    "version" : "1.1.0"
   }],
   "definition" : {
     "extension" : [{
@@ -52,6 +58,17 @@
       {
         "url" : "value",
         "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "shownav"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -316,6 +333,17 @@
       {
         "url" : "value",
         "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "shownav"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "GestiondAgendaPartag"] ; # 
   fhir:title [ fhir:v "Gestion d'Agenda PArtagé (GAP)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-03-23T09:05:09+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-03-23T14:43:50+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -41,6 +41,14 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
      fhir:version [ fhir:v "5.0.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_fr_core" ] ;
+     fhir:uri [
+       fhir:v "https://simplifier.net/packages/hl7.fhir.fr.core/1.1.0/snapshots/$download"^^xsd:anyURI ;
+       fhir:link <https://simplifier.net/packages/hl7.fhir.fr.core/1.1.0/snapshots/$download>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
+     fhir:version [ fhir:v "1.1.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -59,6 +67,15 @@
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ci-build" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "shownav" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -275,6 +292,15 @@
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "ci-build" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "shownav" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
