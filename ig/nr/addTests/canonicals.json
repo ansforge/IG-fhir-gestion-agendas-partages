@@ -1,0 +1,16 @@
+[
+  {
+    "id" : "ans.fhir.fr.agenda",
+    "type" : "ImplementationGuide",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda",
+    "version" : "0.1.0",
+    "name" : "GestiondAgendaPartag"
+  },
+  {
+    "id" : "fr-patient",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/fr-patient",
+    "version" : "0.1.0",
+    "name" : "FrPatient"
+  }
+]
