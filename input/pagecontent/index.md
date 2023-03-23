@@ -2,7 +2,7 @@
 
 Cet Implementation Guide devrait dépendre de l'IG fr-core maintenu par Interop'Santé. Suite à des problèmes de validation, celui-ci ne peut pas avoir lieu. En attendant, ce document constitue uniquement une aide technique, la référence reste le document pdf disponible sur le [site de l'ans](https://esante.gouv.fr/volet-gestion-dagendas-partages).
 
-### Introduction
+<!-- ### Introduction
 
 Ce document présente les spécifications techniques d’interopérabilité de mise en œuvre du volet Gestion d’agendas partagés du CI-SIS. Sa production est basée sur l’étude métier de ce volet (cf. CI-SIS Etude métier – Gestion d’agendas partagés).
 
@@ -74,4 +74,4 @@ Le système gestionnaire d’agenda gère les disponibilités et les rendez-vous
 
 * **Gestion déléguée d’agendas**
 
-Dans ce scénario le système initiateur peut gérer, par délégation du gestionnaire d’agendas, les disponibilités des ressources et la prise de rendez-vous. Des échanges fréquents de synchronisation des disponibilités et des rendez-vous entre ces acteurs doivent donc être optimisés notamment en termes de volumétrie.
+Dans ce scénario le système initiateur peut gérer, par délégation du gestionnaire d’agendas, les disponibilités des ressources et la prise de rendez-vous. Des échanges fréquents de synchronisation des disponibilités et des rendez-vous entre ces acteurs doivent donc être optimisés notamment en termes de volumétrie. -->
