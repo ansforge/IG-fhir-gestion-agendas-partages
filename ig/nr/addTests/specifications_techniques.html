@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ANS.FHIR.FR.AGENDA\Flux 03 - FHIR v4.0.1</title>
+    <title>ANS.FHIR.FR.AGENDA\Specifications Techniques - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +42,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.4"}
-    h3,h4,h5,h6{--heading-prefix:"2.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -155,15 +155,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 03</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Specifications Techniques</b></li>
 
           <span style="float:right;">
 
-            <a href="flux2.html">&lt;prev</a> | 
+            <a href="index.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="flux4.html">next&gt;</a>
+          | <a href="construction_des_flux.html">next&gt;</a>
 
           </span>
 
@@ -186,7 +186,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
-  <h2>Flux 03</h2>
+  <h2>Specifications Techniques</h2>
   
 
 
@@ -201,27 +201,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#flux-3a---création-de-disponibilités" id="markdown-toc-flux-3a---création-de-disponibilités">Flux 3a - Création de disponibilités</a></li>
-  <li><a href="#flux-3b---mise-à-jour-de-disponibilités" id="markdown-toc-flux-3b---mise-à-jour-de-disponibilités">Flux 3b - Mise à jour de disponibilités</a></li>
-  <li><a href="#flux-3c---suppression-de-disponibilités" id="markdown-toc-flux-3c---suppression-de-disponibilités">Flux 3c - Suppression de disponibilités</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<h3 id="flux-3a---création-de-disponibilités">Flux 3a - Création de disponibilités</h3>
 
-<p>Ce flux permet la création des disponibilités d’une ou d’un ensemble de ressources. Une disponibilité est une plage horaire en dehors de laquelle la ressource n’accepte pas les demandes de rendez-vous. Typiquement, une disponibilité d’un médecin de ville pourrait se résumer aux horaires d’ouverture de son cabinet. Ce flux permet donc l’envoi des détails des disponibilités d’une ressource au gestionnaire d’agenda.</p>
-
-<p>Cette notion de disponibilité est introduite par les extensions françaises de la ressource Schedule : FrSchedule.</p>
-
-<h3 id="flux-3b---mise-à-jour-de-disponibilités">Flux 3b - Mise à jour de disponibilités</h3>
-
-<p>Ce flux permet la mise à jour d’une disponibilité d’une ressource. Son contenu est similaire à celui du flux 3a de création de disponibilités.</p>
-
-<h3 id="flux-3c---suppression-de-disponibilités">Flux 3c - Suppression de disponibilités</h3>
-
-<p>Ce flux permet de supprimer une disponibilité d’une ressource. Il contient les identifiants de la disponibilité à supprimer.</p>
 
 
 
@@ -251,7 +234,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="flux2.html">&lt;prev</a>
+                <a href="index.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -259,7 +242,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="flux4.html">next&gt;</a>
+                <a href="construction_des_flux.html">next&gt;</a>
 
               </td>
             </tr>

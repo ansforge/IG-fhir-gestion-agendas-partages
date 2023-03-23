@@ -15,9 +15,9 @@
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "GestiondAgendaPartag"] ; # 
-  fhir:title [ fhir:v "Gestion d'Agenda PArtagé (GAP)"] ; # 
+  fhir:title [ fhir:v "Gestion d'Agenda Partagé (GAP)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-03-23T14:43:50+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-03-23T15:06:44+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -544,79 +544,113 @@
            fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Home" ] ;
+         fhir:title [ fhir:v "Accueil" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "contenu_flux.html"^^xsd:anyURI ]
+           fhir:value [ fhir:v "specifications_techniques.html"^^xsd:anyURI ]
          ] ) ;
-         fhir:name [ fhir:v "contenu_flux.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Contenu Flux" ] ;
+         fhir:name [ fhir:v "specifications_techniques.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Specifications Techniques" ] ;
+         fhir:generation [ fhir:v "markdown" ] ;
+         fhir:page ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "construction_des_flux.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "construction_des_flux.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Construction Des Flux" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "flux1.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "flux1.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Flux 01" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "flux2.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "flux2.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Flux 02" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "flux3.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "flux3.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Flux 03" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "flux4.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "flux4.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Flux 04" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "flux5.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "flux5.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Flux 05" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "flux6.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "flux6.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Flux 06" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] )
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "autres_ressources.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "autres_ressources.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Autres Ressources" ] ;
+         fhir:generation [ fhir:v "markdown" ] ;
+         fhir:page ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "securite.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "securite.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Sécurité" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Téléchargements et usages" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] )
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "tests.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "tests.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Tests" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+           fhir:value [ fhir:v "about.html"^^xsd:anyURI ]
          ] ) ;
-         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Downloads" ] ;
-         fhir:generation [ fhir:v "html" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "flux1.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "flux1.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Flux 1" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "flux2.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "flux2.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Flux 2" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "flux3.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "flux3.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Flux 3" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "flux4.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "flux4.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Flux 4" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "flux5.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "flux5.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Flux 5" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "flux6.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "flux6.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Flux 6" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "securite.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "securite.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Securite" ] ;
+         fhir:name [ fhir:v "about.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "A propos de ce guide" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;

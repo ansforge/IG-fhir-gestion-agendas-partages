@@ -8,9 +8,9 @@
   <url value="https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda"/>
   <version value="0.1.0"/>
   <name value="GestiondAgendaPartag"/>
-  <title value="Gestion d'Agenda PArtagé (GAP)"/>
+  <title value="Gestion d'Agenda Partagé (GAP)"/>
   <status value="draft"/>
-  <date value="2023-03-23T14:43:50+00:00"/>
+  <date value="2023-03-23T15:06:44+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -470,79 +470,111 @@
           <valueUrl value="index.html"/>
         </extension>
         <nameUrl value="index.html"/>
-        <title value="Home"/>
+        <title value="Accueil"/>
         <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="contenu_flux.html"/>
+          <valueUrl value="specifications_techniques.html"/>
         </extension>
-        <nameUrl value="contenu_flux.html"/>
-        <title value="Contenu Flux"/>
+        <nameUrl value="specifications_techniques.html"/>
+        <title value="Specifications Techniques"/>
+        <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="construction_des_flux.html"/>
+          </extension>
+          <nameUrl value="construction_des_flux.html"/>
+          <title value="Construction Des Flux"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="flux1.html"/>
+          </extension>
+          <nameUrl value="flux1.html"/>
+          <title value="Flux 01"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="flux2.html"/>
+          </extension>
+          <nameUrl value="flux2.html"/>
+          <title value="Flux 02"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="flux3.html"/>
+          </extension>
+          <nameUrl value="flux3.html"/>
+          <title value="Flux 03"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="flux4.html"/>
+          </extension>
+          <nameUrl value="flux4.html"/>
+          <title value="Flux 04"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="flux5.html"/>
+          </extension>
+          <nameUrl value="flux5.html"/>
+          <title value="Flux 05"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="flux6.html"/>
+          </extension>
+          <nameUrl value="flux6.html"/>
+          <title value="Flux 06"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="autres_ressources.html"/>
+        </extension>
+        <nameUrl value="autres_ressources.html"/>
+        <title value="Autres Ressources"/>
+        <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="securite.html"/>
+          </extension>
+          <nameUrl value="securite.html"/>
+          <title value="Sécurité"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="downloads.html"/>
+          </extension>
+          <nameUrl value="downloads.html"/>
+          <title value="Téléchargements et usages"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="tests.html"/>
+        </extension>
+        <nameUrl value="tests.html"/>
+        <title value="Tests"/>
         <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="downloads.html"/>
+          <valueUrl value="about.html"/>
         </extension>
-        <nameUrl value="downloads.html"/>
-        <title value="Downloads"/>
-        <generation value="html"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="flux1.html"/>
-        </extension>
-        <nameUrl value="flux1.html"/>
-        <title value="Flux 1"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="flux2.html"/>
-        </extension>
-        <nameUrl value="flux2.html"/>
-        <title value="Flux 2"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="flux3.html"/>
-        </extension>
-        <nameUrl value="flux3.html"/>
-        <title value="Flux 3"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="flux4.html"/>
-        </extension>
-        <nameUrl value="flux4.html"/>
-        <title value="Flux 4"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="flux5.html"/>
-        </extension>
-        <nameUrl value="flux5.html"/>
-        <title value="Flux 5"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="flux6.html"/>
-        </extension>
-        <nameUrl value="flux6.html"/>
-        <title value="Flux 6"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="securite.html"/>
-        </extension>
-        <nameUrl value="securite.html"/>
-        <title value="Securite"/>
+        <nameUrl value="about.html"/>
+        <title value="A propos de ce guide"/>
         <generation value="markdown"/>
       </page>
     </page>

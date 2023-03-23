@@ -8,9 +8,9 @@
   "url" : "https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda",
   "version" : "0.1.0",
   "name" : "GestiondAgendaPartag",
-  "title" : "Gestion d'Agenda PArtagé (GAP)",
+  "title" : "Gestion d'Agenda Partagé (GAP)",
   "status" : "draft",
-  "date" : "2023-03-23T14:43:50+00:00",
+  "date" : "2023-03-23T15:06:44+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -627,88 +627,124 @@
           "valueUrl" : "index.html"
         }],
         "nameUrl" : "index.html",
-        "title" : "Home",
+        "title" : "Accueil",
         "generation" : "markdown"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "contenu_flux.html"
+          "valueUrl" : "specifications_techniques.html"
         }],
-        "nameUrl" : "contenu_flux.html",
-        "title" : "Contenu Flux",
+        "nameUrl" : "specifications_techniques.html",
+        "title" : "Specifications Techniques",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "construction_des_flux.html"
+          }],
+          "nameUrl" : "construction_des_flux.html",
+          "title" : "Construction Des Flux",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "flux1.html"
+          }],
+          "nameUrl" : "flux1.html",
+          "title" : "Flux 01",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "flux2.html"
+          }],
+          "nameUrl" : "flux2.html",
+          "title" : "Flux 02",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "flux3.html"
+          }],
+          "nameUrl" : "flux3.html",
+          "title" : "Flux 03",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "flux4.html"
+          }],
+          "nameUrl" : "flux4.html",
+          "title" : "Flux 04",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "flux5.html"
+          }],
+          "nameUrl" : "flux5.html",
+          "title" : "Flux 05",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "flux6.html"
+          }],
+          "nameUrl" : "flux6.html",
+          "title" : "Flux 06",
+          "generation" : "markdown"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "autres_ressources.html"
+        }],
+        "nameUrl" : "autres_ressources.html",
+        "title" : "Autres Ressources",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "securite.html"
+          }],
+          "nameUrl" : "securite.html",
+          "title" : "Sécurité",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "downloads.html"
+          }],
+          "nameUrl" : "downloads.html",
+          "title" : "Téléchargements et usages",
+          "generation" : "markdown"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "tests.html"
+        }],
+        "nameUrl" : "tests.html",
+        "title" : "Tests",
         "generation" : "markdown"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "downloads.html"
+          "valueUrl" : "about.html"
         }],
-        "nameUrl" : "downloads.html",
-        "title" : "Downloads",
-        "generation" : "html"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "flux1.html"
-        }],
-        "nameUrl" : "flux1.html",
-        "title" : "Flux 1",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "flux2.html"
-        }],
-        "nameUrl" : "flux2.html",
-        "title" : "Flux 2",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "flux3.html"
-        }],
-        "nameUrl" : "flux3.html",
-        "title" : "Flux 3",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "flux4.html"
-        }],
-        "nameUrl" : "flux4.html",
-        "title" : "Flux 4",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "flux5.html"
-        }],
-        "nameUrl" : "flux5.html",
-        "title" : "Flux 5",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "flux6.html"
-        }],
-        "nameUrl" : "flux6.html",
-        "title" : "Flux 6",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "securite.html"
-        }],
-        "nameUrl" : "securite.html",
-        "title" : "Securite",
+        "nameUrl" : "about.html",
+        "title" : "A propos de ce guide",
         "generation" : "markdown"
       }]
     },
