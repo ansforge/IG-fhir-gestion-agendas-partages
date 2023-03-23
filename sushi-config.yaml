@@ -1,7 +1,7 @@
-id: ans.fhir.fr.example
-canonical: http://hl7.org/fhir/fr/example
-name: ExampleIG
-title: ANS IG Example
+id: ans.fhir.fr.agenda
+canonical: https://interop.esante.gouv.fr/ig/fhir/agenda
+name: Gestion d'Agenda Partagé 
+title: Gestion d'Agenda PArtagé (GAP)
 publisher:
   name: ANS
   url: https://esante.gouv.fr

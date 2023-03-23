@@ -2,12 +2,30 @@
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle"> Specification
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle"> Les flux
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="downloads.html">Specs</a>
+        <a href="contenu_flux.html">Contenu des flux</a>
+      </li>
+      <li>
+        <a href="flux1.html">Flux 1 : gestion des ressources</a>
+      </li>
+      <li>
+        <a href="flux2.html">Flux 2 : gestion d'agenda</a>
+      </li>
+      <li>
+        <a href="flux3.html">Flux 3 : gestion des disponibilités</a>
+      </li>
+      <li>
+        <a href="flux4.html">Flux 4 : consultation des disponibilités</a>
+      </li>
+      <li>
+        <a href="flux5.html">Flux 5 : consultation de rendez-vous</a>
+      </li>
+      <li>
+        <a href="flux6.html">Flux 6 : prise de rendez-vous</a>
       </li>
     </ul>
   </li>
