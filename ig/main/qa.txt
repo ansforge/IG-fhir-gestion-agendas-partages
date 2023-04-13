@@ -1,0 +1,26 @@
+﻿GestiondAgendaPartag : Validation Results
+=========================================
+
+err = 0, warn = 5, info = 1
+IG Publisher Version: 1.3.4
+Generated Thu Apr 13 12:41:19 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.agenda#0.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/agenda)
+ Build Errors : 5 / 5 / 0
+ /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.agenda : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/Patient-frpatient-exemple : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/StructureDefinition-fr-patient : 0 / 0 / 2
+</table>
+== n/a ==
+WARNING: ImplementationGuide.dependency[1].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+ERROR: /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/output/StructureDefinition-fr-patient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 383, column 2578: The link 'StructureDefinition-fr-patient-definitions.html#diff_Patient' for "Patient" cannot be resolved (valid targets: 70 targets)
+ERROR: /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/output/StructureDefinition-fr-patient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 384, column 627: The link 'StructureDefinition-fr-patient-definitions.html#diff_Patient.gender' for "gender" cannot be resolved (valid targets: 70 targets)
+ERROR: /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/output/StructureDefinition-fr-patient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 552, column 2578: The link 'StructureDefinition-fr-patient-definitions.html#ms_Patient' for "Patient" cannot be resolved (valid targets: 70 targets)
+ERROR: /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/output/StructureDefinition-fr-patient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 577, column 2578: The link 'StructureDefinition-fr-patient-definitions.html#diff_Patient' for "Patient" cannot be resolved (valid targets: 70 targets)
+ERROR: /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/output/StructureDefinition-fr-patient.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 578, column 627: The link 'StructureDefinition-fr-patient-definitions.html#diff_Patient.gender' for "gender" cannot be resolved (valid targets: 70 targets)
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-ans.fhir.fr.agenda.json ==
+== fsh-generated/resources/Patient-frpatient-exemple.json ==
+== fsh-generated/resources/StructureDefinition-fr-patient.json ==
+INFORMATION: StructureDefinition/fr-patient: StructureDefinition.snapshot.element[30].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
