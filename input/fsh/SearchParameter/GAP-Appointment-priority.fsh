@@ -2,7 +2,7 @@ Instance: GAP-Appointment-priority
 InstanceOf: SearchParameter
 Usage: #definition
 * name = "GAP_Appointment_priority"
-* status = #draft
+* status = #active
 * description = "Priority of the appointment"
 * code = #priority
 * base = #Appointment

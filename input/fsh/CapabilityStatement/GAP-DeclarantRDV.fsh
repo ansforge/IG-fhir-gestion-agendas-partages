@@ -6,11 +6,12 @@ Usage: #definition
 * status = #active
 * experimental = false
 * description = "Un déclarant de rendez-vous fait une demande auprès d’un gestionnaire d’agenda pour créer (demande d'un nouveau rendez-vous ou déclaration d'un rendez-vous pris) ou mettre à jour un rendez-vous"
+* date = "2023-08-02"
 * fhirVersion = #4.0.1
 * kind = #requirements
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.GestionDAgendasPartages"
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/agenda"
 * rest.mode = #client
 * rest.documentation = "Création mise à jour de RDV"
 * rest.security.cors = false

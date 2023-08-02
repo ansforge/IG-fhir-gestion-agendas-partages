@@ -6,11 +6,12 @@ Usage: #definition
 * status = #active
 * experimental = false
 * description = "Le gestionnaire de ressources gère les demandes de gestion de ressources (lieu,   équipement, personne prise en charge, professionnel, etc.)."
+* date = "2023-08-02"
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.GestionDAgendasPartages"
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/agenda"
 * rest.mode = #server
 * rest.documentation = "Crée, modifie et supprime une ressource"
 * rest.security.cors = false
@@ -29,7 +30,7 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #delete
 
 * rest.resource[+].type = #PractitionerRole
-* rest.resource[=].supportedProfile[0] = "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"
+* rest.resource[=].profile = "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete

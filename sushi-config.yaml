@@ -15,7 +15,7 @@ parameters:
   shownav: 'true'
 
 dependencies:
-  ans.annuaire.fhir.r4: 0.2.0
+  ans.fhir.fr.annuaire: 1.0.0-ballot-2
   hl7.fhir.fr.core: 1.1.0
 
 pages:
@@ -33,6 +33,8 @@ pages:
             title: Flux 04 et 05 - Demande consultation
         flux6.md:
             title: Flux 06 - Gestion rendez-vous
+    specifications_fonctionnelles.md:
+        title: Spécifications fonctionnelles
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
@@ -54,6 +56,7 @@ menu:
         Flux 04: flux4.html
         Flux 05: flux5.html
         Flux 06: flux6.html
+    Spécifications fonctionnelles : specifications_fonctionnelles.html
     Ressources de conformité: artifacts.html
     Tests:   tests.html
     Autres ressources:

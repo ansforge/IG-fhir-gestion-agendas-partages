@@ -5,6 +5,7 @@ Usage: #definition
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/Slot-start"
 * experimental = false
 * description = "latest start of a potential appointment"
+* status = #active
 * code = #start
 * base = #Slot
 * type = #date

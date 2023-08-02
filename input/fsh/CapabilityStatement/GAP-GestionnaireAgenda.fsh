@@ -6,11 +6,12 @@ Usage: #definition
 * status = #active
 * experimental = false
 * description = "Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous."
+* date = "2023-08-02"
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.GestionDAgendasPartages"
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/agenda"
 * rest.mode = #server
 * rest.documentation = "Déclaration, modification et suppression des disponibilités d'une ressource"
 * rest.security.cors = false

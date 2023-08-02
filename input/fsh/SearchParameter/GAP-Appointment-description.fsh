@@ -2,7 +2,7 @@ Instance: GAP-Appointment-description
 InstanceOf: SearchParameter
 Usage: #definition
 * name = "GAP_Appointment_description"
-* status = #draft
+* status = #active
 * description = "Comment or title of the appointment"
 * code = #description
 * base = #Appointment

@@ -1,0 +1,1 @@
+Les spécifications fonctionnelles sont accessibles sur le site de l'ANS : https://esante.gouv.fr/volet-gestion-dagendas-partages.
