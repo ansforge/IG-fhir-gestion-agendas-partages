@@ -1,4 +1,4 @@
-Instance: ConsommateurGAP
+Instance: GAP-Consommateur
 InstanceOf: CapabilityStatement
 Usage: #definition
 * name = "GAP-consommateur"
@@ -40,6 +40,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Slot-schedule"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Reference vers la ressource schedule correspondant à notre disponibilité"
+
 * rest.resource[+].type = #Appointment
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrAppointment"
 * rest.resource[=].interaction[0].code = #read

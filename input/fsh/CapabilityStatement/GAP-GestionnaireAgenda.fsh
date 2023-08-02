@@ -1,4 +1,4 @@
-Instance: GAP-GestionnaireAgendaGAP
+Instance: GAP-GestionnaireAgenda
 InstanceOf: CapabilityStatement
 Usage: #definition
 * name = "GAP-GestionnaireAgenda"
@@ -15,12 +15,14 @@ Usage: #definition
 * rest.documentation = "Déclaration, modification et suppression des disponibilités d'une ressource"
 * rest.security.cors = false
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
+
 * rest.resource[0].type = #Schedule
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrSchedule"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].interaction[+].code = #patch
+
 * rest.resource[+].type = #Slot
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrSlot"
 * rest.resource[=].interaction[0].code = #read
@@ -69,6 +71,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Slot-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "The free/busy status of the appointment"
+
 * rest.resource[+].type = #Appointment
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrAppointment"
 * rest.resource[=].interaction[0].code = #create

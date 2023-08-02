@@ -1,4 +1,4 @@
-Instance: DeclarantGAP
+Instance: Gap-Declarant
 InstanceOf: CapabilityStatement
 Usage: #definition
 * name = "GAP-Declarant"

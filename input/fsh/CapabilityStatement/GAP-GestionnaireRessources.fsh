@@ -1,4 +1,4 @@
-Instance: GAP-GestionnaireRessourcesGAP
+Instance: GAP-GestionnaireRessources
 InstanceOf: CapabilityStatement
 Usage: #definition
 * name = "GAP-GestionnaireRessources"
@@ -15,42 +15,49 @@ Usage: #definition
 * rest.documentation = "Crée, modifie et supprime une ressource"
 * rest.security.cors = false
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
+
 * rest.resource[0].type = #Patient
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrPatient"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
+
 * rest.resource[+].type = #Practitioner
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrPractitioner"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
+
 * rest.resource[+].type = #PractitionerRole
-* rest.resource[=].supportedProfile[0] = "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-professionalRole-rass"
-* rest.resource[=].supportedProfile[+] = "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-organizationalRole-rass"
+* rest.resource[=].supportedProfile[0] = "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
+
 * rest.resource[+].type = #RelatedPerson
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
+
 * rest.resource[+].type = #Location
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrLocation"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
+
 * rest.resource[+].type = #HealthcareService
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrHealthcareService"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
+
 * rest.resource[+].type = #Organization
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrOrganization"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
+
 * rest.resource[+].type = #Device
 * rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Device"
 * rest.resource[=].interaction[0].code = #create

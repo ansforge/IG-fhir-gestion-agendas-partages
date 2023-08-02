@@ -6,7 +6,7 @@ publisher:
   name: ANS
   url: https://esante.gouv.fr
 status: draft
-version: 0.1.0
+version: 3.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: ci-build
@@ -24,17 +24,15 @@ pages:
     specifications_techniques.md:
         construction_des_flux.md:
         flux1.md:
-            title: Flux 01
+            title: Flux 01 - Gestion ressources
         flux2.md:
-            title: Flux 02
+            title: Flux 02 - Gestion agenda
         flux3.md:
-            title: Flux 03
+            title: Flux 03 - Gestion disponibilités
         flux4.md:
-            title: Flux 04
-        flux5.md:
-            title: Flux 05
+            title: Flux 04 et 05 - Demande consultation
         flux6.md:
-            title: Flux 06
+            title: Flux 06 - Gestion rendez-vous
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
