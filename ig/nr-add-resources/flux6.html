@@ -204,14 +204,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p>  <!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#flux-6a---création-de-rendez-vous" id="markdown-toc-flux-6a---création-de-rendez-vous">Flux 6a - Création de rendez-vous</a></li>
-  <li><a href="#flux-6b---mise-à-jour-de-rendez-vous" id="markdown-toc-flux-6b---mise-à-jour-de-rendez-vous">Flux 6b - Mise à jour de rendez-vous</a></li>
-</ul>
-
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
 </div>
-<h3 id="flux-6a---création-de-rendez-vous">Flux 6a - Création de rendez-vous</h3>
+<h3 id="gestion-de-rendez-vous">Gestion de rendez-vous</h3>
+
+<p>Les flux de création et de mise à jour d’un rendez-vous sont respectivement opérés par les requêtes HTTP POST et PUT sur la ressource Appointment représentant le rendez-vous. Ces requêtes sont envoyées au gestionnaire d’agendas.</p>
+
+<h4 id="flux-6a---création-de-rendez-vous">Flux 6a - Création de rendez-vous</h4>
 
 <p>Le flux de création de rendez-vous est initié par un déclarant de rendez-vous et peut constituer une demande de rendez-vous (attente de confirmation) ou une simple déclaration d’un rendez-vous pris.</p>
 
@@ -224,11 +224,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Ce flux correspond à une requête HTTP POST sur une ressource Appointment.</p>
 
-<h3 id="flux-6b---mise-à-jour-de-rendez-vous">Flux 6b - Mise à jour de rendez-vous</h3>
+<p>Le flux 6a permet la création de rendez-vous. Cela se fait via l’interaction create de l’API FHIR (http POST) sur la ressource Appointment.
+Le flux de création de rendez-vous est initié par un déclarant de rendez-vous et peut constituer une demande de rendez-vous (attente de confirmation) ou une simple déclaration d’un rendez-vous pris.</p>
+
+<h4 id="flux-6b---mise-à-jour-de-rendez-vous">Flux 6b - Mise à jour de rendez-vous</h4>
 
 <p>Le flux de mise à jour de rendez-vous est initié par un déclarant de rendez-vous et constitue une simple mise à jour d’un rendez-vous préalablement déclaré (changement de statut, ajout d’un participant…). La structure du flux 6b de mise à jour de rendez-vous est similaire à celle du flux 6a de création de rendez-vous.</p>
 
 <p>Ce flux correspond à une requête HTTP PUT (Conditional update) sur une ressource Appointment.</p>
+
+<p>Le flux 6b permet la mise à jour d’un rendez-vous préalablement déclaré (changement de statut, ajout d’un participant…). Cela se fait via l’interaction conditional update de l’API FHIR (http PUT) sur la ressource Appointment en se basant sur l’identifiant métier unique « appointment.identifier ». A la réception de la requête, une recherche au niveau du gestionnaire d’agendas est effectuée sur la base de cet identifiant. Si un rendez-vous correspond à l’identifiant fournie par le déclarant la ressource est mise à jour et un code statut 200 ok est retourné.</p>
+
+<p>Consultez la documentation du standard pour plus d’information sur l’implémentation du conditional update.</p>
 
 
 
@@ -277,7 +284,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 2, 2023 14:50+0000">2023-08-02</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 2, 2023 15:50+0000">2023-08-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
