@@ -1,5 +1,16 @@
 ### Les flux de gestion d'agenda 
 
+<div class="figure" style="width:65%;">
+    <img src="flux2.png" alt="Flux1" title="Flux1">
+</div>
+
+<div class="figure" style="width:65%;">
+    <img src="flux2.2.png" alt="Flux1" title="Flux1">
+</div>
+
+Les flux de création, de mise à jour et de suppression d’un agenda sont respectivement opérés par les requêtes HTTP POST, PUT et DELETE sur la ressource Schedule représentant l’agenda. Ces requêtes sont envoyées au gestionnaire d’agendas.
+A noter qu’une fois la suppression effectuée par le serveur, ce dernier renvoie un code statut 200 OK ou 204 No Content.
+
 #### Flux 2a - Création d'un agenda
 
 Ce flux permet la création d'un agenda. Un agenda peut appartenir à une ou plusieurs ressources.
@@ -30,7 +41,7 @@ Pour plus d'information sur les profils, consultez les dépendances et les guide
 **Ressource « Schedule »**
 La ressource Schedule représente l’agenda d’un acteur ou d’un ensemble d’acteurs sur une période donnée. Pour ce volet, le profil français de la ressource, FrSchedule du package FrCore défini par HL7 France, doit être utilisé. Il s’agit d’un conteneur de créneaux horaires utilisé pour présenter les dates et les horaires durant lesquels une ressource peut être disponible pour une prise de rendez-vous.
 
-L’extension française availabilityTime introduit la notion de disponibilités, c’est à dire des plages horaires, récurrentes ou non, durant lesquelles les rendez-vous peuvent être pris avec les acteurs de l’agenda (si un rendez-vous n’est pas déjà pris sur le créneau demandé). Il s’agit d’une description ou d’un paramétrage qui va permettre de déduire sur une période donnée la disposition d’une ressource à accepter des rendez-vous. L’utilisation de cette extension est particulièrement intéressante dans le scénario d’implémentation avec gestion déléguée d’agendas. Ce concept est différent du concept de créneaux horaires de disponibilité qui correspondent aux Slot. Une disponibilité se compose d’un ensemble de créneaux durant lesquels l’acteur peut être encore disponible pour un rendez-vous ou occupé par un rendez-vous pris. Les exceptions de disponibilités telles que des vacances ou un déplacement d’un professionnel peuvent aussi être exprimées à travers cette extension. Cette extension correspond au composant VAVAILABILITY d’iCalendar (cf. Annexe 1) 
+L’extension française availabilityTime introduit la notion de disponibilités, c’est à dire des plages horaires, récurrentes ou non, durant lesquelles les rendez-vous peuvent être pris avec les acteurs de l’agenda (si un rendez-vous n’est pas déjà pris sur le créneau demandé). Il s’agit d’une description ou d’un paramétrage qui va permettre de déduire sur une période donnée la disposition d’une ressource à accepter des rendez-vous. L’utilisation de cette extension est particulièrement intéressante dans le scénario d’implémentation avec gestion déléguée d’agendas. Ce concept est différent du concept de créneaux horaires de disponibilité qui correspondent aux Slot. Une disponibilité se compose d’un ensemble de créneaux durant lesquels l’acteur peut être encore disponible pour un rendez-vous ou occupé par un rendez-vous pris. Les exceptions de disponibilités telles que des vacances ou un déplacement d’un professionnel peuvent aussi être exprimées à travers cette extension. Cette extension correspond au composant VAVAILABILITY d’iCalendar (cf. Annexe 1).
 <!-- TODO  annexe 1-->
 
 L’extension serviceTypeDuration permet quant à elle d’introduire le lien entre un type de service, qui peut constituer un motif de rendez-vous, et la durée par défaut qui s’applique lors de la demande de rendez-vous. Quand le Schedule représente l’agenda d’un fournisseur de services de soins, PractitionerRole ou HealthcareService par exemple, le jeu de valeurs des types de service qui y est associé devrait provenir de jeu de valeurs des types de services de ces acteurs.
