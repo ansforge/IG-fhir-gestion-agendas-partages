@@ -25,4 +25,3 @@ Ce flux correspond à une requête HTTP PUT (Conditional update) sur une ressour
 Le flux 6b permet la mise à jour d’un rendez-vous préalablement déclaré (changement de statut, ajout d'un participant...). Cela se fait via l’interaction conditional update de l’API FHIR (http PUT) sur la ressource Appointment en se basant sur l’identifiant métier unique « appointment.identifier ». A la réception de la requête, une recherche au niveau du gestionnaire d’agendas est effectuée sur la base de cet identifiant. Si un rendez-vous correspond à l’identifiant fournie par le déclarant la ressource est mise à jour et un code statut 200 ok est retourné.
 
 Consultez la documentation du standard pour plus d’information sur l’implémentation du conditional update.
-

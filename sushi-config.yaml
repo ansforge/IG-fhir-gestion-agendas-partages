@@ -50,12 +50,11 @@ menu:
     Accueil: index.html
     Description des flux:
         Construction des flux: construction_des_flux.html
-        Flux 01: flux1.html
-        Flux 02: flux2.html
-        Flux 03: flux3.html
-        Flux 04: flux4.html
-        Flux 05: flux5.html
-        Flux 06: flux6.html
+        Flux 01 - Gestion ressources: flux1.html
+        Flux 02 - Gestion agenda: flux2.html
+        Flux 03 - Gestion disponibilités: flux3.html
+        Flux 04 et 05 - Demande consultation: flux4.html
+        Flux 06 - Gestion rendez-vous: flux6.html
     Spécifications fonctionnelles : specifications_fonctionnelles.html
     Ressources de conformité: artifacts.html
     Tests:   tests.html

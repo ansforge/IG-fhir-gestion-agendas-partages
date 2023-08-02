@@ -39,23 +39,16 @@ Ce flux correspond à une requête HTTP DELETE d'une des ressources indiquées c
 
 ### Les ressources d'agenda
 
-* Patient : profil FrPatient
-* PractitionerRole : AsPractitionerRole
-* Practitioner : profil FrPractitioner
-* RelatedPerson : profil FrRelatedPerson
-* Location : profil FrLocation
-* HealthcareService : profil FrHealthcareService
-* Organization : profil FrOrganization
-* Device
-
 Pour les ressources de type personne, il est important de recueillir l’adresse électronique pour permettre l’envoi de notifications et l’envoi d’objets iCalendar, après mise en correspondance (cf. Annexe 1), pour une meilleure intégration dans les agendas électronique non spécifiques au secteur.
 
 Pour plus d'information sur les profils, consultez les dépendances et les guides d'implémentations associés. Pour chacune de ces ressources, les éléments autres que ceux mentionnés dans les spécifications fonctionnelles du volet peuvent être utilisés.
 
-**Ressource « Patient »**
+#### Ressource « Patient »
+
 La ressource Patient représente la personne prise en charge. Pour ce volet, le profil français FrPatient du package FrCore, défini par HL7 France, doit être utilisé. Dans les spécifications fonctionnelles de ce volet, seules les informations minimales d’identification et de contact du patient sont mentionnées.
 
-**Ressources « Practitioner » et « PractitionerRole »**
+#### Ressources « Practitioner » et « PractitionerRole »
+
 Les ressources Practitioner et PractitionerRole représentent respectivement le professionnel et le couple exercice professionnel et situation d’exercice au sein d’un établissement. Pour ce volet, le profil français FrPractitioner du package FrCore défini par HL7 France et les profils AsPractitionerRole du package annuaire de l’annuaire santé doivent être utilisés.
 
 Comme pour le patient, tout élément de ces ressources peut être utilisé même s’il ne fait pas partie des
@@ -63,16 +56,20 @@ informations minimales mentionnées dans les spécifications fonctionnelles du v
 
 La prise de rendez-vous se fait avec un professionnel dans une situation donnée d’exercice professionnel. L’agenda et les disponibilités et rendez-vous qui y sont rattachés devraient donc être liés à la situation d’exercice, elle-même liée au professionnel. Ainsi c’est la ressource PractitionerRole qui devrait être référencée comme acteur d’agenda ou comme participant à un rendez-vous. Cependant pour des raisons techniques et afin de faciliter les recherches de disponibilités et de rendez-vous, les deux types de ressources doivent être référencés lorsque l’acteur est un professionnel en exercice. Ainsi, en termes de profils, les instances de AsPractitionerRole et FrPractitioner, si elles existent, doivent être référencées entre elles.
 
-**Ressource « RelatedPerson »**
+#### Ressource « RelatedPerson »
+
 La Ressource RelatedPerson représente une personne proche du patient, son tuteur légal par exemple. Pour ce volet, le profil français FrRelatedPerson du package FrCore, défini par HL7 France, doit être utilisé. Les projets peuvent avoir recours à cette ressource s’ils trouvent opportun de créer un agenda dédié à cette personne.
 
-**Ressource « Device »**
+#### Ressource « Device »
+
 La ressource Device représente un équipement qui peut être réservé pour un rendez-vous et disposant donc d’un agenda, un échographe par exemple.
 
-**Ressource « Location »**
+#### Ressource « Location »
+
 La ressource Location représente un lieu qui peut être réservé pour un rendez-vous et disposant donc d’un agenda, un box de consultation par exemple. Pour ce volet, le profil français de la ressource, FrLocation du package FrCore défini par HL7 France, doit être utilisé.
 
-**Ressources « HealthcareService » et « Organization »**
+#### Ressources « HealthcareService » et « Organization »
+
 Les ressources Organization et HealthcareService représentent respectivement un établissement (entité
 géographique) et une organisation interne qui y est proposée. Pour ce volet, les profils français de ces ressources, FrOrganization et FrHealthcareService du package FrCore, définis par HL7 France doivent être utilisés.
 

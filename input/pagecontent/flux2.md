@@ -38,7 +38,8 @@ Ce flux correspond à une requête HTTP DELETE sur une ressource Schedule.
 
 Pour plus d'information sur les profils, consultez les dépendances et les guides d'implémentations associés.
 
-**Ressource « Schedule »**
+#### Ressource « Schedule »
+
 La ressource Schedule représente l’agenda d’un acteur ou d’un ensemble d’acteurs sur une période donnée. Pour ce volet, le profil français de la ressource, FrSchedule du package FrCore défini par HL7 France, doit être utilisé. Il s’agit d’un conteneur de créneaux horaires utilisé pour présenter les dates et les horaires durant lesquels une ressource peut être disponible pour une prise de rendez-vous.
 
 L’extension française availabilityTime introduit la notion de disponibilités, c’est à dire des plages horaires, récurrentes ou non, durant lesquelles les rendez-vous peuvent être pris avec les acteurs de l’agenda (si un rendez-vous n’est pas déjà pris sur le créneau demandé). Il s’agit d’une description ou d’un paramétrage qui va permettre de déduire sur une période donnée la disposition d’une ressource à accepter des rendez-vous. L’utilisation de cette extension est particulièrement intéressante dans le scénario d’implémentation avec gestion déléguée d’agendas. Ce concept est différent du concept de créneaux horaires de disponibilité qui correspondent aux Slot. Une disponibilité se compose d’un ensemble de créneaux durant lesquels l’acteur peut être encore disponible pour un rendez-vous ou occupé par un rendez-vous pris. Les exceptions de disponibilités telles que des vacances ou un déplacement d’un professionnel peuvent aussi être exprimées à travers cette extension. Cette extension correspond au composant VAVAILABILITY d’iCalendar (cf. Annexe 1).
@@ -46,7 +47,8 @@ L’extension française availabilityTime introduit la notion de disponibilités
 
 L’extension serviceTypeDuration permet quant à elle d’introduire le lien entre un type de service, qui peut constituer un motif de rendez-vous, et la durée par défaut qui s’applique lors de la demande de rendez-vous. Quand le Schedule représente l’agenda d’un fournisseur de services de soins, PractitionerRole ou HealthcareService par exemple, le jeu de valeurs des types de service qui y est associé devrait provenir de jeu de valeurs des types de services de ces acteurs.
 
-**Ressource « Slot »**
+#### Ressource « Slot »
+
 La ressource Slot représente un créneau horaire d’un agenda durant lequel une ressource peut être disponible ou non pour la prise de rendez-vous. Ce créneau peut donc représenter du temps libre ou occupé. La durée d’un slot correspond généralement à la durée nécessaire à l’exécution d’un type de service durant un rendez-vous.
 
 Pour ce volet, le profil français de la ressource, FrSlot du package FrCore, défini par HL7 France, doit être utilisé.
@@ -57,7 +59,8 @@ Cette ressource correspond au composant VFREEBUSY d’iCalendar (cf. Annexe 1).
 
 La valeur prise par serviceType doit provenir du même jeu de valeur que celui de l’extension serviceTypeDuration de la ressource Schedule à laquelle le créneau est rattaché.
 
-**Ressource « Appointment »**
+#### Ressource « Appointment »
+
 La ressource Appointment représente un rendez-vous. Dans ce volet, le profil français de cette ressource,
 FrAppointment du package FrCore, doit être utilisé.
 
