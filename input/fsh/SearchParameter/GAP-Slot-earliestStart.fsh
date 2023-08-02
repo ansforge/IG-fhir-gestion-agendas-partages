@@ -1,13 +1,10 @@
-Instance: GAP-Slot-latestStart
+Instance: GAP-Slot-earliestStart
 InstanceOf: SearchParameter
 Usage: #definition
-* name = "GAP_Slot_latestStart"
+* name = "GAP_Slot_earliestStart"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/Slot-start"
-* status = #draft
 * experimental = false
-* date = "2021-12-01"
-* publisher = "ANS"
-* description = "latest start of a potential appointment"
+* description = "earliest start of a potential appointment"
 * code = #start
 * base = #Slot
 * type = #date
@@ -16,5 +13,5 @@ Usage: #definition
 * xpathUsage = #normal
 * multipleOr = true
 * multipleAnd = true
-* comparator[0] = #lt
-* comparator[+] = #le
+* comparator[0] = #gt
+* comparator[+] = #ge

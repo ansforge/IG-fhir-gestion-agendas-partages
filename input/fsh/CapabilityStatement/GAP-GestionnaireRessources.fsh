@@ -1,12 +1,10 @@
 Instance: GAP-GestionnaireRessourcesGAP
 InstanceOf: CapabilityStatement
 Usage: #definition
-* name = "GAP_GestionnaireRessourcesGAP"
+* name = "GAP-GestionnaireRessources"
 * title = "CI-SIS Gestion-d-Agendas-Partages - GestionnaireRessourcesGAP"
 * status = #active
 * experimental = false
-* date = "2021-12-01T11:06:38+01:00"
-* publisher = "ANS"
 * description = "Le gestionnaire de ressources gère les demandes de gestion de ressources (lieu,   équipement, personne prise en charge, professionnel, etc.)."
 * kind = #requirements
 * fhirVersion = #4.0.1

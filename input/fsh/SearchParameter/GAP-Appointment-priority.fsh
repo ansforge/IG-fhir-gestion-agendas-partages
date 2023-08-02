@@ -3,8 +3,6 @@ InstanceOf: SearchParameter
 Usage: #definition
 * name = "GAP_Appointment_priority"
 * status = #draft
-* date = "2021-12-01"
-* publisher = "ANS"
 * description = "Priority of the appointment"
 * code = #priority
 * base = #Appointment

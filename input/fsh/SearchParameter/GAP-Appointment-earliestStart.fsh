@@ -1,13 +1,12 @@
-Instance: GAP-Appointment-latestStart
+Instance: GAP-Appointment-earliestStart
 InstanceOf: SearchParameter
 Usage: #definition
-* name = "GAP_Appointment_latestStart"
+* version = "2.0"
+* name = "GAP_Appointment_earliestStart"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/Appointment-start"
 * status = #draft
 * experimental = false
-* date = "2021-12-01"
-* publisher = "ANS"
-* description = "latest start of an appointment"
+* description = "Earliest start of an appointment"
 * code = #start
 * base = #Appointment
 * type = #date
@@ -16,5 +15,5 @@ Usage: #definition
 * xpathUsage = #normal
 * multipleOr = true
 * multipleAnd = true
-* comparator[0] = #lt
-* comparator[+] = #le
+* comparator[0] = #gt
+* comparator[+] = #ge

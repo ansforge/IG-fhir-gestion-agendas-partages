@@ -1,14 +1,13 @@
 Instance: GAP.DeclarantRDVGAP
 InstanceOf: CapabilityStatement
 Usage: #definition
-* name = "GAP.DeclarantRDVGAP"
+* name = "GAP-DeclarantRDV"
 * title = "CI-SIS Gestion-d-Agendas-Partages - DeclarantRDVGAP"
 * status = #active
 * experimental = false
-* date = "2023-01-12T14:27:51+01:00"
-* publisher = "ANS"
 * description = "Un déclarant de rendez-vous fait une demande auprès d’un gestionnaire d’agenda pour créer (demande d'un nouveau rendez-vous ou déclaration d'un rendez-vous pris) ou mettre à jour un rendez-vous"
 * fhirVersion = #4.0.1
+* kind = #requirements
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
 * implementationGuide = "http://esante.gouv.fr/ci-sis/fhir/ImplementationGuides/CI-SIS.GestionDAgendasPartages"

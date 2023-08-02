@@ -1,12 +1,10 @@
 Instance: GAP-GestionnaireAgendaGAP
 InstanceOf: CapabilityStatement
 Usage: #definition
-* name = "GAP_GestionnaireAgendaGAP"
+* name = "GAP-GestionnaireAgenda"
 * title = "CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP"
 * status = #active
 * experimental = false
-* date = "2021-12-01T11:06:38+01:00"
-* publisher = "ANS"
 * description = "Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous."
 * kind = #requirements
 * fhirVersion = #4.0.1

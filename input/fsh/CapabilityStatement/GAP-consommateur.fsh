@@ -1,14 +1,10 @@
 Instance: ConsommateurGAP
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://esante.gouv.fr/ci-sis/fhir/CapabilityStatements/GAP.ConsommateurGAP"
-* version = "2.1"
-* name = "ConsommateurGAP"
+* name = "GAP-consommateur"
 * title = "CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP"
 * status = #active
 * experimental = false
-* date = "2023-01-12T14:27:51+01:00"
-* publisher = "ANS"
 * description = "Un consommateur consulte l’agenda d’une ressource gérée par un gestionnaire d’agenda. La consultation de l’agenda indique les éventuelles plages de disponibilité déclarées pour la  \nressource ainsi que ses indisponibilités et les détails des rendez-vous existants (types, durées, etc., cf. section 2.3.3). Le consommateur peut être la personne prise en charge, un  \nprofessionnel intervenant dans la prise en charge d’une personne ou tout autre tiers autorisé à consulter l’agenda de la ressource concernée. "
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -19,6 +15,7 @@ Usage: #definition
 * rest.documentation = "consultation de disponibilités"
 * rest.security.cors = false
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)"
+
 * rest.resource[0].type = #Slot
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrSlot"
 * rest.resource[=].interaction[0].code = #read
@@ -83,6 +80,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Appointment-supporting-info"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "information supplémentaire sur le rendez vous"
+
 * rest.resource[+].type = #Schedule
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrSchedule"
 * rest.resource[=].interaction[0].code = #read
@@ -91,6 +89,7 @@ Usage: #definition
 * rest.resource[=].searchParam.definition = "http://hl7.org/fhir/SearchParameter/Schedule-actor"
 * rest.resource[=].searchParam.type = #reference
 * rest.resource[=].searchParam.documentation = "Reference vers la ressource participant au creneau"
+
 * rest.resource[+].type = #Patient
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrPatient"
 * rest.resource[=].interaction[0].code = #read
@@ -107,6 +106,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/individual-given"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Prenom du patient"
+
 * rest.resource[+].type = #Practitioner
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrPractitioner"
 * rest.resource[=].interaction[0].code = #read
@@ -123,9 +123,9 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/individual-given"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Prenom du patient"
+
 * rest.resource[+].type = #PractitionerRole
-* rest.resource[=].profile = "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-organizationalRole-rass"
-* rest.resource[=].supportedProfile = "https://apifhir.annuaire.sante.fr/ws-sync/exposed/structuredefinition/practitionerRole-professionalRole-rass"
+* rest.resource[=].profile = "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "role"
@@ -144,6 +144,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/individual-telecom"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Telecommunication de la situation d'exercice"
+
 * rest.resource[+].type = #RelatedPerson
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson"
 * rest.resource[=].interaction[0].code = #read
@@ -164,6 +165,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/RelatedPerson-name"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Nom de la personne de contact"
+
 * rest.resource[+].type = #Location
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrLocation"
 * rest.resource[=].interaction[0].code = #read
@@ -184,6 +186,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant du lieu"
+
 * rest.resource[+].type = #Device
 * rest.resource[=].profile = "http://hl7.org/fhir/StructureDefinition/Device"
 * rest.resource[=].interaction[0].code = #read
@@ -204,6 +207,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Device-model"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Modele de l'équipement opérationnel'"
+
 * rest.resource[+].type = #HealthcareService
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrHealthcareService"
 * rest.resource[=].interaction[0].code = #read
@@ -224,6 +228,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/HealthcareService-organization"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Référence vers l'entite géographique de l'organisation interne"
+
 * rest.resource[+].type = #Organization
 * rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrOrganization"
 * rest.resource[=].interaction[0].code = #read
