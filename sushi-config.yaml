@@ -63,5 +63,5 @@ menu:
         Sécurité: securite.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
-        "Site de l'ANS ": new-tab https://esante.gouv.fr/
+        "Site de l'ANS ": new-tab https://esante.gouv.fr
     A propos de ce guide: about.html

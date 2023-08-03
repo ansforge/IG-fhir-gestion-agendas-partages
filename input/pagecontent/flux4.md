@@ -24,10 +24,7 @@ Si la ressource est déjà identifiée, les critères de recherche se rapportero
 Exemple d’une requête :
 La requête ci-dessous représente une recherche de disponibilités d’un médecin généraliste (code SM54 de la TRE R38 de l’ensemble des spécialités ordinales) à Paris entre le 02/01/2019 et le 06/01/2019. La réponse doit retourner les ressources Slot répondant à ces critères de recherche ainsi que la ressource Schedule et PractitionerRole (actor) qui y sont liés.
 
-Get example.com/base/Slot?_include=Slot:schedule&_include=Schedule:actor&start=ge2019-01-
-02&start=le2019-01-06&schedule.actor:PractitionerRole.specialty=
-https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-
-SpecialiteOrdinale|SM54&schedule.actor:PractitionerRole.address=Paris&status=free
+> Get example.com/base/Slot?_include=Slot:schedule&_include=Schedule:actor&start=ge2019-01-02&start=le2019-01-06&schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale|SM54&schedule.actor:PractitionerRole.address=Paris&status=free
 
 #### Flux 5a - Réponse à la demande de consultation de disponibilités
 
@@ -45,12 +42,48 @@ Consultez la documentation du standard sur la gestion des erreurs liées à la r
 Ce flux permet de rechercher des rendez-vous dans l’agenda d’une ressource donnée. Les critères de recherche peuvent se rapporter aux détails du rendez-vous et/ou aux identifiants des ressources qui y participent.
 
 Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
-<!-- TODO tableau à ajouter ? Ou non ? -->
+
+Le flux 4a permet de demander les créneaux de disponibilité, représentés par les ressources Slot, d’une ou de plusieurs ressources. Cela se fait à travers la requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
+
+Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference43.
+
+| Paramètre de recherche | Description |
+| ----- | ----- |
+| identifier : token | Identifiant du créneau |
+| status : token | Statut du créneau |
+| start : date | Ce paramètre, peut être accompagné de modifier (lt, le, gt, ge...) pour modifier l'intervalle de recherche (cf documentation FHIR Search). |
+| schedule.actor:Patient.identifier : token | Identifiant du patient (matricule INS ou autre identifiant) |
+| schedule.actor:Patient.family : string | Nom du patient |
+| schedule.actor:Patient.given : string | Prénom du patient |
+| schedule.actor:Practitioner.identifier : token | Identifiant du professionnel |
+| schedule.actor:PractitionerRole.name : string | Recherche sur le nom ou prénom d’exercice du professionnel, cf IG Annuaire |
+| schedule.actor:PractitionerRole.role: token | Profession du professionnel |
+| schedule.actor:PractitionerRole.specialty : token | Spécialité du professionnel |
+| schedule.actor:PractitionerRole.location.address : string ou schedule.actor:PractitionerRole.location.near : special | Adresse du lieu d’exercice du professionnel |
+| schedule.actor:PractitionerRole.telecom : token | Télécommunication du professionnel |
+| schedule.actor:RelatedPerson.identifier : token | Identifiant du contact |
+| schedule.actor:RelatedPerson.address : string | Adresse du contact |
+| schedule.actor:RelatedPerson.telecom: token | Télécommunication du contact |
+| schedule.actor:RelatedPerson.name : string | Nom du contact |
+| schedule.actor:RelatedPerson.name : string | Prénom du contact |
+| schedule.actor:Location.name : string | Nom du lieu |
+| schedule.actor:Location.identifier : token | Identifiant du lieu |
+| schedule.actor:Location.address : string ou schedule.actor:Location.near : special | Adresse du lieu du rendez-vous |
+| schedule.actor:Device.identifier : token | Identifiant de l’équipement |
+| schedule.actor:Device.type : token | Type de l’équipement |
+| schedule.actor:Device.device-name : string | Nom de l’équipement |
+| schedule.actor:Device.model : string | Modèle de l’équipement |
+| schedule.actor:HealthcareService.identifier : token | Identifiant de l’organisation interne (service de soins) |
+| schedule.actor:HealthcareService.name : string | Nom de l’organisation interne (service de soins) |
+| schedule.actor:HealthcareService.service-type : token | Type de service de l’organisation interne (service de soins) |
+| schedule.actor:HealthcareService.organization.identifier : token | Identifiant de l’établissement de rattachement de l’organisation interne (service de soins) |
+| schedule.actor:HealthcareService.organization.name : string | Nom de l’établissement de rattachement de l’organisation interne (service de soins) |
+| schedule.actor:HealthcareService.organization.address : string | Adresse de l’établissement de rattachement de l’organisation interne (service de soins) |
 
 #### Flux 5b - Réponse à la demande de consultation de rendez-vous
 
 Ce flux constitue la réponse au flux 4b de recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande.
 
 Le flux 5b constitue la réponse du gestionnaire d’agenda à cette requête. Il s’agit d’une réponse HTTP 200 ok avec comme contenu une ressource Bundle de type searchset contenant l’ensemble des Appointment répondant aux critères de recherche envoyés dans la requête et représentant les rendez-vous de la ressource demandée ainsi que toute ressource liée demandée. Un profil spécifique est créé pour ce volet et nommé GAP_BundleResultatReponseADemandeConsultationRDV.
-<!-- TODO changer nom -->
-Consultez la documentation du standard sur la gestion des erreurs47 liées à la recherche.
+
+Consultez la documentation du standard sur la gestion des erreurs liées à la recherche.
