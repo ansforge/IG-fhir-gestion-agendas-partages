@@ -2,9 +2,15 @@
 
 Les flux de création et de mise à jour d’un rendez-vous sont respectivement opérés par les requêtes HTTP POST et PUT sur la ressource Appointment représentant le rendez-vous. Ces requêtes sont envoyées au gestionnaire d’agendas.
 
+
+<div class="figure" style="width:65%;">
+    <img src="flux6.png" alt="Flux6" title="Flux6">
+</div>
+
+-
 #### Flux 6a - Création de rendez-vous
 
-Le flux de création de rendez-vous est initié par un déclarant de rendez-vous et peut constituer une demande de rendez-vous (attente de confirmation) ou une simple déclaration d'un rendez-vous pris.
+Le flux de création de rendez-vous est initié par un déclarant de rendez-vous et peut constituer une demande de rendez-vous (attente de confirmation) ou une simple déclaration d'un rendez-vous pris. L'attribut Appointment.status permet de définir quel est le cas concerné.
 
 Il existe deux cas d'usage pour la demande de rendez-vous :
 
@@ -14,7 +20,6 @@ Il existe deux cas d'usage pour la demande de rendez-vous :
 Ce flux correspond à une requête HTTP POST sur une ressource Appointment.
 
 Le flux 6a permet la création de rendez-vous. Cela se fait via l’interaction create de l’API FHIR (http POST) sur la ressource Appointment.
-Le flux de création de rendez-vous est initié par un déclarant de rendez-vous et peut constituer une demande de rendez-vous (attente de confirmation) ou une simple déclaration d'un rendez-vous pris.
 
 #### Flux 6b - Mise à jour de rendez-vous
 
