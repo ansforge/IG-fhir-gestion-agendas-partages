@@ -39,7 +39,7 @@ Ce flux correspond à une requête HTTP DELETE d'une des ressources d'agenda ind
 
 ### Les ressources d'agenda
 
-Pour les ressources de type personne, il est important de recueillir l’adresse électronique pour permettre l’envoi de notifications et l’envoi d’objets iCalendar, après mise en correspondance (cf. Annexe 1), pour une meilleure intégration dans les agendas électronique non spécifiques au secteur.
+Pour les ressources de type personne, il est important de recueillir l’adresse électronique pour permettre l’envoi de notifications et l’envoi d’objets iCalendar, après mise en correspondance (cf. Annexe 1), pour une meilleure intégration dans les agendas électroniques non spécifiques au secteur.
 
 Pour plus d'information sur les profils, consultez les dépendances et les guides d'implémentations associés. Pour chacune de ces ressources, les éléments autres que ceux mentionnés dans les spécifications fonctionnelles du volet peuvent être utilisés.
 
