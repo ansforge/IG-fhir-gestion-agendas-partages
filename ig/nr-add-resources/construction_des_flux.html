@@ -204,60 +204,60 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<h3 id="contenu-structuré-des-flux">Contenu structuré des flux</h3>
-
-<h4 id="correspondances-entre-objets-métier-et-objets-du-standard-fhir">Correspondances entre objets métier et objets du standard FHIR</h4>
 
 <p>Les spécifications de ce document concernent les flux structurés identifiés dans les spécifications fonctionnelles du
 volet, à savoir :</p>
 
+<p>Pour la gestion des ressources</p>
+
 <ul>
-  <li>Pour la gestion des ressources
-    <ul>
-      <li>Flux 1a : CreationRessource : Pour la création de ressources d’agenda (une ressource étant toute personne, objet ou lieu disposant d’un agenda pour la prise de rendez-vous)</li>
-      <li>Flux 1b : MiseAJourRessource : Pour la mise à jour d’une ressource.</li>
-      <li>Flux 1c : SuppressionRessource : Pour la suppression d’une ressource.</li>
-      <li>Flux 1bis : RetourDemandeRessource : Flux technique de réponse aux flux de gestion de ressources.</li>
-    </ul>
-  </li>
-  <li>Pour la gestion d’agenda
-    <ul>
-      <li>Flux 2a : CreationAgenda : Pour la création d’un agenda (un agenda étant l’ensemble des disponibilités et des rendez-vous sur une période donnée. Il peut être posséder par une ou plusieurs ressources).</li>
-      <li>Flux 2b : MiseAJourAgenda : Pour la mise à jour d’un agenda.</li>
-      <li>Flux 2c : SuppressionAgenda : Pour la suppression d’un agenda.</li>
-      <li>Flux 2bis : RetourDemandeAgenda : Flux technique de réponse aux flux de gestion d’agenda.</li>
-    </ul>
-  </li>
-  <li>Pour la gestion des disponibilités
-    <ul>
-      <li>Flux 3a : CreationDisponibilite : Pour la création d’une plage de disponibilité sur un agenda (Une disponibilité étant une plage horaire pour laquelle la/les ressource(s) sont en capacité d’accepter des rendez-vous. Par exception, la plage de disponibilité permet de déclarer les périodes sur lesquels la ressource est indisponible).</li>
-      <li>Flux 3b : MiseAJourDisponibilite : Pour la mise à jour d’une plage de disponibilité.</li>
-      <li>Flux 3c : SuppressionDisponibilite : Pour la suppression d’une plage de disponibilité.</li>
-      <li>Flux 3bis : RetourDemandeDisponibilite : Flux technique de réponse aux flux de gestion des disponibilités.</li>
-    </ul>
-  </li>
-  <li>Pour les demandes de consultation des disponibilités
-    <ul>
-      <li>Flux 4a : DemandeConsultationDisponibilite : Pour demander une vue sur les disponibilités d’une ou plusieurs ressources.</li>
-      <li>Flux 5a : ReponseDemandeConsultationDisponibilite : Réponse au flux précédent. Peut contenir les informations sur les disponibilités d’une ou plusieurs ressources qui répondent aux critères de recherche.</li>
-    </ul>
-  </li>
-  <li>Pour les demandes de consultation de rendez-vous
-    <ul>
-      <li>Flux 4b : DemandeConsultationRDV : Pour demander une vue sur les rendez-vous (un rendezvous étant une rencontre prévue entre deux personnes à une heure et dans un lieu déterminé)</li>
-      <li>Flux 5b : ReponseDemandeConsultationRDV : Réponse au flux précédent. Peut contenir les informations sur les rendez-vous d’un agenda qui répondent aux critères de recherche.</li>
-    </ul>
-  </li>
-  <li>Pour la prise de rendez-vous
-    <ul>
-      <li>Flux 6a – CreationRDV : Pour déclarer un rendez pris ou demander un rendez-vous.</li>
-      <li>Flux 6b – MAJRDV : Pour mettre à jour un rendez-vous pris.</li>
-      <li>Flux 6bis- RetourDemandeRDV : Réponse aux flux précédents. Contient les informations relatives au rendez-vous.</li>
-    </ul>
-  </li>
+  <li>Flux 1a : CreationRessource : Pour la création de ressources d’agenda (une ressource étant toute personne, objet ou lieu disposant d’un agenda pour la prise de rendez-vous)</li>
+  <li>Flux 1b : MiseAJourRessource : Pour la mise à jour d’une ressource.</li>
+  <li>Flux 1c : SuppressionRessource : Pour la suppression d’une ressource.</li>
+  <li>Flux 1bis : RetourDemandeRessource : Flux technique de réponse aux flux de gestion de ressources.</li>
 </ul>
 
-<p>Dans cette section, une mise en correspondance est faite entre :</p>
+<p>Pour la gestion d’agenda</p>
+
+<ul>
+  <li>Flux 2a : CreationAgenda : Pour la création d’un agenda (un agenda étant l’ensemble des disponibilités et des rendez-vous sur une période donnée. Il peut être posséder par une ou plusieurs ressources).</li>
+  <li>Flux 2b : MiseAJourAgenda : Pour la mise à jour d’un agenda.</li>
+  <li>Flux 2c : SuppressionAgenda : Pour la suppression d’un agenda.</li>
+  <li>Flux 2bis : RetourDemandeAgenda : Flux technique de réponse aux flux de gestion d’agenda.</li>
+</ul>
+
+<p>Pour la gestion des disponibilités</p>
+
+<ul>
+  <li>Flux 3a : CreationDisponibilite : Pour la création d’une plage de disponibilité sur un agenda (Une disponibilité étant une plage horaire pour laquelle la/les ressource(s) sont en capacité d’accepter des rendez-vous. Par exception, la plage de disponibilité permet de déclarer les périodes sur lesquels la ressource est indisponible).</li>
+  <li>Flux 3b : MiseAJourDisponibilite : Pour la mise à jour d’une plage de disponibilité.</li>
+  <li>Flux 3c : SuppressionDisponibilite : Pour la suppression d’une plage de disponibilité.</li>
+  <li>Flux 3bis : RetourDemandeDisponibilite : Flux technique de réponse aux flux de gestion des disponibilités.</li>
+</ul>
+
+<p>Pour les demandes de consultation des disponibilités</p>
+
+<ul>
+  <li>Flux 4a : DemandeConsultationDisponibilite : Pour demander une vue sur les disponibilités d’une ou plusieurs ressources.</li>
+  <li>Flux 5a : ReponseDemandeConsultationDisponibilite : Réponse au flux précédent. Peut contenir les informations sur les disponibilités d’une ou plusieurs ressources qui répondent aux critères de recherche.</li>
+</ul>
+
+<p>Pour les demandes de consultation de rendez-vous</p>
+
+<ul>
+  <li>Flux 4b : DemandeConsultationRDV : Pour demander une vue sur les rendez-vous (un rendezvous étant une rencontre prévue entre deux personnes à une heure et dans un lieu déterminé)</li>
+  <li>Flux 5b : ReponseDemandeConsultationRDV : Réponse au flux précédent. Peut contenir les informations sur les rendez-vous d’un agenda qui répondent aux critères de recherche.</li>
+</ul>
+
+<p>Pour la prise de rendez-vous</p>
+
+<ul>
+  <li>Flux 6a – CreationRDV : Pour déclarer un rendez pris ou demander un rendez-vous.</li>
+  <li>Flux 6b – MAJRDV : Pour mettre à jour un rendez-vous pris.</li>
+  <li>Flux 6bis- RetourDemandeRDV : Réponse aux flux précédents. Contient les informations relatives au rendez-vous.</li>
+</ul>
+
+<p>Une mise en correspondance est faite entre :</p>
 
 <ul>
   <li>Les objets métier identifiés à l’issue des spécifications fonctionnelles du volet Gestion d’agendas partagés (cf. CI-SIS Spécifications fonctionnelles – Gestion d’agendas Partagés)</li>
@@ -313,7 +313,7 @@ volet, à savoir :</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 3, 2023 07:28+0000">2023-08-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 3, 2023 07:38+0000">2023-08-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
