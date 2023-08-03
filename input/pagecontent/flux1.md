@@ -23,13 +23,13 @@ Ce flux permet donc l’envoi des détails d’une ressource au gestionnaire de 
 
 Ce flux correspond à une requête HTTP POST d'une des ressources d'agenda indiquées ci-dessous.
 
-#### Flux 1b - Mise à jour d'une ressource
+#### Flux 1b - Mise à jour d'une ressource d'agenda
 
 Ce flux permet la mise à jour d’une ressource. Son contenu est similaire à celui du flux 1a de création de ressource.
 
 Ce flux correpsond à une requête HTTP PUT d'une des ressources d'agenda indiquées ci-dessous.
 
-#### Flux 1c - Suppression d'une ressource
+#### Flux 1c - Suppression d'une ressource d'agenda
 
 Ce flux permet de supprimer une ressource.
 
