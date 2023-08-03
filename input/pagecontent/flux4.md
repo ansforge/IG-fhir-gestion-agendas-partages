@@ -55,7 +55,7 @@ Si la ressource est déjà identifiée, les critères de recherche se rapportero
 Exemple d’une requête :
 La requête ci-dessous représente une recherche de disponibilités d’un médecin généraliste (code SM54 de la TRE R38 de l’ensemble des spécialités ordinales) à Paris entre le 02/01/2019 et le 06/01/2019. La réponse doit retourner les ressources Slot répondant à ces critères de recherche ainsi que la ressource Schedule et PractitionerRole (actor) qui y sont liés.
 
-> `Get example.com/base/Slot?_include=Slot:schedule&_include=Schedule:actor&start=ge2019-01-02&start=le2019-01-06&schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale|SM54&schedule.actor:PractitionerRole.address=Paris&status=free`
+> Get example.com/base/Slot?_include=Slot:schedule&_include=Schedule:actor&start=ge2019-01-02&start=le2019-01-06&schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale\|SM54&schedule.actor:PractitionerRole.address=Paris&status=free
 
 #### Flux 5a - Réponse à la demande de consultation de disponibilités
 
