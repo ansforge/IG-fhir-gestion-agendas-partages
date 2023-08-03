@@ -1,35 +1,3 @@
-### Les flux de gestion d'agenda 
-
-<div class="figure" style="width:65%;">
-    <img src="flux2.png" alt="Flux1" title="Flux1">
-</div>
-
-<div class="figure" style="width:65%;">
-    <img src="flux2.2.png" alt="Flux1" title="Flux1">
-</div>
-
-Les flux de création, de mise à jour et de suppression d’un agenda sont respectivement opérés par les requêtes HTTP POST, PUT et DELETE sur la ressource Schedule représentant l’agenda. Ces requêtes sont envoyées au gestionnaire d’agendas.
-A noter qu’une fois la suppression effectuée par le serveur, ce dernier renvoie un code statut 200 OK ou 204 No Content.
-
-#### Flux 2a - Création d'un agenda
-
-Ce flux permet la création d'un agenda. Un agenda peut appartenir à une ou plusieurs ressources.
-Par exemple, plusieurs professionnels peuvent avoir un agenda commun.
-
-Ce flux correspond à une requête HTTP POST sur une ressource Schedule.
-
-#### Flux 2b - Mise à jour d'un agenda
-
-Ce flux permet la mise à jour d’un agenda. La structure du flux 2b est identique à celle du flux 2a, de création d'agenda. Dans ce flux, l'attribut Agenda/dateCreation n'est pas utilisé.
-
-Ce flux correspond à une requête HTTP PUT sur une ressource Schedule.
-
-#### Flux 2c - Suppression d'un agenda
-
-Ce flux permet de supprimer un agenda.
-
-Ce flux correspond à une requête HTTP DELETE sur une ressource Schedule.
-
 ### Les objets Agenda
 
 * Schedule : profil FrSchedule
@@ -72,3 +40,36 @@ Le jeu de valeurs de l’élément serviceType devrait être le même que celui 
 
 Dans le cas d’un rendez-vous lié à une prescription, l’élément supportingInformation peut être utilisé pour référencer un document représentant la prescription ou n’importe quelle autre pièce jointe (les ressources DocumentReference ou Binary).
 Le demandeur du rendez-vous peut préciser le degré d’urgence du rendez-vous en utilisant l’élément appointmentType et le jeu de valeurs proposé par le standard39 ou en attribuant une priorité au rendez-vous avec l’élément priority.
+
+### Les flux de gestion d'agenda
+
+<div class="figure" style="width:65%;">
+    <img src="flux2.png" alt="Flux1" title="Flux1">
+</div>
+
+<div class="figure" style="width:65%;">
+    <img src="flux2.2.png" alt="Flux1" title="Flux1">
+</div>
+
+Les flux de création, de mise à jour et de suppression d’un agenda sont respectivement opérés par les requêtes HTTP POST, PUT et DELETE sur la ressource Schedule représentant l’agenda. Ces requêtes sont envoyées au gestionnaire d’agendas.
+A noter qu’une fois la suppression effectuée par le serveur, ce dernier renvoie un code statut 200 OK ou 204 No Content.
+
+#### Flux 2a - Création d'un agenda
+
+Ce flux permet la création d'un agenda. Un agenda peut appartenir à une ou plusieurs ressources.
+Par exemple, plusieurs professionnels peuvent avoir un agenda commun.
+
+Ce flux correspond à une requête HTTP POST sur une ressource Schedule.
+
+#### Flux 2b - Mise à jour d'un agenda
+
+Ce flux permet la mise à jour d’un agenda. La structure du flux 2b est identique à celle du flux 2a, de création d'agenda. Dans ce flux, l'attribut Agenda/dateCreation n'est pas utilisé.
+
+Ce flux correspond à une requête HTTP PUT sur une ressource Schedule.
+
+#### Flux 2c - Suppression d'un agenda
+
+Ce flux permet de supprimer un agenda.
+
+Ce flux correspond à une requête HTTP DELETE sur une ressource Schedule.
+
