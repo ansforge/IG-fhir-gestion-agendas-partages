@@ -73,4 +73,4 @@ La ressource Location représente un lieu qui peut être réservé pour un rende
 Les ressources Organization et HealthcareService représentent respectivement un établissement (entité
 géographique) et une organisation interne qui y est proposée. Pour ce volet, les profils français de ces ressources, FrOrganization et FrHealthcareService du package FrCore, définis par HL7 France doivent être utilisés.
 
-La prise de rendez-vous peut s’effectuer avec une organisation interne qui peut donc disposer d’un agenda. Les attributs de l’établissement servent essentiellement à l’identification de l’organisation interne et à la recherche deressources.
+La prise de rendez-vous peut s’effectuer avec une organisation interne qui peut donc disposer d’un agenda. Les attributs de l’établissement servent essentiellement à l’identification de l’organisation interne et à la recherche de ressources.
