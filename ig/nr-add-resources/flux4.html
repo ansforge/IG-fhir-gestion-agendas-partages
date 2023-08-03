@@ -136,7 +136,7 @@
         <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
       </li>
       <li>
-        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
+        <a target="_blank" href="https://esante.gouv.fr">Site de l&apos;ANS </a>
       </li>
     </ul>
   </li>
@@ -230,10 +230,16 @@ Si la ressource est déjà identifiée, les critères de recherche se rapportero
 <p>Exemple d’une requête :
 La requête ci-dessous représente une recherche de disponibilités d’un médecin généraliste (code SM54 de la TRE R38 de l’ensemble des spécialités ordinales) à Paris entre le 02/01/2019 et le 06/01/2019. La réponse doit retourner les ressources Slot répondant à ces critères de recherche ainsi que la ressource Schedule et PractitionerRole (actor) qui y sont liés.</p>
 
-<p>Get example.com/base/Slot?_include=Slot:schedule&amp;_include=Schedule:actor&amp;start=ge2019-01-
-02&amp;start=le2019-01-06&amp;schedule.actor:PractitionerRole.specialty=
-https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-
-SpecialiteOrdinale|SM54&amp;schedule.actor:PractitionerRole.address=Paris&amp;status=free</p>
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>Get example.com/base/Slot?_include=Slot:schedule&amp;_include=Schedule:actor&amp;start=ge2019-01-02&amp;start=le2019-01-06&amp;schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</td>
+        <td>SM54&amp;schedule.actor:PractitionerRole.address=Paris&amp;status=free</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
 
 <h4 id="flux-5a---réponse-à-la-demande-de-consultation-de-disponibilités">Flux 5a - Réponse à la demande de consultation de disponibilités</h4>
 
@@ -250,16 +256,150 @@ Consultez la documentation du standard sur la gestion des erreurs liées à la r
 
 <p>Ce flux permet de rechercher des rendez-vous dans l’agenda d’une ressource donnée. Les critères de recherche peuvent se rapporter aux détails du rendez-vous et/ou aux identifiants des ressources qui y participent.</p>
 
-<p>Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
-<!-- TODO tableau à ajouter ? Ou non ? --></p>
+<p>Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.</p>
+
+<p>Le flux 4a permet de demander les créneaux de disponibilité, représentés par les ressources Slot, d’une ou de plusieurs ressources. Cela se fait à travers la requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.</p>
+
+<p>Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference43.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramètre de recherche</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>identifier : token</td>
+      <td>Identifiant du créneau</td>
+    </tr>
+    <tr>
+      <td>status : token</td>
+      <td>Statut du créneau</td>
+    </tr>
+    <tr>
+      <td>start : date</td>
+      <td>Ce paramètre, peut être accompagné de modifier (lt, le, gt, ge…) pour modifier l’intervalle de recherche (cf documentation FHIR Search).</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Patient.identifier : token</td>
+      <td>Identifiant du patient (matricule INS ou autre identifiant)</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Patient.family : string</td>
+      <td>Nom du patient</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Patient.given : string</td>
+      <td>Prénom du patient</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Practitioner.identifier : token</td>
+      <td>Identifiant du professionnel</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:PractitionerRole.name : string</td>
+      <td>Recherche sur le nom ou prénom d’exercice du professionnel, cf IG Annuaire</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:PractitionerRole.role: token</td>
+      <td>Profession du professionnel</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:PractitionerRole.specialty : token</td>
+      <td>Spécialité du professionnel</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:PractitionerRole.location.address : string ou schedule.actor:PractitionerRole.location.near : special</td>
+      <td>Adresse du lieu d’exercice du professionnel</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:PractitionerRole.telecom : token</td>
+      <td>Télécommunication du professionnel</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:RelatedPerson.identifier : token</td>
+      <td>Identifiant du contact</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:RelatedPerson.address : string</td>
+      <td> Adresse du contact</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:RelatedPerson.telecom: token</td>
+      <td>Télécommunication du contact</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:RelatedPerson.name : string</td>
+      <td>Nom du contact</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:RelatedPerson.name : string</td>
+      <td>Prénom du contact</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Location.name : string</td>
+      <td>Nom du lieu</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Location.identifier : token</td>
+      <td>Identifiant du lieu</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Location.address : string ou schedule.actor:Location.near : special</td>
+      <td>Adresse du lieu du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Device.identifier : token</td>
+      <td>Identifiant de l’équipement</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Device.type : token</td>
+      <td>Type de l’équipement</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Device.device-name : string</td>
+      <td>Nom de l’équipement</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Device.model : string</td>
+      <td>Modèle de l’équipement</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.identifier : token</td>
+      <td> Identifiant de l’organisation interne (service de soins)</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.name : string</td>
+      <td> Nom de l’organisation interne (service de soins)</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.service-type : token</td>
+      <td> Type de service de l’organisation interne (service de soins)</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.organization.identifier : token </td>
+      <td>Identifiant de l’établissement de rattachement de l’organisation interne (service de soins)</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.organization.name : string</td>
+      <td>Nom de l’établissement de rattachement de l’organisation interne (service de soins) </td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.organization.address : string</td>
+      <td>Adresse de l’établissement de rattachement de l’organisation interne (service de soins)</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="flux-5b---réponse-à-la-demande-de-consultation-de-rendez-vous">Flux 5b - Réponse à la demande de consultation de rendez-vous</h4>
 
 <p>Ce flux constitue la réponse au flux 4b de recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande.</p>
 
-<p>Le flux 5b constitue la réponse du gestionnaire d’agenda à cette requête. Il s’agit d’une réponse HTTP 200 ok avec comme contenu une ressource Bundle de type searchset contenant l’ensemble des Appointment répondant aux critères de recherche envoyés dans la requête et représentant les rendez-vous de la ressource demandée ainsi que toute ressource liée demandée. Un profil spécifique est créé pour ce volet et nommé GAP_BundleResultatReponseADemandeConsultationRDV.
-<!-- TODO changer nom -->
-Consultez la documentation du standard sur la gestion des erreurs47 liées à la recherche.</p>
+<p>Le flux 5b constitue la réponse du gestionnaire d’agenda à cette requête. Il s’agit d’une réponse HTTP 200 ok avec comme contenu une ressource Bundle de type searchset contenant l’ensemble des Appointment répondant aux critères de recherche envoyés dans la requête et représentant les rendez-vous de la ressource demandée ainsi que toute ressource liée demandée. Un profil spécifique est créé pour ce volet et nommé GAP_BundleResultatReponseADemandeConsultationRDV.</p>
+
+<p>Consultez la documentation du standard sur la gestion des erreurs liées à la recherche.</p>
 
 
 
@@ -308,7 +448,7 @@ Consultez la documentation du standard sur la gestion des erreurs47 liées à la
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 3, 2023 07:49+0000">2023-08-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 3, 2023 09:48+0000">2023-08-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
