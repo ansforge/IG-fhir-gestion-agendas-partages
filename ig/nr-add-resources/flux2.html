@@ -246,7 +246,7 @@ FrAppointment du package FrCore, doit être utilisé.</p>
 
 <p>L’élément status porte le statut du rendez-vous et doit être mis jour à chaque étape du cycle de vie d’un rendez-vous.</p>
 
-<p>Lors d’une demande de rendez-vous suivant une consultation de disponibilités, la ressource Appointment est liée à une ou plusieurs ressources Slot, elles-mêmes liées à une ressource Schedule représentant l’agenda d’un ou de plusieurs acteurs. Dans d’autres cas d’usage, la ressource Appointment peut ne pas être liée à un créneau d’un agenda et référencer directement les ressources représentant les acteurs participant au rendez-vous au niveau de Appointmant.participant.actor. L’extension appointmentOperator référence quant à elle la personne ou l’entité qui demande la création ou la mise à jour du rendez-vous.</p>
+<p>Lors d’une demande de rendez-vous suivant une consultation de disponibilités, la ressource Appointment est liée à une ou plusieurs ressources Slot, elles-mêmes liées à une ressource Schedule représentant l’agenda d’un ou de plusieurs acteurs. Dans d’autres cas d’usage, la ressource Appointment peut ne pas être liée à un créneau d’un agenda et référencer directement les ressources représentant les acteurs participant au rendez-vous au niveau de Appointment.participant.actor. L’extension appointmentOperator référence quant à elle la personne ou l’entité qui demande la création ou la mise à jour du rendez-vous.</p>
 
 <p>Le jeu de valeurs de l’élément serviceType devrait être le même que celui de l’élément serviceType de la ou des ressources Slot auxquelles est rattaché le rendez-vous. Selon le type de service demandé, la durée du rendez-vous doit être cohérente, ou directement déduite, de la durée du type de service défini dans l’extension serviceTypeDuration de la ressource Schedule.</p>
 
@@ -332,7 +332,7 @@ Par exemple, plusieurs professionnels peuvent avoir un agenda commun.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 3, 2023 15:16+0000">2023-08-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 3, 2023 15:20+0000">2023-08-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
