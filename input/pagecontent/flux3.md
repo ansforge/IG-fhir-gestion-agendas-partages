@@ -1,5 +1,9 @@
 ### Les flux de gestion des disponibilités 
 
+<div class="figure" style="width:65%;">
+    <img src="flux3.png" alt="Flux3" title="Flux3">
+</div>
+
 Ces trois flux correspondent à une requête HTTP PUT/PATCH pour ajouter, mettre à jour ou supprimer une disponibilité à un agenda existant. Le support des requêtes HTTP PATCH ne constitue pas une exigence de ces spécifications d’interopérabilité. Le gestionnaire d’agenda peut proposer le support de ce type de requêtes pour des raisons de volumétrie des flux par exemple.
 
 Les flux de création, de mise à jour et de suppression d’une disponibilité sont opérés par les requêtes HTTP PUT ou PATCH sur la ressource Schedule représentant l’agenda pour créer, modifier ou supprimer une occurrence de l’extension availabilityTime. Ces requêtes sont envoyées au gestionnaire d’agendas.
