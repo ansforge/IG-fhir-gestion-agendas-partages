@@ -4,6 +4,7 @@ Id: gap-bundle-reponse-demande-consult-dispo
 Title: "GAP_BundleResultatReponseADemandeConsultationDisponibilites"
 Description: "Il s’agit de la réponse à la demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, elle devra contenir les informations sur le temps libre ou occupé de chacune des ressources. La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande. Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris"
 * type = #searchset
+
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open

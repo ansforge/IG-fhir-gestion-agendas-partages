@@ -16,9 +16,9 @@ Le système gestionnaire d’agenda gère les disponibilités et les rendez-vous
 
 Dans ce scénario le système initiateur peut gérer, par délégation du gestionnaire d’agendas, les disponibilités des ressources et la prise de rendez-vous. Des échanges fréquents de synchronisation des disponibilités et des rendez-vous entre ces acteurs doivent donc être optimisés notamment en termes de volumétrie.
 
-#### Profils utilisés
+### Profils utilisés
 
-Le tableau ci-après spécifie les profils utilisés pour les ressources et types de données mentionnés dans ce document. Pour les ressources et types de données non mentionnés dans ce tableau, le profil à utiliser est celui défini par HL7 FHIR.
+Le tableau ci-après spécifie les profils utilisés pour les ressources mentionnés dans ce document. Pour les ressources non mentionnés dans ce tableau, le profil à utiliser est celui défini par HL7 FHIR.
 
 | **Ressource** | **Profil** | **Package** | **Description** |
 | ----- | ----- | ----- |

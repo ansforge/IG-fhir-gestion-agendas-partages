@@ -17,35 +17,7 @@ Ce flux permet de demander une vue sur le temps libre ou occupé d’une ou de p
 Ce flux est donc un flux de recherche sur les ressources de type Slot avec status=free, correspondants aux créneaux de disponibilités.
 
 Le flux 4a permet de demander les créneaux de disponibilité, représentés par les ressources Slot, d’une ou de plusieurs ressources. Cela se fait à travers la requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
-Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference43.
-
-<!-- TODO tableau à ajouter ? Ou non ? -->
-
-Exemple d’une requête :
-La requête ci-dessous représente une recherche de disponibilités d’un médecin généraliste (code SM54 de la TRE R38 de l’ensemble des spécialités ordinales) à Paris entre le 02/01/2019 et le 06/01/2019. La réponse doit retourner les ressources Slot répondant à ces critères de recherche ainsi que la ressource Schedule et PractitionerRole (actor) qui y sont liés.
-
-> Get example.com/base/Slot?_include=Slot:schedule&_include=Schedule:actor&start=ge2019-01-02&start=le2019-01-06&schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale|SM54&schedule.actor:PractitionerRole.address=Paris&status=free
-
-#### Flux 5a - Réponse à la demande de consultation de disponibilités
-
-Ce flux constitue la réponse au flux 5a de demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, il devra contenir les informations sur le temps libre ou occupé de chacune des ressources.
-
-La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande.
-
-Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris.
-
-Le flux 5a constitue la réponse du gestionnaire d’agenda à cette requête. Il s’agit d’une réponse HTTP 200 ok avec comme corps une ressource Bundle de type searchset contenant l’ensemble des Slot répondant aux critères de recherche envoyés et toute autre ressource référencée ayant été demandée. Un profil spécifique est créé pour ce volet et nommé GAP_BundleResultatReponseADemandeConsultationDisponibilites.
-Consultez la documentation du standard sur la gestion des erreurs liées à la recherche.
-
-#### Flux 4b - Demande de consultation de rendez-vous
-
-Ce flux permet de rechercher des rendez-vous dans l’agenda d’une ressource donnée. Les critères de recherche peuvent se rapporter aux détails du rendez-vous et/ou aux identifiants des ressources qui y participent.
-
-Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
-
-Le flux 4a permet de demander les créneaux de disponibilité, représentés par les ressources Slot, d’une ou de plusieurs ressources. Cela se fait à travers la requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
-
-Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference43.
+Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference.
 
 | Paramètre de recherche | Description |
 | ----- | ----- |
@@ -79,6 +51,50 @@ Si la ressource est déjà identifiée, les critères de recherche se rapportero
 | schedule.actor:HealthcareService.organization.identifier : token | Identifiant de l’établissement de rattachement de l’organisation interne (service de soins) |
 | schedule.actor:HealthcareService.organization.name : string | Nom de l’établissement de rattachement de l’organisation interne (service de soins) |
 | schedule.actor:HealthcareService.organization.address : string | Adresse de l’établissement de rattachement de l’organisation interne (service de soins) |
+
+Exemple d’une requête :
+La requête ci-dessous représente une recherche de disponibilités d’un médecin généraliste (code SM54 de la TRE R38 de l’ensemble des spécialités ordinales) à Paris entre le 02/01/2019 et le 06/01/2019. La réponse doit retourner les ressources Slot répondant à ces critères de recherche ainsi que la ressource Schedule et PractitionerRole (actor) qui y sont liés.
+
+> Get example.com/base/Slot?_include=Slot:schedule&_include=Schedule:actor&start=ge2019-01-02&start=le2019-01-06&schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale|SM54&schedule.actor:PractitionerRole.address=Paris&status=free
+
+#### Flux 5a - Réponse à la demande de consultation de disponibilités
+
+Ce flux constitue la réponse au flux 5a de demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, il devra contenir les informations sur le temps libre ou occupé de chacune des ressources.
+
+La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande.
+
+Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris.
+
+Le flux 5a constitue la réponse du gestionnaire d’agenda à cette requête. Il s’agit d’une réponse HTTP 200 ok avec comme corps une ressource Bundle de type searchset contenant l’ensemble des Slot répondant aux critères de recherche envoyés et toute autre ressource référencée ayant été demandée. Un profil spécifique est créé pour ce volet et nommé GAP_BundleResultatReponseADemandeConsultationDisponibilites.
+Consultez la documentation du standard sur la gestion des erreurs liées à la recherche.
+
+#### Flux 4b - Demande de consultation de rendez-vous
+
+Ce flux permet de rechercher des rendez-vous dans l’agenda d’une ressource donnée. Les critères de recherche peuvent se rapporter aux détails du rendez-vous et/ou aux identifiants des ressources qui y participent.
+
+Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
+
+Le flux 4a permet de demander les créneaux de disponibilité, représentés par les ressources Slot, d’une ou de plusieurs ressources. Cela se fait à travers la requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
+
+Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference43.
+
+| Paramètre de recherche | Description |
+| ----- | ----- |
+| identifier : token | Identifiant du rendez-vous |
+| date : date | Ce paramètre, peut être accompagné de modifier (lt, le, gt, ge...) pour modifier l'intervalle de recherche (cf documentation FHIR Search). |
+| created : token | Date de création du rendez-vous |
+| service-type : token | Type de rendez-vous |
+| status : token | Statut du rendez-vous |
+| description : string | Critère portant sur l’objet et le commentaire du rendez-vous |
+| supporting-info : reference | Pièce jointe du rendez-vous |
+| priority : token | Priorité du rendez-vous |
+| actor:Patient.identifier : token ou patient.identifier : token | Matricule INS ou identifiant du patient participant au rendez-vous |
+| actor:Practitioner.identifier : token ou practitioner.identifier : token | Identifiant du professionnel participant au rendez-vous |
+| actor:RelatedPerson.identifier : token | Identifiant du contact participant au rendez-vous |
+| actor:Location.identifier : token ou location.identifier : token | Identifiant du lieu du rendez-vous |
+| actor:Device.identifier : token | Identifiant de l’équipement alloué au rendez-vous |
+| actor:HealthcareService.identifier : token | Identifiant de l’organisation interne (service de soins) participant au
+rendez-vous |
 
 #### Flux 5b - Réponse à la demande de consultation de rendez-vous
 
