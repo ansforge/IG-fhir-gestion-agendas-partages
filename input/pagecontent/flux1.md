@@ -1,4 +1,4 @@
-### Les flux de gestion de ressource 
+### Les flux de gestion de ressources d'agenda
 
 <div class="figure" style="width:65%;">
     <img src="flux1.png" alt="Flux1" title="Flux1">
