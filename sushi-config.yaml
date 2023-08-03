@@ -1,6 +1,10 @@
 id: ans.fhir.fr.agenda
 canonical: https://interop.esante.gouv.fr/ig/fhir/agenda
+<<<<<<< HEAD
 name: GestionAgendaPartage
+=======
+name: Gestion d'Agenda Partagé 
+>>>>>>> main
 title: Gestion d'Agenda Partagé (GAP)
 publisher:
   name: ANS
@@ -15,14 +19,23 @@ parameters:
   shownav: 'true'
 
 dependencies:
+<<<<<<< HEAD
   ans.fhir.fr.annuaire: 1.0.0-ballot-2
   hl7.fhir.fr.core: 1.1.0
+=======
+  hl7.fhir.fr.core: 
+    uri: https://simplifier.net/packages/hl7.fhir.fr.core/1.1.0/snapshots/$download
+    version: 1.1.0
+
+
+>>>>>>> main
 
 pages:
     index.md:
         title: Accueil
     specifications_techniques.md:
         construction_des_flux.md:
+<<<<<<< HEAD
             title: Vue d'ensemble
         flux1.md:
             title: Flux 01 - Gestion ressources
@@ -36,6 +49,20 @@ pages:
             title: Flux 06 - Gestion rendez-vous
     specifications_fonctionnelles.md:
         title: Spécifications fonctionnelles
+=======
+        flux1.md:
+            title: Flux 01
+        flux2.md:
+            title: Flux 02
+        flux3.md:
+            title: Flux 03
+        flux4.md:
+            title: Flux 04
+        flux5.md:
+            title: Flux 05
+        flux6.md:
+            title: Flux 06
+>>>>>>> main
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
@@ -50,6 +77,7 @@ pages:
 menu:
     Accueil: index.html
     Description des flux:
+<<<<<<< HEAD
         Vue d'ensemble: construction_des_flux.html
         Flux 01 - Gestion ressources: flux1.html
         Flux 02 - Gestion agenda: flux2.html
@@ -57,6 +85,15 @@ menu:
         Flux 04 et 05 - Demande consultation: flux4.html
         Flux 06 - Gestion rendez-vous: flux6.html
     Spécifications fonctionnelles : specifications_fonctionnelles.html
+=======
+        Construction des flux: construction_des_flux.html
+        Flux 01: flux1.html
+        Flux 02: flux2.html
+        Flux 03: flux3.html
+        Flux 04: flux4.html
+        Flux 05: flux5.html
+        Flux 06: flux6.html
+>>>>>>> main
     Ressources de conformité: artifacts.html
     Tests:   tests.html
     Autres ressources:

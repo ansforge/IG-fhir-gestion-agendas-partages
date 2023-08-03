@@ -1,6 +1,4 @@
-
-Les spécifications de ce document concernent les flux structurés identifiés dans les spécifications fonctionnelles du
-volet, à savoir :
+Les spécifications de ce document concernent les flux structurés identifiés dans les spécifications fonctionnelles du volet, à savoir :
 
 Pour la gestion des ressources
 
