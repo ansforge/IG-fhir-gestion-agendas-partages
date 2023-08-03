@@ -39,7 +39,7 @@
     "type" : "ImplementationGuide",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda",
     "version" : "3.0.0-ballot",
-    "name" : "GestiondAgendaPartag"
+    "name" : "GestionAgendaPartage"
   },
   {
     "id" : "GAP-Appointment-created",

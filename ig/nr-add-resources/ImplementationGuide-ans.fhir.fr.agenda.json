@@ -3,14 +3,14 @@
   "id" : "ans.fhir.fr.agenda",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GestiondAgendaPartag</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GestionAgendaPartage</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda",
   "version" : "3.0.0-ballot",
-  "name" : "GestiondAgendaPartag",
+  "name" : "GestionAgendaPartage",
   "title" : "Gestion d'Agenda Partagé (GAP)",
   "status" : "draft",
-  "date" : "2023-08-03T07:00:46+00:00",
+  "date" : "2023-08-03T07:28:23+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -808,7 +808,7 @@
             "valueUrl" : "construction_des_flux.html"
           }],
           "nameUrl" : "construction_des_flux.html",
-          "title" : "Construction Des Flux",
+          "title" : "Vue d'ensemble",
           "generation" : "markdown"
         },
         {

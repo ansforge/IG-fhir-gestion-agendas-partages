@@ -1,9 +1,9 @@
 {
   "url" : "https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda",
-  "name" : "GestiondAgendaPartag",
+  "name" : "GestionAgendaPartage",
   "package-id" : "ans.fhir.fr.agenda",
   "ig-ver" : "3.0.0-ballot",
-  "date" : "Thu, 03 Aug, 2023 07:00:46 +0000",
+  "date" : "Thu, 03 Aug, 2023 07:28:23 +0000",
   "errs" : 3,
   "warnings" : 12,
   "hints" : 0,
