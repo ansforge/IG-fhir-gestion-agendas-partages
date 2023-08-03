@@ -6,7 +6,7 @@
 
 Les flux de création, de mise à jour et de suppression de ressources sont respectivement opérés par les requêtes HTTP POST, PUT et DELETE sur les ressources FHIR représentant les ressources d’agenda. Ces requêtes sont envoyées au gestionnaire de ressources qui joue le rôle d’annuaire adossé au gestionnaire d’agendas. Les flux de recherche de ressources sont hors périmètre de ce volet.
 
-#### Flux 1a - Création d'une ressource
+#### Flux 1a - Création d'une ressource d'agenda
 
 Ce flux permet la création d’une ressource. Une ressource est toute personne, lieu ou objet disposant d’un agenda dans le système de gestion d’agendas partagés. Une ressource peut représenter :
 
