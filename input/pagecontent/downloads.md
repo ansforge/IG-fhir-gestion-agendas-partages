@@ -6,7 +6,8 @@ Pour cela, il suffit de télécharger le [package.tgz](package.tgz) et l'importe
 
 Vous pourrez ensuite utiliser l'opération [$validate](https://www.hl7.org/fhir/resource-operation-validate.html) pour valider les instances de ressource contre un profil issu de cette spécification.
 
-Ensemble des ressources téléchargeables : 
+Ensemble des ressources téléchargeables :
+
 * [L'ensemble de la specification (zip)](full-ig.zip)
 * [Package (tgz)](package.tgz)
 * [JSON Définitions (zip)](definitions.json.zip)
