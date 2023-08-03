@@ -1,5 +1,4 @@
-Les spécifications fonctionnelles sont accessibles sur le site de l'ANS : (https://esante.gouv.fr/volet-gestion-dagendas-partages).
+Lien de téléchargement vers les études des normes et standards, et les spécifications fonctionnelles :
 
-Une étude des normes et standards a également été effectuée et est téléchargeable ici.
-
-* [Turtle Définitions](definitions.ttl.zip)
+* [Etude normes et standards](CI-SIS_ETUDE_NORMES_STANDARDS_GESTION_AGENDAS_PARTAGES_V1.0.pdf)
+* [Spécifications fonctionnelles](cisis-tec_specifications_fonctionnelles-gestion_agendas_partages_v2.0.pdf)
