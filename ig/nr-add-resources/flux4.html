@@ -223,44 +223,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Ce flux est donc un flux de recherche sur les ressources de type Slot avec status=free, correspondants aux créneaux de disponibilités.</p>
 
 <p>Le flux 4a permet de demander les créneaux de disponibilité, représentés par les ressources Slot, d’une ou de plusieurs ressources. Cela se fait à travers la requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
-Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference43.</p>
-
-<!-- TODO tableau à ajouter ? Ou non ? -->
-
-<p>Exemple d’une requête :
-La requête ci-dessous représente une recherche de disponibilités d’un médecin généraliste (code SM54 de la TRE R38 de l’ensemble des spécialités ordinales) à Paris entre le 02/01/2019 et le 06/01/2019. La réponse doit retourner les ressources Slot répondant à ces critères de recherche ainsi que la ressource Schedule et PractitionerRole (actor) qui y sont liés.</p>
-
-<blockquote>
-  <table>
-    <tbody>
-      <tr>
-        <td>Get example.com/base/Slot?_include=Slot:schedule&amp;_include=Schedule:actor&amp;start=ge2019-01-02&amp;start=le2019-01-06&amp;schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</td>
-        <td>SM54&amp;schedule.actor:PractitionerRole.address=Paris&amp;status=free</td>
-      </tr>
-    </tbody>
-  </table>
-</blockquote>
-
-<h4 id="flux-5a---réponse-à-la-demande-de-consultation-de-disponibilités">Flux 5a - Réponse à la demande de consultation de disponibilités</h4>
-
-<p>Ce flux constitue la réponse au flux 5a de demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, il devra contenir les informations sur le temps libre ou occupé de chacune des ressources.</p>
-
-<p>La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande.</p>
-
-<p>Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris.</p>
-
-<p>Le flux 5a constitue la réponse du gestionnaire d’agenda à cette requête. Il s’agit d’une réponse HTTP 200 ok avec comme corps une ressource Bundle de type searchset contenant l’ensemble des Slot répondant aux critères de recherche envoyés et toute autre ressource référencée ayant été demandée. Un profil spécifique est créé pour ce volet et nommé GAP_BundleResultatReponseADemandeConsultationDisponibilites.
-Consultez la documentation du standard sur la gestion des erreurs liées à la recherche.</p>
-
-<h4 id="flux-4b---demande-de-consultation-de-rendez-vous">Flux 4b - Demande de consultation de rendez-vous</h4>
-
-<p>Ce flux permet de rechercher des rendez-vous dans l’agenda d’une ressource donnée. Les critères de recherche peuvent se rapporter aux détails du rendez-vous et/ou aux identifiants des ressources qui y participent.</p>
-
-<p>Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.</p>
-
-<p>Le flux 4a permet de demander les créneaux de disponibilité, représentés par les ressources Slot, d’une ou de plusieurs ressources. Cela se fait à travers la requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.</p>
-
-<p>Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference43.</p>
+Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference.</p>
 
 <table>
   <thead>
@@ -393,6 +356,112 @@ Consultez la documentation du standard sur la gestion des erreurs liées à la r
   </tbody>
 </table>
 
+<p>Exemple d’une requête :
+La requête ci-dessous représente une recherche de disponibilités d’un médecin généraliste (code SM54 de la TRE R38 de l’ensemble des spécialités ordinales) à Paris entre le 02/01/2019 et le 06/01/2019. La réponse doit retourner les ressources Slot répondant à ces critères de recherche ainsi que la ressource Schedule et PractitionerRole (actor) qui y sont liés.</p>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>Get example.com/base/Slot?_include=Slot:schedule&amp;_include=Schedule:actor&amp;start=ge2019-01-02&amp;start=le2019-01-06&amp;schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale</td>
+        <td>SM54&amp;schedule.actor:PractitionerRole.address=Paris&amp;status=free</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h4 id="flux-5a---réponse-à-la-demande-de-consultation-de-disponibilités">Flux 5a - Réponse à la demande de consultation de disponibilités</h4>
+
+<p>Ce flux constitue la réponse au flux 5a de demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, il devra contenir les informations sur le temps libre ou occupé de chacune des ressources.</p>
+
+<p>La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande.</p>
+
+<p>Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris.</p>
+
+<p>Le flux 5a constitue la réponse du gestionnaire d’agenda à cette requête. Il s’agit d’une réponse HTTP 200 ok avec comme corps une ressource Bundle de type searchset contenant l’ensemble des Slot répondant aux critères de recherche envoyés et toute autre ressource référencée ayant été demandée. Un profil spécifique est créé pour ce volet et nommé GAP_BundleResultatReponseADemandeConsultationDisponibilites.
+Consultez la documentation du standard sur la gestion des erreurs liées à la recherche.</p>
+
+<h4 id="flux-4b---demande-de-consultation-de-rendez-vous">Flux 4b - Demande de consultation de rendez-vous</h4>
+
+<p>Ce flux permet de rechercher des rendez-vous dans l’agenda d’une ressource donnée. Les critères de recherche peuvent se rapporter aux détails du rendez-vous et/ou aux identifiants des ressources qui y participent.</p>
+
+<p>Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.</p>
+
+<p>Le flux 4a permet de demander les créneaux de disponibilité, représentés par les ressources Slot, d’une ou de plusieurs ressources. Cela se fait à travers la requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.</p>
+
+<p>Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference43.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramètre de recherche</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>identifier : token</td>
+      <td>Identifiant du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>date : date</td>
+      <td>Ce paramètre, peut être accompagné de modifier (lt, le, gt, ge…) pour modifier l’intervalle de recherche (cf documentation FHIR Search).</td>
+    </tr>
+    <tr>
+      <td>created : token</td>
+      <td>Date de création du rendez-vous </td>
+    </tr>
+    <tr>
+      <td>service-type : token</td>
+      <td>Type de rendez-vous</td>
+    </tr>
+    <tr>
+      <td>status : token</td>
+      <td> Statut du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>description : string</td>
+      <td> Critère portant sur l’objet et le commentaire du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>supporting-info : reference</td>
+      <td>Pièce jointe du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>priority : token</td>
+      <td>Priorité du rendez-vous </td>
+    </tr>
+    <tr>
+      <td>actor:Patient.identifier : token ou patient.identifier : token</td>
+      <td>Matricule INS ou identifiant du patient participant au rendez-vous </td>
+    </tr>
+    <tr>
+      <td>actor:Practitioner.identifier : token ou practitioner.identifier : token</td>
+      <td>Identifiant du professionnel participant au rendez-vous</td>
+    </tr>
+    <tr>
+      <td>actor:RelatedPerson.identifier : token</td>
+      <td>Identifiant du contact participant au rendez-vous</td>
+    </tr>
+    <tr>
+      <td>actor:Location.identifier : token ou location.identifier : token</td>
+      <td>Identifiant du lieu du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>actor:Device.identifier : token</td>
+      <td>Identifiant de l’équipement alloué au rendez-vous</td>
+    </tr>
+    <tr>
+      <td>actor:HealthcareService.identifier : token</td>
+      <td> Identifiant de l’organisation interne (service de soins) participant au</td>
+    </tr>
+    <tr>
+      <td>rendez-vous</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h4 id="flux-5b---réponse-à-la-demande-de-consultation-de-rendez-vous">Flux 5b - Réponse à la demande de consultation de rendez-vous</h4>
 
 <p>Ce flux constitue la réponse au flux 4b de recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande.</p>
@@ -448,7 +517,7 @@ Consultez la documentation du standard sur la gestion des erreurs liées à la r
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 3, 2023 09:48+0000">2023-08-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 3, 2023 14:29+0000">2023-08-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
