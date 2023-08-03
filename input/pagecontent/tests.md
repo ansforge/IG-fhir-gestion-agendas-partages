@@ -18,10 +18,9 @@ Il est notamment utilisé lors des Projectathons organisés par l’ANS pour les
 
 #### HAPI FHIR
 
-Cette methode est particulièrement utile lors de la phase de modélisation de nouveaux profils, ou lors de la création d'exemples.
+Ce serveur FHIR open source est particulièrement utile pour importer des profils et tester la validité des ressources générées contre les profils..
 
-Vous pouvez retouver une description complète via le lien ci-dessous : 
--[https://github.com/ansforge/FIG_ans-ig-sample/wiki/Valider-une-ressource-contre-un-profil](https://github.com/ansforge/FIG_ans-ig-sample/wiki/Valider-une-ressource-contre-un-profil)
+Plus d'information sur la validation dans la documentation des guides d'implémentation : [https://interop.esante.gouv.fr/ig/documentation/](https://interop.esante.gouv.fr/ig/documentation/)
 
 ### Projectathon
 
