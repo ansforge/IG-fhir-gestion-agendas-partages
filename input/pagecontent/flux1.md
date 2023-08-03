@@ -21,13 +21,13 @@ Une ressource représentant une personne peut être étendue à un lieu. Par exe
 
 Ce flux permet donc l’envoi des détails d’une ressource au gestionnaire de ressources. Il véhicule les attributs des classes d’objet qui correspondent aux ressources métier.
 
-Ce flux correspond à une requête HTTP POST d'une des ressources indiquées ci-dessous.
+Ce flux correspond à une requête HTTP POST d'une des ressources d'agenda indiquées ci-dessous.
 
 #### Flux 1b - Mise à jour d'une ressource
 
 Ce flux permet la mise à jour d’une ressource. Son contenu est similaire à celui du flux 1a de création de ressource.
 
-Ce flux correpsond à une requête HTTP PUT d'une des ressources indiquées ci-dessous.
+Ce flux correpsond à une requête HTTP PUT d'une des ressources d'agenda indiquées ci-dessous.
 
 #### Flux 1c - Suppression d'une ressource
 
@@ -35,7 +35,7 @@ Ce flux permet de supprimer une ressource.
 
 A noter que dans cette spécification ne sont pas décrites les règles de contrôle devant être réalisées par le gestionnaire suite à la demande de suppression. Par exemple, la suppression de la ressource entraine la suppression des agendas qui lui sont liés, uniquement s’il est l'unique propriétaire des agendas en question.
 
-Ce flux correspond à une requête HTTP DELETE d'une des ressources indiquées ci-dessous.
+Ce flux correspond à une requête HTTP DELETE d'une des ressources d'agenda indiquées ci-dessous.
 
 ### Les ressources d'agenda
 
