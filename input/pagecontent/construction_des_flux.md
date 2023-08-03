@@ -9,14 +9,14 @@ Pour la gestion des ressources
 
 Pour la gestion d’agenda
 
-* Flux 2a : CreationAgenda : Pour la création d’un agenda (un agenda étant l’ensemble des disponibilités et des rendez-vous sur une période donnée. Il peut être posséder par une ou plusieurs ressources).
+* Flux 2a : CreationAgenda : Pour la création d’un agenda (un agenda étant l’ensemble des disponibilités et des rendez-vous sur une période donnée. Il peut être posséde par une ou plusieurs ressources).
 * Flux 2b : MiseAJourAgenda : Pour la mise à jour d’un agenda.
 * Flux 2c : SuppressionAgenda : Pour la suppression d’un agenda.
 * Flux 2bis : RetourDemandeAgenda : Flux technique de réponse aux flux de gestion d’agenda.
 
 Pour la gestion des disponibilités
 
-* Flux 3a : CreationDisponibilite : Pour la création d’une plage de disponibilité sur un agenda (Une disponibilité étant une plage horaire pour laquelle la/les ressource(s) sont en capacité d'accepter des rendez-vous. Par exception, la plage de disponibilité permet de déclarer les périodes sur lesquels la ressource est indisponible).
+* Flux 3a : CreationDisponibilite : Pour la création d’une plage de disponibilité sur un agenda (Une disponibilité étant une plage horaire pour laquelle la/les ressource(s) sont en capacité d'accepter des rendez-vous. Par exception, la plage de disponibilité permet de déclarer les périodes sur lesquelless la ressource est indisponible).
 * Flux 3b : MiseAJourDisponibilite : Pour la mise à jour d’une plage de disponibilité.
 * Flux 3c : SuppressionDisponibilite : Pour la suppression d’une plage de disponibilité.
 * Flux 3bis : RetourDemandeDisponibilite : Flux technique de réponse aux flux de gestion des disponibilités.
@@ -28,7 +28,7 @@ Pour les demandes de consultation des disponibilités
 
 Pour les demandes de consultation de rendez-vous
 
-* Flux 4b : DemandeConsultationRDV : Pour demander une vue sur les rendez-vous (un rendezvous étant une rencontre prévue entre deux personnes à une heure et dans un lieu déterminé)
+* Flux 4b : DemandeConsultationRDV : Pour demander une vue sur les rendez-vous (un rendez-vous étant une rencontre prévue entre deux personnes à une heure et dans un lieu déterminé)
 * Flux 5b : ReponseDemandeConsultationRDV : Réponse au flux précédent. Peut contenir les informations sur les rendez-vous d’un agenda qui répondent aux critères de recherche.
 
 Pour la prise de rendez-vous
