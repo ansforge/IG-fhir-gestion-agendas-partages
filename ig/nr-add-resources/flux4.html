@@ -360,7 +360,7 @@ Si la ressource est déjà identifiée, les critères de recherche se rapportero
 La requête ci-dessous représente une recherche de disponibilités d’un médecin généraliste (code SM54 de la TRE R38 de l’ensemble des spécialités ordinales) à Paris entre le 02/01/2019 et le 06/01/2019. La réponse doit retourner les ressources Slot répondant à ces critères de recherche ainsi que la ressource Schedule et PractitionerRole (actor) qui y sont liés.</p>
 
 <blockquote>
-  <p>Get example.com/base/Slot?_include=Slot:schedule&amp;_include=Schedule:actor&amp;start=ge2019-01-02&amp;start=le2019-01-06&amp;schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale|SM54&amp;schedule.actor:PractitionerRole.address=Paris&amp;status=free</p>
+  <p>GET example.com/base/Slot?_include=Slot:schedule&amp;_include=Schedule:actor&amp;start=ge2019-01-02&amp;start=le2019-01-06&amp;schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale|SM54&amp;schedule.actor:PractitionerRole.address=Paris&amp;status=free</p>
 </blockquote>
 
 <h4 id="flux-5a---réponse-à-la-demande-de-consultation-de-disponibilités">Flux 5a - Réponse à la demande de consultation de disponibilités</h4>
@@ -510,7 +510,7 @@ Consultez la documentation du standard sur la gestion des erreurs liées à la r
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 3, 2023 15:36+0000">2023-08-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Aug 3, 2023 15:37+0000">2023-08-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
