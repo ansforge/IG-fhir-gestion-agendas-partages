@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "3.0.0-ballot"] ; # 
   fhir:name [ fhir:v "GAP_Appointment_priority"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2023-08-03T14:36:54+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-08-03T14:42:19+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
