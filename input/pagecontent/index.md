@@ -1,4 +1,4 @@
-<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; max-width: 790px">
+<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br>
 The purpose of this implementation guide is to allow the management of resources (people, places or objects), the management of the availability of these resources, the consultation and synchronization of calendars and the making of appointments.
 </p>
