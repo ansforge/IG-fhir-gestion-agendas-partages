@@ -8,3 +8,7 @@ Alias: $FrHealthcareService = http://interopsante.org/fhir/StructureDefinition/F
 Alias: $FrOrganization = http://interopsante.org/fhir/StructureDefinition/FrOrganization
 Alias: $FrRelatedPerson = http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson
 Alias: $FrAppointment = http://interopsante.org/fhir/StructureDefinition/FrAppointment
+
+// Examples
+Alias: $ServiceType = http://example.org/ValueSet/ServiceType
+Alias: $TRE-R38-SpecialiteOrdinale = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale
