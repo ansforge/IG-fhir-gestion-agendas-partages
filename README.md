@@ -1,45 +1,27 @@
-[WIP] Work In Progress
+[![Workflow Init](https://github.com/ansforge/IG-fhir-gestion-agenda-partage/actions/workflows/fhir-worklows.yml/badge.svg)](https://github.com/ansforge/IG-fhir-gestion-agenda-partage/actions/workflows/fhir-worklows.yml)
 
-# Description
-Ceci est exemple d'ImplementationGuide très simplifié qui servira de template pour les prochains développement d'IGs. Pour créer un nouvel IG, il suffit de forker ce document et de mettre à jour :
-* sushi-config.yaml
-* ig.ini
-* input/fsh pour indiquer vos instances, profils, extensions, exemples...
-* pagecontent pour créer la documentation en markdown.
+# Contexte
 
-Ce sample IG a été créé à partir du sample-ig fhir : https://github.com/FHIR/sample-ig.
+## Contexte métier du projet
 
-# IG publisher
+Ce guide d’implémentation a pour objet de permettre la gestion de ressources (personnes, lieux ou objets), la gestion des disponibilités de ces ressources, la consultation et la synchronisation d’agenda et la prise de rendez-vous.
 
-Après avoir créé les profil et mis à jour sushi-config, voici la démarche à suivre pour générer l'IG en html.
+## Contexte technique du projet
 
-## Prérequis : sushi, java, ruby et jekyll
+Les ressources concernées par ce guide sont : Patient, Practitioner, PractitionerRole, Location, HealthcareService, Organization, RelatedPerson, Schedule, Slot et Appointment.
 
-Sushi permet de convertir la [grammaire FSH](https://build.fhir.org/ig/HL7/fhir-shorthand/) pour générer des profils, extensions (StructureDefinition) et des exemples / instances FHIR. La prise en main est relativement facile lorsque l'on connaît bien FHIR.
-Sushi est développé en javascript sous forme de module npm. 
+# CI/CD
 
-```
-npm install -g fsh-sushi
-```
-Pour information, [GoFSH](https://github.com/FHIR/GoFSH) permet de faire la transformation inverse : transformer une StructureDefinition au format FSH.
+Les workflows associés à ce repository (.github/workflows) permettent : 
 
-Une fois ses outils installés, il faut installer les dépendances de l'IG publisher :
-Installation de [java](https://www.java.com/fr/download/help/download_options.html), [ruby](https://www.ruby-lang.org/fr/documentation/installation/) et [jekyll](https://jekyllrb.com/docs/installation/).
-
-```
-brew install ruby (sur mac)
-gem install bundler jekyll
-```
-Vous trouverez davantage d'informations sur le [confluence d'hl7](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
-
-Des difficultés pour installer ruby et jekyll peuvent survenir sur mac M1, M2: lancer le [terminal avec rosetta](https://apple.stackexchange.com/questions/428768/on-apple-m1-with-rosetta-how-to-open-entire-terminal-iterm-in-x86-64-architec) et suivre [cette procédure](https://github.com/jekyll/jekyll/issues/8576#issuecomment-798080994) permet de régler les problèmes.
-
-## Générer l'IG
-```
-bash _updatePublisher.sh // Mise à jour du publisher java
-bash _genonce.sh // Génère l'IG
-```
-
+* D'executer Sushi pour vérifier la grammaire
+* De faire les tests avec le validator_cli
+* De publier les pages : https://ansforge.github.io/IG-fhir-gestion-agenda-partage/ig/{nom de la branche}
+Exemple : [https://ansforge.github.io/IG-fhir-gestion-agenda-partage/ig/main]
 
 ## Acronymes
-FIG : FHIR Implementation Guide
+
+* IG : Implementation Guide
+* FHIR : Fast Healthcare Interoperability Resources
+* FIG : FHIR Implementation Guide
+* HL7 : Health Level Seven

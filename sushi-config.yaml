@@ -1,12 +1,12 @@
 id: ans.fhir.fr.agenda
 canonical: https://interop.esante.gouv.fr/ig/fhir/agenda
-name: Gestion d'Agenda Partagé 
+name: GestionAgendaPartage
 title: Gestion d'Agenda Partagé (GAP)
 publisher:
   name: ANS
   url: https://esante.gouv.fr
 status: draft
-version: 0.1.0
+version: 3.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: ci-build
@@ -15,55 +15,48 @@ parameters:
   shownav: 'true'
 
 dependencies:
-  hl7.fhir.fr.core: 
-    uri: https://simplifier.net/packages/hl7.fhir.fr.core/1.1.0/snapshots/$download
-    version: 1.1.0
-
-
+  ans.fhir.fr.annuaire: 1.0.0-ballot-2
+  hl7.fhir.fr.core: 1.1.0
 
 pages:
     index.md:
         title: Accueil
     specifications_techniques.md:
         construction_des_flux.md:
+            title: Vue d'ensemble
         flux1.md:
-            title: Flux 01
+            title: Flux 01 - Gestion ressources
         flux2.md:
-            title: Flux 02
+            title: Flux 02 - Gestion agenda
         flux3.md:
-            title: Flux 03
+            title: Flux 03 - Gestion disponibilités
         flux4.md:
-            title: Flux 04
-        flux5.md:
-            title: Flux 05
+            title: Flux 04 et 05 - Demande consultation
         flux6.md:
-            title: Flux 06
+            title: Flux 06 - Gestion rendez-vous
+    specifications_fonctionnelles.md:
+        title: Spécifications fonctionnelles
     autres_ressources.md:
         title: Autres Ressources
         securite.md:
             title: Sécurité
         downloads.md:
             title: Téléchargements et usages
-    tests.md:
-        title: Tests      
-    about.md:
-        title: A propos de ce guide
 
 menu:
     Accueil: index.html
     Description des flux:
-        Construction des flux: construction_des_flux.html
-        Flux 01: flux1.html
-        Flux 02: flux2.html
-        Flux 03: flux3.html
-        Flux 04: flux4.html
-        Flux 05: flux5.html
-        Flux 06: flux6.html
+        Vue d'ensemble: construction_des_flux.html
+        Flux 01 - Gestion ressources: flux1.html
+        Flux 02 - Gestion agenda: flux2.html
+        Flux 03 - Gestion disponibilités: flux3.html
+        Flux 04 et 05 - Demande consultation: flux4.html
+        Flux 06 - Gestion rendez-vous: flux6.html
+    Spécifications fonctionnelles : specifications_fonctionnelles.html
     Ressources de conformité: artifacts.html
-    Tests:   tests.html
     Autres ressources:
         Sécurité: securite.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
-        "Site de l'ANS ": new-tab https://esante.gouv.fr/
-    A propos de ce guide: about.html
+        "Site de l'ANS ": new-tab https://esante.gouv.fr
+    Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
