@@ -4,23 +4,21 @@ Le README ci-dessous constitue un template à adapter et compléter pour chaque 
 # Contexte
 
 ## Contexte métier du projet
-[A COMPLETER : doit contenir la description fonctionnelle du projet destinée à un profil non technique]
+
+Ce guide d’implémentation a pour objet de permettre la gestion de ressources (personnes, lieux ou objets), la gestion des disponibilités de ces ressources, la consultation et la synchronisation d’agenda et la prise de rendez-vous.
 
 ## Contexte technique du projet
-[A COMPLETER : doit expliquer brièvement quelles ressources / profils sont utilisés, exemple implémentation où IG est utilisé]
+
+Les ressources concernées par ce guide sont : Patient, Practitioner, PractitionerRole, Location, HealthcareService, Organization, RelatedPerson, Schedule, Slot et Appointment.
 
 # CI/CD
+
 Les workflows associés à ce repository (.github/workflows) permettent : 
+
 * D'executer Sushi pour vérifier la grammaire
 * De faire les tests avec le validator_cli
 * De publier les pages : https://ansforge.github.io/IG-fhir-gestion-agenda-partage/ig/{nom de la branche}
-Exemple : https://ansforge.github.io/IG-fhir-gestion-agenda-partage/ig/main
-
-# Notes
-Ce repo "IG-modele" a été créé à partir du repo [sample-ig](https://github.com/FHIR/sample-ig) de l'organisation GitHub FHIR.
-
-[A COMPLETER: notes supplémentaires pour le lecteur de la spec]
-Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://docs.github.com/fr/issues) pour indiquer vos propositions d'amélioration et de correction.
+Exemple : [https://ansforge.github.io/IG-fhir-gestion-agenda-partage/ig/main]
 
 ## Acronymes
 
@@ -28,5 +26,3 @@ Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://docs.github
 * FHIR : Fast Healthcare Interoperability Resources
 * FIG : FHIR Implementation Guide
 * HL7 : Health Level Seven
-
-[A COMPLETER : acronymes utilisés dans le cadre de ce projet]
