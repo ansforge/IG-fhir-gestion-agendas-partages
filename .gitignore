@@ -28,6 +28,7 @@ Thumbs.db
 # Microsoft Office temp files #
 ###############################
 ~$*.xlsx
+~$*.docx
 input-cache/txcache/all-systems.cache
 input-cache/txcache/http___cancerstaging.org.cache
 input-cache/txcache/http___varnomen.hgvs.org.cache
