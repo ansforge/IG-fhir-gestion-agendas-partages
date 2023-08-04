@@ -10,14 +10,14 @@
   fhir:id [ fhir:v "ans.fhir.fr.agenda"] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GestiondAgendaPartag</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda</pre></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GestionAgendaPartage</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda</pre></div>"
   ] ; # 
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
-  fhir:name [ fhir:v "GestiondAgendaPartag"] ; # 
+  fhir:version [ fhir:v "3.0.0-ballot"] ; # 
+  fhir:name [ fhir:v "GestionAgendaPartage"] ; # 
   fhir:title [ fhir:v "Gestion d'Agenda Partagé (GAP)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-04-13T12:41:18+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-08-04T14:07:22+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -42,10 +42,30 @@
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
      fhir:version [ fhir:v "5.0.0" ]
   ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:version [ fhir:v "1.0.0" ]
+  ] [
+     fhir:id [ fhir:v "ans_fhir_fr_annuaire" ] ;
+     fhir:uri [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire>
+     ] ;
+     fhir:packageId [ fhir:v "ans.fhir.fr.annuaire" ] ;
+     fhir:version [ fhir:v "1.0.0-ballot-2" ]
+  ] [
      fhir:id [ fhir:v "hl7_fhir_fr_core" ] ;
      fhir:uri [
-       fhir:v "https://simplifier.net/packages/hl7.fhir.fr.core/1.1.0/snapshots/$download"^^xsd:anyURI ;
-       fhir:link <https://simplifier.net/packages/hl7.fhir.fr.core/1.1.0/snapshots/$download>
+       fhir:v "http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core"^^xsd:anyURI ;
+       fhir:link <http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core>
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
      fhir:version [ fhir:v "1.1.0" ]
@@ -277,6 +297,9 @@
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.fhir.uv.tools#current" ]
+     ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "copyrightyear" ]
@@ -505,30 +528,204 @@
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [ fhir:v "Schedule" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/fr-patient> ;
-         fhir:reference [ fhir:v "StructureDefinition/fr-patient" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/Schedule/example> ;
+         fhir:reference [ fhir:v "Schedule/example" ]
        ] ;
-       fhir:name [ fhir:v "Patient français" ] ;
-       fhir:description [ fhir:v "Description du patient français" ] ;
+       fhir:name [ fhir:v "example-fr-schedule" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Slot" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/Slot/example> ;
+         fhir:reference [ fhir:v "Slot/example" ]
+       ] ;
+       fhir:name [ fhir:v "example-frslot" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Appointment" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/Appointment/example-req-appointment> ;
+         fhir:reference [ fhir:v "Appointment/example-req-appointment" ]
+       ] ;
+       fhir:name [ fhir:v "example-req-appointment" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SearchParameter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Appointment-created> ;
+         fhir:reference [ fhir:v "SearchParameter/GAP-Appointment-created" ]
+       ] ;
+       fhir:name [ fhir:v "GAP-Appointment-created" ] ;
+       fhir:description [ fhir:v "Date that this appointment was initially created" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
+         fhir:value [ fhir:v "SearchParameter" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/Patient/frpatient-exemple> ;
-         fhir:reference [ fhir:v "Patient/frpatient-exemple" ]
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Appointment-description> ;
+         fhir:reference [ fhir:v "SearchParameter/GAP-Appointment-description" ]
        ] ;
-       fhir:name [ fhir:v "frpatient-exemple" ] ;
-       fhir:description [ fhir:v "Exemple d'un patient français" ] ;
-       fhir:example [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/fr-patient"^^xsd:anyURI ;
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/fr-patient>
-       ]
+       fhir:name [ fhir:v "GAP-Appointment-description" ] ;
+       fhir:description [ fhir:v "Comment or title of the appointment" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SearchParameter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Appointment-earliestStart> ;
+         fhir:reference [ fhir:v "SearchParameter/GAP-Appointment-earliestStart" ]
+       ] ;
+       fhir:name [ fhir:v "GAP-Appointment-earliestStart" ] ;
+       fhir:description [ fhir:v "Earliest start of an appointment" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SearchParameter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Appointment-latestStart> ;
+         fhir:reference [ fhir:v "SearchParameter/GAP-Appointment-latestStart" ]
+       ] ;
+       fhir:name [ fhir:v "GAP-Appointment-latestStart" ] ;
+       fhir:description [ fhir:v "latest start of an appointment" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SearchParameter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Appointment-priority> ;
+         fhir:reference [ fhir:v "SearchParameter/GAP-Appointment-priority" ]
+       ] ;
+       fhir:name [ fhir:v "GAP-Appointment-priority" ] ;
+       fhir:description [ fhir:v "Priority of the appointment" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/GAP-Consommateur> ;
+         fhir:reference [ fhir:v "CapabilityStatement/GAP-Consommateur" ]
+       ] ;
+       fhir:name [ fhir:v "GAP-Consommateur" ] ;
+       fhir:description [ fhir:v "Un consommateur consulte l’agenda d’une ressource gérée par un gestionnaire d’agenda. La consultation de l’agenda indique les éventuelles plages de disponibilité déclarées pour la  \nressource ainsi que ses indisponibilités et les détails des rendez-vous existants (types, durées, etc., cf. section 2.3.3). Le consommateur peut être la personne prise en charge, un  \nprofessionnel intervenant dans la prise en charge d’une personne ou tout autre tiers autorisé à consulter l’agenda de la ressource concernée." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/Gap-Declarant> ;
+         fhir:reference [ fhir:v "CapabilityStatement/Gap-Declarant" ]
+       ] ;
+       fhir:name [ fhir:v "Gap-Declarant" ] ;
+       fhir:description [ fhir:v "Le déclarant peut initier une demande de création d’une nouvelle ressource à un gestionnaire de ressource ou d’une plage de disponibilité d’une ressource à un gestionnaire d’agenda.\nIl peut également modifier ou supprimer une ressource ou une plage de disponibilité d’une ressource existante. \nLe déclarant peut être soit le responsable de la ressource, soit un gestionnaire d’agenda ou un gestionnaire de ressources auprès duquel une ressource ou une plage de disponibilité d’une ressource a été déclarée et qui diffuse cette information à un autre gestionnaire d’agenda, ou à un autre gestionnaire de ressources." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/GAP-DeclarantRDV> ;
+         fhir:reference [ fhir:v "CapabilityStatement/GAP-DeclarantRDV" ]
+       ] ;
+       fhir:name [ fhir:v "GAP-DeclarantRDV" ] ;
+       fhir:description [ fhir:v "Un déclarant de rendez-vous fait une demande auprès d’un gestionnaire d’agenda pour créer (demande d'un nouveau rendez-vous ou déclaration d'un rendez-vous pris) ou mettre à jour un rendez-vous" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/GAP-GestionnaireAgenda> ;
+         fhir:reference [ fhir:v "CapabilityStatement/GAP-GestionnaireAgenda" ]
+       ] ;
+       fhir:name [ fhir:v "GAP-GestionnaireAgenda" ] ;
+       fhir:description [ fhir:v "Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/GAP-GestionnaireRessources> ;
+         fhir:reference [ fhir:v "CapabilityStatement/GAP-GestionnaireRessources" ]
+       ] ;
+       fhir:name [ fhir:v "GAP-GestionnaireRessources" ] ;
+       fhir:description [ fhir:v "Le gestionnaire de ressources gère les demandes de gestion de ressources (lieu,   équipement, personne prise en charge, professionnel, etc.)." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SearchParameter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Slot-earliestStart> ;
+         fhir:reference [ fhir:v "SearchParameter/GAP-Slot-earliestStart" ]
+       ] ;
+       fhir:name [ fhir:v "GAP-Slot-earliestStart" ] ;
+       fhir:description [ fhir:v "earliest start of a potential appointment" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SearchParameter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Slot-latestStart> ;
+         fhir:reference [ fhir:v "SearchParameter/GAP-Slot-latestStart" ]
+       ] ;
+       fhir:name [ fhir:v "GAP-Slot-latestStart" ] ;
+       fhir:description [ fhir:v "latest start of a potential appointment" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-bundle-reponse-demande-consult-dispo> ;
+         fhir:reference [ fhir:v "StructureDefinition/gap-bundle-reponse-demande-consult-dispo" ]
+       ] ;
+       fhir:name [ fhir:v "GAP_BundleResultatReponseADemandeConsultationDisponibilites" ] ;
+       fhir:description [ fhir:v "Il s’agit de la réponse à la demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, elle devra contenir les informations sur le temps libre ou occupé de chacune des ressources. La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande. Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-bundle-reponse-demande-consult-rdv> ;
+         fhir:reference [ fhir:v "StructureDefinition/gap-bundle-reponse-demande-consult-rdv" ]
+       ] ;
+       fhir:name [ fhir:v "GAP_BundleResultatReponseADemandeConsultationRDV" ] ;
+       fhir:description [ fhir:v "Il s’agit du flux de réponse à la recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] ) ;
      fhir:page [
        fhir:extension ( [
@@ -560,7 +757,7 @@
              fhir:value [ fhir:v "construction_des_flux.html"^^xsd:anyURI ]
            ] ) ;
            fhir:name [ fhir:v "construction_des_flux.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Construction Des Flux" ] ;
+           fhir:title [ fhir:v "Vue d'ensemble" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
@@ -568,7 +765,7 @@
              fhir:value [ fhir:v "flux1.html"^^xsd:anyURI ]
            ] ) ;
            fhir:name [ fhir:v "flux1.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Flux 01" ] ;
+           fhir:title [ fhir:v "Flux 01 - Gestion ressources" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
@@ -576,7 +773,7 @@
              fhir:value [ fhir:v "flux2.html"^^xsd:anyURI ]
            ] ) ;
            fhir:name [ fhir:v "flux2.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Flux 02" ] ;
+           fhir:title [ fhir:v "Flux 02 - Gestion agenda" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
@@ -584,7 +781,7 @@
              fhir:value [ fhir:v "flux3.html"^^xsd:anyURI ]
            ] ) ;
            fhir:name [ fhir:v "flux3.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Flux 03" ] ;
+           fhir:title [ fhir:v "Flux 03 - Gestion disponibilités" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
@@ -592,15 +789,7 @@
              fhir:value [ fhir:v "flux4.html"^^xsd:anyURI ]
            ] ) ;
            fhir:name [ fhir:v "flux4.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Flux 04" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "flux5.html"^^xsd:anyURI ]
-           ] ) ;
-           fhir:name [ fhir:v "flux5.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Flux 05" ] ;
+           fhir:title [ fhir:v "Flux 04 et 05 - Demande consultation" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
@@ -608,9 +797,17 @@
              fhir:value [ fhir:v "flux6.html"^^xsd:anyURI ]
            ] ) ;
            fhir:name [ fhir:v "flux6.html"^^xsd:anyURI ] ;
-           fhir:title [ fhir:v "Flux 06" ] ;
+           fhir:title [ fhir:v "Flux 06 - Gestion rendez-vous" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "specifications_fonctionnelles.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "specifications_fonctionnelles.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Spécifications fonctionnelles" ] ;
+         fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
@@ -636,22 +833,6 @@
            fhir:title [ fhir:v "Téléchargements et usages" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "tests.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "tests.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Tests" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "about.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "about.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "A propos de ce guide" ] ;
-         fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;
      fhir:parameter ( [

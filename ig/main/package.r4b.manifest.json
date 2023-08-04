@@ -1,5 +1,5 @@
 {
-  "version" : "0.1.0",
-  "date" : "20230413124042",
+  "version" : "3.0.0-ballot",
+  "date" : "20230804140638",
   "name" : "ans.fhir.fr.agenda.r4b"
 }

@@ -1,2 +1,312 @@
-<html><head><title>Terminology Server Log</title></head><body><h2>Terminology Server Log</h2>
-</head></html>
+<html><head><title>Terminology Server Log</title></head><body><h2>Terminology Server Log</h2><pre>
+
+</pre><hr/>
+<a name="l1"> </a><h3>1</h3>
+<pre>
+Request: 
+
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://terminology.interopsante.org/CodeSystem/v2-3315","code":"free"}},{"name":"displayLanguage","valueString":"en-US"},{"name":"displayLanguage","valueString":"en"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"profile","resource":{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"}]}}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:584
+content-type:application/fhir+json
+date:Fri, 04 Aug 2023 14:07:55 GMT
+last-modified:Fri, 04 Aug 2023 14:07:55 GMT
+pragma:no-cache
+server:nginx
+x-request-id:16-2186008
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "x-caused-by-unknown-system","valueUri" : "http://terminology.interopsante.org/CodeSystem/v2-3315"},{"name" : "message","valueString" : "The CodeSystem http://terminology.interopsante.org/CodeSystem/v2-3315 is unknown"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"severity" : "error","code" : "not-found","details" : {"text" : "The CodeSystem http://terminology.interopsante.org/CodeSystem/v2-3315 is unknown"},"location" : ["Coding.system"]}]}}]}
+
+</pre><hr/>
+<a name="l2"> </a><h3>2</h3>
+<pre>
+Request: 
+
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://unitsofmeasure.org","code":"min"}},{"name":"displayLanguage","valueString":"en-US"},{"name":"displayLanguage","valueString":"en"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"profile","resource":{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"}]}}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:276
+content-type:application/fhir+json
+date:Fri, 04 Aug 2023 14:07:55 GMT
+last-modified:Fri, 04 Aug 2023 14:07:55 GMT
+pragma:no-cache
+server:nginx
+x-request-id:16-2186009
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : true},{"name" : "system","valueUri" : "http://unitsofmeasure.org"},{"name" : "code","valueCode" : "min"},{"name" : "version","valueString" : "2.0.1"},{"name" : "display","valueString" : "min"}]}
+
+</pre><hr/>
+<a name="l3"> </a><h3>3</h3>
+<pre>
+Request: 
+
+POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"urn:ietf:bcp:13","code":"application/fhir+xml"}},{"name":"implySystem","valueBoolean":true},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","id":"mimetypes","meta":{"lastUpdated":"2019-11-01T09:29:23.356+11:00","profile":["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]},"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-wg","valueCode":"fhir"},{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status","valueCode":"normative"},{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version","valueCode":"4.0.0"},{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm","valueInteger":5}],"url":"http://hl7.org/fhir/ValueSet/mimetypes","identifier":[{"system":"urn:ietf:rfc:3986","value":"urn:oid:2.16.840.1.113883.4.642.3.1024"}],"version":"4.0.1","name":"Mime Types","title":"MimeType","status":"active","experimental":false,"date":"2019-11-01T09:29:23+11:00","publisher":"HL7 International - FHIR-Infrastructure","contact":[{"telecom":[{"system":"url","value":"http://hl7.org/fhir"}]}],"description":"This value set includes all possible codes from BCP-13 (http://tools.ietf.org/html/bcp13)","compose":{"include":[{"system":"urn:ietf:bcp:13"}]}}},{"name":"cache-id","valueId":"de65c7f8-a0b4-4058-a1ed-617ed082aecd"},{"name":"profile","resource":{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"}]}}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:255
+content-type:application/fhir+json
+date:Fri, 04 Aug 2023 14:08:06 GMT
+last-modified:Fri, 04 Aug 2023 14:08:06 GMT
+pragma:no-cache
+server:nginx
+x-request-id:16-2186028
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : true},{"name" : "system","valueUri" : "urn:ietf:bcp:13"},{"name" : "code","valueCode" : "application/fhir+xml"},{"name" : "display","valueString" : "application/fhir+xml"}]}
+
+</pre><hr/>
+<a name="l4"> </a><h3>4</h3>
+<pre>
+Request: 
+
+POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"urn:ietf:bcp:13","code":"application/fhir+json"}},{"name":"implySystem","valueBoolean":true},{"name":"default-to-latest-version","valueBoolean":true},{"name":"url","valueUri":"http://hl7.org/fhir/ValueSet/mimetypes|4.0.1"},{"name":"cache-id","valueId":"de65c7f8-a0b4-4058-a1ed-617ed082aecd"},{"name":"profile","resource":{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"}]}}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:257
+content-type:application/fhir+json
+date:Fri, 04 Aug 2023 14:08:06 GMT
+last-modified:Fri, 04 Aug 2023 14:08:06 GMT
+pragma:no-cache
+server:nginx
+x-request-id:16-2186029
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : true},{"name" : "system","valueUri" : "urn:ietf:bcp:13"},{"name" : "code","valueCode" : "application/fhir+json"},{"name" : "display","valueString" : "application/fhir+json"}]}
+
+</pre><hr/>
+<a name="l5"> </a><h3>5</h3>
+<pre>
+Request: 
+
+POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale","code":"SM54"}},{"name":"valueSetMode","valueString":"CHECK_MEMERSHIP_ONLY"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","url":"http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty--0","version":"1.0.1","status":"active","compose":{"include":[{"system":"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"}]}}},{"name":"cache-id","valueId":"de65c7f8-a0b4-4058-a1ed-617ed082aecd"},{"name":"profile","resource":{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"}]}}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:1037
+content-type:application/fhir+json
+date:Fri, 04 Aug 2023 14:08:07 GMT
+last-modified:Fri, 04 Aug 2023 14:08:07 GMT
+pragma:no-cache
+server:nginx
+x-request-id:16-2186032
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "x-caused-by-unknown-system","valueUri" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"},{"name" : "message","valueString" : "The CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale is unknown; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty--0|1.0.1"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"severity" : "error","code" : "not-found","details" : {"text" : "The CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale is unknown"},"location" : ["Coding.system"]},{"severity" : "warning","code" : "not-found","details" : {"text" : "Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty--0|1.0.1"},"location" : ["Coding"]}]}}]}
+
+--- 1 -----------------
+Request: 
+
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://terminology.interopsante.org/CodeSystem/v2-3315","code":"free"}},{"name":"displayLanguage","valueString":"en-US"},{"name":"displayLanguage","valueString":"en"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"profile","resource":{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"}]}}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:584
+content-type:application/fhir+json
+date:Fri, 04 Aug 2023 14:07:55 GMT
+last-modified:Fri, 04 Aug 2023 14:07:55 GMT
+pragma:no-cache
+server:nginx
+x-request-id:16-2186008
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "x-caused-by-unknown-system","valueUri" : "http://terminology.interopsante.org/CodeSystem/v2-3315"},{"name" : "message","valueString" : "The CodeSystem http://terminology.interopsante.org/CodeSystem/v2-3315 is unknown"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"severity" : "error","code" : "not-found","details" : {"text" : "The CodeSystem http://terminology.interopsante.org/CodeSystem/v2-3315 is unknown"},"location" : ["Coding.system"]}]}}]}
+
+--- 2 -----------------
+Request: 
+
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://unitsofmeasure.org","code":"min"}},{"name":"displayLanguage","valueString":"en-US"},{"name":"displayLanguage","valueString":"en"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"profile","resource":{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"}]}}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:276
+content-type:application/fhir+json
+date:Fri, 04 Aug 2023 14:07:55 GMT
+last-modified:Fri, 04 Aug 2023 14:07:55 GMT
+pragma:no-cache
+server:nginx
+x-request-id:16-2186009
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : true},{"name" : "system","valueUri" : "http://unitsofmeasure.org"},{"name" : "code","valueCode" : "min"},{"name" : "version","valueString" : "2.0.1"},{"name" : "display","valueString" : "min"}]}
+
+--- 3 -----------------
+Request: 
+
+POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"urn:ietf:bcp:13","code":"application/fhir+xml"}},{"name":"implySystem","valueBoolean":true},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","id":"mimetypes","meta":{"lastUpdated":"2019-11-01T09:29:23.356+11:00","profile":["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]},"extension":[{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-wg","valueCode":"fhir"},{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status","valueCode":"normative"},{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version","valueCode":"4.0.0"},{"url":"http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm","valueInteger":5}],"url":"http://hl7.org/fhir/ValueSet/mimetypes","identifier":[{"system":"urn:ietf:rfc:3986","value":"urn:oid:2.16.840.1.113883.4.642.3.1024"}],"version":"4.0.1","name":"Mime Types","title":"MimeType","status":"active","experimental":false,"date":"2019-11-01T09:29:23+11:00","publisher":"HL7 International - FHIR-Infrastructure","contact":[{"telecom":[{"system":"url","value":"http://hl7.org/fhir"}]}],"description":"This value set includes all possible codes from BCP-13 (http://tools.ietf.org/html/bcp13)","compose":{"include":[{"system":"urn:ietf:bcp:13"}]}}},{"name":"cache-id","valueId":"de65c7f8-a0b4-4058-a1ed-617ed082aecd"},{"name":"profile","resource":{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"}]}}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:255
+content-type:application/fhir+json
+date:Fri, 04 Aug 2023 14:08:06 GMT
+last-modified:Fri, 04 Aug 2023 14:08:06 GMT
+pragma:no-cache
+server:nginx
+x-request-id:16-2186028
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : true},{"name" : "system","valueUri" : "urn:ietf:bcp:13"},{"name" : "code","valueCode" : "application/fhir+xml"},{"name" : "display","valueString" : "application/fhir+xml"}]}
+
+--- 4 -----------------
+Request: 
+
+POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"urn:ietf:bcp:13","code":"application/fhir+json"}},{"name":"implySystem","valueBoolean":true},{"name":"default-to-latest-version","valueBoolean":true},{"name":"url","valueUri":"http://hl7.org/fhir/ValueSet/mimetypes|4.0.1"},{"name":"cache-id","valueId":"de65c7f8-a0b4-4058-a1ed-617ed082aecd"},{"name":"profile","resource":{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"}]}}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:257
+content-type:application/fhir+json
+date:Fri, 04 Aug 2023 14:08:06 GMT
+last-modified:Fri, 04 Aug 2023 14:08:06 GMT
+pragma:no-cache
+server:nginx
+x-request-id:16-2186029
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : true},{"name" : "system","valueUri" : "urn:ietf:bcp:13"},{"name" : "code","valueCode" : "application/fhir+json"},{"name" : "display","valueString" : "application/fhir+json"}]}
+
+--- 5 -----------------
+Request: 
+
+POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale","code":"SM54"}},{"name":"valueSetMode","valueString":"CHECK_MEMERSHIP_ONLY"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","url":"http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty--0","version":"1.0.1","status":"active","compose":{"include":[{"system":"https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"}]}}},{"name":"cache-id","valueId":"de65c7f8-a0b4-4058-a1ed-617ed082aecd"},{"name":"profile","resource":{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"}]}}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:1037
+content-type:application/fhir+json
+date:Fri, 04 Aug 2023 14:08:07 GMT
+last-modified:Fri, 04 Aug 2023 14:08:07 GMT
+pragma:no-cache
+server:nginx
+x-request-id:16-2186032
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "x-caused-by-unknown-system","valueUri" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"},{"name" : "message","valueString" : "The CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale is unknown; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty--0|1.0.1"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"severity" : "error","code" : "not-found","details" : {"text" : "The CodeSystem https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale is unknown"},"location" : ["Coding.system"]},{"severity" : "warning","code" : "not-found","details" : {"text" : "Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty--0|1.0.1"},"location" : ["Coding"]}]}}]}
+</pre></head></html>

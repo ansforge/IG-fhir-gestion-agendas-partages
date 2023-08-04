@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ANS.FHIR.FR.AGENDA\Flux 03 - FHIR v4.0.1</title>
+    <title>ANS.FHIR.FR.AGENDA\Flux 03 - Gestion disponibilités - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -57,7 +57,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Gestion d&#39;Agenda Partagé (GAP)</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">3.0.0-ballot - ci-build
 
 
             </span>
@@ -93,33 +93,30 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="construction_des_flux.html">Construction des flux</a>
+        <a href="construction_des_flux.html">Vue d&apos;ensemble</a>
       </li>
       <li>
-        <a href="flux1.html">Flux 01</a>
+        <a href="flux1.html">Flux 01 - Gestion ressources</a>
       </li>
       <li>
-        <a href="flux2.html">Flux 02</a>
+        <a href="flux2.html">Flux 02 - Gestion agenda</a>
       </li>
       <li>
-        <a href="flux3.html">Flux 03</a>
+        <a href="flux3.html">Flux 03 - Gestion disponibilités</a>
       </li>
       <li>
-        <a href="flux4.html">Flux 04</a>
+        <a href="flux4.html">Flux 04 et 05 - Demande consultation</a>
       </li>
       <li>
-        <a href="flux5.html">Flux 05</a>
-      </li>
-      <li>
-        <a href="flux6.html">Flux 06</a>
+        <a href="flux6.html">Flux 06 - Gestion rendez-vous</a>
       </li>
     </ul>
   </li>
   <li>
-    <a href="artifacts.html">Ressources de conformité</a>
+    <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
   </li>
   <li>
-    <a href="tests.html">Tests</a>
+    <a href="artifacts.html">Ressources de conformité</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
@@ -136,12 +133,12 @@
         <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
       </li>
       <li>
-        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
+        <a target="_blank" href="https://esante.gouv.fr">Site de l&apos;ANS </a>
       </li>
     </ul>
   </li>
   <li>
-    <a href="about.html">A propos de ce guide</a>
+    <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -155,7 +152,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 03</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 03 - Gestion disponibilités</b></li>
 
           <span style="float:right;">
 
@@ -186,7 +183,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
-  <h2>Flux 03</h2>
+  <h2>Flux 03 - Gestion disponibilités</h2>
   
 
 
@@ -201,27 +198,57 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#flux-3a---création-de-disponibilités" id="markdown-toc-flux-3a---création-de-disponibilités">Flux 3a - Création de disponibilités</a></li>
-  <li><a href="#flux-3b---mise-à-jour-de-disponibilités" id="markdown-toc-flux-3b---mise-à-jour-de-disponibilités">Flux 3b - Mise à jour de disponibilités</a></li>
-  <li><a href="#flux-3c---suppression-de-disponibilités" id="markdown-toc-flux-3c---suppression-de-disponibilités">Flux 3c - Suppression de disponibilités</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<h3 id="flux-3a---création-de-disponibilités">Flux 3a - Création de disponibilités</h3>
+<h3 id="les-flux-de-gestion-des-disponibilités">Les flux de gestion des disponibilités</h3>
+
+<div class="figure" style="width:65%;">
+    <img src="flux3.png" alt="Flux3" title="Flux3" />
+</div>
+
+<p>Ces trois flux correspondent à une requête HTTP PUT/PATCH pour ajouter, mettre à jour ou supprimer une disponibilité à un agenda existant. Le support des requêtes HTTP PATCH ne constitue pas une exigence de ces spécifications d’interopérabilité. Le gestionnaire d’agenda peut proposer le support de ce type de requêtes pour des raisons de volumétrie des flux par exemple.</p>
+
+<p>Les flux de création, de mise à jour et de suppression d’une disponibilité sont opérés par les requêtes HTTP PUT ou PATCH sur la ressource Schedule représentant l’agenda pour créer, modifier ou supprimer une occurrence de l’extension availabilityTime. Ces requêtes sont envoyées au gestionnaire d’agendas.</p>
+
+<h4 id="flux-3a---création-de-disponibilités">Flux 3a - Création de disponibilités</h4>
 
 <p>Ce flux permet la création des disponibilités d’une ou d’un ensemble de ressources. Une disponibilité est une plage horaire en dehors de laquelle la ressource n’accepte pas les demandes de rendez-vous. Typiquement, une disponibilité d’un médecin de ville pourrait se résumer aux horaires d’ouverture de son cabinet. Ce flux permet donc l’envoi des détails des disponibilités d’une ressource au gestionnaire d’agenda.</p>
 
 <p>Cette notion de disponibilité est introduite par les extensions françaises de la ressource Schedule : FrSchedule.</p>
 
-<h3 id="flux-3b---mise-à-jour-de-disponibilités">Flux 3b - Mise à jour de disponibilités</h3>
+<p>Le flux 3a permet de déclarer les disponibilités d’une ressource. L’ajout des disponibilités à un agenda existant peut se faire selon deux méthodes :</p>
+
+<ul>
+  <li>Méthode HTTP PUT avec la nouvelle version de la ressource Schedule, contenant les nouvelles disponibilités (extension availabilityTime), dans le corps.</li>
+  <li>Méthode HTTP PATCH, en utilisant l’opération add, pour ajouter une nouvelle disponibilité (extension availabilityTime).
+Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas, ce dernier renvoie un code statut 200 OK.</li>
+</ul>
+
+<h4 id="flux-3b---mise-à-jour-de-disponibilités">Flux 3b - Mise à jour de disponibilités</h4>
 
 <p>Ce flux permet la mise à jour d’une disponibilité d’une ressource. Son contenu est similaire à celui du flux 3a de création de disponibilités.</p>
 
-<h3 id="flux-3c---suppression-de-disponibilités">Flux 3c - Suppression de disponibilités</h3>
+<p>Le flux 3b permet de mettre à jour les disponibilités d’une ressource. Cela peut se faire en utilisant :</p>
+
+<ul>
+  <li>La méthode HTTP PUT et en envoyant dans le corps de la requête la ressource Schedule contenant les disponibilités mises à jour.</li>
+  <li>La méthode HTTP PATCH, avec l’opération replace, pour remplacer une disponibilité (extension availabilityTime) par sa nouvelle version.
+Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas, ce dernier renvoie un code statut 200 OK.</li>
+</ul>
+
+<h4 id="flux-3c---suppression-de-disponibilités">Flux 3c - Suppression de disponibilités</h4>
 
 <p>Ce flux permet de supprimer une disponibilité d’une ressource. Il contient les identifiants de la disponibilité à supprimer.</p>
+
+<p>Le flux 3c permet de supprimer les disponibilités. Cela peut se faire de deux façons :</p>
+
+<ul>
+  <li>Méthode HTTP PUT pour envoyer une nouvelle version de la ressource Schedule où les disponibilités en question ont été supprimées.</li>
+  <li>Méthode HTTP PATCH, en utilisant l’opération remove, pour supprimer les disponibilités.
+Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas, ce dernier renvoie un code statut 200 OK.</li>
+</ul>
+
 
 
 
@@ -269,7 +296,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 13, 2023 12:41+0000">2023-04-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 4, 2023 14:07+0000">2023-08-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

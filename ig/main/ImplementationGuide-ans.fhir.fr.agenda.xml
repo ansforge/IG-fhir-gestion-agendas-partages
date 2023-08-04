@@ -3,14 +3,14 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ans.fhir.fr.agenda"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GestiondAgendaPartag</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda</pre></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GestionAgendaPartage</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda"/>
-  <version value="0.1.0"/>
-  <name value="GestiondAgendaPartag"/>
+  <version value="3.0.0-ballot"/>
+  <name value="GestionAgendaPartage"/>
   <title value="Gestion d'Agenda Partagé (GAP)"/>
   <status value="draft"/>
-  <date value="2023-04-13T12:41:18+00:00"/>
+  <date value="2023-08-04T14:07:22+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -30,8 +30,21 @@
     <packageId value="hl7.terminology.r4"/>
     <version value="5.0.0"/>
   </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="1.0.0"/>
+  </dependsOn>
+  <dependsOn id="ans_fhir_fr_annuaire">
+    <uri value="https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire"/>
+    <packageId value="ans.fhir.fr.annuaire"/>
+    <version value="1.0.0-ballot-2"/>
+  </dependsOn>
   <dependsOn id="hl7_fhir_fr_core">
-    <uri value="https://simplifier.net/packages/hl7.fhir.fr.core/1.1.0/snapshots/$download"/>
+    <uri value="http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core"/>
     <packageId value="hl7.fhir.fr.core"/>
     <version value="1.1.0"/>
   </dependsOn>
@@ -236,6 +249,9 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools#current"/>
+    </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueCode value="copyrightyear"/>
@@ -438,25 +454,187 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
+        <valueString value="Schedule"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/fr-patient"/>
+        <reference value="Schedule/example"/>
       </reference>
-      <name value="Patient français"/>
-      <description value="Description du patient français"/>
+      <name value="example-fr-schedule"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Slot"/>
+      </extension>
+      <reference>
+        <reference value="Slot/example"/>
+      </reference>
+      <name value="example-frslot"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/example-req-appointment"/>
+      </reference>
+      <name value="example-req-appointment"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/GAP-Appointment-created"/>
+      </reference>
+      <name value="GAP-Appointment-created"/>
+      <description value="Date that this appointment was initially created"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
+        <valueString value="SearchParameter"/>
       </extension>
       <reference>
-        <reference value="Patient/frpatient-exemple"/>
+        <reference value="SearchParameter/GAP-Appointment-description"/>
       </reference>
-      <name value="frpatient-exemple"/>
-      <description value="Exemple d'un patient français"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/fr-patient"/>
+      <name value="GAP-Appointment-description"/>
+      <description value="Comment or title of the appointment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/GAP-Appointment-earliestStart"/>
+      </reference>
+      <name value="GAP-Appointment-earliestStart"/>
+      <description value="Earliest start of an appointment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/GAP-Appointment-latestStart"/>
+      </reference>
+      <name value="GAP-Appointment-latestStart"/>
+      <description value="latest start of an appointment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/GAP-Appointment-priority"/>
+      </reference>
+      <name value="GAP-Appointment-priority"/>
+      <description value="Priority of the appointment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/GAP-Consommateur"/>
+      </reference>
+      <name value="GAP-Consommateur"/>
+      <description value="Un consommateur consulte l’agenda d’une ressource gérée par un gestionnaire d’agenda. La consultation de l’agenda indique les éventuelles plages de disponibilité déclarées pour la  &#xA;ressource ainsi que ses indisponibilités et les détails des rendez-vous existants (types, durées, etc., cf. section 2.3.3). Le consommateur peut être la personne prise en charge, un  &#xA;professionnel intervenant dans la prise en charge d’une personne ou tout autre tiers autorisé à consulter l’agenda de la ressource concernée."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/Gap-Declarant"/>
+      </reference>
+      <name value="Gap-Declarant"/>
+      <description value="Le déclarant peut initier une demande de création d’une nouvelle ressource à un gestionnaire de ressource ou d’une plage de disponibilité d’une ressource à un gestionnaire d’agenda.&#xA;Il peut également modifier ou supprimer une ressource ou une plage de disponibilité d’une ressource existante. &#xA;Le déclarant peut être soit le responsable de la ressource, soit un gestionnaire d’agenda ou un gestionnaire de ressources auprès duquel une ressource ou une plage de disponibilité d’une ressource a été déclarée et qui diffuse cette information à un autre gestionnaire d’agenda, ou à un autre gestionnaire de ressources."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/GAP-DeclarantRDV"/>
+      </reference>
+      <name value="GAP-DeclarantRDV"/>
+      <description value="Un déclarant de rendez-vous fait une demande auprès d’un gestionnaire d’agenda pour créer (demande d'un nouveau rendez-vous ou déclaration d'un rendez-vous pris) ou mettre à jour un rendez-vous"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/GAP-GestionnaireAgenda"/>
+      </reference>
+      <name value="GAP-GestionnaireAgenda"/>
+      <description value="Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/GAP-GestionnaireRessources"/>
+      </reference>
+      <name value="GAP-GestionnaireRessources"/>
+      <description value="Le gestionnaire de ressources gère les demandes de gestion de ressources (lieu,   équipement, personne prise en charge, professionnel, etc.)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/GAP-Slot-earliestStart"/>
+      </reference>
+      <name value="GAP-Slot-earliestStart"/>
+      <description value="earliest start of a potential appointment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/GAP-Slot-latestStart"/>
+      </reference>
+      <name value="GAP-Slot-latestStart"/>
+      <description value="latest start of a potential appointment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/gap-bundle-reponse-demande-consult-dispo"/>
+      </reference>
+      <name value="GAP_BundleResultatReponseADemandeConsultationDisponibilites"/>
+      <description value="Il s’agit de la réponse à la demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, elle devra contenir les informations sur le temps libre ou occupé de chacune des ressources. La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande. Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/gap-bundle-reponse-demande-consult-rdv"/>
+      </reference>
+      <name value="GAP_BundleResultatReponseADemandeConsultationRDV"/>
+      <description value="Il s’agit du flux de réponse à la recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande"/>
+      <exampleBoolean value="false"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -485,7 +663,7 @@
             <valueUrl value="construction_des_flux.html"/>
           </extension>
           <nameUrl value="construction_des_flux.html"/>
-          <title value="Construction Des Flux"/>
+          <title value="Vue d'ensemble"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -493,7 +671,7 @@
             <valueUrl value="flux1.html"/>
           </extension>
           <nameUrl value="flux1.html"/>
-          <title value="Flux 01"/>
+          <title value="Flux 01 - Gestion ressources"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -501,7 +679,7 @@
             <valueUrl value="flux2.html"/>
           </extension>
           <nameUrl value="flux2.html"/>
-          <title value="Flux 02"/>
+          <title value="Flux 02 - Gestion agenda"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -509,7 +687,7 @@
             <valueUrl value="flux3.html"/>
           </extension>
           <nameUrl value="flux3.html"/>
-          <title value="Flux 03"/>
+          <title value="Flux 03 - Gestion disponibilités"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -517,15 +695,7 @@
             <valueUrl value="flux4.html"/>
           </extension>
           <nameUrl value="flux4.html"/>
-          <title value="Flux 04"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="flux5.html"/>
-          </extension>
-          <nameUrl value="flux5.html"/>
-          <title value="Flux 05"/>
+          <title value="Flux 04 et 05 - Demande consultation"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -533,9 +703,17 @@
             <valueUrl value="flux6.html"/>
           </extension>
           <nameUrl value="flux6.html"/>
-          <title value="Flux 06"/>
+          <title value="Flux 06 - Gestion rendez-vous"/>
           <generation value="markdown"/>
         </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="specifications_fonctionnelles.html"/>
+        </extension>
+        <nameUrl value="specifications_fonctionnelles.html"/>
+        <title value="Spécifications fonctionnelles"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -560,22 +738,6 @@
           <title value="Téléchargements et usages"/>
           <generation value="markdown"/>
         </page>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="tests.html"/>
-        </extension>
-        <nameUrl value="tests.html"/>
-        <title value="Tests"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="about.html"/>
-        </extension>
-        <nameUrl value="about.html"/>
-        <title value="A propos de ce guide"/>
-        <generation value="markdown"/>
       </page>
     </page>
     <parameter>

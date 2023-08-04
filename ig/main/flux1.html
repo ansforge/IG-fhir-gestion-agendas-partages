@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ANS.FHIR.FR.AGENDA\Flux 01 - FHIR v4.0.1</title>
+    <title>ANS.FHIR.FR.AGENDA\Flux 01 - Gestion ressources - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -57,7 +57,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Gestion d&#39;Agenda Partagé (GAP)</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">3.0.0-ballot - ci-build
 
 
             </span>
@@ -93,33 +93,30 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="construction_des_flux.html">Construction des flux</a>
+        <a href="construction_des_flux.html">Vue d&apos;ensemble</a>
       </li>
       <li>
-        <a href="flux1.html">Flux 01</a>
+        <a href="flux1.html">Flux 01 - Gestion ressources</a>
       </li>
       <li>
-        <a href="flux2.html">Flux 02</a>
+        <a href="flux2.html">Flux 02 - Gestion agenda</a>
       </li>
       <li>
-        <a href="flux3.html">Flux 03</a>
+        <a href="flux3.html">Flux 03 - Gestion disponibilités</a>
       </li>
       <li>
-        <a href="flux4.html">Flux 04</a>
+        <a href="flux4.html">Flux 04 et 05 - Demande consultation</a>
       </li>
       <li>
-        <a href="flux5.html">Flux 05</a>
-      </li>
-      <li>
-        <a href="flux6.html">Flux 06</a>
+        <a href="flux6.html">Flux 06 - Gestion rendez-vous</a>
       </li>
     </ul>
   </li>
   <li>
-    <a href="artifacts.html">Ressources de conformité</a>
+    <a href="specifications_fonctionnelles.html">Spécifications fonctionnelles</a>
   </li>
   <li>
-    <a href="tests.html">Tests</a>
+    <a href="artifacts.html">Ressources de conformité</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
@@ -136,12 +133,12 @@
         <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
       </li>
       <li>
-        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
+        <a target="_blank" href="https://esante.gouv.fr">Site de l&apos;ANS </a>
       </li>
     </ul>
   </li>
   <li>
-    <a href="about.html">A propos de ce guide</a>
+    <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -155,7 +152,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 01</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 01 - Gestion ressources</b></li>
 
           <span style="float:right;">
 
@@ -186,7 +183,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
-  <h2>Flux 01</h2>
+  <h2>Flux 01 - Gestion ressources</h2>
   
 
 
@@ -203,37 +200,90 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#flux-1a---création-dune-ressource" id="markdown-toc-flux-1a---création-dune-ressource">Flux 1a - Création d’une ressource</a></li>
-  <li><a href="#flux-1b---mise-à-jour-dune-ressource" id="markdown-toc-flux-1b---mise-à-jour-dune-ressource">Flux 1b - Mise à jour d’une ressource</a></li>
-  <li><a href="#flux-1c---suppression-dune-ressource" id="markdown-toc-flux-1c---suppression-dune-ressource">Flux 1c - Suppression d’une ressource</a></li>
+  <li><a href="#les-ressources-dagenda" id="markdown-toc-les-ressources-dagenda">Les ressources d’agenda</a></li>
+  <li><a href="#les-flux-de-gestion-de-ressources-dagenda" id="markdown-toc-les-flux-de-gestion-de-ressources-dagenda">Les flux de gestion de ressources d’agenda</a></li>
 </ul>
 
 </div>
-<h3 id="flux-1a---création-dune-ressource">Flux 1a - Création d’une ressource</h3>
+<h3 id="les-ressources-dagenda">Les ressources d’agenda</h3>
+
+<p>Pour les ressources de type personne, il est important de recueillir l’adresse électronique pour permettre l’envoi de notifications et l’envoi d’objets iCalendar, après mise en correspondance (cf. Annexe 1), pour une meilleure intégration dans les agendas électroniques non spécifiques au secteur.</p>
+
+<p>Pour plus d’information sur les profils, consultez les dépendances et les guides d’implémentations associés. Pour chacune de ces ressources, les éléments autres que ceux mentionnés dans les spécifications fonctionnelles du volet peuvent être utilisés.</p>
+
+<h4 id="ressource--patient-">Ressource « Patient »</h4>
+
+<p>La ressource Patient représente la personne prise en charge. Pour ce volet, le profil français FrPatient du package FrCore, défini par HL7 France, doit être utilisé. Dans les spécifications fonctionnelles de ce volet, seules les informations minimales d’identification et de contact du patient sont mentionnées.</p>
+
+<h4 id="ressources--practitioner--et--practitionerrole-">Ressources « Practitioner » et « PractitionerRole »</h4>
+
+<p>Les ressources Practitioner et PractitionerRole représentent respectivement le professionnel et le couple exercice professionnel et situation d’exercice au sein d’un établissement. Pour ce volet, le profil français FrPractitioner du package FrCore défini par HL7 France et les profils AsPractitionerRole du package annuaire de l’annuaire santé doivent être utilisés.</p>
+
+<p>Comme pour le patient, tout élément de ces ressources peut être utilisé même s’il ne fait pas partie des
+informations minimales mentionnées dans les spécifications fonctionnelles du volet.</p>
+
+<p>La prise de rendez-vous se fait avec un professionnel dans une situation donnée d’exercice professionnel. L’agenda et les disponibilités et rendez-vous qui y sont rattachés devraient donc être liés à la situation d’exercice, elle-même liée au professionnel. Ainsi c’est la ressource PractitionerRole qui devrait être référencée comme acteur d’agenda ou comme participant à un rendez-vous. Cependant pour des raisons techniques et afin de faciliter les recherches de disponibilités et de rendez-vous, les deux types de ressources doivent être référencés lorsque l’acteur est un professionnel en exercice. Ainsi, en termes de profils, les instances de AsPractitionerRole et FrPractitioner, si elles existent, doivent être référencées entre elles.</p>
+
+<h4 id="ressource--relatedperson-">Ressource « RelatedPerson »</h4>
+
+<p>La Ressource RelatedPerson représente une personne proche du patient, son tuteur légal par exemple. Pour ce volet, le profil français FrRelatedPerson du package FrCore, défini par HL7 France, doit être utilisé. Les projets peuvent avoir recours à cette ressource s’ils trouvent opportun de créer un agenda dédié à cette personne.</p>
+
+<h4 id="ressource--device-">Ressource « Device »</h4>
+
+<p>La ressource Device représente un équipement qui peut être réservé pour un rendez-vous et disposant donc d’un agenda, un échographe par exemple.</p>
+
+<h4 id="ressource--location-">Ressource « Location »</h4>
+
+<p>La ressource Location représente un lieu qui peut être réservé pour un rendez-vous et disposant donc d’un agenda, un box de consultation par exemple. Pour ce volet, le profil français de la ressource, FrLocation du package FrCore défini par HL7 France, doit être utilisé.</p>
+
+<h4 id="ressources--healthcareservice--et--organization-">Ressources « HealthcareService » et « Organization »</h4>
+
+<p>Les ressources Organization et HealthcareService représentent respectivement un établissement (entité
+géographique) et une organisation interne qui y est proposée. Pour ce volet, les profils français de ces ressources, FrOrganization et FrHealthcareService du package FrCore, définis par HL7 France doivent être utilisés.</p>
+
+<p>La prise de rendez-vous peut s’effectuer avec une organisation interne qui peut donc disposer d’un agenda. Les attributs de l’établissement servent essentiellement à l’identification de l’organisation interne et à la recherche de ressources.</p>
+
+<h3 id="les-flux-de-gestion-de-ressources-dagenda">Les flux de gestion de ressources d’agenda</h3>
+
+<div class="figure" style="width:65%;">
+    <img src="flux1.png" alt="Flux1" title="Flux1" />
+</div>
+
+<p>Les flux de création, de mise à jour et de suppression de ressources sont respectivement opérés par les requêtes HTTP POST, PUT et DELETE sur les ressources FHIR représentant les ressources d’agenda. Ces requêtes sont envoyées au gestionnaire de ressources qui joue le rôle d’annuaire adossé au gestionnaire d’agendas. Les flux de recherche de ressources sont hors périmètre de ce volet.</p>
+
+<h4 id="flux-1a---création-dune-ressource-dagenda">Flux 1a - Création d’une ressource d’agenda</h4>
 
 <p>Ce flux permet la création d’une ressource. Une ressource est toute personne, lieu ou objet disposant d’un agenda dans le système de gestion d’agendas partagés. Une ressource peut représenter :</p>
+
 <ul>
-  <li>Une personne prise en charge : un patient ou une personne prise en charge au niveau sanitaire, médicoadministratif, médico-social ou social.</li>
-  <li>Un professionnel : une personne qui participe à la prise en charge d’une autre personne que ce soit au niveau sanitaire, médico-administratif, médico-social ou social.</li>
-  <li>Un contact : un membre de la famille ou un proche de la personne prise en charge.</li>
-  <li>Une organisation interne : un type de service proposé par un établissement pour lequel une personne prise en charge peut prendre rendez-vous. Il s’agit par exemple d’un service de cardiologie dans un hôpital ou une unité d’échographie dans un centre d’imagerie médicale.</li>
-  <li>Un lieu : Informations relatives à une portion déterminée de l’espace, fixe ou mobile, du point de vue de son affectation ou de ce qui s’y passe. Un box de consultation par exemple.</li>
-  <li>Un équipement opérationnel : une ressource matérielle nécessaire à la réalisation d’une activité. Un scanner par exemple.</li>
+  <li><strong>Une personne prise en charge</strong> : un patient ou une personne prise en charge au niveau sanitaire, médicoadministratif, médico-social ou social.</li>
+  <li><strong>Un professionnel</strong> : une personne qui participe à la prise en charge d’une autre personne que ce soit au niveau sanitaire, médico-administratif, médico-social ou social.</li>
+  <li><strong>Un contact</strong> : un membre de la famille ou un proche de la personne prise en charge.</li>
+  <li><strong>Une organisation interne</strong> : un type de service proposé par un établissement pour lequel une personne prise en charge peut prendre rendez-vous. Il s’agit par exemple d’un service de cardiologie dans un hôpital ou une unité d’échographie dans un centre d’imagerie médicale.</li>
+  <li><strong>Un lieu</strong> : Informations relatives à une portion déterminée de l’espace, fixe ou mobile, du point de vue de son affectation ou de ce qui s’y passe. Un box de consultation par exemple.</li>
+  <li><strong>Un équipement opérationnel</strong> : une ressource matérielle nécessaire à la réalisation d’une activité. Un scanner par exemple.</li>
 </ul>
 
 <p>Une ressource représentant une personne peut être étendue à un lieu. Par exemple, un professionnel dans un de ses lieux d’exercice constitue une ressource d’agenda.</p>
 
 <p>Ce flux permet donc l’envoi des détails d’une ressource au gestionnaire de ressources. Il véhicule les attributs des classes d’objet qui correspondent aux ressources métier.</p>
 
-<h3 id="flux-1b---mise-à-jour-dune-ressource">Flux 1b - Mise à jour d’une ressource</h3>
+<p>Ce flux correspond à une requête HTTP POST d’une des ressources d’agenda indiquées ci-dessous.</p>
+
+<h4 id="flux-1b---mise-à-jour-dune-ressource-dagenda">Flux 1b - Mise à jour d’une ressource d’agenda</h4>
 
 <p>Ce flux permet la mise à jour d’une ressource. Son contenu est similaire à celui du flux 1a de création de ressource.</p>
 
-<h3 id="flux-1c---suppression-dune-ressource">Flux 1c - Suppression d’une ressource</h3>
+<p>Ce flux correpsond à une requête HTTP PUT d’une des ressources d’agenda indiquées ci-dessous.</p>
+
+<h4 id="flux-1c---suppression-dune-ressource-dagenda">Flux 1c - Suppression d’une ressource d’agenda</h4>
 
 <p>Ce flux permet de supprimer une ressource.</p>
 
 <p>A noter que dans cette spécification ne sont pas décrites les règles de contrôle devant être réalisées par le gestionnaire suite à la demande de suppression. Par exemple, la suppression de la ressource entraine la suppression des agendas qui lui sont liés, uniquement s’il est l’unique propriétaire des agendas en question.</p>
+
+<p>Ce flux correspond à une requête HTTP DELETE d’une des ressources d’agenda indiquées ci-dessous.</p>
+
 
 
 
@@ -281,7 +331,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 13, 2023 12:41+0000">2023-04-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 4, 2023 14:07+0000">2023-08-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
