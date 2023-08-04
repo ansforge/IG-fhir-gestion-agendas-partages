@@ -3,7 +3,7 @@
   "name" : "GestionAgendaPartage",
   "package-id" : "ans.fhir.fr.agenda",
   "ig-ver" : "3.0.0-ballot",
-  "date" : "Fri, 04 Aug, 2023 10:44:08 +0000",
+  "date" : "Fri, 04 Aug, 2023 13:09:08 +0000",
   "errs" : 12,
   "warnings" : 18,
   "hints" : 4,
