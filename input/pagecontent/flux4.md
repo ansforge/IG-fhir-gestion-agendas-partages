@@ -70,13 +70,7 @@ Consultez la documentation du standard sur la gestion des erreurs liées à la r
 
 #### Flux 4b - Demande de consultation de rendez-vous
 
-Ce flux permet de rechercher des rendez-vous dans l’agenda d’une ressource donnée. Les critères de recherche peuvent se rapporter aux détails du rendez-vous et/ou aux identifiants des ressources qui y participent.
-
-Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
-
-Le flux 4a permet de demander les créneaux de disponibilité, représentés par les ressources Slot, d’une ou de plusieurs ressources. Cela se fait à travers la requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
-
-Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference43.
+Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR. Les critères de recherche peuvent se rapporter aux détails du rendez-vous et/ou aux identifiants des ressources qui y participent.
 
 | Paramètre de recherche | Description |
 | ----- | ----- |
