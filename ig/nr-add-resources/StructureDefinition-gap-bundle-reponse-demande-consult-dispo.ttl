@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "GAP_BundleResultatReponseADemandeConsultationDisponibilite"] ; # 
   fhir:title [ fhir:v "GAP_BundleResultatReponseADemandeConsultationDisponibilites"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-08-04T13:08:43+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-08-04T13:11:30+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;

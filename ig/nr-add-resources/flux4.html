@@ -215,36 +215,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="flux-4a---demande-de-consultation-de-disponibilités">Flux 4a - Demande de consultation de disponibilités</h4>
 
-<p>Ce flux permet de demander une vue sur le temps libre ou occupé d’une ou de plusieurs ressources sur une durée de temps donnée. Un paktient souhaitant prfunction checkGuess() {
-  let userGuess = Number(guessField.value);
-  if (guessCount === 1) {
-    guesses.textContent = “Propositions précédentes : “;
-  }
-  guesses.textContent += userGuess + “ “;</p>
-
-<p>if (userGuess === randomNumber) {
-    lastResult.textContent = “Bravo, vous avez trouvé le nombre !”;
-    lastResult.style.backgroundColor = “green”;
-    lowOrHi.textContent = “”;
-    setGameOver();
-  } else if (guessCount === 10) {
-    lastResult.textContent = “!!! PERDU !!!”;
-    setGameOver();
-  } else {
-    lastResult.textContent = “Faux !”;
-    lastResult.style.backgroundColor = “red”;
-    if (userGuess &lt; randomNumber) {
-      lowOrHi.textContent = “Le nombre saisi est trop petit !”;
-    } else if (userGuess &gt; randomNumber) {
-      lowOrHi.textContent = “Le nombre saisi est trop grand !”;
-    }
-  }</p>
-
-<p>guessCount++;
-  guessField.value = “”;
-  guessField.focus();
-}
-Pasendre un rendez-vous avec un dentiste pourrait effectuer une recherche sur les disponibilités des dentistes à proximité de son lieu de travail sur une semaine donnée. Il pourra ainsi avoir une vue globale sur le temps libre ou occupé de chacun d’eux et demander un rendez-vous avec le dentiste ayant une disponibilité sur l’horaire qui lui convient le mieux. Sont envoyés dans ce flux l’intervalle de temps sur lequel les disponibilités sont demandées et les critères de recherche sur les ressources.</p>
+<p>Ce flux permet de demander une vue sur le temps libre ou occupé d’une ou de plusieurs ressources sur une durée de temps donnée. Un patient souhaitant prendre un rendez-vous avec un dentiste pourrait effectuer une recherche sur les disponibilités des dentistes à proximité de son lieu de travail sur une semaine donnée. Il pourra ainsi avoir une vue globale sur le temps libre ou occupé de chacun d’eux et demander un rendez-vous avec le dentiste ayant une disponibilité sur l’horaire qui lui convient le mieux. Sont envoyés dans ce flux l’intervalle de temps sur lequel les disponibilités sont demandées et les critères de recherche sur les ressources.</p>
 
 <p>Ce flux est donc un flux de recherche sur les ressources de type Slot avec status=free, correspondants aux créneaux de disponibilités.</p>
 
@@ -530,7 +501,7 @@ Consultez la documentation du standard sur la gestion des erreurs liées à la r
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 4, 2023 13:08+0000">2023-08-04</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 4, 2023 13:11+0000">2023-08-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
