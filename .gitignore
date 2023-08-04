@@ -8,7 +8,7 @@ output
 # Ignore large files and frequently changed files in input-cache #
 ##################################################################
 input-cache/*
-# input-cache/txcache/
+input-cache/txcache/*
 
 # OS generated files #
 ######################
