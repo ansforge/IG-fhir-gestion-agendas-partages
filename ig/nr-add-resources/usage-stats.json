@@ -56,6 +56,15 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator": [
+      "Appointment"
+    ],
+    "http://interopsante.org/fhir/StructureDefinition/FrScheduleAvailabiltyTime": [
+      "Schedule"
+    ],
+    "http://interopsante.org/fhir/StructureDefinition/FrServiceTypeDuration": [
+      "Schedule"
     ]
   }
 }

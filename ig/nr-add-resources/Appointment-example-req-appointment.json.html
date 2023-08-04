@@ -1,9 +1,11 @@
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ANS.FHIR.FR.AGENDA\Tests - FHIR v4.0.1</title>
+    <title>ANS.FHIR.FR.AGENDA\example-req-appointment - JSON Representation - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +44,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"5"}
-    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <style type="text/css">h2{--heading-prefix:"5.17"}
+    h3,h4,h5,h6{--heading-prefix:"5.17"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -118,9 +120,6 @@
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
-  <li>
-    <a href="tests.html">Tests</a>
-  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
       <b class="caret"></b>
@@ -141,7 +140,7 @@
     </ul>
   </li>
   <li>
-    <a href="about.html">A propos de ce guide</a>
+    <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -155,15 +154,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Tests</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>example-req-appointment</b></li>
 
           <span style="float:right;">
 
-            <a href="downloads.html">&lt;prev</a> | 
+            <a href="Appointment-example-req-appointment.xml.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="about.html">next&gt;</a>
+          | <a href="Appointment-example-req-appointment.ttl.html">next&gt;</a>
 
           </span>
 
@@ -177,71 +176,168 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<style type="text/css">
-h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
-h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
-h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
-h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
-h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
-</style>
-<div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
-  <h2>Tests</h2>
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Appointment-example-req-appointment.html">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="Appointment-example-req-appointment.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Appointment-example-req-appointment.ttl.html">TTL</a>
+    </li>
   
 
 
 
-
-
-
-
-
-
-
-
-
-    <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#outils-de-tests" id="markdown-toc-outils-de-tests">Outils de tests</a></li>
-  <li><a href="#projectathon" id="markdown-toc-projectathon">Projectathon</a></li>
 </ul>
 
-</div>
-<h3 id="outils-de-tests">Outils de tests</h3>
 
-<div style="text-align: center;"><?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="380.2083px" preserveAspectRatio="none" style="width:461px;height:380px;background:#00000000;" version="1.1" viewBox="0 0 461 380" width="461.4583px" zoomAndPan="magnify"><defs /><g><rect fill="#999999" height="58.6426" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="82.2917" x="10.4167" y="159.9162" /><text fill="#EEEEEE" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="40.625" x="31.25" y="194.2861">Tests</text><rect fill="#343852" height="58.6426" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="158.3333" x="144.7917" y="60.5713" /><text fill="#EEEEEE" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="116.6667" x="165.625" y="94.9412">Espace de tests</text><rect fill="#999999" height="58.6426" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="73.9583" x="355.2083" y="20.8333" /><text fill="#EEEEEE" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="32.2917" x="376.0417" y="55.2032">CGU</text><path d="M303.125,89.8926 L313.5417,89.8926 C329.1667,89.8926 329.1667,50.1546 344.7917,50.1546 L355.2083,50.1546 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#999999" height="58.6426" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="93.75" x="355.2083" y="100.3092" /><text fill="#EEEEEE" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="52.0833" x="376.0417" y="134.6792">Manuel</text><path d="M303.125,89.8926 L313.5417,89.8926 C329.1667,89.8926 329.1667,129.6305 344.7917,129.6305 L355.2083,129.6305 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><path d="M92.7083,189.2375 L103.125,189.2375 C118.75,189.2375 118.75,89.8926 134.375,89.8926 L144.7917,89.8926 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#D20050" height="58.6426" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="110.4167" x="144.7917" y="140.0472" /><text fill="#EEEEEE" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="68.75" x="165.625" y="174.4171">HAPI FHIR</text><path d="M92.7083,189.2375 L103.125,189.2375 C118.75,189.2375 118.75,169.3685 134.375,169.3685 L144.7917,169.3685 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#EAB9BF" height="58.6426" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="133.3333" x="144.7917" y="219.5231" /><text fill="#EEEEEE" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="91.6667" x="165.625" y="253.893">Projectathon</text><path d="M92.7083,189.2375 L103.125,189.2375 C118.75,189.2375 118.75,248.8444 134.375,248.8444 L144.7917,248.8444 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#383837" height="58.6426" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="223.9583" x="144.7917" y="298.999" /><text fill="#EEEEEE" font-family="&quot;Verdana&quot;" font-size="14.5833" lengthAdjust="spacing" textLength="182.2917" x="165.625" y="333.3689">Verification de conformité</text><path d="M92.7083,189.2375 L103.125,189.2375 C118.75,189.2375 118.75,328.3203 134.375,328.3203 L144.7917,328.3203 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /></g></svg></div>
+<a name="root"> </a>
 
-<h4 id="espace-de-test">Espace de test</h4>
 
-<p>Cet outil permet de vérifier la conformité  :</p>
+<h2 id="root">: example-req-appointment - JSON Representation</h2>
+  <table class="colsi">
+    <tr>
 
-<ul>
-  <li>des documents CDA</li>
-  <li>des archives IHE_XDM.ZIP utilisés pour les échanges</li>
-  <li>Des ressources FHIR</li>
-</ul>
+      <td colspan="2">
+        
+          
+          
+        
+      </td>
 
-<p>Il est accessible en ligne :</p>
+    </tr>
+  </table>
 
-<ul>
-  <li><a href="https://interop.esante.gouv.fr/">https://interop.esante.gouv.fr/</a></li>
-</ul>
 
-<p>Il est notamment utilisé lors des Projectathons organisés par l’ANS pour les éditeurs.</p>
+<p><a href="Appointment-example-req-appointment.json" no-download="true">Raw json</a> | <a href="Appointment-example-req-appointment.json" download>Download</a></p>
 
-<h4 id="hapi-fhir">HAPI FHIR</h4>
+  <!-- insert intro if present -->
+  
 
-<p>Ce serveur FHIR open source est particulièrement utile pour importer des profils et tester la validité des ressources générées contre les profils..</p>
 
-<p>Plus d’information sur la validation dans la documentation des guides d’implémentation : <a href="https://interop.esante.gouv.fr/ig/documentation/">https://interop.esante.gouv.fr/ig/documentation/</a></p>
 
-<h3 id="projectathon">Projectathon</h3>
+  <pre class="json" style="white-space: pre; overflow: hidden"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resourceType</a>" : "Appointment",
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.id">id</a>" : "example-req-appointment",
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://interopsante.org/fhir/StructureDefinition/FrAppointment"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Appointment&lt;/b&gt;&lt;a name=\&quot;example-req-appointment\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Appointment &amp;quot;example-req-appointment&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;amp;canonical=http://interopsante.org/fhir/StructureDefinition/FrAppointment\&quot;&gt;FrAppointment&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;FrAppointmentOperator&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;amp;canonical=https://exampleserver.org/fhir/Patient/1\&quot;&gt;https://exampleserver.org/fhir/Patient/1&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id:\u00a0123&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: proposed&lt;/p&gt;&lt;p&gt;&lt;b&gt;serviceType&lt;/b&gt;: suivi &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (ServiceType#1)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: Médecine générale (SM) &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (TRE-R38-SpecialiteOrdinale#SM54)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;priority&lt;/b&gt;: 5&lt;/p&gt;&lt;p&gt;&lt;b&gt;minutesDuration&lt;/b&gt;: 15&lt;/p&gt;&lt;p&gt;&lt;b&gt;slot&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;amp;canonical=https://exampleserver.org/fhir/Slot/example\&quot;&gt;https://exampleserver.org/fhir/Slot/example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;created&lt;/b&gt;: 2019-01-02&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;amp;canonical=https://exampleserver.org/fhir/Patient/1\&quot;&gt;https://exampleserver.org/fhir/Patient/1: M Martin&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;required&lt;/b&gt;: required&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: accepted&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;amp;canonical=https://exampleserver.org/fhir/PractitionerRole/1\&quot;&gt;https://exampleserver.org/fhir/PractitionerRole/1: Dr Langdon, cabinet Paris&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;required&lt;/b&gt;: required&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: needs-action&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;actor&lt;/b&gt;: &lt;a href=\&quot;https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;amp;canonical=https://exampleserver.org/fhir/Practitioner/1\&quot;&gt;https://exampleserver.org/fhir/Practitioner/1: Dr Langdon&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;required&lt;/b&gt;: required&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: needs-action&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;requestedPeriod&lt;/b&gt;: 2019-01-04 09:15:00+0000 --&amp;gt; (ongoing)&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator",
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://exampleserver.org/fhir/Patient/1"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://example.org/sampleappointment-identifier",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "123"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.status">status</a>" : "proposed",
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.serviceType">serviceType</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/ValueSet/ServiceType",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "1",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "suivi"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.specialty">specialty</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SM54",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Médecine générale (SM)"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.priority">priority</a>" : 5,
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.minutesDuration">minutesDuration</a>" : 15,
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.slot">slot</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://exampleserver.org/fhir/Slot/example"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.created">created</a>" : "2019-01-02",
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant">participant</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.actor">actor</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://exampleserver.org/fhir/Patient/1",
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "M Martin"
+      },
+      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.required">required</a>" : "required",
+      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.status">status</a>" : "accepted"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.actor">actor</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://exampleserver.org/fhir/PractitionerRole/1",
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Dr Langdon, cabinet Paris"
+      },
+      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.required">required</a>" : "required",
+      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.status">status</a>" : "needs-action"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.actor">actor</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://exampleserver.org/fhir/Practitioner/1",
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Dr Langdon"
+      },
+      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.required">required</a>" : "required",
+      "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.participant.status">status</a>" : "needs-action"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.requestedPeriod">requestedPeriod</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2019-01-04T09:15:00Z"
+    }
+  ]
+}</code></pre>
 
-<p>L’ANS organise régulièrement des Projectathons pour permettre à un industriel de vérifier la conformité de l’implémentation des spécifications d’interopérabilité et de réaliser des tests d’interopérabilité  avec d’autres éditeurs.</p>
 
-<p>Vous serez informé par l’ANS des prochains projectathons (date, lieu,…) pour pouvoir y participer.</p>
-
+  <!-- insert notes if present -->
+  
 
 
 
@@ -271,7 +367,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="downloads.html">&lt;prev</a>
+                <a href="Appointment-example-req-appointment.xml.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -279,7 +375,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="about.html">next&gt;</a>
+                <a href="Appointment-example-req-appointment.ttl.html">next&gt;</a>
 
               </td>
             </tr>
@@ -289,7 +385,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 4, 2023 09:56+0000">2023-08-04</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Aug 4, 2023 10:44+0000">2023-08-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
