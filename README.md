@@ -1,5 +1,4 @@
-Cet exemple d'Implementation Guide (IG) très simplifié sert de base pour le développement de nouveaux guides d'implémentation. La démarche d'élaboration d'un nouvel IG est expliquée dans le [wiki de ce repo](https://github.com/ansforge/IG-modele/wiki). 
-Le README ci-dessous constitue un template à adapter et compléter pour chaque projet.
+[![Workflow Init](https://github.com/ansforge/IG-fhir-gestion-agenda-partage/actions/workflows/fhir-worklows.yml/badge.svg)](https://github.com/ansforge/IG-fhir-gestion-agenda-partage/actions/workflows/fhir-worklows.yml)
 
 # Contexte
 
