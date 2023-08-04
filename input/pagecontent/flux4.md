@@ -72,7 +72,6 @@ Consultez la documentation du standard sur la gestion des erreurs liées à la r
 
 Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR. Les critères de recherche peuvent se rapporter aux détails du rendez-vous et/ou aux identifiants des ressources qui y participent.
 
-
 | Paramètre de recherche | Description |
 | ----- | ----- |
 | identifier : token | Identifiant du rendez-vous |
