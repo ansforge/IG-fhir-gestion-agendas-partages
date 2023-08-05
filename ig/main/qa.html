@@ -36,12 +36,12 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for GestionAgendaPartage</h1>
- <p>Generated Fri Aug 04 14:58:14 UTC 2023, FHIR version 4.0.1 for ans.fhir.fr.agenda#3.0.0-ballot (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/agenda">https://interop.esante.gouv.fr/ig/fhir/agenda</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/agenda/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Sat Aug 05 17:19:45 UTC 2023, FHIR version 4.0.1 for ans.fhir.fr.agenda#3.0.0-ballot (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/agenda">https://interop.esante.gouv.fr/ig/fhir/agenda</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/agenda/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.3.27</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.3.28</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.agenda, Canonical = https://interop.esante.gouv.fr/ig/fhir/agenda</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
- <tr><td>Publication Request:</td><td><ul><li><span title="Invalid HTTP response 404 from https://interop.esante.gouv.fr/ig/fhir/agenda/package-list.json?nocache=1691161094178 (Not Found) (content in /tmp/http-log/fhir-http-3.log)">This IG has never been published</span> <img src="information.png" height="16px" width="16px"/></li>
+ <tr><td>Publication Request:</td><td><ul><li><span title="Invalid HTTP response 404 from https://interop.esante.gouv.fr/ig/fhir/agenda/package-list.json?nocache=1691255984694 (Not Found) (content in /tmp/http-log/fhir-http-3.log)">This IG has never been published</span> <img src="information.png" height="16px" width="16px"/></li>
 <li>No publication request found <img src="information.png" height="16px" width="16px"/></li>
 </ul>
 </td></tr>
@@ -60,7 +60,7 @@
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
  <tr><td>R5 Dependencies:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
- <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://interop.esante.gouv.fr/ig/fhir/agenda (Problem #1 with package-list.json at https://interop.esante.gouv.fr/ig/fhir/agenda: Invalid HTTP response 404 from https://interop.esante.gouv.fr/ig/fhir/agenda/package-list.json?nocache=1691160992090 (Not Found) (content in /tmp/http-log/fhir-http-2.log))</td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://interop.esante.gouv.fr/ig/fhir/agenda (Problem #1 with package-list.json at https://interop.esante.gouv.fr/ig/fhir/agenda: Invalid HTTP response 404 from https://interop.esante.gouv.fr/ig/fhir/agenda/package-list.json?nocache=1691255869056 (Not Found) (content in /tmp/http-log/fhir-http-2.log))</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>Summary:</td><td> errors = 12, warn = 18, info = 4, broken links = 182</td></tr>
 </table>
@@ -709,7 +709,7 @@
      <td><b>Appointment&#8203;.extension[0]&#8203;.value&#8203;.ofType(Reference) (l12&#8203;/c8)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Patient/1'</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Appointment.specialty[0] (l36/c6)</b></td><td><b>warning</b></td><td title="Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
+     <td><b>Appointment.specialty[0] (l36/c6)</b></td><td><b>warning</b></td><td title="Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Appointment&#8203;.specialty[0]&#8203;.coding[0] (l38&#8203;/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
@@ -820,7 +820,7 @@
      <td><b>Schedule&#8203;.extension[0]&#8203;.extension[1]&#8203;.value&#8203;.ofType(Coding)&#8203;.system (l23&#8203;/c79)</b></td><td><b>error</b></td><td title="_DT_Fixed_Wrong"><b>Value is 'http://terminology.interopsante.org/CodeSystem/v2-3315' but must be 'http://interopsante.org/fhir/CodeSystem/fr-schedule-type'</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Schedule.specialty[0] (l73/c6)</b></td><td><b>warning</b></td><td title="Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
+     <td><b>Schedule.specialty[0] (l73/c6)</b></td><td><b>warning</b></td><td title="Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Schedule&#8203;.specialty[0]&#8203;.coding[0] (l75&#8203;/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
@@ -924,7 +924,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Slot.specialty[0] (l28/c6)</b></td><td><b>warning</b></td><td title="Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
+     <td><b>Slot.specialty[0] (l28/c6)</b></td><td><b>warning</b></td><td title="Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Slot.specialty[0].coding[0] (l30/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
