@@ -3,7 +3,7 @@
 
 err = 12, warn = 18, info = 4
 IG Publisher Version: 1.3.28
-Generated Sat Aug 05 17:19:45 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.agenda#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/agenda)
+Generated Sun Aug 06 13:20:56 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.agenda#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/agenda)
  Build Errors : 182 / 6 / 0
  /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/Appointment-example-req-appointment : 5 / 1 / 2
  /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 1 / 1 / 1
