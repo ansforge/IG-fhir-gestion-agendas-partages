@@ -1,5 +1,5 @@
 Instance: example-fr-schedule-2
-InstanceOf: FrSchedule
+InstanceOf: gap-fr-schedule
 Usage: #inline
 * meta.profile = "http://interopsante.org/fhir/StructureDefinition/FrSchedule"
 * extension.url = "http://interopsante.org/fhir/StructureDefinition/FrServiceTypeDuration"
