@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="GAP-GestionnaireAgenda"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GAP-GestionnaireAgenda</h2><div><p>Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous.</p>
+</div><table><tr><td>Mode</td><td>SERVER</td></tr><tr><td>Description</td><td><div><p>Déclaration, modification et suppression des disponibilités d'une ressource</p>
+</div></td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title="GET a resource (read interaction)">Read</b></th><th><b title="GET all set of resources of the type (search interaction)">Search</b></th><th><b title="PUT a new resource version (update interaction)">Update</b></th><th><b title="PATCH a new resource version (patch interaction)">Patch</b></th><th><b title="POST a new resource (create interaction)">Create</b></th><th><b title="DELETE a resource (delete interaction)">Delete</b></th></tr><tr><td>Schedule</td><td><a href="http://interopsante.org/fhir/StructureDefinition/FrSchedule">http://interopsante.org/fhir/StructureDefinition/FrSchedule</a></td><td></td><td></td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Slot</td><td><a href="http://interopsante.org/fhir/StructureDefinition/FrSlot">http://interopsante.org/fhir/StructureDefinition/FrSlot</a></td><td>y</td><td>y</td><td></td><td></td><td></td><td></td></tr><tr><td>Appointment</td><td><a href="http://interopsante.org/fhir/StructureDefinition/FrAppointment">http://interopsante.org/fhir/StructureDefinition/FrAppointment</a></td><td>y</td><td>y</td><td>y</td><td></td><td>y</td><td></td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-GestionnaireAgenda"/>
+  <version value="3.0.0-ballot"/>
+  <name value="GAP-GestionnaireAgenda"/>
+  <title value="CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-08-02"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous."/>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="application/fhir+xml"/>
+  <format value="application/fhir+json"/>
+  <implementationGuide value="https://interop.esante.gouv.fr/ig/fhir/agenda"/>
+  <rest>
+    <mode value="server"/>
+    <documentation value="Déclaration, modification et suppression des disponibilités d'une ressource"/>
+    <security>
+      <cors value="false"/>
+      <description value="L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"/>
+    </security>
+    <resource>
+      <type value="Schedule"/>
+      <profile value="http://interopsante.org/fhir/StructureDefinition/FrSchedule"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+      </interaction>
+      <interaction>
+        <code value="patch"/>
+      </interaction>
+    </resource>
+    <resource>
+      <type value="Slot"/>
+      <profile value="http://interopsante.org/fhir/StructureDefinition/FrSlot"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="GAP_Slot_earliestStart"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_earliestStart"/>
+        <type value="date"/>
+        <documentation value="Recherche d'une disponibilité sur la date et l'heure de la disponibilité souhaité, date au plus tôt"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Slot_latestStart"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_latestStart"/>
+        <type value="date"/>
+        <documentation value="Recherche d'une disponibilité sur la date et l'heure de disponibilité souhaité, date au plus tard"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Schedule_Actor_AsDevice"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsDevice"/>
+        <type value="reference"/>
+        <documentation value="Recherche d'une disponibilité sur les caractéristiques de la ressource Device qui est l'acteur d'agenda (identifiant, nom, modèle, type)"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Schedule_Actor_AsHealthcareService"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsHealthcareService"/>
+        <type value="reference"/>
+        <documentation value="Recherche d'une disponibilité sur les caractéristiques de la ressource HealthcareService qui est l'acteur d'agenda (identifiant, nom, type, identifiant-nom-type de l'organization)"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Schedule_Actor_AsLocation"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsLocation"/>
+        <type value="reference"/>
+        <documentation value="Recherche d'une disponibilité sur les caractéristiques du lieu d'exercice de la ressource (Location) qui est l'acteur d'agenda (nom, adresse, proximité et code postal)"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Schedule_Actor_AsPatient"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPatient"/>
+        <type value="reference"/>
+        <documentation value="Recherche d'une disponibilité sur les caractéristiques de la ressource Patient qui est l'acteur d'agenda (identifiant, nom, prénom)"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Schedule_Actor_AsPractitioner"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPractitioner"/>
+        <type value="reference"/>
+        <documentation value="Recherche d'une disponibilité sur les caractéristiques de la ressource Practitioner qui est l'acteur d'agenda (identifiant, nom, prénom)"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Schedule_Actor_AsPractitionerRole"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPractitionerRole"/>
+        <type value="reference"/>
+        <documentation value="Recherche d'une disponibilité sur sur les caractéristiques de la ressource PractitionerRole qui est l'acteur d'agenda (profession, spécialité, adresse, telecom, nom-prénom du professionnel)"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Schedule_Actor_AsRelatedPerson"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsRelatedPerson"/>
+        <type value="reference"/>
+        <documentation value="sur sur les caractéristiques de la ressource RelatedPerson qui est l'acteur d'agenda (identifiant, nom, adresse, telecom)"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Slot-identifier"/>
+        <type value="token"/>
+        <documentation value="A Slot Identifier"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Slot-status"/>
+        <type value="token"/>
+        <documentation value="The free/busy status of the appointment"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Appointment"/>
+      <profile value="http://interopsante.org/fhir/StructureDefinition/FrAppointment"/>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <conditionalUpdate value="true"/>
+      <searchParam>
+        <name value="GAP_Appointment_priority"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_priority"/>
+        <type value="token"/>
+        <documentation value="Priority of the appointment"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Appointment_description"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_description"/>
+        <type value="string"/>
+        <documentation value="Comment or title of the appointment"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Appointment_created"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_created"/>
+        <type value="date"/>
+        <documentation value="Date that this appointment was initially created"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Appointment_Actor"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_Actor"/>
+        <type value="reference"/>
+        <documentation value="Recherche d'un rendez-vous sur l'identifiant de l'acteur, la ressource pouvant être Patient, Practitioner, PractitionerRole, RelatedPerson, Location, Device ou HealthcareService"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Appointment_earliestStart"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_earliestStart"/>
+        <type value="date"/>
+        <documentation value="Recherche d'un rendez-vous sur la date et heure de rendez-vous, date au plus tôt"/>
+      </searchParam>
+      <searchParam>
+        <name value="GAP_Appointment_latestStart"/>
+        <definition value="http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_latestStart"/>
+        <type value="date"/>
+        <documentation value="Recherche d'un rendez-vous sur la date et heure de rendez-vous, date au plus tard"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Appointment-date"/>
+        <type value="date"/>
+        <documentation value="date et heure du rendez-vous"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Appointment-identifier"/>
+        <type value="token"/>
+        <documentation value="identifiant du rendez-vous"/>
+      </searchParam>
+      <searchParam>
+        <name value="service-type"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Appointment-service-type"/>
+        <type value="token"/>
+        <documentation value="serivce spécifique qui doit être réslisé pandant le rendez-vous"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Appointment-status"/>
+        <type value="token"/>
+        <documentation value="The overall status of the appointment"/>
+      </searchParam>
+      <searchParam>
+        <name value="supporting-info"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Appointment-supporting-info"/>
+        <type value="reference"/>
+        <documentation value="Additional information to support the appointment"/>
+      </searchParam>
+    </resource>
+  </rest>
+</CapabilityStatement>

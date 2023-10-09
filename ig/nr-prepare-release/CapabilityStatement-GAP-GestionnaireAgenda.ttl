@@ -1,0 +1,269 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-GestionnaireAgenda> a fhir:CapabilityStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "GAP-GestionnaireAgenda"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GAP-GestionnaireAgenda</h2><div><p>Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous.</p>\n</div><table><tr><td>Mode</td><td>SERVER</td></tr><tr><td>Description</td><td><div><p>Déclaration, modification et suppression des disponibilités d'une ressource</p>\n</div></td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"PATCH a new resource version (patch interaction)\">Patch</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th><th><b title=\"DELETE a resource (delete interaction)\">Delete</b></th></tr><tr><td>Schedule</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrSchedule\">http://interopsante.org/fhir/StructureDefinition/FrSchedule</a></td><td></td><td></td><td>y</td><td>y</td><td>y</td><td>y</td></tr><tr><td>Slot</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrSlot\">http://interopsante.org/fhir/StructureDefinition/FrSlot</a></td><td>y</td><td>y</td><td></td><td></td><td></td><td></td></tr><tr><td>Appointment</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrAppointment\">http://interopsante.org/fhir/StructureDefinition/FrAppointment</a></td><td>y</td><td>y</td><td>y</td><td></td><td>y</td><td></td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-GestionnaireAgenda"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-ballot"] ; # 
+  fhir:name [ fhir:v "GAP-GestionnaireAgenda"] ; # 
+  fhir:title [ fhir:v "CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-08-02"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous."] ; # 
+  fhir:kind [ fhir:v "requirements"] ; # 
+  fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
+  fhir:format ( [ fhir:v "application/fhir+xml"] [ fhir:v "application/fhir+json"] ) ; # 
+  fhir:implementationGuide ( [
+     fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda"^^xsd:anyURI ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda>
+  ] ) ; # 
+  fhir:rest ( [
+     fhir:mode [ fhir:v "server" ] ;
+     fhir:documentation [ fhir:v "Déclaration, modification et suppression des disponibilités d'une ressource" ] ;
+     fhir:security [
+       fhir:cors [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:description [ fhir:v "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)" ]
+     ] ;
+     fhir:resource ( [
+       fhir:type [ fhir:v "Schedule" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrSchedule"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrSchedule>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] [
+         fhir:code [ fhir:v "patch" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Slot" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrSlot"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrSlot>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "GAP_Slot_earliestStart" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_earliestStart"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_earliestStart>
+         ] ;
+         fhir:type [ fhir:v "date" ] ;
+         fhir:documentation [ fhir:v "Recherche d'une disponibilité sur la date et l'heure de la disponibilité souhaité, date au plus tôt" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Slot_latestStart" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_latestStart"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_latestStart>
+         ] ;
+         fhir:type [ fhir:v "date" ] ;
+         fhir:documentation [ fhir:v "Recherche d'une disponibilité sur la date et l'heure de disponibilité souhaité, date au plus tard" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Schedule_Actor_AsDevice" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsDevice"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsDevice>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Recherche d'une disponibilité sur les caractéristiques de la ressource Device qui est l'acteur d'agenda (identifiant, nom, modèle, type)" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Schedule_Actor_AsHealthcareService" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsHealthcareService"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsHealthcareService>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Recherche d'une disponibilité sur les caractéristiques de la ressource HealthcareService qui est l'acteur d'agenda (identifiant, nom, type, identifiant-nom-type de l'organization)" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Schedule_Actor_AsLocation" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsLocation"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsLocation>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Recherche d'une disponibilité sur les caractéristiques du lieu d'exercice de la ressource (Location) qui est l'acteur d'agenda (nom, adresse, proximité et code postal)" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Schedule_Actor_AsPatient" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPatient"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPatient>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Recherche d'une disponibilité sur les caractéristiques de la ressource Patient qui est l'acteur d'agenda (identifiant, nom, prénom)" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Schedule_Actor_AsPractitioner" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPractitioner"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPractitioner>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Recherche d'une disponibilité sur les caractéristiques de la ressource Practitioner qui est l'acteur d'agenda (identifiant, nom, prénom)" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Schedule_Actor_AsPractitionerRole" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPractitionerRole"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPractitionerRole>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Recherche d'une disponibilité sur sur les caractéristiques de la ressource PractitionerRole qui est l'acteur d'agenda (profession, spécialité, adresse, telecom, nom-prénom du professionnel)" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Schedule_Actor_AsRelatedPerson" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsRelatedPerson"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsRelatedPerson>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "sur sur les caractéristiques de la ressource RelatedPerson qui est l'acteur d'agenda (identifiant, nom, adresse, telecom)" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Slot-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Slot-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "A Slot Identifier" ]
+       ] [
+         fhir:name [ fhir:v "status" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Slot-status"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Slot-status>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "The free/busy status of the appointment" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Appointment" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrAppointment"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrAppointment>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:conditionalUpdate [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "GAP_Appointment_priority" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_priority"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_priority>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Priority of the appointment" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Appointment_description" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_description"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_description>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Comment or title of the appointment" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Appointment_created" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_created"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_created>
+         ] ;
+         fhir:type [ fhir:v "date" ] ;
+         fhir:documentation [ fhir:v "Date that this appointment was initially created" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Appointment_Actor" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_Actor"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_Actor>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Recherche d'un rendez-vous sur l'identifiant de l'acteur, la ressource pouvant être Patient, Practitioner, PractitionerRole, RelatedPerson, Location, Device ou HealthcareService" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Appointment_earliestStart" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_earliestStart"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_earliestStart>
+         ] ;
+         fhir:type [ fhir:v "date" ] ;
+         fhir:documentation [ fhir:v "Recherche d'un rendez-vous sur la date et heure de rendez-vous, date au plus tôt" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Appointment_latestStart" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_latestStart"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_latestStart>
+         ] ;
+         fhir:type [ fhir:v "date" ] ;
+         fhir:documentation [ fhir:v "Recherche d'un rendez-vous sur la date et heure de rendez-vous, date au plus tard" ]
+       ] [
+         fhir:name [ fhir:v "date" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Appointment-date"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Appointment-date>
+         ] ;
+         fhir:type [ fhir:v "date" ] ;
+         fhir:documentation [ fhir:v "date et heure du rendez-vous" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Appointment-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Appointment-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "identifiant du rendez-vous" ]
+       ] [
+         fhir:name [ fhir:v "service-type" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Appointment-service-type"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Appointment-service-type>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "serivce spécifique qui doit être réslisé pandant le rendez-vous" ]
+       ] [
+         fhir:name [ fhir:v "status" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Appointment-status"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Appointment-status>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "The overall status of the appointment" ]
+       ] [
+         fhir:name [ fhir:v "supporting-info" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Appointment-supporting-info"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Appointment-supporting-info>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Additional information to support the appointment" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

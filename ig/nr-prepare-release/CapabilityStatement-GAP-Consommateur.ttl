@@ -1,0 +1,533 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-Consommateur> a fhir:CapabilityStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "GAP-Consommateur"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GAP-consommateur</h2><div><p>Un consommateur consulte l’agenda d’une ressource gérée par un gestionnaire d’agenda. La consultation de l’agenda indique les éventuelles plages de disponibilité déclarées pour la<br/>\nressource ainsi que ses indisponibilités et les détails des rendez-vous existants (types, durées, etc., cf. section 2.3.3). Le consommateur peut être la personne prise en charge, un<br/>\nprofessionnel intervenant dans la prise en charge d’une personne ou tout autre tiers autorisé à consulter l’agenda de la ressource concernée.</p>\n</div><table><tr><td>Mode</td><td>CLIENT</td></tr><tr><td>Description</td><td><div><p>consultation de disponibilités</p>\n</div></td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th></tr><tr><td>Slot</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrSlot\">http://interopsante.org/fhir/StructureDefinition/FrSlot</a></td><td>y</td><td>y</td><td></td><td></td></tr><tr><td>Appointment</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrAppointment\">http://interopsante.org/fhir/StructureDefinition/FrAppointment</a></td><td>y</td><td>y</td><td></td><td></td></tr><tr><td>Schedule</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrSchedule\">http://interopsante.org/fhir/StructureDefinition/FrSchedule</a></td><td>y</td><td>y</td><td></td><td></td></tr><tr><td>Patient</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrPatient\">http://interopsante.org/fhir/StructureDefinition/FrPatient</a></td><td>y</td><td>y</td><td></td><td></td></tr><tr><td>Practitioner</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrPractitioner\">http://interopsante.org/fhir/StructureDefinition/FrPractitioner</a></td><td>y</td><td>y</td><td></td><td></td></tr><tr><td>PractitionerRole</td><td><a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole\">https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole</a></td><td>y</td><td>y</td><td></td><td></td></tr><tr><td>RelatedPerson</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson\">http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson</a></td><td>y</td><td>y</td><td></td><td></td></tr><tr><td>Location</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrLocation\">http://interopsante.org/fhir/StructureDefinition/FrLocation</a></td><td>y</td><td>y</td><td></td><td></td></tr><tr><td>Device</td><td><a href=\"http://hl7.org/fhir/StructureDefinition/Device\">http://hl7.org/fhir/StructureDefinition/Device</a></td><td>y</td><td>y</td><td></td><td></td></tr><tr><td>HealthcareService</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrHealthcareService\">http://interopsante.org/fhir/StructureDefinition/FrHealthcareService</a></td><td>y</td><td>y</td><td></td><td></td></tr><tr><td>Organization</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrOrganization\">http://interopsante.org/fhir/StructureDefinition/FrOrganization</a></td><td>y</td><td>y</td><td></td><td></td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-Consommateur"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-ballot"] ; # 
+  fhir:name [ fhir:v "GAP-consommateur"] ; # 
+  fhir:title [ fhir:v "CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-08-02"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Un consommateur consulte l’agenda d’une ressource gérée par un gestionnaire d’agenda. La consultation de l’agenda indique les éventuelles plages de disponibilité déclarées pour la  \nressource ainsi que ses indisponibilités et les détails des rendez-vous existants (types, durées, etc., cf. section 2.3.3). Le consommateur peut être la personne prise en charge, un  \nprofessionnel intervenant dans la prise en charge d’une personne ou tout autre tiers autorisé à consulter l’agenda de la ressource concernée."] ; # 
+  fhir:kind [ fhir:v "requirements"] ; # 
+  fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
+  fhir:format ( [ fhir:v "application/fhir+xml"] [ fhir:v "application/fhir+json"] ) ; # 
+  fhir:implementationGuide ( [
+     fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda"^^xsd:anyURI ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda>
+  ] ) ; # 
+  fhir:rest ( [
+     fhir:mode [ fhir:v "client" ] ;
+     fhir:documentation [ fhir:v "consultation de disponibilités" ] ;
+     fhir:security [
+       fhir:cors [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:description [ fhir:v "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)" ]
+     ] ;
+     fhir:resource ( [
+       fhir:type [ fhir:v "Slot" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrSlot"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrSlot>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "GAP_Slot_earliestStart" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_earliestStart"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_earliestStart>
+         ] ;
+         fhir:type [ fhir:v "date" ] ;
+         fhir:documentation [ fhir:v "Recherche d'une disponibilité sur la date et l'heure de début de disponibilité souhaité" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Slot_latestStart" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_latestStart"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_latestStart>
+         ] ;
+         fhir:type [ fhir:v "date" ] ;
+         fhir:documentation [ fhir:v "Recherche d'une disponibilité sur la date et l'heure de fin de disponibilité souhaité" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Slot-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Slot-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Identifiant du slot" ]
+       ] [
+         fhir:name [ fhir:v "status" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Slot-status"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Slot-status>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Statut (occupé/libre) d'un slot" ]
+       ] [
+         fhir:name [ fhir:v "schedule" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Slot-schedule"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Slot-schedule>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Reference vers la ressource schedule correspondant à notre disponibilité" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Appointment" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrAppointment"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrAppointment>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "GAP_Appointment_priority" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_priority"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_priority>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Priorité du rendez vous" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Appointment_description" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_description"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_description>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Description du rendez vous (titre ou commentaire)" ]
+       ] [
+         fhir:name [ fhir:v "GAP_Appointment_created" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_created"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_created>
+         ] ;
+         fhir:type [ fhir:v "date" ] ;
+         fhir:documentation [ fhir:v "Date de création du rendez vous" ]
+       ] [
+         fhir:name [ fhir:v "actor" ] ;
+         fhir:definition [
+           fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/Appointment-actor"^^xsd:anyURI ;
+           fhir:link <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/Appointment-actor>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Recherche d'un rendez-vous sur l'identifiant de l'acteur" ]
+       ] [
+         fhir:name [ fhir:v "date" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Appointment-date"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Appointment-date>
+         ] ;
+         fhir:type [ fhir:v "date" ] ;
+         fhir:documentation [ fhir:v "date et heure du rendez-vous" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Appointment-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Appointment-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "identifiant du rendez-vous" ]
+       ] [
+         fhir:name [ fhir:v "service-type" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Appointment-service-type"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Appointment-service-type>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "serivce spécifique qui doit être réslisé pandant le rendez-vous" ]
+       ] [
+         fhir:name [ fhir:v "status" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Appointment-status"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Appointment-status>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "status générale du rendez vous" ]
+       ] [
+         fhir:name [ fhir:v "supporting-info" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Appointment-supporting-info"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Appointment-supporting-info>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "information supplémentaire sur le rendez vous" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Schedule" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrSchedule"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrSchedule>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "actor" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Schedule-actor"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Schedule-actor>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Reference vers la ressource participant au creneau" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Patient" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrPatient"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrPatient>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Patient-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Patient-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Identifiant du patient (matricule INS ou autre identifiant)" ]
+       ] [
+         fhir:name [ fhir:v "family" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/individual-family"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/individual-family>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Nom du patient" ]
+       ] [
+         fhir:name [ fhir:v "given" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/individual-given"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/individual-given>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Prenom du patient" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Practitioner" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrPractitioner"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrPractitioner>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Practitioner-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Practitioner-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Identifiant du professionnel" ]
+       ] [
+         fhir:name [ fhir:v "family" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/individual-family"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/individual-family>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Nom du patient" ]
+       ] [
+         fhir:name [ fhir:v "given" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/individual-given"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/individual-given>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Prenom du patient" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "PractitionerRole" ] ;
+       fhir:profile [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "role" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/PractitionerRole-role"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/PractitionerRole-role>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Profession du professionnel" ]
+       ] [
+         fhir:name [ fhir:v "speciality" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/PractitionerRole-speciality"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/PractitionerRole-speciality>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Spécialité du professionnel" ]
+       ] [
+         fhir:name [ fhir:v "location" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/PractitionerRole-location"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/PractitionerRole-location>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Adresse situation exercice" ]
+       ] [
+         fhir:name [ fhir:v "telecom" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/individual-telecom"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/individual-telecom>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Telecommunication de la situation d'exercice" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "RelatedPerson" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/RelatedPerson-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/RelatedPerson-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Identifiant de la personne de contact" ]
+       ] [
+         fhir:name [ fhir:v "address" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/individual-address"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/individual-address>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Adresse de la personne de contact" ]
+       ] [
+         fhir:name [ fhir:v "telecom" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/individual-telecom"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/individual-telecom>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Telecom de la personne de contact" ]
+       ] [
+         fhir:name [ fhir:v "name" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/RelatedPerson-name"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/RelatedPerson-name>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Nom de la personne de contact" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Location" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrLocation"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrLocation>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "address" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Location-address"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-address>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Adresse situation exercice" ]
+       ] [
+         fhir:name [ fhir:v "near" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Location-near"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-near>
+         ] ;
+         fhir:type [ fhir:v "special" ] ;
+         fhir:documentation [ fhir:v "Adresse situation exercice via les coordonnées géographiques" ]
+       ] [
+         fhir:name [ fhir:v "name" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Location-name"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-name>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Nom du lieu" ]
+       ] [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Location-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Location-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Identifiant du lieu" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Device" ] ;
+       fhir:profile [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/Device"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Device-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Device-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Identifiant de l'équipement opérationnel'" ]
+       ] [
+         fhir:name [ fhir:v "type" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Device-type"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Device-type>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Type de l'équipement opérationnel'" ]
+       ] [
+         fhir:name [ fhir:v "device-name" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Device-device-name"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Device-device-name>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Libelle de l'équipement opérationnel'" ]
+       ] [
+         fhir:name [ fhir:v "model" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Device-model"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Device-model>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Modele de l'équipement opérationnel'" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "HealthcareService" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrHealthcareService"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrHealthcareService>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/HealthcareService-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Identifiant de l'organisation interne" ]
+       ] [
+         fhir:name [ fhir:v "name" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/HealthcareService-name"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/HealthcareService-name>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Nom de l'organisation interne" ]
+       ] [
+         fhir:name [ fhir:v "service-type" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/HealthcareService-service-type"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/HealthcareService-service-type>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Champ d'activite de l'organisation interne" ]
+       ] [
+         fhir:name [ fhir:v "organization" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/HealthcareService-organization"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/HealthcareService-organization>
+         ] ;
+         fhir:type [ fhir:v "reference" ] ;
+         fhir:documentation [ fhir:v "Référence vers l'entite géographique de l'organisation interne" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Organization" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrOrganization"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrOrganization>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "read" ]
+       ] [
+         fhir:code [ fhir:v "search-type" ]
+       ] ) ;
+       fhir:searchParam ( [
+         fhir:name [ fhir:v "identifier" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Organization-identifier"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Organization-identifier>
+         ] ;
+         fhir:type [ fhir:v "token" ] ;
+         fhir:documentation [ fhir:v "Identifiant de l'entite geographique (idNatStruct)" ]
+       ] [
+         fhir:name [ fhir:v "name" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Organization-name"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Organization-name>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Nom de l'entite geographique" ]
+       ] [
+         fhir:name [ fhir:v "address" ] ;
+         fhir:definition [
+           fhir:v "http://hl7.org/fhir/SearchParameter/Organization-address"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/SearchParameter/Organization-address>
+         ] ;
+         fhir:type [ fhir:v "string" ] ;
+         fhir:documentation [ fhir:v "Adresse de l'entite geographique" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
