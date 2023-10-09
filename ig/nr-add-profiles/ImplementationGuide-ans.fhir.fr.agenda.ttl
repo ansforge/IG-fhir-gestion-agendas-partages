@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "GestionAgendaPartage"] ; # 
   fhir:title [ fhir:v "Gestion d'Agenda Partagé (GAP)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-10-09T08:58:24+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-10-09T16:11:37+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -613,7 +613,10 @@
          fhir:reference [ fhir:v "Schedule/example" ]
        ] ;
        fhir:name [ fhir:v "example-fr-schedule" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-fr-schedule"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-fr-schedule>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -624,7 +627,10 @@
          fhir:reference [ fhir:v "Slot/example" ]
        ] ;
        fhir:name [ fhir:v "example-frslot" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-fr-slot"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-fr-slot>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -635,7 +641,10 @@
          fhir:reference [ fhir:v "Appointment/example-req-appointment" ]
        ] ;
        fhir:name [ fhir:v "example-req-appointment" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-fr-appointment"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-fr-appointment>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;

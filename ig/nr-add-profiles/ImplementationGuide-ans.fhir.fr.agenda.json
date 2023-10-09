@@ -10,7 +10,7 @@
   "name" : "GestionAgendaPartage",
   "title" : "Gestion d'Agenda Partagé (GAP)",
   "status" : "draft",
-  "date" : "2023-10-09T08:58:24+00:00",
+  "date" : "2023-10-09T16:11:37+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -700,7 +700,7 @@
         "reference" : "Schedule/example"
       },
       "name" : "example-fr-schedule",
-      "exampleBoolean" : true
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-fr-schedule"
     },
     {
       "extension" : [{
@@ -711,7 +711,7 @@
         "reference" : "Slot/example"
       },
       "name" : "example-frslot",
-      "exampleBoolean" : true
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-fr-slot"
     },
     {
       "extension" : [{
@@ -722,7 +722,7 @@
         "reference" : "Appointment/example-req-appointment"
       },
       "name" : "example-req-appointment",
-      "exampleBoolean" : true
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-fr-appointment"
     },
     {
       "extension" : [{
