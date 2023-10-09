@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Flux 03 - Gestion disponibilités - Gestion d'Agenda Partagé (GAP) v3.0.0-ballot</title>
+    <title>Flux 04 et 05 - Demande consultation - Gestion d'Agenda Partagé (GAP) v3.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.4"}
-    h3,h4,h5,h6{--heading-prefix:"2.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.5"}
+    h3,h4,h5,h6{--heading-prefix:"2.5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -95,19 +95,19 @@
         <a href="construction_des_flux.html">Vue d&apos;ensemble</a>
       </li>
       <li>
-        <a href="flux1.html">Flux 01 - Gestion ressources</a>
+        <a href="flux-gestion-ressources.html">Flux 01 - Gestion ressources</a>
       </li>
       <li>
-        <a href="flux2.html">Flux 02 - Gestion agenda</a>
+        <a href="flux-gestion-agenda.html">Flux 02 - Gestion agenda</a>
       </li>
       <li>
-        <a href="flux3.html">Flux 03 - Gestion disponibilités</a>
+        <a href="flux-gestion-dispo.html">Flux 03 - Gestion disponibilités</a>
       </li>
       <li>
-        <a href="flux4.html">Flux 04 et 05 - Demande consultation</a>
+        <a href="flux-demande-consultation.html">Flux 04 et 05 - Demande consultation</a>
       </li>
       <li>
-        <a href="flux6.html">Flux 06 - Gestion rendez-vous</a>
+        <a href="flux-gestion-rdv.html">Flux 06 - Gestion rendez-vous</a>
       </li>
     </ul>
   </li>
@@ -151,15 +151,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 03 - Gestion disponibilités</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 04 et 05 - Demande consultation</b></li>
 
           <span style="float:right;">
 
-            <a href="flux2.html">&lt;prev</a> | 
+            <a href="flux-gestion-dispo.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="flux4.html">next&gt;</a>
+          | <a href="flux-gestion-rdv.html">next&gt;</a>
 
           </span>
 
@@ -182,7 +182,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
-  <h2>Flux 03 - Gestion disponibilités</h2>
+  <h2>Flux 04 et 05 - Demande consultation</h2>
   
 
 
@@ -200,53 +200,258 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<h3 id="les-flux-de-gestion-des-disponibilités">Les flux de gestion des disponibilités</h3>
+<h3 id="les-flux-de-recherche">Les flux de recherche</h3>
+
+<p>Ces flux correspondent à des requêtes HTTP GET associés à leur réponse.</p>
 
 <div class="figure" style="width:65%;">
-    <img src="flux3.png" alt="Flux3" title="Flux3" />
+    <img src="flux4.png" alt="Flux1" title="Flux1" />
 </div>
 
-<p>Ces trois flux correspondent à une requête HTTP PUT/PATCH pour ajouter, mettre à jour ou supprimer une disponibilité à un agenda existant. Le support des requêtes HTTP PATCH ne constitue pas une exigence de ces spécifications d’interopérabilité. Le gestionnaire d’agenda peut proposer le support de ce type de requêtes pour des raisons de volumétrie des flux par exemple.</p>
+<p>Le flux de demande de consultation de disponibilités et sa réponse, est opéré par la requête HTTP GET sur la ressource Slot représentant les créneaux d’un agenda et sa réponse. Cette requête est envoyée au gestionnaire d’agendas.</p>
 
-<p>Les flux de création, de mise à jour et de suppression d’une disponibilité sont opérés par les requêtes HTTP PUT ou PATCH sur la ressource Schedule représentant l’agenda pour créer, modifier ou supprimer une occurrence de l’extension availabilityTime. Ces requêtes sont envoyées au gestionnaire d’agendas.</p>
+<p>Le flux de demande de consultation de rendez-vous et sa réponse, est opéré par la requête HTTP GET sur la ressource Appointment représentant les rendez-vous d’un agenda et sa réponse. Cette requête est envoyée au gestionnaire d’agendas.</p>
 
-<h4 id="flux-3a---création-de-disponibilités">Flux 3a - Création de disponibilités</h4>
+<h4 id="flux-4a---demande-de-consultation-de-disponibilités">Flux 4a - Demande de consultation de disponibilités</h4>
 
-<p>Ce flux permet la création des disponibilités d’une ou d’un ensemble de ressources. Une disponibilité est une plage horaire en dehors de laquelle la ressource n’accepte pas les demandes de rendez-vous. Typiquement, une disponibilité d’un médecin de ville pourrait se résumer aux horaires d’ouverture de son cabinet. Ce flux permet donc l’envoi des détails des disponibilités d’une ressource au gestionnaire d’agenda.</p>
+<p>Ce flux permet de demander une vue sur le temps libre ou occupé d’une ou de plusieurs ressources sur une durée de temps donnée. Un patient souhaitant prendre un rendez-vous avec un dentiste pourrait effectuer une recherche sur les disponibilités des dentistes à proximité de son lieu de travail sur une semaine donnée. Il pourra ainsi avoir une vue globale sur le temps libre ou occupé de chacun d’eux et demander un rendez-vous avec le dentiste ayant une disponibilité sur l’horaire qui lui convient le mieux. Sont envoyés dans ce flux l’intervalle de temps sur lequel les disponibilités sont demandées et les critères de recherche sur les ressources.</p>
 
-<p>Cette notion de disponibilité est introduite par les extensions françaises de la ressource Schedule : FrSchedule.</p>
+<p>Ce flux est donc un flux de recherche sur les ressources de type Slot avec status=free, correspondants aux créneaux de disponibilités.</p>
 
-<p>Le flux 3a permet de déclarer les disponibilités d’une ressource. L’ajout des disponibilités à un agenda existant peut se faire selon deux méthodes :</p>
+<p>Le flux 4a permet de demander les créneaux de disponibilité, représentés par les ressources Slot, d’une ou de plusieurs ressources. Cela se fait à travers la requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR.
+Si la ressource est déjà identifiée, les critères de recherche se rapporteront aux Slot de son agenda, recherche par horaires par exemple. Si la ressource n’est pas encore identifiée, les critères peuvent être étendus pour qu’une recherche de ressources d’agenda soit effectuée en même temps. Typiquement, la recherche peut constituer une demande des créneaux libres des dentistes du 15e arrondissement de Paris pour le lendemain. Ceci se fait en utilisant le chainage des paramètres de recherche pour les éléments de type Reference.</p>
 
-<ul>
-  <li>Méthode HTTP PUT avec la nouvelle version de la ressource Schedule, contenant les nouvelles disponibilités (extension availabilityTime), dans le corps.</li>
-  <li>Méthode HTTP PATCH, en utilisant l’opération add, pour ajouter une nouvelle disponibilité (extension availabilityTime).
-Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas, ce dernier renvoie un code statut 200 OK.</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Paramètre de recherche</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>identifier : token</td>
+      <td>Identifiant du créneau</td>
+    </tr>
+    <tr>
+      <td>status : token</td>
+      <td>Statut du créneau</td>
+    </tr>
+    <tr>
+      <td>start : date</td>
+      <td>Ce paramètre, peut être accompagné de modifier (lt, le, gt, ge…) pour modifier l’intervalle de recherche (cf documentation FHIR Search).</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Patient.identifier : token</td>
+      <td>Identifiant du patient (matricule INS ou autre identifiant)</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Patient.family : string</td>
+      <td>Nom du patient</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Patient.given : string</td>
+      <td>Prénom du patient</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Practitioner.identifier : token</td>
+      <td>Identifiant du professionnel</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:PractitionerRole.name : string</td>
+      <td>Recherche sur le nom ou prénom d’exercice du professionnel, cf IG Annuaire</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:PractitionerRole.role: token</td>
+      <td>Profession du professionnel</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:PractitionerRole.specialty : token</td>
+      <td>Spécialité du professionnel</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:PractitionerRole.location.address : string ou schedule.actor:PractitionerRole.location.near : special</td>
+      <td>Adresse du lieu d’exercice du professionnel</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:PractitionerRole.telecom : token</td>
+      <td>Télécommunication du professionnel</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:RelatedPerson.identifier : token</td>
+      <td>Identifiant du contact</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:RelatedPerson.address : string</td>
+      <td> Adresse du contact</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:RelatedPerson.telecom: token</td>
+      <td>Télécommunication du contact</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:RelatedPerson.name : string</td>
+      <td>Nom du contact</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:RelatedPerson.name : string</td>
+      <td>Prénom du contact</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Location.name : string</td>
+      <td>Nom du lieu</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Location.identifier : token</td>
+      <td>Identifiant du lieu</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Location.address : string ou schedule.actor:Location.near : special</td>
+      <td>Adresse du lieu du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Device.identifier : token</td>
+      <td>Identifiant de l’équipement</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Device.type : token</td>
+      <td>Type de l’équipement</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Device.device-name : string</td>
+      <td>Nom de l’équipement</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:Device.model : string</td>
+      <td>Modèle de l’équipement</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.identifier : token</td>
+      <td> Identifiant de l’organisation interne (service de soins)</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.name : string</td>
+      <td> Nom de l’organisation interne (service de soins)</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.service-type : token</td>
+      <td> Type de service de l’organisation interne (service de soins)</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.organization.identifier : token </td>
+      <td>Identifiant de l’établissement de rattachement de l’organisation interne (service de soins)</td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.organization.name : string</td>
+      <td>Nom de l’établissement de rattachement de l’organisation interne (service de soins) </td>
+    </tr>
+    <tr>
+      <td>schedule.actor:HealthcareService.organization.address : string</td>
+      <td>Adresse de l’établissement de rattachement de l’organisation interne (service de soins)</td>
+    </tr>
+  </tbody>
+</table>
 
-<h4 id="flux-3b---mise-à-jour-de-disponibilités">Flux 3b - Mise à jour de disponibilités</h4>
+<p>Exemple d’une requête :
+La requête ci-dessous représente une recherche de disponibilités d’un médecin généraliste (code SM54 de la TRE R38 de l’ensemble des spécialités ordinales) à Paris entre le 02/01/2019 et le 06/01/2019. La réponse doit retourner les ressources Slot répondant à ces critères de recherche ainsi que la ressource Schedule et PractitionerRole (actor) qui y sont liés.</p>
 
-<p>Ce flux permet la mise à jour d’une disponibilité d’une ressource. Son contenu est similaire à celui du flux 3a de création de disponibilités.</p>
+<blockquote>
+  <p>GET example.com/base/Slot?_include=Slot:schedule&amp;_include=Schedule:actor&amp;start=ge2019-01-02&amp;start=le2019-01-06&amp;schedule.actor:PractitionerRole.specialty=https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale|SM54&amp;schedule.actor:PractitionerRole.address=Paris&amp;status=free</p>
+</blockquote>
 
-<p>Le flux 3b permet de mettre à jour les disponibilités d’une ressource. Cela peut se faire en utilisant :</p>
+<h4 id="flux-5a---réponse-à-la-demande-de-consultation-de-disponibilités">Flux 5a - Réponse à la demande de consultation de disponibilités</h4>
 
-<ul>
-  <li>La méthode HTTP PUT et en envoyant dans le corps de la requête la ressource Schedule contenant les disponibilités mises à jour.</li>
-  <li>La méthode HTTP PATCH, avec l’opération replace, pour remplacer une disponibilité (extension availabilityTime) par sa nouvelle version.
-Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas, ce dernier renvoie un code statut 200 OK.</li>
-</ul>
+<p>Ce flux constitue la réponse au flux 5a de demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, il devra contenir les informations sur le temps libre ou occupé de chacune des ressources.</p>
 
-<h4 id="flux-3c---suppression-de-disponibilités">Flux 3c - Suppression de disponibilités</h4>
+<p>La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande.</p>
 
-<p>Ce flux permet de supprimer une disponibilité d’une ressource. Il contient les identifiants de la disponibilité à supprimer.</p>
+<p>Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris.</p>
 
-<p>Le flux 3c permet de supprimer les disponibilités. Cela peut se faire de deux façons :</p>
+<p>Le flux 5a constitue la réponse du gestionnaire d’agenda à cette requête. Il s’agit d’une réponse HTTP 200 ok avec comme corps une ressource Bundle de type searchset contenant l’ensemble des Slot répondant aux critères de recherche envoyés et toute autre ressource référencée ayant été demandée. Un profil spécifique est créé pour ce volet et nommé GAP_BundleResultatReponseADemandeConsultationDisponibilites.
+Consultez la documentation du standard sur la gestion des erreurs liées à la recherche.</p>
 
-<ul>
-  <li>Méthode HTTP PUT pour envoyer une nouvelle version de la ressource Schedule où les disponibilités en question ont été supprimées.</li>
-  <li>Méthode HTTP PATCH, en utilisant l’opération remove, pour supprimer les disponibilités.
-Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas, ce dernier renvoie un code statut 200 OK.</li>
-</ul>
+<h4 id="flux-4b---demande-de-consultation-de-rendez-vous">Flux 4b - Demande de consultation de rendez-vous</h4>
+
+<p>Le flux 4b permet de rechercher des rendez-vous dans l’agenda d’une ressource préalablement identifiée. Cela correspond à une recherche de ressources Appointment et se fait avec une requête HTTP GET avec des paramètres de recherche listés dans le tableau ci-dessous et respectant les spécifications FHIR. Les critères de recherche peuvent se rapporter aux détails du rendez-vous et/ou aux identifiants des ressources qui y participent.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramètre de recherche</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>identifier : token</td>
+      <td>Identifiant du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>date : date</td>
+      <td>Ce paramètre, peut être accompagné de modifier (lt, le, gt, ge…) pour modifier l’intervalle de recherche (cf documentation FHIR Search).</td>
+    </tr>
+    <tr>
+      <td>created : token</td>
+      <td>Date de création du rendez-vous </td>
+    </tr>
+    <tr>
+      <td>service-type : token</td>
+      <td>Type de rendez-vous</td>
+    </tr>
+    <tr>
+      <td>status : token</td>
+      <td> Statut du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>description : string</td>
+      <td> Critère portant sur l’objet et le commentaire du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>supporting-info : reference</td>
+      <td>Pièce jointe du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>priority : token</td>
+      <td>Priorité du rendez-vous </td>
+    </tr>
+    <tr>
+      <td>actor:Patient.identifier : token ou patient.identifier : token</td>
+      <td>Matricule INS ou identifiant du patient participant au rendez-vous </td>
+    </tr>
+    <tr>
+      <td>actor:Practitioner.identifier : token ou practitioner.identifier : token</td>
+      <td>Identifiant du professionnel participant au rendez-vous</td>
+    </tr>
+    <tr>
+      <td>actor:RelatedPerson.identifier : token</td>
+      <td>Identifiant du contact participant au rendez-vous</td>
+    </tr>
+    <tr>
+      <td>actor:Location.identifier : token ou location.identifier : token</td>
+      <td>Identifiant du lieu du rendez-vous</td>
+    </tr>
+    <tr>
+      <td>actor:Device.identifier : token</td>
+      <td>Identifiant de l’équipement alloué au rendez-vous</td>
+    </tr>
+    <tr>
+      <td>actor:HealthcareService.identifier : token</td>
+      <td> Identifiant de l’organisation interne (service de soins) participant au</td>
+    </tr>
+    <tr>
+      <td>rendez-vous</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="flux-5b---réponse-à-la-demande-de-consultation-de-rendez-vous">Flux 5b - Réponse à la demande de consultation de rendez-vous</h4>
+
+<p>Ce flux constitue la réponse au flux 4b de recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande.</p>
+
+<p>Le flux 5b constitue la réponse du gestionnaire d’agenda à cette requête. Il s’agit d’une réponse HTTP 200 ok avec comme contenu une ressource Bundle de type searchset contenant l’ensemble des Appointment répondant aux critères de recherche envoyés dans la requête et représentant les rendez-vous de la ressource demandée ainsi que toute ressource liée demandée. Un profil spécifique est créé pour ce volet et nommé GAP_BundleResultatReponseADemandeConsultationRDV.</p>
+
+<p>Consultez la documentation du standard sur la gestion des erreurs liées à la recherche.</p>
 
 
 
@@ -277,7 +482,7 @@ Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="flux2.html">&lt;prev</a>
+                <a href="flux-gestion-dispo.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -285,7 +490,7 @@ Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="flux4.html">next&gt;</a>
+                <a href="flux-gestion-rdv.html">next&gt;</a>
 
               </td>
             </tr>

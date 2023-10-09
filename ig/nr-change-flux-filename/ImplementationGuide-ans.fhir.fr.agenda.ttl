@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "GestionAgendaPartage"] ; # 
   fhir:title [ fhir:v "Gestion d'Agenda Partagé (GAP)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-10-09T12:14:14+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-10-09T12:14:50+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -780,41 +780,41 @@
          ] [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "flux1.html"^^xsd:anyURI ]
+             fhir:value [ fhir:v "flux-gestion-ressources.html"^^xsd:anyURI ]
            ] ) ;
-           fhir:name [ fhir:v "flux1.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "flux-gestion-ressources.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "Flux 01 - Gestion ressources" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "flux2.html"^^xsd:anyURI ]
+             fhir:value [ fhir:v "flux-gestion-agenda.html"^^xsd:anyURI ]
            ] ) ;
-           fhir:name [ fhir:v "flux2.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "flux-gestion-agenda.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "Flux 02 - Gestion agenda" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "flux3.html"^^xsd:anyURI ]
+             fhir:value [ fhir:v "flux-gestion-dispo.html"^^xsd:anyURI ]
            ] ) ;
-           fhir:name [ fhir:v "flux3.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "flux-gestion-dispo.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "Flux 03 - Gestion disponibilités" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "flux4.html"^^xsd:anyURI ]
+             fhir:value [ fhir:v "flux-demande-consultation.html"^^xsd:anyURI ]
            ] ) ;
-           fhir:name [ fhir:v "flux4.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "flux-demande-consultation.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "Flux 04 et 05 - Demande consultation" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "flux6.html"^^xsd:anyURI ]
+             fhir:value [ fhir:v "flux-gestion-rdv.html"^^xsd:anyURI ]
            ] ) ;
-           fhir:name [ fhir:v "flux6.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "flux-gestion-rdv.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "Flux 06 - Gestion rendez-vous" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )

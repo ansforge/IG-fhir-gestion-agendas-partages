@@ -10,7 +10,7 @@
   <name value="GestionAgendaPartage"/>
   <title value="Gestion d'Agenda Partagé (GAP)"/>
   <status value="draft"/>
-  <date value="2023-10-09T12:14:14+00:00"/>
+  <date value="2023-10-09T12:14:50+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -684,41 +684,41 @@
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="flux1.html"/>
+            <valueUrl value="flux-gestion-ressources.html"/>
           </extension>
-          <nameUrl value="flux1.html"/>
+          <nameUrl value="flux-gestion-ressources.html"/>
           <title value="Flux 01 - Gestion ressources"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="flux2.html"/>
+            <valueUrl value="flux-gestion-agenda.html"/>
           </extension>
-          <nameUrl value="flux2.html"/>
+          <nameUrl value="flux-gestion-agenda.html"/>
           <title value="Flux 02 - Gestion agenda"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="flux3.html"/>
+            <valueUrl value="flux-gestion-dispo.html"/>
           </extension>
-          <nameUrl value="flux3.html"/>
+          <nameUrl value="flux-gestion-dispo.html"/>
           <title value="Flux 03 - Gestion disponibilités"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="flux4.html"/>
+            <valueUrl value="flux-demande-consultation.html"/>
           </extension>
-          <nameUrl value="flux4.html"/>
+          <nameUrl value="flux-demande-consultation.html"/>
           <title value="Flux 04 et 05 - Demande consultation"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="flux6.html"/>
+            <valueUrl value="flux-gestion-rdv.html"/>
           </extension>
-          <nameUrl value="flux6.html"/>
+          <nameUrl value="flux-gestion-rdv.html"/>
           <title value="Flux 06 - Gestion rendez-vous"/>
           <generation value="markdown"/>
         </page>
