@@ -1,5 +1,5 @@
-id: ans.fhir.fr.agenda
-canonical: https://interop.esante.gouv.fr/ig/fhir/agenda
+id: ans.fhir.fr.gap
+canonical: https://interop.esante.gouv.fr/ig/fhir/gap
 name: GestionAgendaPartage
 title: Gestion d'Agenda Partagé (GAP)
 publisher:
