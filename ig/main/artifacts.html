@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ANS.FHIR.FR.AGENDA\Artifacts Summary - FHIR v4.0.1</title>
+    <title>Artifacts Summary - Gestion d'Agenda Partagé (GAP) v3.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,7 +20,6 @@
   	<link href="assets/css/prism.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
-    <!-- CSS only -->
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -32,10 +31,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -48,11 +47,11 @@
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
-  </div>
-  <div id="ans-nav">
-    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
-  </div>
+  <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+</div>
+<div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+  <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+</div>
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Gestion d&#39;Agenda Partagé (GAP)</span>
@@ -194,10 +193,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Comportement: Capability Statements</a>
+         <a href="#1">Behavior: Capability Statements</a>
       </li>
       <li>
-         <a href="#2">Comportement: Search Parameters</a>
+         <a href="#2">Behavior: Search Parameters</a>
       </li>
       <li>
          <a href="#3">Structures: Resource Profiles</a>
@@ -212,9 +211,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:f="http://hl7.org/fhir">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
-   <h3>Comportement: Capability Statements </h3>
+   <h3>Behavior: Capability Statements </h3>
    <p>
-    <p>La ressource CapabilityStatement permet de définir les capacités spécifiques que les systèmes doivent supporter pour être conforme à cet Implementation Guide (IG). Les systèmes conformes à cet IG doivent déclarer leur conformance à au moins une de ces ressources CapabilityStatement.</p>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
 </p>
    <p>
       <table class="grid">
@@ -223,7 +222,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
                <td style="column-width:30%">
                   <a href="CapabilityStatement-GAP-Consommateur.html"
-                     title="CapabilityStatement/GAP-Consommateur">GAP-Consommateur</a>
+                     title="CapabilityStatement/GAP-Consommateur">CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP</a>
                </td>
                <td>
 <p>Un consommateur consulte l’agenda d’une ressource gérée par un gestionnaire d’agenda. La consultation de l’agenda indique les éventuelles plages de disponibilité déclarées pour la<br />
@@ -234,7 +233,7 @@ professionnel intervenant dans la prise en charge d’une personne ou tout autre
             <tr>
                <td style="column-width:30%">
                   <a href="CapabilityStatement-Gap-Declarant.html"
-                     title="CapabilityStatement/Gap-Declarant">Gap-Declarant</a>
+                     title="CapabilityStatement/Gap-Declarant">CI-SIS Gestion-d-Agendas-Partages - DeclarantGAP</a>
                </td>
                <td>
 <p>Le déclarant peut initier une demande de création d’une nouvelle ressource à un gestionnaire de ressource ou d’une plage de disponibilité d’une ressource à un gestionnaire d’agenda.
@@ -245,7 +244,7 @@ Le déclarant peut être soit le responsable de la ressource, soit un gestionnai
             <tr>
                <td style="column-width:30%">
                   <a href="CapabilityStatement-GAP-DeclarantRDV.html"
-                     title="CapabilityStatement/GAP-DeclarantRDV">GAP-DeclarantRDV</a>
+                     title="CapabilityStatement/GAP-DeclarantRDV">CI-SIS Gestion-d-Agendas-Partages - DeclarantRDVGAP</a>
                </td>
                <td>
 <p>Un déclarant de rendez-vous fait une demande auprès d’un gestionnaire d’agenda pour créer (demande d’un nouveau rendez-vous ou déclaration d’un rendez-vous pris) ou mettre à jour un rendez-vous</p>
@@ -254,7 +253,7 @@ Le déclarant peut être soit le responsable de la ressource, soit un gestionnai
             <tr>
                <td style="column-width:30%">
                   <a href="CapabilityStatement-GAP-GestionnaireAgenda.html"
-                     title="CapabilityStatement/GAP-GestionnaireAgenda">GAP-GestionnaireAgenda</a>
+                     title="CapabilityStatement/GAP-GestionnaireAgenda">CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP</a>
                </td>
                <td>
 <p>Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous.</p>
@@ -263,7 +262,7 @@ Le déclarant peut être soit le responsable de la ressource, soit un gestionnai
             <tr>
                <td style="column-width:30%">
                   <a href="CapabilityStatement-GAP-GestionnaireRessources.html"
-                     title="CapabilityStatement/GAP-GestionnaireRessources">GAP-GestionnaireRessources</a>
+                     title="CapabilityStatement/GAP-GestionnaireRessources">CI-SIS Gestion-d-Agendas-Partages - GestionnaireRessourcesGAP</a>
                </td>
                <td>
 <p>Le gestionnaire de ressources gère les demandes de gestion de ressources (lieu,   équipement, personne prise en charge, professionnel, etc.).</p>
@@ -273,9 +272,9 @@ Le déclarant peut être soit le responsable de la ressource, soit un gestionnai
       </table>
    </p>
    <a name="2"> </a>
-   <h3>Comportement: Search Parameters </h3>
+   <h3>Behavior: Search Parameters </h3>
    <p>
-    <p>La ressource SearchParameter permet de définir de nouveaux paramètres de recherche pour les serveurs RESTful. Ces paramètres de recherche peuvent également être utilisés pour trier ou inclure des ressources reliées.</p>
+    <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
 </p>
    <p>
       <table class="grid">
@@ -350,7 +349,7 @@ Le déclarant peut être soit le responsable de la ressource, soit un gestionnai
    <a name="3"> </a>
    <h3>Structures: Resource Profiles </h3>
    <p>
-    <p>Ces structures définissent les contraintes sur les ressources FHIR par les systèmes conformes à cet Implementation Guide (IG).</p>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
 </p>
    <p>
       <table class="grid">
@@ -380,7 +379,7 @@ Le déclarant peut être soit le responsable de la ressource, soit un gestionnai
    <a name="4"> </a>
    <h3>Example: Example Instances </h3>
    <p>
-    <p>Ces exemples dévoilent à quoi doivent ressembler les données produites et consommées par les systèmes conformes à cet Implementation Guide (IG).</p>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 </p>
    <p>
       <table class="grid">
@@ -451,14 +450,13 @@ Le déclarant peut être soit le responsable de la ressource, soit un gestionnai
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Aug 6, 2023 13:19+0000">2023-08-06</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.agenda#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Oct 9, 2023 07:57+0000">2023-10-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
-                  | <a style="color: #81BEF7" target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/agenda/history.html">Version History</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-fhir-gestion-agenda-partage">New Issue</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-fhir-gestion-agenda-partage">New Issue</a>
                 
-
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -601,6 +599,4 @@ anchors.add()</script>
   </footer>
   </body>
 </html>
-
-
 

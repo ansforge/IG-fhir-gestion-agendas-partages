@@ -10,7 +10,7 @@
   <name value="GestionAgendaPartage"/>
   <title value="Gestion d'Agenda Partagé (GAP)"/>
   <status value="draft"/>
-  <date value="2023-08-06T13:19:03+00:00"/>
+  <date value="2023-10-09T07:57:18+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -28,7 +28,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="5.0.0"/>
+    <version value="5.3.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -204,6 +204,14 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -414,6 +422,14 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
         <valueCode value="active-tables"/>
       </extension>
       <extension url="value">
@@ -452,6 +468,61 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/GAP-Consommateur"/>
+      </reference>
+      <name value="CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP"/>
+      <description value="Un consommateur consulte l’agenda d’une ressource gérée par un gestionnaire d’agenda. La consultation de l’agenda indique les éventuelles plages de disponibilité déclarées pour la  &#xA;ressource ainsi que ses indisponibilités et les détails des rendez-vous existants (types, durées, etc., cf. section 2.3.3). Le consommateur peut être la personne prise en charge, un  &#xA;professionnel intervenant dans la prise en charge d’une personne ou tout autre tiers autorisé à consulter l’agenda de la ressource concernée."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/Gap-Declarant"/>
+      </reference>
+      <name value="CI-SIS Gestion-d-Agendas-Partages - DeclarantGAP"/>
+      <description value="Le déclarant peut initier une demande de création d’une nouvelle ressource à un gestionnaire de ressource ou d’une plage de disponibilité d’une ressource à un gestionnaire d’agenda.&#xA;Il peut également modifier ou supprimer une ressource ou une plage de disponibilité d’une ressource existante. &#xA;Le déclarant peut être soit le responsable de la ressource, soit un gestionnaire d’agenda ou un gestionnaire de ressources auprès duquel une ressource ou une plage de disponibilité d’une ressource a été déclarée et qui diffuse cette information à un autre gestionnaire d’agenda, ou à un autre gestionnaire de ressources."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/GAP-DeclarantRDV"/>
+      </reference>
+      <name value="CI-SIS Gestion-d-Agendas-Partages - DeclarantRDVGAP"/>
+      <description value="Un déclarant de rendez-vous fait une demande auprès d’un gestionnaire d’agenda pour créer (demande d'un nouveau rendez-vous ou déclaration d'un rendez-vous pris) ou mettre à jour un rendez-vous"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/GAP-GestionnaireAgenda"/>
+      </reference>
+      <name value="CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP"/>
+      <description value="Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/GAP-GestionnaireRessources"/>
+      </reference>
+      <name value="CI-SIS Gestion-d-Agendas-Partages - GestionnaireRessourcesGAP"/>
+      <description value="Le gestionnaire de ressources gère les demandes de gestion de ressources (lieu,   équipement, personne prise en charge, professionnel, etc.)."/>
+      <exampleBoolean value="false"/>
+    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Schedule"/>
@@ -535,61 +606,6 @@
       </reference>
       <name value="GAP-Appointment-priority"/>
       <description value="Priority of the appointment"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CapabilityStatement"/>
-      </extension>
-      <reference>
-        <reference value="CapabilityStatement/GAP-Consommateur"/>
-      </reference>
-      <name value="GAP-Consommateur"/>
-      <description value="Un consommateur consulte l’agenda d’une ressource gérée par un gestionnaire d’agenda. La consultation de l’agenda indique les éventuelles plages de disponibilité déclarées pour la  &#xA;ressource ainsi que ses indisponibilités et les détails des rendez-vous existants (types, durées, etc., cf. section 2.3.3). Le consommateur peut être la personne prise en charge, un  &#xA;professionnel intervenant dans la prise en charge d’une personne ou tout autre tiers autorisé à consulter l’agenda de la ressource concernée."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CapabilityStatement"/>
-      </extension>
-      <reference>
-        <reference value="CapabilityStatement/Gap-Declarant"/>
-      </reference>
-      <name value="Gap-Declarant"/>
-      <description value="Le déclarant peut initier une demande de création d’une nouvelle ressource à un gestionnaire de ressource ou d’une plage de disponibilité d’une ressource à un gestionnaire d’agenda.&#xA;Il peut également modifier ou supprimer une ressource ou une plage de disponibilité d’une ressource existante. &#xA;Le déclarant peut être soit le responsable de la ressource, soit un gestionnaire d’agenda ou un gestionnaire de ressources auprès duquel une ressource ou une plage de disponibilité d’une ressource a été déclarée et qui diffuse cette information à un autre gestionnaire d’agenda, ou à un autre gestionnaire de ressources."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CapabilityStatement"/>
-      </extension>
-      <reference>
-        <reference value="CapabilityStatement/GAP-DeclarantRDV"/>
-      </reference>
-      <name value="GAP-DeclarantRDV"/>
-      <description value="Un déclarant de rendez-vous fait une demande auprès d’un gestionnaire d’agenda pour créer (demande d'un nouveau rendez-vous ou déclaration d'un rendez-vous pris) ou mettre à jour un rendez-vous"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CapabilityStatement"/>
-      </extension>
-      <reference>
-        <reference value="CapabilityStatement/GAP-GestionnaireAgenda"/>
-      </reference>
-      <name value="GAP-GestionnaireAgenda"/>
-      <description value="Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CapabilityStatement"/>
-      </extension>
-      <reference>
-        <reference value="CapabilityStatement/GAP-GestionnaireRessources"/>
-      </reference>
-      <name value="GAP-GestionnaireRessources"/>
-      <description value="Le gestionnaire de ressources gère les demandes de gestion de ressources (lieu,   équipement, personne prise en charge, professionnel, etc.)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
