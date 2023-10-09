@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="GAP-Slot-earliestStart"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GAP_Slot_earliestStart</h2><p>Parameter <code>start</code>:<code>date</code></p><div><p>earliest start of a potential appointment</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/slot.html">Slot</a></td></tr><tr><td>Expression</td><td><code>Slot.start</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td>The parameter can repeat (and) and can have repeating values (or)</td></tr><tr><td>Comparators</td><td>Allowed: gt, ge</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Slot-earliestStart"/>
+  <version value="3.0.0-ballot"/>
+  <name value="GAP_Slot_earliestStart"/>
+  <derivedFrom value="http://hl7.org/fhir/SearchParameter/Slot-start"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-10-09T12:14:14+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="earliest start of a potential appointment"/>
+  <code value="start"/>
+  <base value="Slot"/>
+  <type value="date"/>
+  <expression value="Slot.start"/>
+  <xpathUsage value="normal"/>
+  <multipleOr value="true"/>
+  <multipleAnd value="true"/>
+  <comparator value="gt"/>
+  <comparator value="ge"/>
+</SearchParameter>
