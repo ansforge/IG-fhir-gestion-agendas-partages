@@ -13,6 +13,24 @@
         "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-rdv",
         "title": "GAP_BundleResultatReponseADemandeConsultationRDV"
       }
+    ],
+    "Appointment": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-appointment",
+        "title": "GAP_FrAppointment"
+      }
+    ],
+    "Schedule": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-schedule",
+        "title": "GAP_FrSchedule"
+      }
+    ],
+    "Slot": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-slot",
+        "title": "GAP_FrSlot"
+      }
     ]
   },
   "usage": {

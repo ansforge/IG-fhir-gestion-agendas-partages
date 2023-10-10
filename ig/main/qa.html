@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 0, errors = 12, warn = 24, info = 4-->
+<!-- broken links = 0, errors = 12, warn = 27, info = 9-->
 <head>
   <title>GestionAgendaPartage : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for GestionAgendaPartage</h1>
- <p>Generated Tue Oct 10 07:45:48 UTC 2023, FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/gap">https://interop.esante.gouv.fr/ig/fhir/gap</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/gap/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Tue Oct 10 07:46:20 UTC 2023, FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/gap">https://interop.esante.gouv.fr/ig/fhir/gap</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/gap/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.4.13</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.gap, Canonical = https://interop.esante.gouv.fr/ig/fhir/gap</td></tr>
@@ -65,7 +65,7 @@
  <tr><td>introduction</d><td>Gestion d'Agendas Partagés (GAP)</td></tr>
  <tr><td>ci-build</d><td>https://ansforge.github.io/IG-fhir-annuaire/ig/main/</td></tr>
 </table>
-<ul><li><span title="Invalid HTTP response 404 from https://interop.esante.gouv.fr/ig/fhir/gap/package-list.json?nocache=1696923947443 (Not Found) (content in /tmp/http-log/fhir-http-3.log)">This IG has never been published</span> <img src="information.png" height="16px" width="16px"/></li>
+<ul><li><span title="Invalid HTTP response 404 from https://interop.esante.gouv.fr/ig/fhir/gap/package-list.json?nocache=1696923979425 (Not Found) (content in /tmp/http-log/fhir-http-3.log)">This IG has never been published</span> <img src="information.png" height="16px" width="16px"/></li>
 <li>This release is labelled as a milestone, so should not have a patch version (3.0.0-ballot) <img src="icon-warning.png" height="16px" width="16px"/></li>
 <li>descmd cannot contain a ' <img src="icon-error.gif" height="16px" width="16px"/></li>
 <li>This IG is not yet published at all, so there must be "first" : true in the publication request <img src="icon-error.gif" height="16px" width="16px"/></li>
@@ -89,26 +89,42 @@
   <li>
 hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-parameter-code.html">GuideParameterCode</a>
  (15 uses),     <a href="http://hl7.org/fhir/R4/device.html">Device</a>
- (3 uses),     <code>fhir-type</code>
- (96 uses),     <a href="http://hl7.org/fhir/R4/extension-structuredefinition-standards-status.html">standards-status</a>
- (223 uses),     <a href="http://hl7.org/fhir/R4/extension-structuredefinition-normative-version.html">normative-version</a>
- (221 uses),     <a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html">maxValueSet</a>
- (2 uses),     <a href="http://hl7.org/fhir/R4/extension-elementdefinition-bindingname.html">bindingName</a>
- (50 uses),     <a href="http://hl7.org/fhir/R4/extension-elementdefinition-iscommonbinding.html">isCommonBinding</a>
- (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a>
- (2 uses),     <a href="http://hl7.org/fhir/R4/extension-elementdefinition-bestpractice.html">bestpractice</a>
- (19 uses),     <a href="http://hl7.org/fhir/R4/extension-elementdefinition-bestpractice-explanation.html">bestpractice-explanation</a>
- (19 uses),     <a href="http://hl7.org/fhir/R4/organization.html">Organization</a>
- (2 uses),     <code>identifier</code>
+ (5 uses),     <code>fhir-type</code>
+ (104 uses),     <a href="http://hl7.org/fhir/R4/extension-structuredefinition-standards-status.html">standards-status</a>
+ (309 uses),     <a href="http://hl7.org/fhir/R4/extension-structuredefinition-normative-version.html">normative-version</a>
+ (307 uses),     <a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html">maxValueSet</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/extension-elementdefinition-bindingname.html">bindingName</a>
+ (75 uses),     <a href="http://hl7.org/fhir/R4/extension-elementdefinition-iscommonbinding.html">isCommonBinding</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/extension-elementdefinition-bestpractice.html">bestpractice</a>
+ (22 uses),     <a href="http://hl7.org/fhir/R4/extension-elementdefinition-bestpractice-explanation.html">bestpractice-explanation</a>
+ (22 uses),     <a href="http://hl7.org/fhir/R4/organization.html">Organization</a>
+ (4 uses),     <code>identifier</code>
  (2 uses),     <code>status</code>
  (2 uses),     <code>date</code>
  (2 uses),     <code>identifier</code>
  (2 uses),     <code>service-type</code>
  (2 uses),     <code>status</code>
  (2 uses),     <code>supporting-info</code>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a>
+ (9 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-category.html">ServiceCategory</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-type.html">ServiceType</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a>
  (2 uses),     <code>start</code>
  (2 uses),     <a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a>
- (3 uses),     <code>schedule</code>
+ (7 uses),     <a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-appointmentstatus.html">AppointmentStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html">AppointmentCancellationReason</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-reason.html">EncounterReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/condition.html">Condition</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/immunizationrecommendation.html">ImmunizationRecommendation</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-participant-type.html">ParticipantType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-participantrequired.html">ParticipantRequired</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-participationstatus.html">ParticipationStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-slotstatus.html">SlotStatus</a>
+ (1 uses),     <code>schedule</code>
  (1 uses),     <code>actor</code>
  (1 uses),     <code>identifier</code>
  (1 uses),     <code>family</code>
@@ -139,21 +155,21 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
   </li>
   <li>
 hl7.fhir.uv.tools#1.0.0-candidate:     <a href="https://build.fhir.org/ig/FHIR/fhir-tools-ig//StructureDefinition-resource-sort.html">ResourceSortExt</a>
- (17 uses)
+ (20 uses)
   </li>
 </ul>
 </td></tr>
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
- <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://interop.esante.gouv.fr/ig/fhir/gap (Problem #1 with package-list.json at https://interop.esante.gouv.fr/ig/fhir/gap: Invalid HTTP response 404 from https://interop.esante.gouv.fr/ig/fhir/gap/package-list.json?nocache=1696923885475 (Not Found) (content in /tmp/http-log/fhir-http-2.log))</td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://interop.esante.gouv.fr/ig/fhir/gap (Problem #1 with package-list.json at https://interop.esante.gouv.fr/ig/fhir/gap: Invalid HTTP response 404 from https://interop.esante.gouv.fr/ig/fhir/gap/package-list.json?nocache=1696923910730 (Not Found) (content in /tmp/http-log/fhir-http-2.log))</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 12, warn = 24, info = 4, broken links = 0</td></tr>
+ <tr><td>Summary:</td><td> errors = 12, warn = 27, info = 9, broken links = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>6</b></td><td><b>0</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>9</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_Appointment-example-req-appointment"><b>/home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/Appointment-example-req-appointment</b></a></td><td><b>5</b></td><td><b>3</b></td><td><b>1</b></td>
@@ -209,12 +225,30 @@ hl7.fhir.uv.tools#1.0.0-candidate:     <a href="https://build.fhir.org/ig/FHIR/f
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_StructureDefinition-gap-bundle-reponse-demande-consult-rdv"><b>/home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-rdv</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_StructureDefinition-gap-fr-appointment"><b>/home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/StructureDefinition-gap-fr-appointment</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_StructureDefinition-gap-fr-schedule"><b>/home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/StructureDefinition-gap-fr-schedule</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_StructureDefinition-gap-fr-slot"><b>/home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/StructureDefinition-gap-fr-slot</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
 </table>
 <hr/>
 <a name="internal"> </a>
 <h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
  <div style="border: 1px grey solid; display: none" id="v"></div>
  <table class="grid">
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/gap-fr-appointment.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/gap-fr-schedule.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/gap-fr-slot.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
    <tr style="background-color: #ffebcc">
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Schedule/example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
@@ -236,39 +270,39 @@ hl7.fhir.uv.tools#1.0.0-candidate:     <a href="https://build.fhir.org/ig/FHIR/f
 </table>
 <hr/>
 <a name="_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_Appointment-example-req-appointment"> </a>
-<h2><a href="Appointment-example-req-appointment.html">fsh-generated/resources/Appointment-example-req-appointment.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>Appointment: Validated against hl7.fhir.fr.core.<a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrAppointment">FrAppointment</a></li></ul>
+<h2><a href="Appointment-example-req-appointment.html">fsh-generated/resources/Appointment-example-req-appointment.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(4)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>Appointment: Validated against <i>this.</i><a href="StructureDefinition-gap-fr-appointment.html">GAP_FrAppointment</a>, hl7.fhir.fr.core.<a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrAppointment">FrAppointment</a> (per meta), hl7.fhir.fr.core.<a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrAppointment">FrAppointment</a> and <i>this.</i><a href="StructureDefinition-gap-fr-appointment.html">GAP_FrAppointment</a> (per meta)</li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Appointment&#8203;.extension[0]&#8203;.value&#8203;.ofType(Reference) (l12&#8203;/c8)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Patient/1'</b></td>
+     <td><b>Appointment&#8203;.extension[0]&#8203;.value&#8203;.ofType(Reference) (l13&#8203;/c8)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Patient/1'</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Appointment.specialty[0] (l36/c6)</b></td><td><b>warning</b></td><td title=""><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
+     <td><b>Appointment.specialty[0] (l37/c6)</b></td><td><b>warning</b></td><td title=""><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Appointment.specialty[0] (l36/c6)</b></td><td><b>warning</b></td><td title=""><b>Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
+     <td><b>Appointment.specialty[0] (l37/c6)</b></td><td><b>warning</b></td><td title=""><b>Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Appointment.specialty[0] (l36/c6)</b></td><td><b>warning</b></td><td title="Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
+     <td><b>Appointment.specialty[0] (l37/c6)</b></td><td><b>warning</b></td><td title="Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Appointment&#8203;.specialty[0]&#8203;.coding[0] (l38&#8203;/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
+     <td><b>Appointment&#8203;.specialty[0]&#8203;.coding[0] (l39&#8203;/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Appointment.slot[0] (l49/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Slot/example'</b></td>
+     <td><b>Appointment.slot[0] (l50/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Slot/example'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Appointment&#8203;.participant[0]&#8203;.actor (l56&#8203;/c8)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Patient/1'</b></td>
+     <td><b>Appointment&#8203;.participant[0]&#8203;.actor (l57&#8203;/c8)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Patient/1'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Appointment&#8203;.participant[1]&#8203;.actor (l64&#8203;/c8)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/PractitionerRole/1'</b></td>
+     <td><b>Appointment&#8203;.participant[1]&#8203;.actor (l65&#8203;/c8)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/PractitionerRole/1'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Appointment&#8203;.participant[2]&#8203;.actor (l72&#8203;/c8)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Practitioner/1'</b></td>
+     <td><b>Appointment&#8203;.participant[2]&#8203;.actor (l73&#8203;/c8)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Practitioner/1'</b></td>
    </tr>
 </table>
 <hr/>
@@ -350,36 +384,36 @@ hl7.fhir.uv.tools#1.0.0-candidate:     <a href="https://build.fhir.org/ig/FHIR/f
 </table>
 <hr/>
 <a name="_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_Schedule-example"> </a>
-<h2><a href="Schedule-example.html">fsh-generated/resources/Schedule-example.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>Schedule: Validated against hl7.fhir.fr.core.<a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrSchedule">FrSchedule</a></li></ul>
+<h2><a href="Schedule-example.html">fsh-generated/resources/Schedule-example.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(4)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>Schedule: Validated against <i>this.</i><a href="StructureDefinition-gap-fr-schedule.html">GAP_FrSchedule</a>, hl7.fhir.fr.core.<a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrSchedule">FrSchedule</a> (per meta), hl7.fhir.fr.core.<a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrSchedule">FrSchedule</a> and <i>this.</i><a href="StructureDefinition-gap-fr-schedule.html">GAP_FrSchedule</a> (per meta)</li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Schedule&#8203;.extension[0]&#8203;.extension[1]&#8203;.value&#8203;.ofType(Coding) (l21&#8203;/c12)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://terminology.interopsante.org/CodeSystem/v2-3315' is unknown so the code cannot be validated</b></td>
+     <td><b>Schedule&#8203;.extension[0]&#8203;.extension[1]&#8203;.value&#8203;.ofType(Coding) (l22&#8203;/c12)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://terminology.interopsante.org/CodeSystem/v2-3315' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Schedule&#8203;.extension[0]&#8203;.extension[1]&#8203;.value&#8203;.ofType(Coding)&#8203;.system (l23&#8203;/c79)</b></td><td><b>error</b></td><td title="_DT_Fixed_Wrong"><b>Value is 'http://terminology.interopsante.org/CodeSystem/v2-3315' but must be 'http://interopsante.org/fhir/CodeSystem/fr-schedule-type'</b></td>
+     <td><b>Schedule&#8203;.extension[0]&#8203;.extension[1]&#8203;.value&#8203;.ofType(Coding)&#8203;.system (l24&#8203;/c79)</b></td><td><b>error</b></td><td title="_DT_Fixed_Wrong"><b>Value is 'http://terminology.interopsante.org/CodeSystem/v2-3315' but must be 'http://interopsante.org/fhir/CodeSystem/fr-schedule-type'</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Schedule.specialty[0] (l73/c6)</b></td><td><b>warning</b></td><td title=""><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
+     <td><b>Schedule.specialty[0] (l74/c6)</b></td><td><b>warning</b></td><td title=""><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Schedule.specialty[0] (l73/c6)</b></td><td><b>warning</b></td><td title=""><b>Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
+     <td><b>Schedule.specialty[0] (l74/c6)</b></td><td><b>warning</b></td><td title=""><b>Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Schedule.specialty[0] (l73/c6)</b></td><td><b>warning</b></td><td title="Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
+     <td><b>Schedule.specialty[0] (l74/c6)</b></td><td><b>warning</b></td><td title="Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Schedule&#8203;.specialty[0]&#8203;.coding[0] (l75&#8203;/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
+     <td><b>Schedule&#8203;.specialty[0]&#8203;.coding[0] (l76&#8203;/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Schedule.actor[0] (l84/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/PractitionerRole/1'</b></td>
+     <td><b>Schedule.actor[0] (l85/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/PractitionerRole/1'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Schedule.actor[1] (l88/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Practitioner/1'</b></td>
+     <td><b>Schedule.actor[1] (l89/c6)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Practitioner/1'</b></td>
    </tr>
 </table>
 <hr/>
@@ -466,27 +500,27 @@ hl7.fhir.uv.tools#1.0.0-candidate:     <a href="https://build.fhir.org/ig/FHIR/f
 </table>
 <hr/>
 <a name="_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_Slot-example"> </a>
-<h2><a href="Slot-example.html">fsh-generated/resources/Slot-example.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>Slot: Validated against hl7.fhir.fr.core.<a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrSlot">FrSlot</a></li></ul>
+<h2><a href="Slot-example.html">fsh-generated/resources/Slot-example.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(4)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>Slot: Validated against <i>this.</i><a href="StructureDefinition-gap-fr-slot.html">GAP_FrSlot</a>, hl7.fhir.fr.core.<a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrSlot">FrSlot</a> (per meta), hl7.fhir.fr.core.<a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/StructureDefinition/FrSlot">FrSlot</a> and <i>this.</i><a href="StructureDefinition-gap-fr-slot.html">GAP_FrSlot</a> (per meta)</li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Slot.specialty[0] (l28/c6)</b></td><td><b>warning</b></td><td title=""><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
+     <td><b>Slot.specialty[0] (l29/c6)</b></td><td><b>warning</b></td><td title=""><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Slot.specialty[0] (l28/c6)</b></td><td><b>warning</b></td><td title=""><b>Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
+     <td><b>Slot.specialty[0] (l29/c6)</b></td><td><b>warning</b></td><td title=""><b>Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Slot.specialty[0] (l28/c6)</b></td><td><b>warning</b></td><td title="Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
+     <td><b>Slot.specialty[0] (l29/c6)</b></td><td><b>warning</b></td><td title="Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Slot.specialty[0].coding[0] (l30/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
+     <td><b>Slot.specialty[0].coding[0] (l31/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Slot.schedule (l38/c4)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Schedule/example'</b></td>
+     <td><b>Slot.schedule (l39/c4)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Schedule/example'</b></td>
    </tr>
 </table>
 <hr/>
@@ -513,6 +547,51 @@ hl7.fhir.uv.tools#1.0.0-candidate:     <a href="https://build.fhir.org/ig/FHIR/f
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition&#8203;.where(url = 'https:&#8203;/&#8203;/interop&#8203;.esante&#8203;.gouv&#8203;.fr&#8203;/ig&#8203;/fhir&#8203;/gap&#8203;/StructureDefinition&#8203;/gap-bundle-reponse-demande-consult-rdv')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_StructureDefinition-gap-fr-appointment"> </a>
+<h2><a href="StructureDefinition-gap-fr-appointment.html">fsh-generated/resources/StructureDefinition-gap-fr-appointment.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi19"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[43]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c83242)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[44]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c85055)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_StructureDefinition-gap-fr-schedule"> </a>
+<h2><a href="StructureDefinition-gap-fr-schedule.html">fsh-generated/resources/StructureDefinition-gap-fr-schedule.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi20"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[18]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c39033)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[25]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c52130)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_IG-fhir-gestion-agenda-partage_IG-fhir-gestion-agenda-partage_fsh-generated_resources_StructureDefinition-gap-fr-slot"> </a>
+<h2><a href="StructureDefinition-gap-fr-slot.html">fsh-generated/resources/StructureDefinition-gap-fr-slot.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[16]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c35148)</b></td><td><b>information</b></td><td title="SECURITY_STRING_CONTENT_WARNING"><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
 </table>
 <a name="suppressed"> </a>
@@ -581,6 +660,26 @@ hl7.fhir.uv.tools#1.0.0-candidate:     <a href="https://build.fhir.org/ig/FHIR/f
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Slot-example.html">fsh-generated/resources/Slot-example.json</a></td><td><b>Unable to resolve resource with reference 'https://exampleserver.org/fhir/Schedule/example'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="SECURITY_STRING_CONTENT_WARNING"> </a>
+<h2>SECURITY_STRING_CONTENT_WARNING</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-gap-fr-appointment.html">fsh-generated/resources/StructureDefinition-gap-fr-appointment.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-gap-fr-appointment.html">fsh-generated/resources/StructureDefinition-gap-fr-appointment.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-gap-fr-schedule.html">fsh-generated/resources/StructureDefinition-gap-fr-schedule.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-gap-fr-schedule.html">fsh-generated/resources/StructureDefinition-gap-fr-schedule.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-gap-fr-slot.html">fsh-generated/resources/StructureDefinition-gap-fr-slot.json</a></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b></td>
    </tr>
 </table>
 <hr/>

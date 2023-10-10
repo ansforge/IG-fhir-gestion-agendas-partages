@@ -10,7 +10,7 @@
   <name value="GestionAgendaPartage"/>
   <title value="Gestion d'Agenda Partagé (GAP)"/>
   <status value="draft"/>
-  <date value="2023-10-10T07:44:46+00:00"/>
+  <date value="2023-10-10T07:45:12+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -531,7 +531,7 @@
         <reference value="Schedule/example"/>
       </reference>
       <name value="example-fr-schedule"/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-schedule"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -541,7 +541,7 @@
         <reference value="Slot/example"/>
       </reference>
       <name value="example-frslot"/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-slot"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -551,7 +551,7 @@
         <reference value="Appointment/example-req-appointment"/>
       </reference>
       <name value="example-req-appointment"/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-appointment"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -650,6 +650,36 @@
       </reference>
       <name value="GAP_BundleResultatReponseADemandeConsultationRDV"/>
       <description value="Il s’agit du flux de réponse à la recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/gap-fr-appointment"/>
+      </reference>
+      <name value="GAP_FrAppointment"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/gap-fr-schedule"/>
+      </reference>
+      <name value="GAP_FrSchedule"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/gap-fr-slot"/>
+      </reference>
+      <name value="GAP_FrSlot"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>

@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "GestionAgendaPartage"] ; # 
   fhir:title [ fhir:v "Gestion d'Agenda Partagé (GAP)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-10-10T07:44:46+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-10-10T07:45:12+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -613,7 +613,10 @@
          fhir:reference [ fhir:v "Schedule/example" ]
        ] ;
        fhir:name [ fhir:v "example-fr-schedule" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-schedule"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-schedule>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -624,7 +627,10 @@
          fhir:reference [ fhir:v "Slot/example" ]
        ] ;
        fhir:name [ fhir:v "example-frslot" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-slot"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-slot>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -635,7 +641,10 @@
          fhir:reference [ fhir:v "Appointment/example-req-appointment" ]
        ] ;
        fhir:name [ fhir:v "example-req-appointment" ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-appointment"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-appointment>
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -743,6 +752,39 @@
        ] ;
        fhir:name [ fhir:v "GAP_BundleResultatReponseADemandeConsultationRDV" ] ;
        fhir:description [ fhir:v "Il s’agit du flux de réponse à la recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-appointment> ;
+         fhir:reference [ fhir:v "StructureDefinition/gap-fr-appointment" ]
+       ] ;
+       fhir:name [ fhir:v "GAP_FrAppointment" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-schedule> ;
+         fhir:reference [ fhir:v "StructureDefinition/gap-fr-schedule" ]
+       ] ;
+       fhir:name [ fhir:v "GAP_FrSchedule" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-slot> ;
+         fhir:reference [ fhir:v "StructureDefinition/gap-fr-slot" ]
+       ] ;
+       fhir:name [ fhir:v "GAP_FrSlot" ] ;
        fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] ) ;
      fhir:page [
