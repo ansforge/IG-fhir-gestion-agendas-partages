@@ -17,6 +17,11 @@ L’extension serviceTypeDuration permet quant à elle d’introduire le lien en
 #### Ressource « Slot »
 
 La ressource Slot représente un créneau horaire d’un agenda durant lequel une ressource peut être disponible ou non pour la prise de rendez-vous. Ce créneau peut donc représenter du temps libre ou occupé. La durée d’un slot correspond généralement à la durée nécessaire à l’exécution d’un type de service durant un rendez-vous.
+Les ressources Slot sont générées par le gestionnaire d'agenda pour indiquer les créneaux disponbiles. Ces slots pourront être calculés à partir :
+
+* De FrSchedule.extension:serviceTypeDuration
+* De FrSchedule.extension:availabilityTime
+* Des ressources Appointment.
 
 Pour ce volet, le profil français de la ressource, FrSlot du package FrCore, défini par HL7 France, doit être utilisé.
 
