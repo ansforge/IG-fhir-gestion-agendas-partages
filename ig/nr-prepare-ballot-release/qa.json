@@ -3,11 +3,11 @@
   "name" : "GestionAgendaPartage",
   "package-id" : "ans.fhir.fr.gap",
   "ig-ver" : "3.0.0-ballot",
-  "date" : "Tue, 10 Oct, 2023 08:10:19 +0000",
+  "date" : "Tue, 10 Oct, 2023 11:41:41 +0000",
   "errs" : 12,
   "warnings" : 27,
   "hints" : 9,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 2291741040
+  "maxMemory" : 2176242408
 }
