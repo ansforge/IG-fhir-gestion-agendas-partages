@@ -1,0 +1,168 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/Gap-Declarant> a fhir:CapabilityStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Gap-Declarant"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GAP-Declarant</h2><div><p>Le déclarant peut initier une demande de création d’une nouvelle ressource à un gestionnaire de ressource ou d’une plage de disponibilité d’une ressource à un gestionnaire d’agenda.\nIl peut également modifier ou supprimer une ressource ou une plage de disponibilité d’une ressource existante.\nLe déclarant peut être soit le responsable de la ressource, soit un gestionnaire d’agenda ou un gestionnaire de ressources auprès duquel une ressource ou une plage de disponibilité d’une ressource a été déclarée et qui diffuse cette information à un autre gestionnaire d’agenda, ou à un autre gestionnaire de ressources.</p>\n</div><table><tr><td>Mode</td><td>CLIENT</td></tr><tr><td>Description</td><td><div><p>Crée, modifie et supprime une ressource - déclare les disponibilités d'une ressource</p>\n</div></td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"PATCH a new resource version (patch interaction)\">Patch</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th><th><b title=\"DELETE a resource (delete interaction)\">Delete</b></th></tr><tr><td>Patient</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrPatient\">http://interopsante.org/fhir/StructureDefinition/FrPatient</a></td><td></td><td></td><td>y</td><td></td><td>y</td><td>y</td></tr><tr><td>Practitioner</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrPractitioner\">http://interopsante.org/fhir/StructureDefinition/FrPractitioner</a></td><td></td><td></td><td>y</td><td></td><td>y</td><td>y</td></tr><tr><td>PractitionerRole</td><td><a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole\">https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole</a></td><td></td><td></td><td>y</td><td></td><td>y</td><td>y</td></tr><tr><td>RelatedPerson</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson\">http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson</a></td><td></td><td></td><td>y</td><td></td><td>y</td><td>y</td></tr><tr><td>Location</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrLocation\">http://interopsante.org/fhir/StructureDefinition/FrLocation</a></td><td></td><td></td><td>y</td><td></td><td>y</td><td>y</td></tr><tr><td>HealthcareService</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrHealthcareService\">http://interopsante.org/fhir/StructureDefinition/FrHealthcareService</a></td><td></td><td></td><td>y</td><td></td><td>y</td><td>y</td></tr><tr><td>Organization</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrOrganization\">http://interopsante.org/fhir/StructureDefinition/FrOrganization</a></td><td></td><td></td><td>y</td><td></td><td>y</td><td>y</td></tr><tr><td>Device</td><td><a href=\"http://hl7.org/fhir/StructureDefinition/Device\">http://hl7.org/fhir/StructureDefinition/Device</a></td><td></td><td></td><td>y</td><td></td><td>y</td><td>y</td></tr><tr><td>Schedule</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrSchedule\">http://interopsante.org/fhir/StructureDefinition/FrSchedule</a></td><td></td><td></td><td>y</td><td>y</td><td>y</td><td>y</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/Gap-Declarant"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "3.0.0-ballot"] ; # 
+  fhir:name [ fhir:v "GAP-Declarant"] ; # 
+  fhir:title [ fhir:v "CI-SIS Gestion-d-Agendas-Partages - DeclarantGAP"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-08-02"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "ANS"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "ANS" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Le déclarant peut initier une demande de création d’une nouvelle ressource à un gestionnaire de ressource ou d’une plage de disponibilité d’une ressource à un gestionnaire d’agenda.\nIl peut également modifier ou supprimer une ressource ou une plage de disponibilité d’une ressource existante. \nLe déclarant peut être soit le responsable de la ressource, soit un gestionnaire d’agenda ou un gestionnaire de ressources auprès duquel une ressource ou une plage de disponibilité d’une ressource a été déclarée et qui diffuse cette information à un autre gestionnaire d’agenda, ou à un autre gestionnaire de ressources. "] ; # 
+  fhir:kind [ fhir:v "requirements"] ; # 
+  fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
+  fhir:format ( [ fhir:v "application/fhir+xml"] [ fhir:v "application/fhir+json"] ) ; # 
+  fhir:implementationGuide ( [
+     fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda"^^xsd:anyURI ;
+     fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda>
+  ] ) ; # 
+  fhir:rest ( [
+     fhir:mode [ fhir:v "client" ] ;
+     fhir:documentation [ fhir:v "Crée, modifie et supprime une ressource - déclare les disponibilités d'une ressource" ] ;
+     fhir:security [
+       fhir:cors [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:description [ fhir:v "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)" ]
+     ] ;
+     fhir:resource ( [
+       fhir:type [ fhir:v "Patient" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrPatient"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrPatient>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Practitioner" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrPractitioner"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrPractitioner>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "PractitionerRole" ] ;
+       fhir:profile [
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole"^^xsd:anyURI ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "RelatedPerson" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Location" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrLocation"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrLocation>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "HealthcareService" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrHealthcareService"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrHealthcareService>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Organization" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrOrganization"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrOrganization>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Device" ] ;
+       fhir:profile [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/Device"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/StructureDefinition/Device>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] )
+     ] [
+       fhir:type [ fhir:v "Schedule" ] ;
+       fhir:profile [
+         fhir:v "http://interopsante.org/fhir/StructureDefinition/FrSchedule"^^xsd:anyURI ;
+         fhir:link <http://interopsante.org/fhir/StructureDefinition/FrSchedule>
+       ] ;
+       fhir:interaction ( [
+         fhir:code [ fhir:v "create" ]
+       ] [
+         fhir:code [ fhir:v "update" ]
+       ] [
+         fhir:code [ fhir:v "delete" ]
+       ] [
+         fhir:code [ fhir:v "patch" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
