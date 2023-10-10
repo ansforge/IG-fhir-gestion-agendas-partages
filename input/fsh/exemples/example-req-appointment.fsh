@@ -1,5 +1,5 @@
 Instance: example-req-appointment
-InstanceOf: Appointment
+InstanceOf: gap-fr-appointment
 Usage: #example
 * meta.profile = "http://interopsante.org/fhir/StructureDefinition/FrAppointment"
 * extension.url = "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator"

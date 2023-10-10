@@ -1,5 +1,5 @@
 Instance: example-slot
-InstanceOf: Slot
+InstanceOf: gap-fr-slot
 Usage: #inline
 * meta.profile = "http://interopsante.org/fhir/StructureDefinition/FrSlot"
 * identifier.use = #usual

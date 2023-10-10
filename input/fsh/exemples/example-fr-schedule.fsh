@@ -1,5 +1,5 @@
 Instance: example-fr-schedule
-InstanceOf: FrSchedule
+InstanceOf: gap-fr-schedule
 Usage: #example
 * id = "example"
 * meta.profile = "http://interopsante.org/fhir/StructureDefinition/FrSchedule"
