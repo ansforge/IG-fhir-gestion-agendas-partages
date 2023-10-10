@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Flux 06 - Gestion rendez-vous - Gestion d'Agenda Partagé (GAP) v3.0.0-ballot</title>
+    <title>Flux 02 - Gestion agenda - Gestion d'Agenda Partagé (GAP) v3.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.6"}
-    h3,h4,h5,h6{--heading-prefix:"2.6"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.3"}
+    h3,h4,h5,h6{--heading-prefix:"2.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -95,19 +95,19 @@
         <a href="construction_des_flux.html">Vue d&apos;ensemble</a>
       </li>
       <li>
-        <a href="flux1.html">Flux 01 - Gestion ressources</a>
+        <a href="flux-gestion-ressources.html">Flux 01 - Gestion ressources</a>
       </li>
       <li>
-        <a href="flux2.html">Flux 02 - Gestion agenda</a>
+        <a href="flux-gestion-agenda.html">Flux 02 - Gestion agenda</a>
       </li>
       <li>
-        <a href="flux3.html">Flux 03 - Gestion disponibilités</a>
+        <a href="flux-gestion-dispo.html">Flux 03 - Gestion disponibilités</a>
       </li>
       <li>
-        <a href="flux4.html">Flux 04 et 05 - Demande consultation</a>
+        <a href="flux-demande-consultation.html">Flux 04 et 05 - Demande consultation</a>
       </li>
       <li>
-        <a href="flux6.html">Flux 06 - Gestion rendez-vous</a>
+        <a href="flux-gestion-rdv.html">Flux 06 - Gestion rendez-vous</a>
       </li>
     </ul>
   </li>
@@ -151,15 +151,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 06 - Gestion rendez-vous</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 02 - Gestion agenda</b></li>
 
           <span style="float:right;">
 
-            <a href="flux4.html">&lt;prev</a> | 
+            <a href="flux-gestion-ressources.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="specifications_fonctionnelles.html">next&gt;</a>
+          | <a href="flux-gestion-dispo.html">next&gt;</a>
 
           </span>
 
@@ -182,7 +182,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
-  <h2>Flux 06 - Gestion rendez-vous</h2>
+  <h2>Flux 02 - Gestion agenda</h2>
   
 
 
@@ -197,41 +197,88 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
-</div>
-<h3 id="gestion-de-rendez-vous">Gestion de rendez-vous</h3>
-
-<p>Les flux de création et de mise à jour d’un rendez-vous sont respectivement opérés par les requêtes HTTP POST et PUT sur la ressource Appointment représentant le rendez-vous. Ces requêtes sont envoyées au gestionnaire d’agendas.</p>
-
-<div class="figure" style="width:65%;">
-    <img src="flux6.png" alt="Flux6" title="Flux6" />
-</div>
-
-<h4 id="flux-6a---création-de-rendez-vous">Flux 6a - Création de rendez-vous</h4>
-
-<p>Le flux de création de rendez-vous est initié par un déclarant de rendez-vous et peut constituer une demande de rendez-vous (attente de confirmation) ou une simple déclaration d’un rendez-vous pris. L’attribut Appointment.status permet de définir quel est le cas concerné.</p>
-
-<p>Il existe deux cas d’usage pour la demande de rendez-vous :</p>
-
-<ul>
-  <li>La demande est effectuée suite à une consultation des disponibilités d’une ou de plusieurs ressources. Le flux portera alors les informations sur le rendez-vous et l’identifiant du créneau.</li>
-  <li>La demande est poussée sans consultation de l’agenda. Le flux portera alors les informations du rendez-vous et les identifiants des ressources concernées.</li>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#les-objets-agenda" id="markdown-toc-les-objets-agenda">Les objets Agenda</a></li>
+  <li><a href="#les-flux-de-gestion-dagenda" id="markdown-toc-les-flux-de-gestion-dagenda">Les flux de gestion d’agenda</a></li>
 </ul>
 
-<p>Ce flux correspond à une requête HTTP POST sur une ressource Appointment.</p>
+</div>
+<h3 id="les-objets-agenda">Les objets Agenda</h3>
 
-<p>Le flux 6a permet la création de rendez-vous. Cela se fait via l’interaction create de l’API FHIR (http POST) sur la ressource Appointment.</p>
+<ul>
+  <li>Schedule : profil FrSchedule</li>
+  <li>Slot : profil FrSlot</li>
+  <li>Appointment : profil FrAppointment</li>
+</ul>
 
-<h4 id="flux-6b---mise-à-jour-de-rendez-vous">Flux 6b - Mise à jour de rendez-vous</h4>
+<p>Pour plus d’information sur les profils, consultez les dépendances et les guides d’implémentations associés.</p>
 
-<p>Le flux de mise à jour de rendez-vous est initié par un déclarant de rendez-vous et constitue une simple mise à jour d’un rendez-vous préalablement déclaré (changement de statut, ajout d’un participant…). La structure du flux 6b de mise à jour de rendez-vous est similaire à celle du flux 6a de création de rendez-vous.</p>
+<h4 id="ressource--schedule-">Ressource « Schedule »</h4>
 
-<p>Ce flux correspond à une requête HTTP PUT (Conditional update) sur une ressource Appointment.</p>
+<p>La ressource Schedule représente l’agenda d’un acteur ou d’un ensemble d’acteurs sur une période donnée. Pour ce volet, le profil français de la ressource, FrSchedule du package FrCore défini par HL7 France, doit être utilisé. Il s’agit d’un conteneur de créneaux horaires utilisé pour présenter les dates et les horaires durant lesquels une ressource peut être disponible pour une prise de rendez-vous.</p>
 
-<p>Le flux 6b permet la mise à jour d’un rendez-vous préalablement déclaré (changement de statut, ajout d’un participant…). Cela se fait via l’interaction conditional update de l’API FHIR (http PUT) sur la ressource Appointment en se basant sur l’identifiant métier unique « appointment.identifier ». A la réception de la requête, une recherche au niveau du gestionnaire d’agendas est effectuée sur la base de cet identifiant. Si un rendez-vous correspond à l’identifiant fournie par le déclarant la ressource est mise à jour et un code statut 200 ok est retourné.</p>
+<p>L’extension française availabilityTime introduit la notion de disponibilités, c’est à dire des plages horaires, récurrentes ou non, durant lesquelles les rendez-vous peuvent être pris avec les acteurs de l’agenda (si un rendez-vous n’est pas déjà pris sur le créneau demandé). Il s’agit d’une description ou d’un paramétrage qui va permettre de déduire sur une période donnée la disposition d’une ressource à accepter des rendez-vous. L’utilisation de cette extension est particulièrement intéressante dans le scénario d’implémentation avec gestion déléguée d’agendas. Ce concept est différent du concept de créneaux horaires de disponibilité qui correspondent aux Slot. Une disponibilité se compose d’un ensemble de créneaux durant lesquels l’acteur peut être encore disponible pour un rendez-vous ou occupé par un rendez-vous pris. Les exceptions de disponibilités telles que des vacances ou un déplacement d’un professionnel peuvent aussi être exprimées à travers cette extension. Cette extension correspond au composant VAVAILABILITY d’iCalendar (cf mapping dans l’onglet Spécifications fonctionnelles).</p>
 
-<p>Consultez la documentation du standard pour plus d’information sur l’implémentation du conditional update.</p>
+<p>L’extension serviceTypeDuration permet quant à elle d’introduire le lien entre un type de service, qui peut constituer un motif de rendez-vous, et la durée par défaut qui s’applique lors de la demande de rendez-vous. Quand le Schedule représente l’agenda d’un fournisseur de services de soins, PractitionerRole ou HealthcareService par exemple, le jeu de valeurs des types de service qui y est associé devrait provenir de jeu de valeurs des types de services de ces acteurs.</p>
+
+<h4 id="ressource--slot-">Ressource « Slot »</h4>
+
+<p>La ressource Slot représente un créneau horaire d’un agenda durant lequel une ressource peut être disponible ou non pour la prise de rendez-vous. Ce créneau peut donc représenter du temps libre ou occupé. La durée d’un slot correspond généralement à la durée nécessaire à l’exécution d’un type de service durant un rendez-vous.</p>
+
+<p>Pour ce volet, le profil français de la ressource, FrSlot du package FrCore, défini par HL7 France, doit être utilisé.</p>
+
+<p>L’utilisation de cette ressource est particulièrement intéressante pour le scénario d’implémentation avec gestion centralisée d’agendas, notamment, pour la recherche ponctuelle de disponibilités.</p>
+
+<p>Cette ressource correspond au composant VFREEBUSY d’iCalendar (cf. Annexe 1).</p>
+
+<p>La valeur prise par serviceType doit provenir du même jeu de valeur que celui de l’extension serviceTypeDuration de la ressource Schedule à laquelle le créneau est rattaché.</p>
+
+<h4 id="ressource--appointment-">Ressource « Appointment »</h4>
+
+<p>La ressource Appointment représente un rendez-vous. Dans ce volet, le profil français de cette ressource,
+FrAppointment du package FrCore, doit être utilisé.</p>
+
+<p>L’élément status porte le statut du rendez-vous et doit être mis jour à chaque étape du cycle de vie d’un rendez-vous.</p>
+
+<p>Lors d’une demande de rendez-vous suivant une consultation de disponibilités, la ressource Appointment est liée à une ou plusieurs ressources Slot, elles-mêmes liées à une ressource Schedule représentant l’agenda d’un ou de plusieurs acteurs. Dans d’autres cas d’usage, la ressource Appointment peut ne pas être liée à un créneau d’un agenda et référencer directement les ressources représentant les acteurs participant au rendez-vous au niveau de Appointment.participant.actor. L’extension appointmentOperator référence quant à elle la personne ou l’entité qui demande la création ou la mise à jour du rendez-vous.</p>
+
+<p>Le jeu de valeurs de l’élément serviceType devrait être le même que celui de l’élément serviceType de la ou des ressources Slot auxquelles est rattaché le rendez-vous. Selon le type de service demandé, la durée du rendez-vous doit être cohérente, ou directement déduite, de la durée du type de service défini dans l’extension serviceTypeDuration de la ressource Schedule.</p>
+
+<p>Dans le cas d’un rendez-vous lié à une prescription, l’élément supportingInformation peut être utilisé pour référencer un document représentant la prescription ou n’importe quelle autre pièce jointe (les ressources DocumentReference ou Binary).
+Le demandeur du rendez-vous peut préciser le degré d’urgence du rendez-vous en utilisant l’élément appointmentType et le jeu de valeurs proposé par le standard39 ou en attribuant une priorité au rendez-vous avec l’élément priority.</p>
+
+<h3 id="les-flux-de-gestion-dagenda">Les flux de gestion d’agenda</h3>
+
+<div class="figure" style="width:65%;">
+    <img src="flux2.png" alt="Flux1" title="Flux1" />
+</div>
+
+<div class="figure" style="width:65%;">
+    <img src="flux2.2.png" alt="Flux1" title="Flux1" />
+</div>
+
+<p>Les flux de création, de mise à jour et de suppression d’un agenda sont respectivement opérés par les requêtes HTTP POST, PUT et DELETE sur la ressource Schedule représentant l’agenda. Ces requêtes sont envoyées au gestionnaire d’agendas.
+A noter qu’une fois la suppression effectuée par le serveur, ce dernier renvoie un code statut 200 OK ou 204 No Content.</p>
+
+<h4 id="flux-2a---création-dun-agenda">Flux 2a - Création d’un agenda</h4>
+
+<p>Ce flux permet la création d’un agenda. Un agenda peut appartenir à une ou plusieurs ressources.
+Par exemple, plusieurs professionnels peuvent avoir un agenda commun.</p>
+
+<p>Ce flux correspond à une requête HTTP POST sur une ressource Schedule.</p>
+
+<h4 id="flux-2b---mise-à-jour-dun-agenda">Flux 2b - Mise à jour d’un agenda</h4>
+
+<p>Ce flux permet la mise à jour d’un agenda. La structure du flux 2b est identique à celle du flux 2a, de création d’agenda. Dans ce flux, l’attribut Agenda/dateCreation n’est pas utilisé.</p>
+
+<p>Ce flux correspond à une requête HTTP PUT sur une ressource Schedule.</p>
+
+<h4 id="flux-2c---suppression-dun-agenda">Flux 2c - Suppression d’un agenda</h4>
+
+<p>Ce flux permet de supprimer un agenda.</p>
+
+<p>Ce flux correspond à une requête HTTP DELETE sur une ressource Schedule.</p>
 
 
 
@@ -262,7 +309,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="flux4.html">&lt;prev</a>
+                <a href="flux-gestion-ressources.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -270,7 +317,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="specifications_fonctionnelles.html">next&gt;</a>
+                <a href="flux-gestion-dispo.html">next&gt;</a>
 
               </td>
             </tr>
@@ -280,7 +327,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 10, 2023 07:45+0000">2023-10-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 10, 2023 07:48+0000">2023-10-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

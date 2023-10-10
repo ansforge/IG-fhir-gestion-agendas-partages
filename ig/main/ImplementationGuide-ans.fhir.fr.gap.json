@@ -10,7 +10,7 @@
   "name" : "GestionAgendaPartage",
   "title" : "Gestion d'Agenda Partagé (GAP)",
   "status" : "draft",
-  "date" : "2023-10-10T07:45:12+00:00",
+  "date" : "2023-10-10T07:48:11+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -902,45 +902,45 @@
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "flux1.html"
+            "valueUrl" : "flux-gestion-ressources.html"
           }],
-          "nameUrl" : "flux1.html",
+          "nameUrl" : "flux-gestion-ressources.html",
           "title" : "Flux 01 - Gestion ressources",
           "generation" : "markdown"
         },
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "flux2.html"
+            "valueUrl" : "flux-gestion-agenda.html"
           }],
-          "nameUrl" : "flux2.html",
+          "nameUrl" : "flux-gestion-agenda.html",
           "title" : "Flux 02 - Gestion agenda",
           "generation" : "markdown"
         },
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "flux3.html"
+            "valueUrl" : "flux-gestion-dispo.html"
           }],
-          "nameUrl" : "flux3.html",
+          "nameUrl" : "flux-gestion-dispo.html",
           "title" : "Flux 03 - Gestion disponibilités",
           "generation" : "markdown"
         },
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "flux4.html"
+            "valueUrl" : "flux-demande-consultation.html"
           }],
-          "nameUrl" : "flux4.html",
+          "nameUrl" : "flux-demande-consultation.html",
           "title" : "Flux 04 et 05 - Demande consultation",
           "generation" : "markdown"
         },
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "flux6.html"
+            "valueUrl" : "flux-gestion-rdv.html"
           }],
-          "nameUrl" : "flux6.html",
+          "nameUrl" : "flux-gestion-rdv.html",
           "title" : "Flux 06 - Gestion rendez-vous",
           "generation" : "markdown"
         }]

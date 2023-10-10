@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Flux 03 - Gestion disponibilités - Gestion d'Agenda Partagé (GAP) v3.0.0-ballot</title>
+    <title>Flux 06 - Gestion rendez-vous - Gestion d'Agenda Partagé (GAP) v3.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.4"}
-    h3,h4,h5,h6{--heading-prefix:"2.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.6"}
+    h3,h4,h5,h6{--heading-prefix:"2.6"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -95,19 +95,19 @@
         <a href="construction_des_flux.html">Vue d&apos;ensemble</a>
       </li>
       <li>
-        <a href="flux1.html">Flux 01 - Gestion ressources</a>
+        <a href="flux-gestion-ressources.html">Flux 01 - Gestion ressources</a>
       </li>
       <li>
-        <a href="flux2.html">Flux 02 - Gestion agenda</a>
+        <a href="flux-gestion-agenda.html">Flux 02 - Gestion agenda</a>
       </li>
       <li>
-        <a href="flux3.html">Flux 03 - Gestion disponibilités</a>
+        <a href="flux-gestion-dispo.html">Flux 03 - Gestion disponibilités</a>
       </li>
       <li>
-        <a href="flux4.html">Flux 04 et 05 - Demande consultation</a>
+        <a href="flux-demande-consultation.html">Flux 04 et 05 - Demande consultation</a>
       </li>
       <li>
-        <a href="flux6.html">Flux 06 - Gestion rendez-vous</a>
+        <a href="flux-gestion-rdv.html">Flux 06 - Gestion rendez-vous</a>
       </li>
     </ul>
   </li>
@@ -151,15 +151,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 03 - Gestion disponibilités</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications_techniques.html'><b>Specifications Techniques</b></a></li><li><b>Flux 06 - Gestion rendez-vous</b></li>
 
           <span style="float:right;">
 
-            <a href="flux2.html">&lt;prev</a> | 
+            <a href="flux-demande-consultation.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="flux4.html">next&gt;</a>
+          | <a href="specifications_fonctionnelles.html">next&gt;</a>
 
           </span>
 
@@ -182,7 +182,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
-  <h2>Flux 03 - Gestion disponibilités</h2>
+  <h2>Flux 06 - Gestion rendez-vous</h2>
   
 
 
@@ -200,53 +200,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<h3 id="les-flux-de-gestion-des-disponibilités">Les flux de gestion des disponibilités</h3>
+<h3 id="gestion-de-rendez-vous">Gestion de rendez-vous</h3>
+
+<p>Les flux de création et de mise à jour d’un rendez-vous sont respectivement opérés par les requêtes HTTP POST et PUT sur la ressource Appointment représentant le rendez-vous. Ces requêtes sont envoyées au gestionnaire d’agendas.</p>
 
 <div class="figure" style="width:65%;">
-    <img src="flux3.png" alt="Flux3" title="Flux3" />
+    <img src="flux6.png" alt="Flux6" title="Flux6" />
 </div>
 
-<p>Ces trois flux correspondent à une requête HTTP PUT/PATCH pour ajouter, mettre à jour ou supprimer une disponibilité à un agenda existant. Le support des requêtes HTTP PATCH ne constitue pas une exigence de ces spécifications d’interopérabilité. Le gestionnaire d’agenda peut proposer le support de ce type de requêtes pour des raisons de volumétrie des flux par exemple.</p>
+<h4 id="flux-6a---création-de-rendez-vous">Flux 6a - Création de rendez-vous</h4>
 
-<p>Les flux de création, de mise à jour et de suppression d’une disponibilité sont opérés par les requêtes HTTP PUT ou PATCH sur la ressource Schedule représentant l’agenda pour créer, modifier ou supprimer une occurrence de l’extension availabilityTime. Ces requêtes sont envoyées au gestionnaire d’agendas.</p>
+<p>Le flux de création de rendez-vous est initié par un déclarant de rendez-vous et peut constituer une demande de rendez-vous (attente de confirmation) ou une simple déclaration d’un rendez-vous pris. L’attribut Appointment.status permet de définir quel est le cas concerné.</p>
 
-<h4 id="flux-3a---création-de-disponibilités">Flux 3a - Création de disponibilités</h4>
-
-<p>Ce flux permet la création des disponibilités d’une ou d’un ensemble de ressources. Une disponibilité est une plage horaire en dehors de laquelle la ressource n’accepte pas les demandes de rendez-vous. Typiquement, une disponibilité d’un médecin de ville pourrait se résumer aux horaires d’ouverture de son cabinet. Ce flux permet donc l’envoi des détails des disponibilités d’une ressource au gestionnaire d’agenda.</p>
-
-<p>Cette notion de disponibilité est introduite par les extensions françaises de la ressource Schedule : FrSchedule.</p>
-
-<p>Le flux 3a permet de déclarer les disponibilités d’une ressource. L’ajout des disponibilités à un agenda existant peut se faire selon deux méthodes :</p>
+<p>Il existe deux cas d’usage pour la demande de rendez-vous :</p>
 
 <ul>
-  <li>Méthode HTTP PUT avec la nouvelle version de la ressource Schedule, contenant les nouvelles disponibilités (extension availabilityTime), dans le corps.</li>
-  <li>Méthode HTTP PATCH, en utilisant l’opération add, pour ajouter une nouvelle disponibilité (extension availabilityTime).
-Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas, ce dernier renvoie un code statut 200 OK.</li>
+  <li>La demande est effectuée suite à une consultation des disponibilités d’une ou de plusieurs ressources. Le flux portera alors les informations sur le rendez-vous et l’identifiant du créneau.</li>
+  <li>La demande est poussée sans consultation de l’agenda. Le flux portera alors les informations du rendez-vous et les identifiants des ressources concernées.</li>
 </ul>
 
-<h4 id="flux-3b---mise-à-jour-de-disponibilités">Flux 3b - Mise à jour de disponibilités</h4>
+<p>Ce flux correspond à une requête HTTP POST sur une ressource Appointment.</p>
 
-<p>Ce flux permet la mise à jour d’une disponibilité d’une ressource. Son contenu est similaire à celui du flux 3a de création de disponibilités.</p>
+<p>Le flux 6a permet la création de rendez-vous. Cela se fait via l’interaction create de l’API FHIR (http POST) sur la ressource Appointment.</p>
 
-<p>Le flux 3b permet de mettre à jour les disponibilités d’une ressource. Cela peut se faire en utilisant :</p>
+<h4 id="flux-6b---mise-à-jour-de-rendez-vous">Flux 6b - Mise à jour de rendez-vous</h4>
 
-<ul>
-  <li>La méthode HTTP PUT et en envoyant dans le corps de la requête la ressource Schedule contenant les disponibilités mises à jour.</li>
-  <li>La méthode HTTP PATCH, avec l’opération replace, pour remplacer une disponibilité (extension availabilityTime) par sa nouvelle version.
-Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas, ce dernier renvoie un code statut 200 OK.</li>
-</ul>
+<p>Le flux de mise à jour de rendez-vous est initié par un déclarant de rendez-vous et constitue une simple mise à jour d’un rendez-vous préalablement déclaré (changement de statut, ajout d’un participant…). La structure du flux 6b de mise à jour de rendez-vous est similaire à celle du flux 6a de création de rendez-vous.</p>
 
-<h4 id="flux-3c---suppression-de-disponibilités">Flux 3c - Suppression de disponibilités</h4>
+<p>Ce flux correspond à une requête HTTP PUT (Conditional update) sur une ressource Appointment.</p>
 
-<p>Ce flux permet de supprimer une disponibilité d’une ressource. Il contient les identifiants de la disponibilité à supprimer.</p>
+<p>Le flux 6b permet la mise à jour d’un rendez-vous préalablement déclaré (changement de statut, ajout d’un participant…). Cela se fait via l’interaction conditional update de l’API FHIR (http PUT) sur la ressource Appointment en se basant sur l’identifiant métier unique « appointment.identifier ». A la réception de la requête, une recherche au niveau du gestionnaire d’agendas est effectuée sur la base de cet identifiant. Si un rendez-vous correspond à l’identifiant fournie par le déclarant la ressource est mise à jour et un code statut 200 ok est retourné.</p>
 
-<p>Le flux 3c permet de supprimer les disponibilités. Cela peut se faire de deux façons :</p>
-
-<ul>
-  <li>Méthode HTTP PUT pour envoyer une nouvelle version de la ressource Schedule où les disponibilités en question ont été supprimées.</li>
-  <li>Méthode HTTP PATCH, en utilisant l’opération remove, pour supprimer les disponibilités.
-Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas, ce dernier renvoie un code statut 200 OK.</li>
-</ul>
+<p>Consultez la documentation du standard pour plus d’information sur l’implémentation du conditional update.</p>
 
 
 
@@ -277,7 +262,7 @@ Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="flux2.html">&lt;prev</a>
+                <a href="flux-demande-consultation.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -285,7 +270,7 @@ Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="flux4.html">next&gt;</a>
+                <a href="specifications_fonctionnelles.html">next&gt;</a>
 
               </td>
             </tr>
@@ -295,7 +280,7 @@ Une fois la mise à jour correctement effectuée par le gestionnaire d’agendas
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 10, 2023 07:45+0000">2023-10-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 10, 2023 07:48+0000">2023-10-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
