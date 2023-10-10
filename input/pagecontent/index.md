@@ -1,3 +1,8 @@
+<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
+<b>Brief description of this Implementation Guide</b><br>
+The purpose of this implementation guide is to allow the management of resources (people, places or objects), the management of the availability of these resources, the consultation and synchronization of calendars and the making of appointments.
+</p>
+
 <blockquote class="stu-note">
 <p>
   <b>Attention !</b>
@@ -5,11 +10,6 @@
  Cet Implementation Guide est actuellement en concertation.
 </p>
 </blockquote>
-
-<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
-<b>Brief description of this Implementation Guide</b><br>
-The purpose of this implementation guide is to allow the management of resources (people, places or objects), the management of the availability of these resources, the consultation and synchronization of calendars and the making of appointments.
-</p>
 
 <div class="figure" style="width:65%;">
     <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS">
