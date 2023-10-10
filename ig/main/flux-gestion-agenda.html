@@ -224,7 +224,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="ressource--slot-">Ressource « Slot »</h4>
 
-<p>La ressource Slot représente un créneau horaire d’un agenda durant lequel une ressource peut être disponible ou non pour la prise de rendez-vous. Ce créneau peut donc représenter du temps libre ou occupé. La durée d’un slot correspond généralement à la durée nécessaire à l’exécution d’un type de service durant un rendez-vous.</p>
+<p>La ressource Slot représente un créneau horaire d’un agenda durant lequel une ressource peut être disponible ou non pour la prise de rendez-vous. Ce créneau peut donc représenter du temps libre ou occupé. La durée d’un slot correspond généralement à la durée nécessaire à l’exécution d’un type de service durant un rendez-vous.
+Les ressources Slot sont générées par le gestionnaire d’agenda pour indiquer les créneaux disponbiles. Ces slots pourront être calculés à partir :</p>
+
+<ul>
+  <li>De FrSchedule.extension:serviceTypeDuration</li>
+  <li>De FrSchedule.extension:availabilityTime</li>
+  <li>Des ressources Appointment.</li>
+</ul>
 
 <p>Pour ce volet, le profil français de la ressource, FrSlot du package FrCore, défini par HL7 France, doit être utilisé.</p>
 
@@ -327,7 +334,7 @@ Par exemple, plusieurs professionnels peuvent avoir un agenda commun.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 10, 2023 07:48+0000">2023-10-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 10, 2023 08:09+0000">2023-10-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
