@@ -1,6 +1,6 @@
 ### Les ressources d'agenda
 
-Les ressources d'agenda représentent une personne, un lieu ou un objet pouvant possder un agenda. Les ressources FHIR définies par l'[annuaire santé](https://interop.esante.gouv.fr/ig/fhir/annuaire) ou le [ROR](https://interop.esante.gouv.fr/ig/fhir/ror) peuvent être utilisées comme ressource d'agenda.
+Les ressources d'agenda représentent une personne, un lieu ou un objet pouvant posséder un agenda. Les ressources FHIR définies par l'[annuaire santé](https://interop.esante.gouv.fr/ig/fhir/annuaire) ou le [ROR](https://interop.esante.gouv.fr/ig/fhir/ror) peuvent être utilisées comme ressource d'agenda.
 Pour les ressources de type personne, il est important de recueillir l’adresse électronique pour permettre l’envoi de notifications et l’envoi d’objets iCalendar, après mise en correspondance (cf. Annexe 1), pour une meilleure intégration dans les agendas électroniques non spécifiques au secteur.
 
 Pour plus d'information sur les profils, consultez les dépendances et les guides d'implémentations associés. Pour chacune de ces ressources, les éléments autres que ceux mentionnés dans les spécifications fonctionnelles du volet peuvent être utilisés.
