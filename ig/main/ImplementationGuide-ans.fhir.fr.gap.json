@@ -1,16 +1,16 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "ans.fhir.fr.agenda",
+  "id" : "ans.fhir.fr.gap",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GestionAgendaPartage</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GestionAgendaPartage</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap</pre></div>"
   },
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap",
   "version" : "3.0.0-ballot",
   "name" : "GestionAgendaPartage",
   "title" : "Gestion d'Agenda Partagé (GAP)",
   "status" : "draft",
-  "date" : "2023-10-09T07:57:18+00:00",
+  "date" : "2023-10-10T07:44:46+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -19,7 +19,7 @@
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "packageId" : "ans.fhir.fr.agenda",
+  "packageId" : "ans.fhir.fr.gap",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [{
@@ -172,7 +172,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "https://interop.esante.gouv.fr/ig/fhir/agenda/history.html"
+        "valueString" : "https://interop.esante.gouv.fr/ig/fhir/gap/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -462,7 +462,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "https://interop.esante.gouv.fr/ig/fhir/agenda/history.html"
+        "valueString" : "https://interop.esante.gouv.fr/ig/fhir/gap/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

@@ -14,7 +14,7 @@
     }
   },
   "externalDocs": {
-    "url": "https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/Gap-Declarant",
+    "url": "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/Gap-Declarant",
     "description": "FHIR CapabilityStatement"
   },
   "components": {

@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda> a fhir:ImplementationGuide ;
+<https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap> a fhir:ImplementationGuide ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ans.fhir.fr.agenda"] ; # 
+  fhir:id [ fhir:v "ans.fhir.fr.gap"] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GestionAgendaPartage</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda</pre></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GestionAgendaPartage</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap</pre></div>"
   ] ; # 
-  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "3.0.0-ballot"] ; # 
   fhir:name [ fhir:v "GestionAgendaPartage"] ; # 
   fhir:title [ fhir:v "Gestion d'Agenda Partagé (GAP)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-10-09T07:57:18+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-10-10T07:44:46+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -26,7 +26,7 @@
        fhir:value [ fhir:v "https://esante.gouv.fr" ]
      ] )
   ] ) ; # 
-  fhir:packageId [ fhir:v "ans.fhir.fr.agenda"] ; # 
+  fhir:packageId [ fhir:v "ans.fhir.fr.gap"] ; # 
   fhir:license [ fhir:v "CC0-1.0"] ; # 
   fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
   fhir:dependsOn ( [
@@ -167,7 +167,7 @@
          fhir:value [ fhir:v "path-history" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda/history.html" ]
+         fhir:value [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/history.html" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -404,7 +404,7 @@
          fhir:value [ fhir:v "path-history" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/agenda/history.html" ]
+         fhir:value [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/history.html" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -549,7 +549,7 @@
          fhir:value [ fhir:v "CapabilityStatement" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/GAP-Consommateur> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-Consommateur> ;
          fhir:reference [ fhir:v "CapabilityStatement/GAP-Consommateur" ]
        ] ;
        fhir:name [ fhir:v "CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP" ] ;
@@ -561,7 +561,7 @@
          fhir:value [ fhir:v "CapabilityStatement" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/Gap-Declarant> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/Gap-Declarant> ;
          fhir:reference [ fhir:v "CapabilityStatement/Gap-Declarant" ]
        ] ;
        fhir:name [ fhir:v "CI-SIS Gestion-d-Agendas-Partages - DeclarantGAP" ] ;
@@ -573,7 +573,7 @@
          fhir:value [ fhir:v "CapabilityStatement" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/GAP-DeclarantRDV> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-DeclarantRDV> ;
          fhir:reference [ fhir:v "CapabilityStatement/GAP-DeclarantRDV" ]
        ] ;
        fhir:name [ fhir:v "CI-SIS Gestion-d-Agendas-Partages - DeclarantRDVGAP" ] ;
@@ -585,7 +585,7 @@
          fhir:value [ fhir:v "CapabilityStatement" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/GAP-GestionnaireAgenda> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-GestionnaireAgenda> ;
          fhir:reference [ fhir:v "CapabilityStatement/GAP-GestionnaireAgenda" ]
        ] ;
        fhir:name [ fhir:v "CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP" ] ;
@@ -597,7 +597,7 @@
          fhir:value [ fhir:v "CapabilityStatement" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/CapabilityStatement/GAP-GestionnaireRessources> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-GestionnaireRessources> ;
          fhir:reference [ fhir:v "CapabilityStatement/GAP-GestionnaireRessources" ]
        ] ;
        fhir:name [ fhir:v "CI-SIS Gestion-d-Agendas-Partages - GestionnaireRessourcesGAP" ] ;
@@ -609,7 +609,7 @@
          fhir:value [ fhir:v "Schedule" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/Schedule/example> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/Schedule/example> ;
          fhir:reference [ fhir:v "Schedule/example" ]
        ] ;
        fhir:name [ fhir:v "example-fr-schedule" ] ;
@@ -620,7 +620,7 @@
          fhir:value [ fhir:v "Slot" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/Slot/example> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/Slot/example> ;
          fhir:reference [ fhir:v "Slot/example" ]
        ] ;
        fhir:name [ fhir:v "example-frslot" ] ;
@@ -631,7 +631,7 @@
          fhir:value [ fhir:v "Appointment" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/Appointment/example-req-appointment> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/Appointment/example-req-appointment> ;
          fhir:reference [ fhir:v "Appointment/example-req-appointment" ]
        ] ;
        fhir:name [ fhir:v "example-req-appointment" ] ;
@@ -642,7 +642,7 @@
          fhir:value [ fhir:v "SearchParameter" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Appointment-created> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-created> ;
          fhir:reference [ fhir:v "SearchParameter/GAP-Appointment-created" ]
        ] ;
        fhir:name [ fhir:v "GAP-Appointment-created" ] ;
@@ -654,7 +654,7 @@
          fhir:value [ fhir:v "SearchParameter" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Appointment-description> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-description> ;
          fhir:reference [ fhir:v "SearchParameter/GAP-Appointment-description" ]
        ] ;
        fhir:name [ fhir:v "GAP-Appointment-description" ] ;
@@ -666,7 +666,7 @@
          fhir:value [ fhir:v "SearchParameter" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Appointment-earliestStart> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-earliestStart> ;
          fhir:reference [ fhir:v "SearchParameter/GAP-Appointment-earliestStart" ]
        ] ;
        fhir:name [ fhir:v "GAP-Appointment-earliestStart" ] ;
@@ -678,7 +678,7 @@
          fhir:value [ fhir:v "SearchParameter" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Appointment-latestStart> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-latestStart> ;
          fhir:reference [ fhir:v "SearchParameter/GAP-Appointment-latestStart" ]
        ] ;
        fhir:name [ fhir:v "GAP-Appointment-latestStart" ] ;
@@ -690,7 +690,7 @@
          fhir:value [ fhir:v "SearchParameter" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Appointment-priority> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-priority> ;
          fhir:reference [ fhir:v "SearchParameter/GAP-Appointment-priority" ]
        ] ;
        fhir:name [ fhir:v "GAP-Appointment-priority" ] ;
@@ -702,7 +702,7 @@
          fhir:value [ fhir:v "SearchParameter" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Slot-earliestStart> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Slot-earliestStart> ;
          fhir:reference [ fhir:v "SearchParameter/GAP-Slot-earliestStart" ]
        ] ;
        fhir:name [ fhir:v "GAP-Slot-earliestStart" ] ;
@@ -714,7 +714,7 @@
          fhir:value [ fhir:v "SearchParameter" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/SearchParameter/GAP-Slot-latestStart> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Slot-latestStart> ;
          fhir:reference [ fhir:v "SearchParameter/GAP-Slot-latestStart" ]
        ] ;
        fhir:name [ fhir:v "GAP-Slot-latestStart" ] ;
@@ -726,7 +726,7 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-bundle-reponse-demande-consult-dispo> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-dispo> ;
          fhir:reference [ fhir:v "StructureDefinition/gap-bundle-reponse-demande-consult-dispo" ]
        ] ;
        fhir:name [ fhir:v "GAP_BundleResultatReponseADemandeConsultationDisponibilites" ] ;
@@ -738,7 +738,7 @@
          fhir:value [ fhir:v "StructureDefinition:resource" ]
        ] ) ;
        fhir:reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-bundle-reponse-demande-consult-rdv> ;
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-rdv> ;
          fhir:reference [ fhir:v "StructureDefinition/gap-bundle-reponse-demande-consult-rdv" ]
        ] ;
        fhir:name [ fhir:v "GAP_BundleResultatReponseADemandeConsultationRDV" ] ;

@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/fhir/agenda/Appointment/example-req-appointment> a fhir:Appointment ;
+<https://interop.esante.gouv.fr/ig/fhir/gap/Appointment/example-req-appointment> a fhir:Appointment ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "example-req-appointment"] ; # 
   fhir:meta [

@@ -1,16 +1,16 @@
 {
-  "package": "ans.fhir.fr.agenda",
+  "package": "ans.fhir.fr.gap",
   "version": "3.0.0-ballot",
   "fhirVersion": "4.0.1",
   "extensions": [],
   "profiles": {
     "Bundle": [
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-bundle-reponse-demande-consult-dispo",
+        "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-dispo",
         "title": "GAP_BundleResultatReponseADemandeConsultationDisponibilites"
       },
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-bundle-reponse-demande-consult-rdv",
+        "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-rdv",
         "title": "GAP_BundleResultatReponseADemandeConsultationRDV"
       }
     ]

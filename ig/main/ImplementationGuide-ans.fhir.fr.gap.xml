@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ans.fhir.fr.agenda"/>
+  <id value="ans.fhir.fr.gap"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GestionAgendaPartage</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda</pre></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GestionAgendaPartage</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap</pre></div>
   </text>
-  <url value="https://interop.esante.gouv.fr/ig/fhir/agenda/ImplementationGuide/ans.fhir.fr.agenda"/>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap"/>
   <version value="3.0.0-ballot"/>
   <name value="GestionAgendaPartage"/>
   <title value="Gestion d'Agenda Partagé (GAP)"/>
   <status value="draft"/>
-  <date value="2023-10-09T07:57:18+00:00"/>
+  <date value="2023-10-10T07:44:46+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -19,7 +19,7 @@
       <value value="https://esante.gouv.fr"/>
     </telecom>
   </contact>
-  <packageId value="ans.fhir.fr.agenda"/>
+  <packageId value="ans.fhir.fr.gap"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <dependsOn id="hl7tx">
@@ -134,7 +134,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="https://interop.esante.gouv.fr/ig/fhir/agenda/history.html"/>
+        <valueString value="https://interop.esante.gouv.fr/ig/fhir/gap/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -345,7 +345,7 @@
         <valueCode value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="https://interop.esante.gouv.fr/ig/fhir/agenda/history.html"/>
+        <valueString value="https://interop.esante.gouv.fr/ig/fhir/gap/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">

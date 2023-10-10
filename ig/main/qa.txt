@@ -2,8 +2,8 @@
 =========================================
 
 err = 12, warn = 24, info = 4
-IG Publisher Version: 1.4.12
-Generated Mon Oct 09 08:10:05 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.agenda#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/agenda)
+IG Publisher Version: 1.4.13
+Generated Tue Oct 10 07:45:48 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
  Build Errors : 0 / 6 / 0
  /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/Appointment-example-req-appointment : 5 / 3 / 2
  /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 1 / 1 / 1
@@ -11,7 +11,7 @@ Generated Mon Oct 09 08:10:05 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.agend
  /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireAgenda : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireRessources : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/CapabilityStatement-Gap-Declarant : 0 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.agenda : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.gap : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/Schedule-example : 3 / 3 / 3
  /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/SearchParameter-GAP-Appointment-created : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/SearchParameter-GAP-Appointment-description : 0 / 0 / 1
@@ -42,17 +42,17 @@ ERROR: Appointment/example-req-appointment: Appointment.participant[0].actor: Un
 ERROR: Appointment/example-req-appointment: Appointment.participant[1].actor: Unable to resolve resource with reference 'https://exampleserver.org/fhir/PractitionerRole/1'
 ERROR: Appointment/example-req-appointment: Appointment.participant[2].actor: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Practitioner/1'
 == fsh-generated/resources/CapabilityStatement-GAP-Consommateur.json ==
-WARNING: CapabilityStatement/GAP-Consommateur: CapabilityStatement: Rule cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
+WARNING: CapabilityStatement/GAP-Consommateur: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 ERROR: CapabilityStatement/GAP-Consommateur: CapabilityStatement.rest[0].resource[5].searchParam[1].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/PractitionerRole-speciality' does not resolve
 == fsh-generated/resources/CapabilityStatement-GAP-DeclarantRDV.json ==
-WARNING: CapabilityStatement/GAP-DeclarantRDV: CapabilityStatement: Rule cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
+WARNING: CapabilityStatement/GAP-DeclarantRDV: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 == fsh-generated/resources/CapabilityStatement-GAP-GestionnaireAgenda.json ==
-WARNING: CapabilityStatement/GAP-GestionnaireAgenda: CapabilityStatement: Rule cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
+WARNING: CapabilityStatement/GAP-GestionnaireAgenda: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 == fsh-generated/resources/CapabilityStatement-GAP-GestionnaireRessources.json ==
-WARNING: CapabilityStatement/GAP-GestionnaireRessources: CapabilityStatement: Rule cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
+WARNING: CapabilityStatement/GAP-GestionnaireRessources: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 == fsh-generated/resources/CapabilityStatement-Gap-Declarant.json ==
-WARNING: CapabilityStatement/Gap-Declarant: CapabilityStatement: Rule cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
-== fsh-generated/resources/ImplementationGuide-ans.fhir.fr.agenda.json ==
+WARNING: CapabilityStatement/Gap-Declarant: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
+== fsh-generated/resources/ImplementationGuide-ans.fhir.fr.gap.json ==
 == fsh-generated/resources/Schedule-example.json ==
 INFORMATION: Schedule/example: Schedule.extension[0].extension[1].value.ofType(Coding): Code System URI 'http://terminology.interopsante.org/CodeSystem/v2-3315' is unknown so the code cannot be validated
 ERROR: Schedule/example: Schedule.extension[0].extension[1].value.ofType(Coding).system: Value is 'http://terminology.interopsante.org/CodeSystem/v2-3315' but must be 'http://interopsante.org/fhir/CodeSystem/fr-schedule-type'
@@ -80,6 +80,6 @@ WARNING: Slot/example: Slot.specialty[0]: Code System URI 'https://mos.esante.go
 INFORMATION: Slot/example: Slot.specialty[0].coding[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated
 ERROR: Slot/example: Slot.schedule: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Schedule/example'
 == fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-dispo.json ==
-WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-bundle-reponse-demande-consult-dispo'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-dispo'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-rdv.json ==
-WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/agenda/StructureDefinition/gap-bundle-reponse-demande-consult-rdv'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-rdv'): The Implementation Guide contains no examples for this profile
