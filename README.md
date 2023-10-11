@@ -18,8 +18,8 @@ Les workflows associés à ce repository (.github/workflows) permettent :
 
 * D'executer Sushi pour vérifier la grammaire
 * De faire les tests avec le validator_cli
-* De publier les pages : https://ansforge.github.io/IG-fhir-gestion-agenda-partage/ig/{nom de la branche}
-Exemple : [https://ansforge.github.io/IG-fhir-gestion-agenda-partage/ig/main]
+* De publier les pages : https://ansforge.github.io/IG-fhir-gestion-agendas-partages/ig/{nom de la branche}
+Exemple : [https://ansforge.github.io/IG-fhir-gestion-agendas-partages/ig/main]
 
 ## Acronymes
 
