@@ -1,0 +1,51 @@
+{
+  "resourceType" : "CapabilityStatement",
+  "id" : "GAP-DeclarantRDV",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GAP-DeclarantRDV</h2><div><p>Un déclarant de rendez-vous fait une demande auprès d’un gestionnaire d’agenda pour créer (demande d'un nouveau rendez-vous ou déclaration d'un rendez-vous pris) ou mettre à jour un rendez-vous</p>\n</div><table><tr><td>Mode</td><td>CLIENT</td></tr><tr><td>Description</td><td><div><p>Création mise à jour de RDV</p>\n</div></td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th></tr><tr><td>Appointment</td><td><a href=\"http://interopsante.org/fhir/StructureDefinition/FrAppointment\">http://interopsante.org/fhir/StructureDefinition/FrAppointment</a></td><td>y</td><td></td><td>y</td><td>y</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-DeclarantRDV",
+  "version" : "3.0.0-ballot",
+  "name" : "GAP-DeclarantRDV",
+  "title" : "CI-SIS Gestion-d-Agendas-Partages - DeclarantRDVGAP",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-08-02",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Un déclarant de rendez-vous fait une demande auprès d’un gestionnaire d’agenda pour créer (demande d'un nouveau rendez-vous ou déclaration d'un rendez-vous pris) ou mettre à jour un rendez-vous",
+  "kind" : "requirements",
+  "fhirVersion" : "4.0.1",
+  "format" : ["application/fhir+xml",
+  "application/fhir+json"],
+  "implementationGuide" : ["https://interop.esante.gouv.fr/ig/fhir/agenda"],
+  "rest" : [{
+    "mode" : "client",
+    "documentation" : "Création mise à jour de RDV",
+    "security" : {
+      "cors" : false,
+      "description" : "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)"
+    },
+    "resource" : [{
+      "type" : "Appointment",
+      "profile" : "http://interopsante.org/fhir/StructureDefinition/FrAppointment",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "create"
+      },
+      {
+        "code" : "update"
+      }],
+      "conditionalUpdate" : true
+    }]
+  }]
+}

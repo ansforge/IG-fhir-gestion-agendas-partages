@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Appointment xmlns="http://hl7.org/fhir">
+  <id value="example-req-appointment"/>
+  <meta>
+    <profile value="https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-appointment"/>
+    <profile value="http://interopsante.org/fhir/StructureDefinition/FrAppointment"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Appointment</b><a name="example-req-appointment"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Appointment &quot;example-req-appointment&quot; </p><p style="margin-bottom: 0px">Profiles: <a href="StructureDefinition-gap-fr-appointment.html">GAP_FrAppointment</a>, <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/StructureDefinition/FrAppointment">FrAppointment</a></p></div><p><b>FrAppointmentOperator</b>: <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=https://exampleserver.org/fhir/Patient/1">https://exampleserver.org/fhir/Patient/1</a></p><p><b>identifier</b>: id: 123</p><p><b>status</b>: proposed</p><p><b>serviceType</b>: suivi <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (ServiceType#1)</span></p><p><b>specialty</b>: Médecine générale (SM) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (TRE-R38-SpecialiteOrdinale#SM54)</span></p><p><b>priority</b>: 5</p><p><b>minutesDuration</b>: 15</p><p><b>slot</b>: <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=https://exampleserver.org/fhir/Slot/example">https://exampleserver.org/fhir/Slot/example</a></p><p><b>created</b>: 2019-01-02</p><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=https://exampleserver.org/fhir/Patient/1">https://exampleserver.org/fhir/Patient/1: M Martin</a></p><p><b>required</b>: required</p><p><b>status</b>: accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=https://exampleserver.org/fhir/PractitionerRole/1">https://exampleserver.org/fhir/PractitionerRole/1: Dr Langdon, cabinet Paris</a></p><p><b>required</b>: required</p><p><b>status</b>: needs-action</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=https://exampleserver.org/fhir/Practitioner/1">https://exampleserver.org/fhir/Practitioner/1: Dr Langdon</a></p><p><b>required</b>: required</p><p><b>status</b>: needs-action</p></blockquote><p><b>requestedPeriod</b>: 2019-01-04 09:15:00+0000 --&gt; (ongoing)</p></div>
+  </text>
+  <extension url="http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator">
+    <valueReference>
+      <reference value="https://exampleserver.org/fhir/Patient/1"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="http://example.org/sampleappointment-identifier"/>
+    <value value="123"/>
+  </identifier>
+  <status value="proposed"/>
+  <serviceType>
+    <coding>
+      <system value="http://example.org/ValueSet/ServiceType"/>
+      <code value="1"/>
+      <display value="suivi"/>
+    </coding>
+  </serviceType>
+  <specialty>
+    <coding>
+      <system value="https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"/>
+      <code value="SM54"/>
+      <display value="Médecine générale (SM)"/>
+    </coding>
+  </specialty>
+  <priority value="5"/>
+  <minutesDuration value="15"/>
+  <slot>
+    <reference value="https://exampleserver.org/fhir/Slot/example"/>
+  </slot>
+  <created value="2019-01-02"/>
+  <participant>
+    <actor>
+      <reference value="https://exampleserver.org/fhir/Patient/1"/>
+      <display value="M Martin"/>
+    </actor>
+    <required value="required"/>
+    <status value="accepted"/>
+  </participant>
+  <participant>
+    <actor>
+      <reference value="https://exampleserver.org/fhir/PractitionerRole/1"/>
+      <display value="Dr Langdon, cabinet Paris"/>
+    </actor>
+    <required value="required"/>
+    <status value="needs-action"/>
+  </participant>
+  <participant>
+    <actor>
+      <reference value="https://exampleserver.org/fhir/Practitioner/1"/>
+      <display value="Dr Langdon"/>
+    </actor>
+    <required value="required"/>
+    <status value="needs-action"/>
+  </participant>
+  <requestedPeriod>
+    <start value="2019-01-04T09:15:00Z"/>
+  </requestedPeriod>
+</Appointment>
