@@ -326,14 +326,14 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
 
 peut préciser le degré d’urgence du rendez-vous en utilisant l’élément *appointmentType* et le jeu de valeurs proposé par le standard[^24] ou en attribuant une priorité au rendez-vous avec l’élément *priority*.
 
-### MISE EN CORRESPONDANCE AVEC ICALENDAR
+### Mise en correspondance avec iCalendar
 Cette annexe met en correspondance les composants et les propriétés iCalendar avec les ressources et les éléments FHIR de ce volet. Ceci est proposé dans le but de faciliter l’intégration de certains éléments dans les agendas personnels des utilisateurs.
 
-**VAVAILABILITY et AvailabilityTime**
+#### VAVAILABILITY et AvailabilityTime
 
 Le composant VAVAILABILITY définit une durée sur laquelle la ou les disponibilités de la ressource vont être décrites. Sur toute cette durée, la ressource est par défaut non disponible, et ce sont les sous-composants AVAILABILITY qui permettent de définir des plages de disponibilité, récursives ou non, sur cette période. Ci-dessous un schéma représentant les disponibilités d’une ressource sur la semaine de travail allant du 17/07/2017 au 21/07/2017. La première disponibilité, en rouge, est une disponibilité de 8h à 19h récurrente sur 4 jours. La deuxième disponibilité, en bleu, est une disponibilité simple de 8h à 13h le 21 juillet.
 
-![](Aspose.Words.a34b4a43-280b-496e-8a8a-38bda1a652ac.005.png)
+![](vav-ical.png)
 
 Le sous-composant AVAILABILITY correspond à l’extension française *AvailabilityTime* de la ressource *Schedule* avec  *type = free*. Le tableau suivant met en correspondance certaines propriétés du sous-composant AVAILABILITY avec les éléments de l’extension.
 
@@ -342,11 +342,11 @@ Le sous-composant AVAILABILITY correspond à l’extension française *Availabil
 | :-: | :-: | :-: | :-: | :-: |
 |*UID*|TEXT 1..1||Identifiant unique du sous-composant|availabilityTime.id|
 |*CREATED*|DATE-TIME 0..1||Date de création du sous-composant dans le calendrier|availabilityTime.created|
-|*DTSTART*|<p>DATE-TIME 1..1  (default)</p><p>DATE 1..1</p>|VALUE = DATE-TIME | DATE|La date/temps de début de la plage de disponibilité|availabilityTime.start|
+|*DTSTART*|DATE-TIME 1..1  (default)</br>DATE 1..1|VALUE = DATE-TIME | DATE|La date/temps de début de la plage de disponibilité|availabilityTime.start|
 |*RRULE*|RECUR 0..1||Règle de répétition de la plage de disponibilité|AvailabilityTime.rrule|
-|*DTEND*|<p>DATE-TIME 0..1  (default)</p><p>DATE 0..1  </p>|VALUE = DATE-TIME | DATE|La date/temps de fin de la plage de disponibilité|availabilityTime.end|
+|*DTEND*|DATE-TIME 0..1  (default)</br>DATE 0..1  |VALUE = DATE-TIME | DATE|La date/temps de fin de la plage de disponibilité|availabilityTime.end|
 
-**VFREEBUSY et Slot**
+#### VFREEBUSY et Slot
 
 Ce composant regroupe les informations relatives à une demande concernant le temps libre/occupé d’une ressource ou une réponse à une demande concernant le temps libre/occupé d’une ressource.
 
@@ -356,13 +356,13 @@ Ce composant correspond à la ressource Slot. Le tableau suivant met en correspo
 |*Propriété*|*Type et cardinalités*|*Paramètre*|*Description*|*Elément FHIR*|
 | :-: | :-: | :-: | :-: | :-: |
 |*UID*|TEXT 1..1||Identifiant unique du composant|identifier|
-|*DTSTART*|<p>DATE-TIME 0..1  (default)</p><p>DATE 0..1  </p>|VALUE = DATE-TIME | DATE|La date/temps de début du temps libre ou occupé décrit par le composant|start|
-|*DTEND*|<p>DATE-TIME 0..1  (default)</p><p>DATE 0..1  </p>|VALUE = DATE-TIME | DATE|La date/temps de fin du temps libre ou occupé décrit par le composant|end|
+|*DTSTART*|DATE-TIME 0..1  (default)</br>DATE 0..1 |VALUE = DATE-TIME | DATE|La date/temps de début du temps libre ou occupé décrit par le composant|start|
+|*DTEND*|DATE-TIME 0..1  (default)</br>DATE 0..1 |VALUE = DATE-TIME | DATE|La date/temps de fin du temps libre ou occupé décrit par le composant|end|
 |*ATTENDEE*|CAL-ADDRESS 0..\*|CN|Identification de la ressource concernée par cette demande/description de temps libre/occupé|schedule.actor|
 |*COMMENT*|TEXT 0..\*||Un commentaire destiné à l’utilisateur qui va consulter le composant|comment|
 |*FREEBUSY*|PERIOD 0..\*|FBTYPE = FREE | BUSY…|Sous périodes de temps libre ou occupé décrites par le composant|Status (mêmes codes)|
 
-**VEVENT et Appointment**
+#### VEVENT et Appointment
 
 Ce composant regroupe les informations relatives à un évènement (un rendez-vous par exemple).
 
@@ -372,27 +372,27 @@ Lorsqu’il décrit un rendez-vous, ce composant correspond à la ressource *App
 | :-: | :-: | :-: | :-: | :-: |
 |*DTSTAMP*|DATE-TIME 1..1||Date à laquelle le composant a été créé||
 |*UID*|TEXT 1..1||Identifiant unique du composant|identifier|
-|*DTSTART*|<p>DATE-TIME 0..1 (default)</p><p>DATE 0..1</p>|VALUE = DATE-TIME | DATE|La date/temps de début de l’évènement décrit par le composant|start|
-|*CLASS*|<p>TEXT 0..1</p><p>(PUBLIC | PRIVATE | CONFIDENTIAL)</p>||Définition de la classe d’accès au composant||
+|*DTSTART*|DATE-TIME 0..1 (default)</br>DATE 0..1|VALUE = DATE-TIME | DATE|La date/temps de début de l’évènement décrit par le composant|start|
+|*CLASS*|TEXT 0..1</br>(PUBLIC | PRIVATE | CONFIDENTIAL)||Définition de la classe d’accès au composant||
 |*CREATED*|DATE-TIME 0..1||Date de création du composant dans le calendrier|created|
 |*DESCRIPTION*|TEXT 0..1||Description complète du composant|description|
 |*GEO*|FLOAT 0..1||Géolocalisation du lieu de l’évènement décrit par le composant||
 |*LAST-MODIFIED*|DATE-TIME 0..1||Date de révision du composant||
 |*LOCATION*|TEXT 0..1||Lieu de l’évènement décrit par le composant|Participant de type Location|
-|*ORGANIZER*|CAL-ADDRESS 0..1|<p>CN</p><p>DIR</p><p>SENT-BY</p><p>EMAIL</p>|Identification de l’organisateur de l’évènement|participant|
-|*PRIORITY*|<p>INTEGER 0..1</p><p>[0..9]</p>||Priorité du composant|priority|
+|*ORGANIZER*|CAL-ADDRESS 0..1|CN</br>DIR</br>SENT-BY</br>EMAIL|Identification de l’organisateur de l’évènement|participant|
+|*PRIORITY*|INTEGER 0..1</br>[0..9]||Priorité du composant|priority|
 |*SEQUENCE*|INTEGER 0..1||Numéro séquentiel de la révision du composant||
-|*STATUS*|<p>TEXT 0..1</p><p>(TENTATIVE | CONFIRMED | CANCELLED)</p>||Statut de confirmation du composant|<p>Status</p><p>(proposed | pending | booked | arrived | fulfilled | cancelled | noshow | entered-in-error)</p>|
+|*STATUS*|TEXT 0..1</br>(TENTATIVE | CONFIRMED | CANCELLED)||Statut de confirmation du composant|Status</br>(proposed | pending | booked | arrived | fulfilled | cancelled | noshow | entered-in-error)|
 |*SUMMARY*|TEXT 0..1||Sujet ou résumé court du composant||
-|*TRANSP*|<p>TEXT 0..1</p><p>(OPAQUE | TRANSPARENT)</p>||Transparence de l’évènement par rapport à une demande de temps libre/occupé||
+|*TRANSP*|TEXT 0..1</br>(OPAQUE | TRANSPARENT)||Transparence de l’évènement par rapport à une demande de temps libre/occupé||
 |*URL*|URI 0..1||URL associé à l’objet iCalendar||
 |*RECURRENCE-ID*|DAT-TIME 0..1||Identification de la récurrence de l’évènement||
 |*RRULE*|RECUR 0..1||Règle de répétition d’un évènement récurrent||
-|*DTEND*|<p>DATE-TIME 0..1 (default)</p><p>DATE 0..1</p>|VALUE = DATE-TIME | DATE|La date/temps de fin de l’évènement décrit par le composant|end|
+|*DTEND*|DATE-TIME 0..1 (default)</br>DATE 0..1|VALUE = DATE-TIME | DATE|La date/temps de fin de l’évènement décrit par le composant|end|
 |*DURATION*|DURATION 0..1||Durée de l’évènement|minutesDuration|
 |*COLOR*|TEXT 0..1||Couleur associée à l’évènement||
-|*ATTACH*|<p>URI 0..\*</p><p></p>||Association d’un document au composant|supportingInformation type Binary ou documentReference|
-|*ATTENDEE*|CAL-ADDRESS 0..\*|<p>- ROLE</p><p>*(CHAIR | REQ-PARTICIPANT | OPT-PARTICIPANT | NON-PARTICIPANT)*</p><p>- PARTSTAT</p><p>*(NEEDS-ACTION | ACCEPTED | DECLINED | TENTATIVE | DELEGATED)*</p><p>- …</p>|Identification des participants|<p>- Participant.required</p><p>(required | optional | information-only)</p><p>- participant.status</p><p>(accepted | declined | tentative | needs-action)</p>|
+|*ATTACH*|URI 0..\*||Association d’un document au composant|supportingInformation type Binary ou documentReference|
+|*ATTENDEE*|CAL-ADDRESS 0..\*|- ROLE</br>*(CHAIR | REQ-PARTICIPANT | OPT-PARTICIPANT | NON-PARTICIPANT)*</br>- PARTSTAT</br>*(NEEDS-ACTION | ACCEPTED | DECLINED | TENTATIVE | DELEGATED)*</br>- …|Identification des participants|- Participant.required</br>(required | optional | information-only)</br>- participant.status</br>(accepted | declined | tentative | needs-action)|
 |*CATEGORIES*|TEXT 0..\*||Définition des catégories auxquelles appartient le composant||
 |*COMMENT*|TEXT 0..\*||Un commentaire destiné à l’utilisateur qui va consulter le composant||
 |*CONTACT*|TEXT 0..\*||Informations de contact relatives au composant||
@@ -401,13 +401,5 @@ Lorsqu’il décrit un rendez-vous, ce composant correspond à la ressource *App
 |*RELATED-TO*|TEXT 0..\*||Relation avec un autre composant||
 |*RESOURCES*|TEXT 0..\*||Ressource ou équipements requis pour l’évènement||
 |*RDATE*|DATE-TIME 0..\*||Liste des récurrences d’un évènement||
-|*IMAGE*|<p>URI 0..\*</p><p>BINARY</p>||Images associées à l’évènement||
+|*IMAGE*|URI 0..\*</br>BINARY||Images associées à l’évènement||
 |*CONFERENCE*|URI 0..\*||Informations d’accès à une conférence||
-
-[^24]: <https://www.hl7.org/fhir/v2/0276/index.html> 
-[RelatedPerson]: https://simplifier.net/packages/simplifier.core.r4.resources/4.0.0/files/19017 "RelatedPerson simplifier.core.r4.resources 4.0.0 StructureDefinition-RelatedPerson.json"
-[Device]: https://simplifier.net/packages/simplifier.core.r4.resources/4.0.0/files/19118 "Device simplifier.core.r4.resources 4.0.0 StructureDefinition-Device.json"
-[FrHealthcareService]: https://simplifier.net/frenchprofiledfhirar/frhealthcareservice "Profile of the HealthcareService resource for France | Profil de la ressource HealthcareService pour l'usage en France. This profile adds the element serviceTypeDuration to associate the service with the duration of this service | Ce profil ajoute l'élément se"
-[FrLocation]: https://simplifier.net/frenchprofiledfhirar/frlocation "French profile of Location | Profil français de la ressource Location"
-[FrPatient]: https://simplifier.net/frenchprofiledfhirar/frpatient "Profile of the Patient resource for France | Profil de la ressource Patient pour l'usage en FranceThis profile specifies the patient's identifiers for France. It uses international extensions (birtplace and nationality) and adds specific French extensions | Ce"
-[FrPractitioner]: https://simplifier.net/frenchprofiledfhirar/frpractitioner "French profile of the Practitioner resource | Profil de la ressource Practitionner pour la France This profile specifies the types of identifiers for practitioners in France | Ce profil contraint les types d'identifiants du professionnel de santé en France"
