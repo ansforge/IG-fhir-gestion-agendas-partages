@@ -164,9 +164,24 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
 <tr><td colspan="1">typeEquipement</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:Device.type : token</td></tr>
 <tr><td colspan="1">libelle</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:Device.device-name : string</td></tr>
 <tr><td colspan="1">reference</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:Device.model : string</td></tr>
-<tr><td colspan="1" rowspan="4">OrganisationInterne</td><td colspan="1">identifiantOI</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:HealthcareService.identifier : token</td></tr>
-<tr><td colspan="1">nom</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:HealthcareService.name : string</td></tr>
-<tr><td colspan="1">telecommunication</td><td colspan="1">Slot</td><td colspan="1">Il n’existe pas de critère de recherche équivalent dans FHIR</td></tr>
+
+<tr>
+    <td colspan="1" rowspan="3">OrganisationInterne</td>
+    <td colspan="1">identifiantOI</td>
+    <td colspan="1"><p>Slot</p><p></p></td>
+    <td colspan="1">schedule.actor:HealthcareService.identifier : token</td>
+</tr>
+<tr>
+    <td colspan="1">nom</td>
+    <td colspan="1">Slot</td>
+    <td colspan="1">schedule.actor:HealthcareService.name : string</td>
+</tr>
+<tr>
+    <td colspan="1">telecommunication</td>
+    <td colspan="1">Slot</td>
+    <td colspan="1">Il n’existe pas de critère de recherche équivalent dans FHIR</td>
+</tr>
+
 <tr><td colspan="1" rowspan="3">EntiteGeographique</td><td colspan="1">idNat_Struct</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:HealthcareService.organization.identifier : token</td></tr>
 <tr><td colspan="1">denominationEG</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:HealthcareService.organization.name : string</td></tr>
 <tr><td colspan="1">adresseEG</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:HealthcareService.organization.address : string</td></tr>
@@ -386,9 +401,9 @@ Le sous-composant AVAILABILITY correspond à l’extension française *Availabil
 | :-: | :-: | :-: | :-: | :-: |
 |*UID*|TEXT 1..1||Identifiant unique du sous-composant|availabilityTime.id|
 |*CREATED*|DATE-TIME 0..1||Date de création du sous-composant dans le calendrier|availabilityTime.created|
-|*DTSTART*|DATE-TIME 1..1  (default)<br>DATE 1..1|VALUE = DATE-TIME | DATE|La date/temps de début de la plage de disponibilité|availabilityTime.start|
+|*DTSTART*|DATE-TIME 1..1  (default)<br>DATE 1..1|VALUE = DATE-TIME / DATE|La date/temps de début de la plage de disponibilité|availabilityTime.start|
 |*RRULE*|RECUR 0..1||Règle de répétition de la plage de disponibilité|AvailabilityTime.rrule|
-|*DTEND*|DATE-TIME 0..1  (default)<br>DATE 0..1  |VALUE = DATE-TIME | DATE|La date/temps de fin de la plage de disponibilité|availabilityTime.end|
+|*DTEND*|DATE-TIME 0..1  (default)<br>DATE 0..1  |VALUE = DATE-TIME / DATE|La date/temps de fin de la plage de disponibilité|availabilityTime.end|
 
 #### VFREEBUSY et Slot
 
@@ -404,7 +419,7 @@ Ce composant correspond à la ressource Slot. Le tableau suivant met en correspo
 |*DTEND*|DATE-TIME 0..1  (default)<br>DATE 0..1 |VALUE = DATE-TIME / DATE|La date/temps de fin du temps libre ou occupé décrit par le composant|end|
 |*ATTENDEE*|CAL-ADDRESS 0..\*|CN|Identification de la ressource concernée par cette demande/description de temps libre/occupé | schedule.actor|
 |*COMMENT*|TEXT 0..\* || Un commentaire destiné à l’utilisateur qui va consulter le composant | comment |
-|*FREEBUSY*|PERIOD 0..\*|FBTYPE = FREE | BUSY…|Sous périodes de temps libre ou occupé décrites par le composant|Status (mêmes codes)|
+|*FREEBUSY*|PERIOD 0..\*|FBTYPE = FREE / BUSY…|Sous périodes de temps libre ou occupé décrites par le composant|Status (mêmes codes)|
 
 #### VEVENT et Appointment
 
