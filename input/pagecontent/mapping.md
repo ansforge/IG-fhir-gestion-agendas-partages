@@ -25,9 +25,24 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
 <tr><td colspan="1">fonctionQualifiee: [0..1] Code</td><td colspan="1" valign="top"><p>PractitionerRole</p><p>AsPractitionerRoleProfile</p></td><td colspan="1"><p>specialty : CodeableConceptTimed [0..*]</p><p>Slice « savoirFaireR45 »</p></td></tr>
 <tr><td colspan="1">descNonQualifiant : [0..1] Code</td><td colspan="1" valign="top"><p>PractitionerRole</p><p>AsPractitionerRoleProfile</p></td><td colspan="1"><p>specialty : CodeableConceptTimed [0..*]</p><p>Slice « savoirFaireR42 »</p></td></tr>
 <tr><td colspan="1">droitExerciceComplementaire: [0..1] Code</td><td colspan="1" valign="top"><p>PractitionerRole</p><p>AsPractitionerRoleProfile</p></td><td colspan="1"><p>specialty : CodeableConceptTimed [0..*]</p><p>Slice « savoirFaireR97 »</p></td></tr>
-<tr><td colspan="1" rowspan="3">EntiteGeographique</td><td colspan="1">idNat_Struct : [1..1] Identifiant</td><td colspan="1"><p>Organization</p><p>FrOrganization</p></td><td colspan="1">identifier : Identifier [0..*]</td></tr>
-<tr><td colspan="1">denominationEG : [0..1] Texte</td><td colspan="1"><p>Organization</p><p>FrOrganization</p></td><td colspan="1">name : string [0..1]</td></tr>
-<tr><td colspan="1">adresseEG : [0..*] Adresse</td><td colspan="1"><p>Organization</p><p>FrOrganization</p></td><td colspan="1">address : FrAddress [0..*]</td></tr>
+
+<tr>
+    <td colspan="1" rowspan="3">EntiteGeographique</td>
+    <td colspan="1">idNat_Struct : [1..1] Identifiant</td>
+    <td colspan="1"><p>Organization</p><p>FrOrganization</p></td>
+    <td colspan="1">identifier : Identifier [0..*]</td>
+</tr>
+<tr>
+    <td colspan="1">denominationEG : [0..1] Texte</td>
+    <td colspan="1"><p>Organization</p><p>FrOrganization</p></td>
+    <td colspan="1">name : string [0..1]</td>
+</tr>
+<tr>
+    <td colspan="1">adresseEG : [0..*] Adresse</td>
+    <td colspan="1"><p>Organization</p><p>FrOrganization</p></td>
+    <td colspan="1">address : FrAddress [0..*]</td>
+</tr>
+
 <tr><td colspan="1" rowspan="4">Lieu</td><td colspan="1">nom : [0..1] Texte</td><td colspan="1"><p>Location</p><p>FrLocation</p></td><td colspan="1">name : string [0..1]</td></tr>
 <tr><td colspan="1">description : [0..1] Texte</td><td colspan="1"><p>Location</p><p>FrLocation</p></td><td colspan="1">description : string [0..1]</td></tr>
 <tr><td colspan="1">identifiant : [1..1] Identifiant </td><td colspan="1"><p>Location</p><p>FrLocation</p></td><td colspan="1">identifier : Identifier [1..*]</td></tr>
@@ -68,7 +83,7 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
 <tr><td colspan="1">dateCreation : [0..1] Date</td><td colspan="1"><p>Schedule</p><p>FrSchedule</p></td><td colspan="1">Meta[0..1].lastUpdated : instant  [0..1] </td></tr>
 <tr><td colspan="1">dateDebutValidite : [0..1] DateHeure</td><td colspan="1"><p>Schedule</p><p>FrSchedule</p></td><td colspan="1">planningHorizon[0..1].start : [0..1] dateTime</td></tr>
 <tr><td colspan="1">dateFinValidite : [0..1] DateHeure</td><td colspan="1"><p>Schedule</p><p>FrSchedule</p></td><td colspan="1">planningHorizon[0..1].end : [0..1] dateTime</td></tr>
-<tr><td colspan="1"><p>Les acteurs de l’agenda sont décrits dans une partie spécifique</p><p>PersonnePriseCharge [0..*]</sup> [^3]</p></td><td colspan="1" rowspan="6"><p>Schedule</p><p>FrSchedule</p></td><td colspan="1" rowspan="6"><p>Cette référence peut être multiple lorsqu’un agenda concerne un ensemble d’acteurs. En établissement par exemple, un spécialiste, une infirmière et un équipement peuvent disposer d’un même agenda. La prise de rendez-vous sur cet agenda concerne des services de soins spécifiques nécessitant la disponibilité de ces trois acteurs.</p><p>actor : Reference [1..*][^4] </p><p>Il est préconisé de s’appuyer sur les profils AsPractitionerRoleProfile de l’annuaire santé.</p><p>(Fr[RelatedPerson] | [Device] | [FrHealthcareService] | [FrLocation] |  [FrPatient] |  [FrPractitioner] | PractitionerRole[^5])</p></td></tr>
+<tr><td colspan="1"><p>Les acteurs de l’agenda sont décrits dans une partie spécifique</p><p>PersonnePriseCharge [0..*]</p></td><td colspan="1" rowspan="6"><p>Schedule</p><p>FrSchedule</p></td><td colspan="1" rowspan="6"><p>Cette référence peut être multiple lorsqu’un agenda concerne un ensemble d’acteurs. En établissement par exemple, un spécialiste, une infirmière et un équipement peuvent disposer d’un même agenda. La prise de rendez-vous sur cet agenda concerne des services de soins spécifiques nécessitant la disponibilité de ces trois acteurs.</p><p>actor : Reference [1..*][^4] </p><p>Il est préconisé de s’appuyer sur les profils AsPractitionerRoleProfile de l’annuaire santé.</p><p>(Fr[RelatedPerson] | [Device] | [FrHealthcareService] | [FrLocation] |  [FrPatient] |  [FrPractitioner] | PractitionerRole[^5])</p></td></tr>
 <tr><td colspan="1">Contact [0..*]</td></tr>
 <tr><td colspan="1">Professionnel [0..*]</td></tr>
 <tr><td colspan="1">OrganisationInterne [0..*]</td></tr>
@@ -186,7 +201,6 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
 
 #### Flux 5a – Réponse à la demande de consultation de disponibilités
 
-
 <table><tr><th colspan="2"><i>Eléments métier</i></th><th colspan="2"><i>Eléments des ressources et profils FHIR identifiés</i></th></tr>
 <tr><td colspan="1"><b><i>Classe</i></b></td><td colspan="1"><b><i>Attribut</i></b></td><td colspan="1"><b><i>Ressource</i></b></td><td colspan="1"><b><i>Elément</i></b></td></tr>
 <tr><td colspan="1" rowspan="6">Creneau</td><td colspan="1">idCreneau : [1..1] Identifiant</td><td colspan="1"><p>Slot </p><p>FrSlot</p></td><td colspan="1">identifier : Identifier [0..*]</td></tr>
@@ -194,9 +208,9 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
 <tr><td colspan="1">dateDebut : [1..1] DateHeure</td><td colspan="1"><p>Slot </p><p>FrSlot</p></td><td colspan="1">start : instant [1..1]</td></tr>
 <tr><td colspan="1">dateFin : [1..1] DateHeure</td><td colspan="1"><p>Slot </p><p>FrSlot</p></td><td colspan="1">end : instant [1..1]</td></tr>
 <tr><td colspan="1">informationComplementaire : [0..1]</td><td colspan="1"><p>Slot </p><p>FrSlot</p></td><td colspan="1">comment : string [0..1]</td></tr>
-<tr><td colspan="1"><p>L’agenda est décrit dans une partie spécifique.</p><p>Agenda [1..1]</sup> [^9]</p></td><td colspan="1"><p>Slot </p><p>FrSlot</p></td><td colspan="1"><p>schedule : Reference [1..1]</p><p>(FrSchedule)</p></td></tr>
+<tr><td colspan="1"><p>L’agenda est décrit dans une partie spécifique.</p><p>Agenda [1..1]</p></td><td colspan="1"><p>Slot </p><p>FrSlot</p></td><td colspan="1"><p>schedule : Reference [1..1]</p><p>(FrSchedule)</p></td></tr>
 <tr><td colspan="1" rowspan="7">Agenda</td><td colspan="1">idAgenda : [1..1] Identifiant </td><td colspan="1"><p>Schedule </p><p>FrSchedule</p></td><td colspan="1">identifier : Identifier [0..*]</td></tr>
-<tr><td colspan="1"><p>Les acteurs de l’agenda sont décrits dans une partie spécifique.</p><p>PersonnePriseCharge [0..*]</sup> [^10]</p></td><td colspan="1" rowspan="6"><p>Schedule </p><p>FrSchedule</p></td><td colspan="1" rowspan="6"><p>Cette référence peut être multiple lorsqu’un agenda concerne un ensemble d’acteurs. En établissement par exemple, un spécialiste, une infirmière et un équipement peuvent disposer d’un même agenda. La prise de rendez-vous sur cet agenda concerne des services de soins spécifiques nécessitant la disponibilité de ces trois acteurs.</p><p>actor : Reference [1..*][^11]</p><p>Il est préconisé de s’appuyer sur les profils AsPractitionerRoleProfile de l’annuaire santé.</p><p>(Fr[RelatedPerson] | [Device] | [FrHealthcareService] | [FrLocation] |  [FrPatient] |  [FrPractitioner] | PractitionerRole[^12])</p></td></tr>
+<tr><td colspan="1"><p>Les acteurs de l’agenda sont décrits dans une partie spécifique.</p><p>PersonnePriseCharge [0..*]</p></td><td colspan="1" rowspan="6"><p>Schedule </p><p>FrSchedule</p></td><td colspan="1" rowspan="6"><p>Cette référence peut être multiple lorsqu’un agenda concerne un ensemble d’acteurs. En établissement par exemple, un spécialiste, une infirmière et un équipement peuvent disposer d’un même agenda. La prise de rendez-vous sur cet agenda concerne des services de soins spécifiques nécessitant la disponibilité de ces trois acteurs.</p><p>actor : Reference [1..*][^11]</p><p>Il est préconisé de s’appuyer sur les profils AsPractitionerRoleProfile de l’annuaire santé.</p><p>(Fr[RelatedPerson] | [Device] | [FrHealthcareService] | [FrLocation] |  [FrPatient] |  [FrPractitioner] | PractitionerRole[^12])</p></td></tr>
 <tr><td colspan="1">Contact [0..*]</td></tr>
 <tr><td colspan="1">Professionnel [0..*]</td></tr>
 <tr><td colspan="1">OrganisationInterne [0..*]</td></tr>
@@ -223,9 +237,23 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
 <tr><td colspan="1">fonctionQualifiee: [0..1] Code</td><td colspan="1" valign="top"><p>PractitionerRole</p><p>AsPractitionerRoleProfile</p></td><td colspan="1"><p>specialty : CodeableConceptTimed [0..*]</p><p>Slice «  savoirFaireR45 »</p></td></tr>
 <tr><td colspan="1">descNonQualifiant: [0..1] Code</td><td colspan="1" valign="top"><p>PractitionerRole</p><p>AsPractitionerRoleProfile</p></td><td colspan="1"><p>specialty : CodeableConceptTimed [0..*]</p><p>Slice «  savoirFaireR42 »</p></td></tr>
 <tr><td colspan="1">droitExerciceComplementaire: [0..1] Code</td><td colspan="1" valign="top"><p>PractitionerRole</p><p>AsPractitionerRoleProfile</p></td><td colspan="1"><p>specialty : CodeableConceptTimed [0..*]</p><p>Slice «  savoirFaireR97 »</p></td></tr>
-<tr><td colspan="1" rowspan="4">OrganisationInterne</td><td colspan="1">identifiantOI : [1..1] Identifiant</td><td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td><td colspan="1">identifier : Identifier [0..*]</td></tr>
-<tr><td colspan="1">nom : [0..1] Texte</td><td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td><td colspan="1">name : string [0..1]</td></tr>
-<tr><td colspan="1">telecommunication : [0..*] Telecommunication</td><td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td><td colspan="1">telecom : FrContactPoint [0..*]</td></tr>
+<tr>
+    <td colspan="1" rowspan="3">OrganisationInterne</td>
+    <td colspan="1">identifiantOI : [1..1] Identifiant</td>
+    <td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td>
+    <td colspan="1">identifier : Identifier [0..*]</td>
+</tr>
+<tr>
+    <td colspan="1">nom : [0..1] Texte</td>
+    <td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td>
+    <td colspan="1">name : string [0..1]</td>
+</tr>
+<tr>
+    <td colspan="1">telecommunication : [0..*] Telecommunication</td>
+    <td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td>
+    <td colspan="1">telecom : FrContactPoint [0..*]</td>
+</tr>
+
 <tr><td colspan="1" rowspan="3">EntiteGeographique</td><td colspan="1">idNat_Struct : [1..1] Identifiant</td><td colspan="1"><p>Organization</p><p>FrOrganization</p></td><td colspan="1">identifier : Identifier [0..*]</td></tr>
 <tr><td colspan="1">denominationEG : [0..1] Texte</td><td colspan="1"><p>Organization</p><p>FrOrganization</p></td><td colspan="1">name : string [0..1]</td></tr>
 <tr><td colspan="1">adresseEG : [0..*] Adresse</td><td colspan="1"><p>Organization</p><p>FrOrganization</p></td><td colspan="1">address : Address [0..*]</td></tr>
@@ -258,7 +286,7 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
 <tr><td colspan="1">pieceJointe : [0..*] ObjetBinaire</td><td colspan="1"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1"><p>supportingInformation : Reference [0..*]</p><p>(any)</p></td></tr>
 <tr><td colspan="1">priorite : [0..1] Code</td><td colspan="1"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1">priority : unsignedInt [0..1]</td></tr>
 <tr><td colspan="1">commentaire : [0..1] Texte</td><td colspan="1"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1">comment : string [0..1]</td></tr>
-<tr><td colspan="1"><p>Les participants sont décrits dans une partie spécifique</p><p>PersonnePriseCharge [0..*]</sup> [^14]</p></td><td colspan="1" rowspan="6"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1" rowspan="6"><p>Cette référence peut être multiple lorsqu’un agenda concerne un ensemble d’acteurs. En établissement par exemple, un spécialiste, une infirmière et un équipement peuvent disposer d’un même agenda. La prise de rendez-vous sur cet agenda concerne des services de soins spécifiques nécessitant la disponibilité de ces trois acteurs.</p><p>Il est préconisé de s’appuyer sur les profils AsPractitionerRoleProfile de l’annuaire santé.</p><p>participant[1..*].actor : Reference [0..1][^15] (Fr[RelatedPerson] | [Device] | [FrHealthcareService] | [FrLocation] |  [FrPatient] |  [FrPractitioner] | PractitionerRole[^16])</p></td></tr>
+<tr><td colspan="1"><p>Les participants sont décrits dans une partie spécifique</p><p>PersonnePriseCharge [0..*]</p></td><td colspan="1" rowspan="6"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1" rowspan="6"><p>Cette référence peut être multiple lorsqu’un agenda concerne un ensemble d’acteurs. En établissement par exemple, un spécialiste, une infirmière et un équipement peuvent disposer d’un même agenda. La prise de rendez-vous sur cet agenda concerne des services de soins spécifiques nécessitant la disponibilité de ces trois acteurs.</p><p>Il est préconisé de s’appuyer sur les profils AsPractitionerRoleProfile de l’annuaire santé.</p><p>participant[1..*].actor : Reference [0..1][^15] (Fr[RelatedPerson] | [Device] | [FrHealthcareService] | [FrLocation] |  [FrPatient] |  [FrPractitioner] | PractitionerRole[^16])</p></td></tr>
 <tr><td colspan="1">Contact [0..*]</td></tr>
 <tr><td colspan="1">Professionnel [0..*]</td></tr>
 <tr><td colspan="1">OrganisationInterne [0..*]</td></tr>
@@ -287,14 +315,14 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
 <tr><td colspan="1">priorite : [0..1] Code</td><td colspan="1"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1">priority : unsignedInt [0..1]</td></tr>
 <tr><td colspan="1">titreRDV : [0..1] Texte</td><td colspan="1"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1">description : string [0..1]</td></tr>
 <tr><td colspan="1">commentaire : [0..1] Texte</td><td colspan="1"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1">comment : string [0..1]</td></tr>
-<tr><td colspan="1"><p>Le créneau est décrit dans une partie spécifique</p><p>Creneau [0..*]</sup> [^18]</p></td><td colspan="1"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1"><p>slot : Reference [0..*]</p><p>(FrSlot)</p></td></tr>
-<tr><td colspan="1"><p>Les participants sont décrits dans une partie spécifique.</p><p>PersonnePriseCharge [0..*]</sup> [^19]</p></td><td colspan="1" rowspan="6"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1" rowspan="6"><p>Cette référence peut être multiple lorsqu’un agenda concerne un ensemble d’acteurs. En établissement par exemple, un spécialiste, une infirmière et un équipement peuvent disposer d’un même agenda. La prise de rendez-vous sur cet agenda concerne des services de soins spécifiques nécessitant la disponibilité de ces trois acteurs.</p><p>Il est préconisé de s’appuyer sur le profil AsPractitionerRoleProfile de l’annuaire santé.</p><p>participant[1..*].actor : Reference [0..1][^20] (Fr[RelatedPerson] | [Device] | [FrHealthcareService] | [FrLocation] |  [FrPatient] |  [FrPractitioner] | PractitionerRole[^21])</p><p>- « needs-action » dans le cadre d’une demande de rendez-vous avec attente de confirmation</p><p>- « accepted » dans le cadre de la déclaration d’un rendez-vous pris et confirmé.</p><p>- Cf. la documentation du standard pour les autres statuts</p></td></tr>
+<tr><td colspan="1"><p>Le créneau est décrit dans une partie spécifique</p><p>Creneau [0..*]</p></td><td colspan="1"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1"><p>slot : Reference [0..*]</p><p>(FrSlot)</p></td></tr>
+<tr><td colspan="1"><p>Les participants sont décrits dans une partie spécifique.</p><p>PersonnePriseCharge [0..*]</p></td><td colspan="1" rowspan="6"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1" rowspan="6"><p>Cette référence peut être multiple lorsqu’un agenda concerne un ensemble d’acteurs. En établissement par exemple, un spécialiste, une infirmière et un équipement peuvent disposer d’un même agenda. La prise de rendez-vous sur cet agenda concerne des services de soins spécifiques nécessitant la disponibilité de ces trois acteurs.</p><p>Il est préconisé de s’appuyer sur le profil AsPractitionerRoleProfile de l’annuaire santé.</p><p>participant[1..*].actor : Reference [0..1][^20] (Fr[RelatedPerson] | [Device] | [FrHealthcareService] | [FrLocation] |  [FrPatient] |  [FrPractitioner] | PractitionerRole[^21])</p><p>- « needs-action » dans le cadre d’une demande de rendez-vous avec attente de confirmation</p><p>- « accepted » dans le cadre de la déclaration d’un rendez-vous pris et confirmé.</p><p>- Cf. la documentation du standard pour les autres statuts</p></td></tr>
 <tr><td colspan="1">Contact  [0..*]</td></tr>
 <tr><td colspan="1">Professionnel [0..*]</td></tr>
 <tr><td colspan="1">OrganisationInterne [0..*]</td></tr>
 <tr><td colspan="1">Lieu [0..*]</td></tr>
 <tr><td colspan="1">EquipementOperationnel [0..*]</td></tr>
-<tr><td colspan="1"><p>Les participants sont décrits dans une partie spécifique.</p><p>PersonnePriseCharge [0..*]</sup> [^22]</p></td><td colspan="1" rowspan="4"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1" rowspan="4"><p>Extension (FrAppointmentOperator)</p><p>valueRefrence : reference [0..*]</p></td></tr>
+<tr><td colspan="1"><p>Les participants sont décrits dans une partie spécifique.</p><p>PersonnePriseCharge [0..*]</p></td><td colspan="1" rowspan="4"><p>Appointment</p><p>FrAppointment</p></td><td colspan="1" rowspan="4"><p>Extension (FrAppointmentOperator)</p><p>valueRefrence : reference [0..*]</p></td></tr>
 <tr><td colspan="1">Contact  [0..*]</td></tr>
 <tr><td colspan="1">Professionnel [0..*]</td></tr>
 <tr><td colspan="1">OrganisationInterne [0..*]</td></tr>
@@ -312,9 +340,26 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
 <tr><td colspan="1" rowspan="2">PersonnePhysique</td><td colspan="1">nomFamille : [0..1] Texte</td><td colspan="1"><p>Patient</p><p>FrPatient</p></td><td colspan="1"><p>name[1..*].family : string [0..1]</p><p>(FrHumanName)</p><p>Slice « usualName », Patient.name.use prenant la valeur « usual »</p></td></tr>
 <tr><td colspan="1">prenomUsuel : [0..1] Texte</td><td colspan="1"><p>Patient</p><p>FrPatient</p></td><td colspan="1"><p>name[1..*].given : string [0..*]</p><p>(FrHumanName)</p><p>Slice « usualName », Patient.name.use prenant la valeur « usual »</p></td></tr>
 <tr><td colspan="1">EquipementOperationnel</td><td colspan="1">idRessourceMaterielle : [1..1] Identifiant</td><td colspan="1"><p>Device</p><p>FrDevice</p></td><td colspan="1">identifier : Identifier [0..*]</td></tr>
-<tr><td colspan="1" rowspan="4">OrganisationInterne</td><td colspan="1">identifiantOI : [1..1] Identifiant</td><td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td><td colspan="1">identifier : Identifier [0..*] </td></tr>
-<tr><td colspan="1">nom : [0..1] Texte </td><td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td><td colspan="1">name : string [0..1]</td></tr>
-<tr><td colspan="1">telecommunication : [0..*] Telecommunication</td><td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td><td colspan="1">telecom : FrContactPoint [0..*]</td></tr>
+
+
+<tr>
+    <td colspan="1" rowspan="3">OrganisationInterne</td>
+    <td colspan="1">identifiantOI : [1..1] Identifiant</td>
+    <td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td>
+    <td colspan="1">identifier : Identifier [0..*] </td>
+</tr>
+<tr>
+    <td colspan="1">nom : [0..1] Texte </td>
+    <td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td>
+    <td colspan="1">name : string [0..1]</td>
+</tr>
+<tr>
+    <td colspan="1">telecommunication : [0..*] Telecommunication</td>
+    <td colspan="1"><p>HealthcareService</p><p>FrHealthcareService</p></td>
+    <td colspan="1">telecom : FrContactPoint [0..*]</td>
+</tr>
+
+
 <tr><td colspan="1" rowspan="3">Contact</td><td colspan="1">idContact : [1..1] Identifiant</td><td colspan="1"><p>RelatedPerson</p><p>FrRelatedPerson</p></td><td colspan="1">identifier : Identifier [1..1] </td></tr>
 <tr><td colspan="1">adresse : [0..1] Adresse</td><td colspan="1"><p>RelatedPerson</p><p>FrRelatedPerson</p></td><td colspan="1">address : Address [0..*]</td></tr>
 <tr><td colspan="1">telecommunication : [0..*] Telecommunication</td><td colspan="1"><p>RelatedPerson</p><p>FrRelatedPerson</p></td><td colspan="1">telecom : FrContactPoint [0..*]</td></tr>
@@ -355,8 +400,8 @@ Ce composant correspond à la ressource Slot. Le tableau suivant met en correspo
 |*Propriété*|*Type et cardinalités*|*Paramètre*|*Description*|*Elément FHIR*|
 | :-: | :-: | :-: | :-: | :-: |
 |*UID*|TEXT 1..1||Identifiant unique du composant|identifier|
-|*DTSTART*|DATE-TIME 0..1  (default)<br>DATE 0..1 |VALUE = DATE-TIME | DATE|La date/temps de début du temps libre ou occupé décrit par le composant|start|
-|*DTEND*|DATE-TIME 0..1  (default)<br>DATE 0..1 |VALUE = DATE-TIME | DATE|La date/temps de fin du temps libre ou occupé décrit par le composant|end|
+|*DTSTART*|DATE-TIME 0..1  (default)<br>DATE 0..1 |VALUE = DATE-TIME / DATE|La date/temps de début du temps libre ou occupé décrit par le composant|start|
+|*DTEND*|DATE-TIME 0..1  (default)<br>DATE 0..1 |VALUE = DATE-TIME / DATE|La date/temps de fin du temps libre ou occupé décrit par le composant|end|
 |*ATTENDEE*|CAL-ADDRESS 0..\*|CN|Identification de la ressource concernée par cette demande/description de temps libre/occupé | schedule.actor|
 |*COMMENT*|TEXT 0..\* || Un commentaire destiné à l’utilisateur qui va consulter le composant | comment |
 |*FREEBUSY*|PERIOD 0..\*|FBTYPE = FREE | BUSY…|Sous périodes de temps libre ou occupé décrites par le composant|Status (mêmes codes)|
