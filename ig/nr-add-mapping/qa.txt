@@ -3,8 +3,8 @@
 
 err = 12, warn = 27, info = 9
 IG Publisher Version: 1.4.14
-Generated Fri Oct 13 13:40:41 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
- Build Errors : 1 / 9 / 0
+Generated Fri Oct 13 13:53:01 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
+ Build Errors : 0 / 9 / 0
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Appointment-example-req-appointment : 5 / 3 / 5
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 1 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-DeclarantRDV : 0 / 1 / 1
@@ -34,7 +34,6 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Schedule/example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Slot/example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Appointment/example-req-appointment.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/output/mapping.html#/html/body/div/div/div/div/div/p/img at Line 583, column 5: The image source 'Aspose.Words.a34b4a43-280b-496e-8a8a-38bda1a652ac.005.png' cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
