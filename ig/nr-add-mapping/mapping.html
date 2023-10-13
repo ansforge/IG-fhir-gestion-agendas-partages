@@ -413,9 +413,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <tr><td colspan="1">typeEquipement</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:Device.type : token</td></tr>
 <tr><td colspan="1">libelle</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:Device.device-name : string</td></tr>
 <tr><td colspan="1">reference</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:Device.model : string</td></tr>
-<tr><td colspan="1" rowspan="4">OrganisationInterne</td><td colspan="1">identifiantOI</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:HealthcareService.identifier : token</td></tr>
-<tr><td colspan="1">nom</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:HealthcareService.name : string</td></tr>
-<tr><td colspan="1">telecommunication</td><td colspan="1">Slot</td><td colspan="1">Il n’existe pas de critère de recherche équivalent dans FHIR</td></tr>
+
+<tr>
+    <td colspan="1" rowspan="3">OrganisationInterne</td>
+    <td colspan="1">identifiantOI</td>
+    <td colspan="1"><p>Slot</p><p></p></td>
+    <td colspan="1">schedule.actor:HealthcareService.identifier : token</td>
+</tr>
+<tr>
+    <td colspan="1">nom</td>
+    <td colspan="1">Slot</td>
+    <td colspan="1">schedule.actor:HealthcareService.name : string</td>
+</tr>
+<tr>
+    <td colspan="1">telecommunication</td>
+    <td colspan="1">Slot</td>
+    <td colspan="1">Il n’existe pas de critère de recherche équivalent dans FHIR</td>
+</tr>
+
 <tr><td colspan="1" rowspan="3">EntiteGeographique</td><td colspan="1">idNat_Struct</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:HealthcareService.organization.identifier : token</td></tr>
 <tr><td colspan="1">denominationEG</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:HealthcareService.organization.name : string</td></tr>
 <tr><td colspan="1">adresseEG</td><td colspan="1"><p>Slot</p><p></p></td><td colspan="1">schedule.actor:HealthcareService.organization.address : string</td></tr>
@@ -638,7 +653,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <th style="text-align: center"><em>Paramètre</em></th>
       <th style="text-align: center"><em>Description</em></th>
       <th style="text-align: center"><em>Elément FHIR</em></th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
@@ -648,7 +662,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center"> </td>
       <td style="text-align: center">Identifiant unique du sous-composant</td>
       <td style="text-align: center">availabilityTime.id</td>
-      <td> </td>
     </tr>
     <tr>
       <td style="text-align: center"><em>CREATED</em></td>
@@ -656,15 +669,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center"> </td>
       <td style="text-align: center">Date de création du sous-composant dans le calendrier</td>
       <td style="text-align: center">availabilityTime.created</td>
-      <td> </td>
     </tr>
     <tr>
       <td style="text-align: center"><em>DTSTART</em></td>
       <td style="text-align: center">DATE-TIME 1..1  (default)<br />DATE 1..1</td>
-      <td style="text-align: center">VALUE = DATE-TIME</td>
-      <td style="text-align: center">DATE</td>
+      <td style="text-align: center">VALUE = DATE-TIME / DATE</td>
       <td style="text-align: center">La date/temps de début de la plage de disponibilité</td>
-      <td>availabilityTime.start</td>
+      <td style="text-align: center">availabilityTime.start</td>
     </tr>
     <tr>
       <td style="text-align: center"><em>RRULE</em></td>
@@ -672,15 +683,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center"> </td>
       <td style="text-align: center">Règle de répétition de la plage de disponibilité</td>
       <td style="text-align: center">AvailabilityTime.rrule</td>
-      <td> </td>
     </tr>
     <tr>
       <td style="text-align: center"><em>DTEND</em></td>
       <td style="text-align: center">DATE-TIME 0..1  (default)<br />DATE 0..1</td>
-      <td style="text-align: center">VALUE = DATE-TIME</td>
-      <td style="text-align: center">DATE</td>
+      <td style="text-align: center">VALUE = DATE-TIME / DATE</td>
       <td style="text-align: center">La date/temps de fin de la plage de disponibilité</td>
-      <td>availabilityTime.end</td>
+      <td style="text-align: center">availabilityTime.end</td>
     </tr>
   </tbody>
 </table>
@@ -699,7 +708,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <th style="text-align: center"><em>Paramètre</em></th>
       <th style="text-align: center"><em>Description</em></th>
       <th style="text-align: center"><em>Elément FHIR</em></th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
@@ -709,7 +717,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center"> </td>
       <td style="text-align: center">Identifiant unique du composant</td>
       <td style="text-align: center">identifier</td>
-      <td> </td>
     </tr>
     <tr>
       <td style="text-align: center"><em>DTSTART</em></td>
@@ -717,7 +724,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">VALUE = DATE-TIME / DATE</td>
       <td style="text-align: center">La date/temps de début du temps libre ou occupé décrit par le composant</td>
       <td style="text-align: center">start</td>
-      <td> </td>
     </tr>
     <tr>
       <td style="text-align: center"><em>DTEND</em></td>
@@ -725,7 +731,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">VALUE = DATE-TIME / DATE</td>
       <td style="text-align: center">La date/temps de fin du temps libre ou occupé décrit par le composant</td>
       <td style="text-align: center">end</td>
-      <td> </td>
     </tr>
     <tr>
       <td style="text-align: center"><em>ATTENDEE</em></td>
@@ -733,7 +738,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center">CN</td>
       <td style="text-align: center">Identification de la ressource concernée par cette demande/description de temps libre/occupé</td>
       <td style="text-align: center">schedule.actor</td>
-      <td> </td>
     </tr>
     <tr>
       <td style="text-align: center"><em>COMMENT</em></td>
@@ -741,15 +745,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td style="text-align: center"> </td>
       <td style="text-align: center">Un commentaire destiné à l’utilisateur qui va consulter le composant</td>
       <td style="text-align: center">comment</td>
-      <td> </td>
     </tr>
     <tr>
       <td style="text-align: center"><em>FREEBUSY</em></td>
       <td style="text-align: center">PERIOD 0..*</td>
-      <td style="text-align: center">FBTYPE = FREE</td>
-      <td style="text-align: center">BUSY…</td>
+      <td style="text-align: center">FBTYPE = FREE / BUSY…</td>
       <td style="text-align: center">Sous périodes de temps libre ou occupé décrites par le composant</td>
-      <td>Status (mêmes codes)</td>
+      <td style="text-align: center">Status (mêmes codes)</td>
     </tr>
   </tbody>
 </table>
@@ -1051,7 +1053,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 13, 2023 14:31+0000">2023-10-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 13, 2023 14:44+0000">2023-10-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
