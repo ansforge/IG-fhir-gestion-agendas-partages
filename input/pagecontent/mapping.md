@@ -374,7 +374,6 @@ Cette page a pour objectif de mettre en correspondance les ressources FHIR avec 
     <td colspan="1">telecom : FrContactPoint [0..*]</td>
 </tr>
 
-
 <tr><td colspan="1" rowspan="3">Contact</td><td colspan="1">idContact : [1..1] Identifiant</td><td colspan="1"><p>RelatedPerson</p><p>FrRelatedPerson</p></td><td colspan="1">identifier : Identifier [1..1] </td></tr>
 <tr><td colspan="1">adresse : [0..1] Adresse</td><td colspan="1"><p>RelatedPerson</p><p>FrRelatedPerson</p></td><td colspan="1">address : Address [0..*]</td></tr>
 <tr><td colspan="1">telecommunication : [0..*] Telecommunication</td><td colspan="1"><p>RelatedPerson</p><p>FrRelatedPerson</p></td><td colspan="1">telecom : FrContactPoint [0..*]</td></tr>
@@ -392,15 +391,11 @@ Cette annexe met en correspondance les composants et les propriétés iCalendar 
 
 Le composant VAVAILABILITY définit une durée sur laquelle la ou les disponibilités de la ressource vont être décrites. Sur toute cette durée, la ressource est par défaut non disponible, et ce sont les sous-composants AVAILABILITY qui permettent de définir des plages de disponibilité, récursives ou non, sur cette période. Ci-dessous un schéma représentant les disponibilités d’une ressource sur la semaine de travail allant du 17/07/2017 au 21/07/2017. La première disponibilité, en rouge, est une disponibilité de 8h à 19h récurrente sur 4 jours. La deuxième disponibilité, en bleu, est une disponibilité simple de 8h à 13h le 21 juillet.
 
-
-
 <div class="figure" style="width:65%;">
     <img src="vav-ical.png" alt="CI-SIS" title="Logo du CI-SIS">
 </div>
 
-
 Le sous-composant AVAILABILITY correspond à l’extension française *AvailabilityTime* de la ressource *Schedule* avec  *type = free*. Le tableau suivant met en correspondance certaines propriétés du sous-composant AVAILABILITY avec les éléments de l’extension.
-
 
 |*Propriété*|*Type et cardinalités*|*Paramètre*|*Description*|*Elément FHIR*|
 | :-: | :-: | :-: | :-: | :-: |
