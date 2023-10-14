@@ -623,7 +623,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <td colspan="1">telecom : FrContactPoint [0..*]</td>
 </tr>
 
-
 <tr><td colspan="1" rowspan="3">Contact</td><td colspan="1">idContact : [1..1] Identifiant</td><td colspan="1"><p>RelatedPerson</p><p>FrRelatedPerson</p></td><td colspan="1">identifier : Identifier [1..1] </td></tr>
 <tr><td colspan="1">adresse : [0..1] Adresse</td><td colspan="1"><p>RelatedPerson</p><p>FrRelatedPerson</p></td><td colspan="1">address : Address [0..*]</td></tr>
 <tr><td colspan="1">telecommunication : [0..*] Telecommunication</td><td colspan="1"><p>RelatedPerson</p><p>FrRelatedPerson</p></td><td colspan="1">telecom : FrContactPoint [0..*]</td></tr>
@@ -641,7 +640,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Le composant VAVAILABILITY définit une durée sur laquelle la ou les disponibilités de la ressource vont être décrites. Sur toute cette durée, la ressource est par défaut non disponible, et ce sont les sous-composants AVAILABILITY qui permettent de définir des plages de disponibilité, récursives ou non, sur cette période. Ci-dessous un schéma représentant les disponibilités d’une ressource sur la semaine de travail allant du 17/07/2017 au 21/07/2017. La première disponibilité, en rouge, est une disponibilité de 8h à 19h récurrente sur 4 jours. La deuxième disponibilité, en bleu, est une disponibilité simple de 8h à 13h le 21 juillet.</p>
 
-<p><img src="vav-ical.png" alt="" /></p>
+<div class="figure" style="width:65%;">
+    <img src="vav-ical.png" alt="CI-SIS" title="Logo du CI-SIS" />
+</div>
 
 <p>Le sous-composant AVAILABILITY correspond à l’extension française <em>AvailabilityTime</em> de la ressource <em>Schedule</em> avec  <em>type = free</em>. Le tableau suivant met en correspondance certaines propriétés du sous-composant AVAILABILITY avec les éléments de l’extension.</p>
 
@@ -1053,7 +1054,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Oct 13, 2023 14:44+0000">2023-10-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Oct 14, 2023 10:09+0000">2023-10-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
