@@ -1,31 +1,31 @@
-﻿GestionAgendaPartage : Validation Results
+﻿GestionAgendasPartages : Validation Results
 =========================================
 
 err = 12, warn = 27, info = 9
-IG Publisher Version: 1.4.13
-Generated Tue Oct 10 12:31:40 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
+IG Publisher Version: 1.4.15
+Generated Mon Oct 16 08:44:56 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
  Build Errors : 0 / 9 / 0
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/Appointment-example-req-appointment : 5 / 3 / 5
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 1 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/CapabilityStatement-GAP-DeclarantRDV : 0 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireAgenda : 0 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireRessources : 0 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/CapabilityStatement-Gap-Declarant : 0 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.gap : 0 / 0 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/Schedule-example : 3 / 3 / 6
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/SearchParameter-GAP-Appointment-created : 0 / 0 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/SearchParameter-GAP-Appointment-description : 0 / 0 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/SearchParameter-GAP-Appointment-earliestStart : 1 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/SearchParameter-GAP-Appointment-latestStart : 1 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/SearchParameter-GAP-Appointment-priority : 0 / 0 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/SearchParameter-GAP-Slot-earliestStart : 0 / 0 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/SearchParameter-GAP-Slot-latestStart : 0 / 0 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/Slot-example : 1 / 3 / 5
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-dispo : 0 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-rdv : 0 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/StructureDefinition-gap-fr-appointment : 0 / 0 / 3
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/StructureDefinition-gap-fr-schedule : 0 / 0 / 3
- /home/runner/work/IG-fhir-gestion-agenda-partage/IG-fhir-gestion-agenda-partage/fsh-generated/resources/StructureDefinition-gap-fr-slot : 0 / 0 / 2
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Appointment-example-req-appointment : 5 / 3 / 5
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 1 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-DeclarantRDV : 0 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireAgenda : 0 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireRessources : 0 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-Gap-Declarant : 0 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.gap : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Schedule-example : 3 / 3 / 6
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Appointment-created : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Appointment-description : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Appointment-earliestStart : 1 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Appointment-latestStart : 1 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Appointment-priority : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Slot-earliestStart : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Slot-latestStart : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Slot-example : 1 / 3 / 5
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-dispo : 0 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-rdv : 0 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-fr-appointment : 0 / 0 / 3
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-fr-schedule : 0 / 0 / 3
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-fr-slot : 0 / 0 / 2
 </table>
 == n/a ==
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/gap-fr-appointment.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
