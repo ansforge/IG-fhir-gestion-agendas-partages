@@ -38,6 +38,8 @@ pages:
         title: Spécifications fonctionnelles
     autres_ressources.md:
         title: Autres Ressources
+        mapping.md:
+            title: Mappings
         securite.md:
             title: Sécurité
         downloads.md:
@@ -55,6 +57,7 @@ menu:
     Spécifications fonctionnelles : specifications_fonctionnelles.html
     Ressources de conformité: artifacts.html
     Autres ressources:
+        Mappings: mapping.html
         Sécurité: securite.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
