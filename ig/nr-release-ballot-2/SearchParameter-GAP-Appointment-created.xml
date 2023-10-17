@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="GAP-Appointment-created"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GAP_Appointment_created</h2><p>Parameter <code>created</code>:<code>token</code></p><div><p>Date that this appointment was initially created</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a></td></tr><tr><td>Expression</td><td><code>Appointment.created</code></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-created"/>
+  <version value="3.0.0-ballot-2"/>
+  <name value="GAP_Appointment_created"/>
+  <status value="active"/>
+  <date value="2023-10-17T08:46:32+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Date that this appointment was initially created"/>
+  <jurisdiction>
+    <coding>
+      <system value="https://www.iso.org/obp/ui/fr/"/>
+      <code value="iso:code:3166:FR"/>
+    </coding>
+  </jurisdiction>
+  <code value="created"/>
+  <base value="Appointment"/>
+  <type value="token"/>
+  <expression value="Appointment.created"/>
+</SearchParameter>
