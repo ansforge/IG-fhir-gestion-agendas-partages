@@ -6,10 +6,11 @@ publisher:
   name: ANS
   url: https://esante.gouv.fr
 status: draft
-version: 3.0.0-ballot
+version: 3.0.0-ballot-2
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: 3.0.0-ballot
+releaseLabel: STU
+jurisdiction: https://www.iso.org/obp/ui/fr/#iso:code:3166:FR
 
 parameters:
   shownav: 'true'
