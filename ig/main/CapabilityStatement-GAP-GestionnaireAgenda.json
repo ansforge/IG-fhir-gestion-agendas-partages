@@ -21,6 +21,13 @@
     }]
   }],
   "description" : "Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "kind" : "requirements",
   "fhirVersion" : "4.0.1",
   "format" : ["application/fhir+xml",

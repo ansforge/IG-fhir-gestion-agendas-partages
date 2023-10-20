@@ -21,6 +21,13 @@
     }]
   }],
   "description" : "Un déclarant de rendez-vous fait une demande auprès d’un gestionnaire d’agenda pour créer (demande d'un nouveau rendez-vous ou déclaration d'un rendez-vous pris) ou mettre à jour un rendez-vous",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "kind" : "requirements",
   "fhirVersion" : "4.0.1",
   "format" : ["application/fhir+xml",

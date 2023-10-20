@@ -9,13 +9,20 @@
   "version" : "3.0.0-ballot",
   "name" : "GAP_FrSlot",
   "status" : "draft",
-  "date" : "2023-10-16T08:43:22+00:00",
+  "date" : "2023-10-20T13:03:23+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
     "telecom" : [{
       "system" : "url",
       "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
     }]
   }],
   "fhirVersion" : "4.0.1",
@@ -948,7 +955,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Observation"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -1265,7 +1272,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Practitioner"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Observation"
       }],
       "isSummary" : true,
       "mapping" : [{

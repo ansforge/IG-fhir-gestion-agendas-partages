@@ -23,6 +23,13 @@
     </telecom>
   </contact>
   <description value="Le gestionnaire de ressources gère les demandes de gestion de ressources (lieu,   équipement, personne prise en charge, professionnel, etc.)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
   <kind value="requirements"/>
   <fhirVersion value="4.0.1"/>
   <format value="application/fhir+xml"/>

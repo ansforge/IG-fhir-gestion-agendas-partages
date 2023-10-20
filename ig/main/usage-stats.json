@@ -2,6 +2,7 @@
   "package": "ans.fhir.fr.gap",
   "version": "3.0.0-ballot",
   "fhirVersion": "4.0.1",
+  "jurisdiction": "FR",
   "extensions": [],
   "profiles": {
     "Bundle": [

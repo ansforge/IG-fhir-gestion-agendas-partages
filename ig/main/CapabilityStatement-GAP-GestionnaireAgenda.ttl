@@ -28,6 +28,13 @@
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
   fhir:kind [ fhir:v "requirements"] ; # 
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:format ( [ fhir:v "application/fhir+xml"] [ fhir:v "application/fhir+json"] ) ; # 

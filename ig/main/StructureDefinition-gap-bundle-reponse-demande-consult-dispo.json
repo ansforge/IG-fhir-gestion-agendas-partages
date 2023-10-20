@@ -10,7 +10,7 @@
   "name" : "GAP_BundleResultatReponseADemandeConsultationDisponibilite",
   "title" : "GAP_BundleResultatReponseADemandeConsultationDisponibilites",
   "status" : "draft",
-  "date" : "2023-10-16T08:43:22+00:00",
+  "date" : "2023-10-20T13:03:23+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -20,6 +20,13 @@
     }]
   }],
   "description" : "Il s’agit de la réponse à la demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, elle devra contenir les informations sur le temps libre ou occupé de chacune des ressources. La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande. Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "v2",
@@ -214,6 +221,14 @@
     },
     {
       "id" : "Bundle.implicitRules",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.implicitRules",
       "short" : "A set of rules under which this content was created",
       "definition" : "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -247,6 +262,14 @@
     },
     {
       "id" : "Bundle.language",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.language",
       "short" : "Language of the resource content",
       "definition" : "The base language in which the resource is written.",
@@ -398,6 +421,14 @@
     },
     {
       "id" : "Bundle.timestamp",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.timestamp",
       "short" : "When the bundle was assembled",
       "definition" : "The date/time that the bundle was assembled - i.e. when the resources were placed in the bundle.",
@@ -437,6 +468,14 @@
     },
     {
       "id" : "Bundle.total",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.total",
       "short" : "If search, the total number of matches",
       "definition" : "If a set of search matches, this is the total number of entries of type 'match' across all pages in the search.  It does not include search.mode = 'include' or 'outcome' entries and it does not provide a count of the number of entries in the Bundle.",
@@ -580,7 +619,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -634,7 +673,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -650,6 +689,14 @@
     },
     {
       "id" : "Bundle.link.relation",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.link.relation",
       "short" : "See http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1",
       "definition" : "A name which details the functional use for this link - see [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).",
@@ -681,6 +728,14 @@
     },
     {
       "id" : "Bundle.link.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.link.url",
       "short" : "Reference details for the link",
       "definition" : "The reference details for the link.",
@@ -838,7 +893,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -892,7 +947,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -923,6 +978,14 @@
     },
     {
       "id" : "Bundle.entry.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -1086,7 +1149,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -1140,7 +1203,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -1156,6 +1219,14 @@
     },
     {
       "id" : "Bundle.entry.search.mode",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.mode",
       "short" : "match | include | outcome - why this is in the result set",
       "definition" : "Why this entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
@@ -1196,6 +1267,14 @@
     },
     {
       "id" : "Bundle.entry.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -1338,7 +1417,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -1392,7 +1471,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -1408,6 +1487,14 @@
     },
     {
       "id" : "Bundle.entry.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -1448,6 +1535,14 @@
     },
     {
       "id" : "Bundle.entry.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -1479,6 +1574,14 @@
     },
     {
       "id" : "Bundle.entry.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -1510,6 +1613,14 @@
     },
     {
       "id" : "Bundle.entry.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -1541,6 +1652,14 @@
     },
     {
       "id" : "Bundle.entry.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -1572,6 +1691,14 @@
     },
     {
       "id" : "Bundle.entry.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -1714,7 +1841,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -1768,7 +1895,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -1784,6 +1911,14 @@
     },
     {
       "id" : "Bundle.entry.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -1815,6 +1950,14 @@
     },
     {
       "id" : "Bundle.entry.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -1846,6 +1989,14 @@
     },
     {
       "id" : "Bundle.entry.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -1877,6 +2028,14 @@
     },
     {
       "id" : "Bundle.entry.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -2050,7 +2209,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -2104,7 +2263,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -2135,6 +2294,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -2354,7 +2521,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -2408,7 +2575,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -2465,6 +2632,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -2599,7 +2774,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -2653,7 +2828,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -2669,6 +2844,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -2709,6 +2892,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -2740,6 +2931,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -2771,6 +2970,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -2802,6 +3009,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -2833,6 +3048,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -2967,7 +3190,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3021,7 +3244,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -3037,6 +3260,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -3068,6 +3299,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -3099,6 +3338,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -3130,6 +3377,14 @@
     },
     {
       "id" : "Bundle.entry:Slot.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -3303,7 +3558,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3357,7 +3612,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -3388,6 +3643,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -3608,7 +3871,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3662,7 +3925,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -3719,6 +3982,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -3853,7 +4124,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -3907,7 +4178,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -3923,6 +4194,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -3963,6 +4242,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -3994,6 +4281,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -4025,6 +4320,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -4056,6 +4359,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -4087,6 +4398,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -4221,7 +4540,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -4275,7 +4594,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -4291,6 +4610,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -4322,6 +4649,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -4353,6 +4688,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -4384,6 +4727,14 @@
     },
     {
       "id" : "Bundle.entry:Schedule.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -4557,7 +4908,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -4611,7 +4962,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -4642,6 +4993,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -4862,7 +5221,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -4916,7 +5275,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -4973,6 +5332,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -5107,7 +5474,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -5161,7 +5528,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -5177,6 +5544,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -5217,6 +5592,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -5248,6 +5631,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -5279,6 +5670,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -5310,6 +5709,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -5341,6 +5748,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -5475,7 +5890,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -5529,7 +5944,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -5545,6 +5960,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -5576,6 +5999,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -5607,6 +6038,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -5638,6 +6077,14 @@
     },
     {
       "id" : "Bundle.entry:Patient.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -5811,7 +6258,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -5865,7 +6312,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -5896,6 +6343,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -6119,7 +6574,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -6173,7 +6628,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -6230,6 +6685,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -6364,7 +6827,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -6418,7 +6881,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -6434,6 +6897,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -6474,6 +6945,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -6505,6 +6984,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -6536,6 +7023,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -6567,6 +7062,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -6598,6 +7101,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -6732,7 +7243,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -6786,7 +7297,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -6802,6 +7313,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -6833,6 +7352,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -6864,6 +7391,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -6895,6 +7430,14 @@
     },
     {
       "id" : "Bundle.entry:Practitioner.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -7068,7 +7611,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -7122,7 +7665,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -7153,6 +7696,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -7376,7 +7927,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -7430,7 +7981,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -7487,6 +8038,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -7621,7 +8180,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -7675,7 +8234,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -7691,6 +8250,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -7731,6 +8298,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -7762,6 +8337,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -7793,6 +8376,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -7824,6 +8415,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -7855,6 +8454,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -7989,7 +8596,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -8043,7 +8650,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -8059,6 +8666,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -8090,6 +8705,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -8121,6 +8744,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -8152,6 +8783,14 @@
     },
     {
       "id" : "Bundle.entry:PractitionerRole.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -8325,7 +8964,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -8379,7 +9018,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -8410,6 +9049,14 @@
     },
     {
       "id" : "Bundle.entry:Device.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -8573,7 +9220,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -8627,7 +9274,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -8684,6 +9331,14 @@
     },
     {
       "id" : "Bundle.entry:Device.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -8818,7 +9473,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -8872,7 +9527,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -8888,6 +9543,14 @@
     },
     {
       "id" : "Bundle.entry:Device.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -8928,6 +9591,14 @@
     },
     {
       "id" : "Bundle.entry:Device.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -8959,6 +9630,14 @@
     },
     {
       "id" : "Bundle.entry:Device.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -8990,6 +9669,14 @@
     },
     {
       "id" : "Bundle.entry:Device.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -9021,6 +9708,14 @@
     },
     {
       "id" : "Bundle.entry:Device.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -9052,6 +9747,14 @@
     },
     {
       "id" : "Bundle.entry:Device.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -9186,7 +9889,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -9240,7 +9943,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -9256,6 +9959,14 @@
     },
     {
       "id" : "Bundle.entry:Device.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -9287,6 +9998,14 @@
     },
     {
       "id" : "Bundle.entry:Device.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -9318,6 +10037,14 @@
     },
     {
       "id" : "Bundle.entry:Device.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -9349,6 +10076,14 @@
     },
     {
       "id" : "Bundle.entry:Device.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -9522,7 +10257,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -9576,7 +10311,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -9607,6 +10342,14 @@
     },
     {
       "id" : "Bundle.entry:Location.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -9822,7 +10565,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -9876,7 +10619,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -9933,6 +10676,14 @@
     },
     {
       "id" : "Bundle.entry:Location.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -10067,7 +10818,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -10121,7 +10872,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -10137,6 +10888,14 @@
     },
     {
       "id" : "Bundle.entry:Location.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -10177,6 +10936,14 @@
     },
     {
       "id" : "Bundle.entry:Location.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -10208,6 +10975,14 @@
     },
     {
       "id" : "Bundle.entry:Location.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -10239,6 +11014,14 @@
     },
     {
       "id" : "Bundle.entry:Location.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -10270,6 +11053,14 @@
     },
     {
       "id" : "Bundle.entry:Location.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -10301,6 +11092,14 @@
     },
     {
       "id" : "Bundle.entry:Location.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -10435,7 +11234,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -10489,7 +11288,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -10505,6 +11304,14 @@
     },
     {
       "id" : "Bundle.entry:Location.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -10536,6 +11343,14 @@
     },
     {
       "id" : "Bundle.entry:Location.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -10567,6 +11382,14 @@
     },
     {
       "id" : "Bundle.entry:Location.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -10598,6 +11421,14 @@
     },
     {
       "id" : "Bundle.entry:Location.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -10771,7 +11602,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -10825,7 +11656,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -10856,6 +11687,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -11071,7 +11910,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -11125,7 +11964,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -11182,6 +12021,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -11316,7 +12163,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -11370,7 +12217,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -11386,6 +12233,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -11426,6 +12281,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -11457,6 +12320,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -11488,6 +12359,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -11519,6 +12398,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -11550,6 +12437,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -11684,7 +12579,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -11738,7 +12633,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -11754,6 +12649,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -11785,6 +12688,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -11816,6 +12727,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -11847,6 +12766,14 @@
     },
     {
       "id" : "Bundle.entry:HealthcareService.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -12020,7 +12947,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -12074,7 +13001,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -12105,6 +13032,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -12336,7 +13271,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -12390,7 +13325,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -12447,6 +13382,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -12581,7 +13524,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -12635,7 +13578,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -12651,6 +13594,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -12691,6 +13642,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -12722,6 +13681,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -12753,6 +13720,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -12784,6 +13759,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -12815,6 +13798,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -12949,7 +13940,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -13003,7 +13994,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -13019,6 +14010,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -13050,6 +14049,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -13081,6 +14088,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -13112,6 +14127,14 @@
     },
     {
       "id" : "Bundle.entry:Organization.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -13285,7 +14308,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -13339,7 +14362,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -13370,6 +14393,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.fullUrl",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.fullUrl",
       "short" : "URI for resource (Absolute URL server address or URI for UUID/OID)",
       "definition" : "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified.",
@@ -13585,7 +14616,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -13639,7 +14670,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -13696,6 +14727,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.search.score",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.search.score",
       "short" : "Search ranking (between 0 and 1)",
       "definition" : "When searching, the server's search ranking score for the entry.",
@@ -13830,7 +14869,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -13884,7 +14923,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -13900,6 +14939,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.request.method",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.method",
       "short" : "GET | HEAD | POST | PUT | DELETE | PATCH",
       "definition" : "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.",
@@ -13940,6 +14987,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.request.url",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.url",
       "short" : "URL for HTTP equivalent of this entry",
       "definition" : "The URL for this entry, relative to the root (the address to which the request is posted).",
@@ -13971,6 +15026,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.request.ifNoneMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneMatch",
       "short" : "For managing cache currency",
       "definition" : "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -14002,6 +15065,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.request.ifModifiedSince",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifModifiedSince",
       "short" : "For managing cache currency",
       "definition" : "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread).",
@@ -14033,6 +15104,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.request.ifMatch",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifMatch",
       "short" : "For managing update contention",
       "definition" : "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency).",
@@ -14064,6 +15143,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.request.ifNoneExist",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.request.ifNoneExist",
       "short" : "For conditional creates",
       "definition" : "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\").",
@@ -14198,7 +15285,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "mapping" : [{
         "identity" : "rim",
@@ -14252,7 +15339,7 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
       "isModifier" : true,
       "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
@@ -14268,6 +15355,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.response.status",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.status",
       "short" : "Status response code (text optional)",
       "definition" : "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.",
@@ -14299,6 +15394,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.response.location",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.location",
       "short" : "The location (if the operation returns a location)",
       "definition" : "The location header created by processing this operation, populated if the operation returns a location.",
@@ -14330,6 +15433,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.response.etag",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.etag",
       "short" : "The Etag for the resource (if relevant)",
       "definition" : "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency)).",
@@ -14361,6 +15472,14 @@
     },
     {
       "id" : "Bundle.entry:RelatedPerson.response.lastModified",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+        "valueCode" : "normative"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
+      }],
       "path" : "Bundle.entry.response.lastModified",
       "short" : "Server's date time modified",
       "definition" : "The date/time that the resource was modified on the server.",
@@ -14417,6 +15536,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
         "valueCode" : "trial-use"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+        "valueCode" : "4.0.0"
       }],
       "path" : "Bundle.signature",
       "short" : "Digital Signature",

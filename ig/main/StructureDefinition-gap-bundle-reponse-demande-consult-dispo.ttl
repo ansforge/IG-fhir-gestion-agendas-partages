@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "GAP_BundleResultatReponseADemandeConsultationDisponibilite"] ; # 
   fhir:title [ fhir:v "GAP_BundleResultatReponseADemandeConsultationDisponibilites"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-10-16T08:43:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-10-20T13:03:23+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -27,6 +27,13 @@
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "Il s’agit de la réponse à la demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, elle devra contenir les informations sur le temps libre ou occupé de chacune des ressources. La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande. Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:mapping ( [
      fhir:identity [ fhir:v "v2" ] ;
@@ -235,6 +242,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.implicitRules" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.implicitRules" ] ;
        fhir:short [ fhir:v "A set of rules under which this content was created" ] ;
        fhir:definition [ fhir:v "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc." ] ;
@@ -270,6 +284,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.language" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.language" ] ;
        fhir:short [ fhir:v "Language of the resource content" ] ;
        fhir:definition [ fhir:v "The base language in which the resource is written." ] ;
@@ -427,6 +448,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.timestamp" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.timestamp" ] ;
        fhir:short [ fhir:v "When the bundle was assembled" ] ;
        fhir:definition [ fhir:v "The date/time that the bundle was assembled - i.e. when the resources were placed in the bundle." ] ;
@@ -466,6 +494,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.total" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.total" ] ;
        fhir:short [ fhir:v "If search, the total number of matches" ] ;
        fhir:definition [ fhir:v "If a set of search matches, this is the total number of entries of type 'match' across all pages in the search.  It does not include search.mode = 'include' or 'outcome' entries and it does not provide a count of the number of entries in the Bundle." ] ;
@@ -611,8 +646,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -665,8 +700,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -681,6 +716,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.link.relation" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.link.relation" ] ;
        fhir:short [ fhir:v "See http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1" ] ;
        fhir:definition [ fhir:v "A name which details the functional use for this link - see [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1)." ] ;
@@ -714,6 +756,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.link.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.link.url" ] ;
        fhir:short [ fhir:v "Reference details for the link" ] ;
        fhir:definition [ fhir:v "The reference details for the link." ] ;
@@ -879,8 +928,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -933,8 +982,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -963,6 +1012,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -1127,8 +1183,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -1181,8 +1237,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -1197,6 +1253,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.search.mode" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.mode" ] ;
        fhir:short [ fhir:v "match | include | outcome - why this is in the result set" ] ;
        fhir:definition [ fhir:v "Why this entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process." ] ;
@@ -1242,6 +1305,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -1386,8 +1456,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -1440,8 +1510,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -1456,6 +1526,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -1501,6 +1578,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -1534,6 +1618,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -1567,6 +1658,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -1600,6 +1698,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -1633,6 +1738,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -1777,8 +1889,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -1831,8 +1943,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -1847,6 +1959,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -1880,6 +1999,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -1913,6 +2039,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -1946,6 +2079,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -2126,8 +2266,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -2180,8 +2320,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -2210,6 +2350,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -2441,8 +2588,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -2495,8 +2642,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -2557,6 +2704,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -2694,8 +2848,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -2748,8 +2902,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -2764,6 +2918,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -2809,6 +2970,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -2842,6 +3010,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -2875,6 +3050,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -2908,6 +3090,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -2941,6 +3130,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -3078,8 +3274,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -3132,8 +3328,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -3148,6 +3344,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -3181,6 +3384,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -3214,6 +3424,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -3247,6 +3464,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Slot.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -3427,8 +3651,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -3481,8 +3705,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -3511,6 +3735,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -3743,8 +3974,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -3797,8 +4028,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -3859,6 +4090,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -3996,8 +4234,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -4050,8 +4288,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -4066,6 +4304,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -4111,6 +4356,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -4144,6 +4396,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -4177,6 +4436,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -4210,6 +4476,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -4243,6 +4516,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -4380,8 +4660,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -4434,8 +4714,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -4450,6 +4730,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -4483,6 +4770,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -4516,6 +4810,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -4549,6 +4850,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Schedule.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -4729,8 +5037,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -4783,8 +5091,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -4813,6 +5121,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -5045,8 +5360,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -5099,8 +5414,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -5161,6 +5476,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -5298,8 +5620,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -5352,8 +5674,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -5368,6 +5690,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -5413,6 +5742,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -5446,6 +5782,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -5479,6 +5822,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -5512,6 +5862,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -5545,6 +5902,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -5682,8 +6046,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -5736,8 +6100,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -5752,6 +6116,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -5785,6 +6156,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -5818,6 +6196,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -5851,6 +6236,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Patient.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -6031,8 +6423,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -6085,8 +6477,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -6115,6 +6507,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -6349,8 +6748,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -6403,8 +6802,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -6465,6 +6864,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -6602,8 +7008,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -6656,8 +7062,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -6672,6 +7078,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -6717,6 +7130,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -6750,6 +7170,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -6783,6 +7210,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -6816,6 +7250,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -6849,6 +7290,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -6986,8 +7434,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -7040,8 +7488,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -7056,6 +7504,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -7089,6 +7544,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -7122,6 +7584,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -7155,6 +7624,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Practitioner.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -7335,8 +7811,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -7389,8 +7865,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -7419,6 +7895,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -7653,8 +8136,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -7707,8 +8190,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -7769,6 +8252,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -7906,8 +8396,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -7960,8 +8450,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -7976,6 +8466,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -8021,6 +8518,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -8054,6 +8558,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -8087,6 +8598,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -8120,6 +8638,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -8153,6 +8678,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -8290,8 +8822,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -8344,8 +8876,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -8360,6 +8892,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -8393,6 +8932,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -8426,6 +8972,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -8459,6 +9012,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:PractitionerRole.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -8639,8 +9199,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -8693,8 +9253,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -8723,6 +9283,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -8887,8 +9454,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -8941,8 +9508,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -9003,6 +9570,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -9140,8 +9714,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -9194,8 +9768,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -9210,6 +9784,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -9255,6 +9836,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -9288,6 +9876,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -9321,6 +9916,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -9354,6 +9956,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -9387,6 +9996,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -9524,8 +10140,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -9578,8 +10194,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -9594,6 +10210,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -9627,6 +10250,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -9660,6 +10290,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -9693,6 +10330,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Device.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -9873,8 +10517,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -9927,8 +10571,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -9957,6 +10601,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -10185,8 +10836,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -10239,8 +10890,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -10301,6 +10952,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -10438,8 +11096,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -10492,8 +11150,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -10508,6 +11166,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -10553,6 +11218,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -10586,6 +11258,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -10619,6 +11298,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -10652,6 +11338,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -10685,6 +11378,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -10822,8 +11522,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -10876,8 +11576,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -10892,6 +11592,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -10925,6 +11632,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -10958,6 +11672,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -10991,6 +11712,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Location.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -11171,8 +11899,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -11225,8 +11953,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -11255,6 +11983,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -11483,8 +12218,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -11537,8 +12272,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -11599,6 +12334,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -11736,8 +12478,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -11790,8 +12532,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -11806,6 +12548,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -11851,6 +12600,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -11884,6 +12640,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -11917,6 +12680,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -11950,6 +12720,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -11983,6 +12760,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -12120,8 +12904,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -12174,8 +12958,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -12190,6 +12974,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -12223,6 +13014,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -12256,6 +13054,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -12289,6 +13094,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:HealthcareService.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -12469,8 +13281,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -12523,8 +13335,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -12553,6 +13365,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -12797,8 +13616,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -12851,8 +13670,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -12913,6 +13732,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -13050,8 +13876,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -13104,8 +13930,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -13120,6 +13946,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -13165,6 +13998,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -13198,6 +14038,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -13231,6 +14078,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -13264,6 +14118,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -13297,6 +14158,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -13434,8 +14302,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -13488,8 +14356,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -13504,6 +14372,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -13537,6 +14412,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -13570,6 +14452,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -13603,6 +14492,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:Organization.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -13783,8 +14679,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -13837,8 +14733,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -13867,6 +14763,13 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.fullUrl" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.fullUrl" ] ;
        fhir:short [ fhir:v "URI for resource (Absolute URL server address or URI for UUID/OID)" ] ;
        fhir:definition [ fhir:v "The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: \n* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)\n* Results from operations might involve resources that are not identified." ] ;
@@ -14095,8 +14998,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -14149,8 +15052,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -14211,6 +15114,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.search.score" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.search.score" ] ;
        fhir:short [ fhir:v "Search ranking (between 0 and 1)" ] ;
        fhir:definition [ fhir:v "When searching, the server's search ranking score for the entry." ] ;
@@ -14348,8 +15258,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -14402,8 +15312,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -14418,6 +15328,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.request.method" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:short [ fhir:v "GET | HEAD | POST | PUT | DELETE | PATCH" ] ;
        fhir:definition [ fhir:v "In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred." ] ;
@@ -14463,6 +15380,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.request.url" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:short [ fhir:v "URL for HTTP equivalent of this entry" ] ;
        fhir:definition [ fhir:v "The URL for this entry, relative to the root (the address to which the request is posted)." ] ;
@@ -14496,6 +15420,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.request.ifNoneMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneMatch" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "If the ETag values match, return a 304 Not Modified status. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -14529,6 +15460,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.request.ifModifiedSince" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifModifiedSince" ] ;
        fhir:short [ fhir:v "For managing cache currency" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the last updated date matches. See the API documentation for [\"Conditional Read\"](http://hl7.org/fhir/R4/http.html#cread)." ] ;
@@ -14562,6 +15500,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.request.ifMatch" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifMatch" ] ;
        fhir:short [ fhir:v "For managing update contention" ] ;
        fhir:definition [ fhir:v "Only perform the operation if the Etag value matches. For more information, see the API section [\"Managing Resource Contention\"](http://hl7.org/fhir/R4/http.html#concurrency)." ] ;
@@ -14595,6 +15540,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.request.ifNoneExist" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.request.ifNoneExist" ] ;
        fhir:short [ fhir:v "For conditional creates" ] ;
        fhir:definition [ fhir:v "Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for [\"Conditional Create\"](http://hl7.org/fhir/R4/http.html#ccreate). This is just the query portion of the URL - what follows the \"?\" (not including the \"?\")." ] ;
@@ -14732,8 +15684,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:mapping ( [
@@ -14786,8 +15738,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v "true"^^xsd:boolean ] ;
@@ -14802,6 +15754,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.response.status" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.status" ] ;
        fhir:short [ fhir:v "Status response code (text optional)" ] ;
        fhir:definition [ fhir:v "The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code." ] ;
@@ -14835,6 +15794,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.response.location" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.location" ] ;
        fhir:short [ fhir:v "The location (if the operation returns a location)" ] ;
        fhir:definition [ fhir:v "The location header created by processing this operation, populated if the operation returns a location." ] ;
@@ -14868,6 +15834,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.response.etag" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.etag" ] ;
        fhir:short [ fhir:v "The Etag for the resource (if relevant)" ] ;
        fhir:definition [ fhir:v "The Etag for the resource, if the operation for the entry produced a versioned resource (see [Resource Metadata and Versioning](http://hl7.org/fhir/R4/http.html#versioning) and [Managing Resource Contention](http://hl7.org/fhir/R4/http.html#concurrency))." ] ;
@@ -14901,6 +15874,13 @@
        ] )
      ] [
        fhir:id [ fhir:v "Bundle.entry:RelatedPerson.response.lastModified" ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "normative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
+       ] ) ;
        fhir:path [ fhir:v "Bundle.entry.response.lastModified" ] ;
        fhir:short [ fhir:v "Server's date time modified" ] ;
        fhir:definition [ fhir:v "The date/time that the resource was modified on the server." ] ;
@@ -14958,6 +15938,9 @@
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "trial-use" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "4.0.0" ]
        ] ) ;
        fhir:path [ fhir:v "Bundle.signature" ] ;
        fhir:short [ fhir:v "Digital Signature" ] ;

@@ -28,6 +28,13 @@
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "Le gestionnaire de ressources gère les demandes de gestion de ressources (lieu,   équipement, personne prise en charge, professionnel, etc.)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
   fhir:kind [ fhir:v "requirements"] ; # 
   fhir:fhirVersion [ fhir:v "4.0.1"] ; # 
   fhir:format ( [ fhir:v "application/fhir+xml"] [ fhir:v "application/fhir+json"] ) ; # 

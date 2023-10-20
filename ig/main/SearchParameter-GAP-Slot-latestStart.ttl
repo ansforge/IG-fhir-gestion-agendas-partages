@@ -21,7 +21,7 @@
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2023-10-16T08:43:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-10-20T13:03:23+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -31,6 +31,13 @@
      ] )
   ] ) ; # 
   fhir:description [ fhir:v "latest start of a potential appointment"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
   fhir:code [ fhir:v "start"] ; # 
   fhir:base ( [ fhir:v "Slot"] ) ; # 
   fhir:type [ fhir:v "date"] ; # 

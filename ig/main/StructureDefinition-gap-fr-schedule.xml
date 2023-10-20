@@ -10,7 +10,7 @@
   <version value="3.0.0-ballot"/>
   <name value="GAP_FrSchedule"/>
   <status value="draft"/>
-  <date value="2023-10-16T08:43:22+00:00"/>
+  <date value="2023-10-20T13:03:23+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -19,6 +19,13 @@
       <value value="https://esante.gouv.fr"/>
     </telecom>
   </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -1000,7 +1007,7 @@
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -1292,7 +1299,7 @@
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>

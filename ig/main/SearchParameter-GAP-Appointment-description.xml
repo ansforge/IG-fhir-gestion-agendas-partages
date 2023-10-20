@@ -10,7 +10,7 @@
   <version value="3.0.0-ballot"/>
   <name value="GAP_Appointment_description"/>
   <status value="active"/>
-  <date value="2023-10-16T08:43:22+00:00"/>
+  <date value="2023-10-20T13:03:23+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -20,6 +20,13 @@
     </telecom>
   </contact>
   <description value="Comment or title of the appointment"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
   <code value="description"/>
   <base value="Appointment"/>
   <type value="string"/>
