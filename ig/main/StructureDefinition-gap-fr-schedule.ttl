@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "3.0.0-ballot"] ; # 
   fhir:name [ fhir:v "GAP_FrSchedule"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-10-20T13:03:23+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-12-14T10:47:11+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -146,13 +146,6 @@
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:id [ fhir:v "Schedule.meta" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.meta" ] ;
        fhir:short [ fhir:v "Metadata about the resource" ] ;
        fhir:definition [ fhir:v "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource." ] ;
@@ -188,13 +181,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.implicitRules" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.implicitRules" ] ;
        fhir:short [ fhir:v "A set of rules under which this content was created" ] ;
        fhir:definition [ fhir:v "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc." ] ;
@@ -230,13 +216,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.language" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.language" ] ;
        fhir:short [ fhir:v "Language of the resource content" ] ;
        fhir:definition [ fhir:v "The base language in which the resource is written." ] ;
@@ -273,9 +252,6 @@
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "Language" ]
-         ] [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "true"^^xsd:boolean ]
          ] ) ;
          fhir:strength [ fhir:v "preferred" ] ;
          fhir:description [ fhir:v "A human language." ] ;
@@ -290,13 +266,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.text" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.text" ] ;
        fhir:short [ fhir:v "Text summary of the resource, for human interpretation" ] ;
        fhir:definition [ fhir:v "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." ] ;
@@ -601,13 +570,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.identifier" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.identifier" ] ;
        fhir:short [ fhir:v "External Ids for this item" ] ;
        fhir:definition [ fhir:v "External Ids for this item." ] ;
@@ -740,13 +702,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.identifier.use" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.identifier.use" ] ;
        fhir:short [ fhir:v "usual | official | temp | secondary | old (If known)" ] ;
        fhir:definition [ fhir:v "The purpose of this identifier." ] ;
@@ -801,13 +756,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.identifier.type" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.identifier.type" ] ;
        fhir:short [ fhir:v "Description of identifier" ] ;
        fhir:definition [ fhir:v "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose." ] ;
@@ -840,9 +788,6 @@
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "IdentifierType" ]
-         ] [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "true"^^xsd:boolean ]
          ] ) ;
          fhir:strength [ fhir:v "extensible" ] ;
          fhir:description [ fhir:v "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose." ] ;
@@ -872,13 +817,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.identifier.system" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.identifier.system" ] ;
        fhir:short [ fhir:v "The namespace for the identifier value" ] ;
        fhir:definition [ fhir:v "Establishes the namespace for the value - that is, a URL that describes a set values that are unique." ] ;
@@ -926,13 +864,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.identifier.value" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.identifier.value" ] ;
        fhir:short [ fhir:v "The value that is unique" ] ;
        fhir:definition [ fhir:v "The portion of the identifier typically relevant to the user and which is unique within the context of the system." ] ;
@@ -979,13 +910,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.identifier.period" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.identifier.period" ] ;
        fhir:short [ fhir:v "Time period when id is/was valid for use" ] ;
        fhir:definition [ fhir:v "Time period during which identifier is/was valid for use." ] ;
@@ -1018,8 +942,8 @@
          fhir:expression [ fhir:v "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:xpath [ fhir:v "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Address"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Address>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Encounter"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Encounter>
          ]
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
@@ -1044,13 +968,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.identifier.assigner" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.identifier.assigner" ] ;
        fhir:short [ fhir:v "Organization that issued id (may be just text)" ] ;
        fhir:definition [ fhir:v "Organization that issued/manages the identifier." ] ;
@@ -1087,8 +1004,8 @@
          fhir:expression [ fhir:v "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:xpath [ fhir:v "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Observation"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Encounter"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Encounter>
          ]
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
@@ -1110,13 +1027,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.active" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.active" ] ;
        fhir:short [ fhir:v "Whether this schedule is in active use" ] ;
        fhir:definition [ fhir:v "Whether this schedule record is in active use or should not be used (such as was entered in error)." ] ;
@@ -1156,13 +1066,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.serviceCategory" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.serviceCategory" ] ;
        fhir:short [ fhir:v "High-level category" ] ;
        fhir:definition [ fhir:v "A broad categorization of the service that is to be performed during this appointment." ] ;
@@ -1219,13 +1122,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.serviceType" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.serviceType" ] ;
        fhir:short [ fhir:v "Specific service" ] ;
        fhir:definition [ fhir:v "The specific service that is to be performed during this appointment." ] ;
@@ -1285,13 +1181,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.specialty" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.specialty" ] ;
        fhir:short [ fhir:v "Type of specialty needed" ] ;
        fhir:definition [ fhir:v "The specialty of a practitioner that would be required to perform the service requested in this appointment." ] ;
@@ -1349,13 +1238,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.actor" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.actor" ] ;
        fhir:short [ fhir:v "Resource(s) that availability information is being provided for" ] ;
        fhir:definition [ fhir:v "Slots that reference this schedule resource provide the availability details to these referenced resource(s)." ] ;
@@ -1410,8 +1292,8 @@
          fhir:expression [ fhir:v "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" ] ;
          fhir:xpath [ fhir:v "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Observation"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Encounter"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Encounter>
          ]
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
@@ -1433,13 +1315,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.planningHorizon" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.planningHorizon" ] ;
        fhir:short [ fhir:v "Period of time covered by schedule" ] ;
        fhir:definition [ fhir:v "The period of time that the slots that reference this Schedule resource cover (even if none exist). These  cover the amount of time that an organization's planning horizon; the interval for which they are currently accepting appointments. This does not define a \"template\" for planning outside these dates." ] ;
@@ -1472,8 +1347,8 @@
          fhir:expression [ fhir:v "start.hasValue().not() or end.hasValue().not() or (start <= end)" ] ;
          fhir:xpath [ fhir:v "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Address"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Address>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Encounter"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Encounter>
          ]
        ] ) ;
        fhir:isSummary [ fhir:v "true"^^xsd:boolean ] ;
@@ -1495,13 +1370,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Schedule.comment" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "normative" ]
-       ] [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "4.0.0" ]
-       ] ) ;
        fhir:path [ fhir:v "Schedule.comment" ] ;
        fhir:short [ fhir:v "Comments on availability" ] ;
        fhir:definition [ fhir:v "Comments on the availability to describe any extended information. Such as custom constraints on the slots that may be associated." ] ;

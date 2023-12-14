@@ -10,7 +10,7 @@
   <version value="3.0.0-ballot"/>
   <name value="GAP_FrSchedule"/>
   <status value="draft"/>
-  <date value="2023-10-20T13:03:23+00:00"/>
+  <date value="2023-12-14T10:47:11+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -125,12 +125,6 @@
       <isSummary value="true"/>
     </element>
     <element id="Schedule.meta">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.meta"/>
       <short value="Metadata about the resource"/>
       <definition value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."/>
@@ -164,12 +158,6 @@
       </mapping>
     </element>
     <element id="Schedule.implicitRules">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.implicitRules"/>
       <short value="A set of rules under which this content was created"/>
       <definition value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."/>
@@ -202,12 +190,6 @@
       </mapping>
     </element>
     <element id="Schedule.language">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.language"/>
       <short value="Language of the resource content"/>
       <definition value="The base language in which the resource is written."/>
@@ -238,9 +220,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="Language"/>
         </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true"/>
-        </extension>
         <strength value="preferred"/>
         <description value="A human language."/>
         <valueSet value="http://hl7.org/fhir/ValueSet/languages"/>
@@ -251,12 +230,6 @@
       </mapping>
     </element>
     <element id="Schedule.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.text"/>
       <short value="Text summary of the resource, for human interpretation"/>
       <definition value="A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
@@ -544,12 +517,6 @@
       </mapping>
     </element>
     <element id="Schedule.identifier">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.identifier"/>
       <short value="External Ids for this item"/>
       <definition value="External Ids for this item."/>
@@ -679,12 +646,6 @@
       </mapping>
     </element>
     <element id="Schedule.identifier.use">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.identifier.use"/>
       <short value="usual | official | temp | secondary | old (If known)"/>
       <definition value="The purpose of this identifier."/>
@@ -734,12 +695,6 @@
       </mapping>
     </element>
     <element id="Schedule.identifier.type">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.identifier.type"/>
       <short value="Description of identifier"/>
       <definition value="A coded type for the identifier that can be used to determine which identifier to use for a specific purpose."/>
@@ -768,9 +723,6 @@
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="IdentifierType"/>
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true"/>
         </extension>
         <strength value="extensible"/>
         <description value="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."/>
@@ -802,12 +754,6 @@
       </mapping>
     </element>
     <element id="Schedule.identifier.system">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.identifier.system"/>
       <short value="The namespace for the identifier value"/>
       <definition value="Establishes the namespace for the value - that is, a URL that describes a set values that are unique."/>
@@ -855,12 +801,6 @@
       </mapping>
     </element>
     <element id="Schedule.identifier.value">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.identifier.value"/>
       <short value="The value that is unique"/>
       <definition value="The portion of the identifier typically relevant to the user and which is unique within the context of the system."/>
@@ -907,12 +847,6 @@
       </mapping>
     </element>
     <element id="Schedule.identifier.period">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.identifier.period"/>
       <short value="Time period when id is/was valid for use"/>
       <definition value="Time period during which identifier is/was valid for use."/>
@@ -942,7 +876,7 @@
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Address"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -971,12 +905,6 @@
       </mapping>
     </element>
     <element id="Schedule.identifier.assigner">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.identifier.assigner"/>
       <short value="Organization that issued id (may be just text)"/>
       <definition value="Organization that issued/manages the identifier."/>
@@ -1007,7 +935,7 @@
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -1032,12 +960,6 @@
       </mapping>
     </element>
     <element id="Schedule.active">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.active"/>
       <short value="Whether this schedule is in active use"/>
       <definition value="Whether this schedule record is in active use or should not be used (such as was entered in error)."/>
@@ -1075,12 +997,6 @@
       </mapping>
     </element>
     <element id="Schedule.serviceCategory">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.serviceCategory"/>
       <short value="High-level category"/>
       <definition value="A broad categorization of the service that is to be performed during this appointment."/>
@@ -1134,12 +1050,6 @@
       </mapping>
     </element>
     <element id="Schedule.serviceType">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.serviceType"/>
       <short value="Specific service"/>
       <definition value="The specific service that is to be performed during this appointment."/>
@@ -1197,12 +1107,6 @@
       </mapping>
     </element>
     <element id="Schedule.specialty">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.specialty"/>
       <short value="Type of specialty needed"/>
       <definition value="The specialty of a practitioner that would be required to perform the service requested in this appointment."/>
@@ -1257,12 +1161,6 @@
       </mapping>
     </element>
     <element id="Schedule.actor">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.actor"/>
       <short value="Resource(s) that availability information is being provided for"/>
       <definition value="Slots that reference this schedule resource provide the availability details to these referenced resource(s)."/>
@@ -1299,7 +1197,7 @@
         <human value="SHALL have a contained resource if a local reference is provided"/>
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))"/>
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -1324,12 +1222,6 @@
       </mapping>
     </element>
     <element id="Schedule.planningHorizon">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.planningHorizon"/>
       <short value="Period of time covered by schedule"/>
       <definition value="The period of time that the slots that reference this Schedule resource cover (even if none exist). These  cover the amount of time that an organization's planning horizon; the interval for which they are currently accepting appointments. This does not define a &quot;template&quot; for planning outside these dates."/>
@@ -1359,7 +1251,7 @@
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Address"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -1384,12 +1276,6 @@
       </mapping>
     </element>
     <element id="Schedule.comment">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0"/>
-      </extension>
       <path value="Schedule.comment"/>
       <short value="Comments on availability"/>
       <definition value="Comments on the availability to describe any extended information. Such as custom constraints on the slots that may be associated."/>

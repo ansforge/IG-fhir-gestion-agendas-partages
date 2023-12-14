@@ -2,8 +2,8 @@
 =========================================
 
 err = 12, warn = 27, info = 9
-IG Publisher Version: 1.4.16
-Generated Fri Oct 20 13:06:44 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
+IG Publisher Version: 1.5.6
+Generated Thu Dec 14 10:50:18 UTC 2023. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
  Build Errors : 0 / 9 / 0
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Appointment-example-req-appointment : 5 / 3 / 5
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 1 / 1 / 1
@@ -39,17 +39,17 @@ WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-v
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/Appointment-example-req-appointment.json ==
 ERROR: Appointment/example-req-appointment: Appointment.extension[0].value.ofType(Reference): Unable to resolve resource with reference 'https://exampleserver.org/fhir/Patient/1'
-WARNING: Appointment/example-req-appointment: Appointment.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated
+WARNING: Appointment/example-req-appointment: Appointment.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' could not be found so the code cannot be validated
 WARNING: Appointment/example-req-appointment: Appointment.specialty[0]: Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1
-WARNING: Appointment/example-req-appointment: Appointment.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1
-INFORMATION: Appointment/example-req-appointment: Appointment.specialty[0].coding[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated
+WARNING: Appointment/example-req-appointment: Appointment.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' could not be found so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1
+INFORMATION: Appointment/example-req-appointment: Appointment.specialty[0].coding[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' could not be found so the code cannot be validated
 ERROR: Appointment/example-req-appointment: Appointment.slot[0]: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Slot/example'
 ERROR: Appointment/example-req-appointment: Appointment.participant[0].actor: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Patient/1'
 ERROR: Appointment/example-req-appointment: Appointment.participant[1].actor: Unable to resolve resource with reference 'https://exampleserver.org/fhir/PractitionerRole/1'
 ERROR: Appointment/example-req-appointment: Appointment.participant[2].actor: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Practitioner/1'
 == fsh-generated/resources/CapabilityStatement-GAP-Consommateur.json ==
-WARNING: CapabilityStatement/GAP-Consommateur: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 ERROR: CapabilityStatement/GAP-Consommateur: CapabilityStatement.rest[0].resource[5].searchParam[1].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/PractitionerRole-speciality' does not resolve
+WARNING: CapabilityStatement/GAP-Consommateur: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 == fsh-generated/resources/CapabilityStatement-GAP-DeclarantRDV.json ==
 WARNING: CapabilityStatement/GAP-DeclarantRDV: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 == fsh-generated/resources/CapabilityStatement-GAP-GestionnaireAgenda.json ==
@@ -60,12 +60,12 @@ WARNING: CapabilityStatement/GAP-GestionnaireRessources: CapabilityStatement: Co
 WARNING: CapabilityStatement/Gap-Declarant: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.gap.json ==
 == fsh-generated/resources/Schedule-example.json ==
-INFORMATION: Schedule/example: Schedule.extension[0].extension[1].value.ofType(Coding): Code System URI 'http://terminology.interopsante.org/CodeSystem/v2-3315' is unknown so the code cannot be validated
+INFORMATION: Schedule/example: Schedule.extension[0].extension[1].value.ofType(Coding): Code System URI 'http://terminology.interopsante.org/CodeSystem/v2-3315' could not be found so the code cannot be validated
 ERROR: Schedule/example: Schedule.extension[0].extension[1].value.ofType(Coding).system: Value is 'http://terminology.interopsante.org/CodeSystem/v2-3315' but must be 'http://interopsante.org/fhir/CodeSystem/fr-schedule-type'
-WARNING: Schedule/example: Schedule.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated
+WARNING: Schedule/example: Schedule.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' could not be found so the code cannot be validated
 WARNING: Schedule/example: Schedule.specialty[0]: Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1
-WARNING: Schedule/example: Schedule.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1
-INFORMATION: Schedule/example: Schedule.specialty[0].coding[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated
+WARNING: Schedule/example: Schedule.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' could not be found so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1
+INFORMATION: Schedule/example: Schedule.specialty[0].coding[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' could not be found so the code cannot be validated
 ERROR: Schedule/example: Schedule.actor[0]: Unable to resolve resource with reference 'https://exampleserver.org/fhir/PractitionerRole/1'
 ERROR: Schedule/example: Schedule.actor[1]: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Practitioner/1'
 == fsh-generated/resources/SearchParameter-GAP-Appointment-created.json ==
@@ -80,10 +80,10 @@ WARNING: SearchParameter/GAP-Appointment-latestStart: SearchParameter: Unable to
 == fsh-generated/resources/SearchParameter-GAP-Slot-earliestStart.json ==
 == fsh-generated/resources/SearchParameter-GAP-Slot-latestStart.json ==
 == fsh-generated/resources/Slot-example.json ==
-WARNING: Slot/example: Slot.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated
+WARNING: Slot/example: Slot.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' could not be found so the code cannot be validated
 WARNING: Slot/example: Slot.specialty[0]: Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1
-WARNING: Slot/example: Slot.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1
-INFORMATION: Slot/example: Slot.specialty[0].coding[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' is unknown so the code cannot be validated
+WARNING: Slot/example: Slot.specialty[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' could not be found so the code cannot be validated; Unable to check whether the code is in the value set http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty|1.0.1
+INFORMATION: Slot/example: Slot.specialty[0].coding[0]: Code System URI 'https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale' could not be found so the code cannot be validated
 ERROR: Slot/example: Slot.schedule: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Schedule/example'
 == fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-dispo.json ==
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-dispo'): The Implementation Guide contains no examples for this profile

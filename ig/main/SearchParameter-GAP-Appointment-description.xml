@@ -4,13 +4,13 @@
   <id value="GAP-Appointment-description"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GAP_Appointment_description</h2><p>Parameter <code>description</code>:<code>string</code></p><div><p>Comment or title of the appointment</p>
-</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a></td></tr><tr><td>Expression</td><td><code>Appointment.comment | Appointment.description</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a></td></tr><tr><td>Expression</td><td><code>Appointment.comment | Appointment.description</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may only appear once</li><li>multipleOr: The parameter may only have one value (no comma separators)</li></ul></td></tr></table></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-description"/>
   <version value="3.0.0-ballot"/>
   <name value="GAP_Appointment_description"/>
   <status value="active"/>
-  <date value="2023-10-20T13:03:23+00:00"/>
+  <date value="2023-12-14T10:47:11+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
