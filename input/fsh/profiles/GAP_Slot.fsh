@@ -4,3 +4,5 @@
 Profile: GAP_FrSlot
 Parent: FrSlot
 Id: gap-fr-slot
+Title: "GAP-FrSlot"
+Description: "Profil décrivant un créneau"

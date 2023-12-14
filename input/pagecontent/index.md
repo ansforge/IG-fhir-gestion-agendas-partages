@@ -11,9 +11,10 @@ The purpose of this implementation guide is to allow the management of resources
 </p>
 </blockquote>
 
-<div class="figure" style="width:65%;">
-    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS">
+<div class="figure">
+    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
 </div>
+
 
 Ce guide d'implémentation a pour objet de permettre la gestion de ressources (personnes, lieux ou objets), la gestion des disponibilités de ces ressources, la consultation et la synchronisation d’agenda et la prise de rendez-vous.
 
@@ -31,7 +32,10 @@ Dans ce scénario le système initiateur peut gérer, par délégation du gestio
 
 ### Profils utilisés
 
-Le tableau ci-après spécifie les profils utilisés pour les ressources mentionnés dans ce document. Pour les ressources non mentionnés dans ce tableau, le profil à utiliser est celui défini par HL7 FHIR.
+{% sql SELECT '[' || Title ||'](StructureDefinition-' || id || '.html)' as "Titre du profil", Description, json_extract(Json, '$.baseDefinition') as "Parent" FROM Resources WHERE Type = 'StructureDefinition' and Description like "Profil%" %}
+<!-- like "%Profil%" rajouté car induit une erreur si vide -->
+
+D'autres ressources mentionnés dans ce document n'ont pas été profilées (liste non exhaustive).
 
 | **Ressource** | **Profil** | **Package** | **Description** |
 | ----- | ----- | ----- |
@@ -42,9 +46,6 @@ Le tableau ci-après spécifie les profils utilisés pour les ressources mention
 | HealthcareService | FrHealthcareService | hl7.fhir.fr.core | Ce profil spécifie les services en France. |
 | Organization | FrOrganization | hl7.fhir.fr.core | Ce profil spécifie les types d'identifiants pour l'organisation en France, et ajoute des extensions françaises. |
 | RelatedPerson | FrRelatedPerson | hl7.fhir.fr.core | Ce profil spécifie les personnes reliées à un patient. |
-| Schedule | FrSchedule | hl7.fhir.fr.core | Ce profil redéfinit l'élément serviceType de façon à associer le service avec la durée du service. Il ajoute également une extension qui précise les périodes de disponibilités/non disponibilités de la vacation. |
-| Slot | FrSlot | hl7.fhir.fr.core | Ce profil spécifie la spécialité du praticien requise pour le rendez-vous. |
-| Appointment | FrAppointment | hl7.fhir.fr.core | Ce profil ajoute l'opérateur qui a créé/modifié/annulé le RDV. Il permet également de référencer éventuellement un RDV annulé et/ou un document lié au RDV. |
 
 Dans l’ensemble de cet IG, lorsqu’il est fait référence à ces ressources, les profils associés doivent être utilisés.
 
