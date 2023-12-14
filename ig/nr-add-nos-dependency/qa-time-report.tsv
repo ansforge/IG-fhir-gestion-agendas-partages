@@ -1,0 +1,22 @@
+Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.gap.json	11406	-	0	0	0	0	0	0	5	63	0	0	0	0	0	0	0	0	0	0	126	82	0	0	1	4	0	1
+fsh-generated/resources/Appointment-example-req-appointment.json	1982	12	0	0	0	0	0	0	0	432	0	0	0	0	0	0	0	0	0	0	19	35	0	0	0	0	0	0
+fsh-generated/resources/CapabilityStatement-GAP-Consommateur.json	16659	32	0	0	0	0	0	0	2	110	0	0	0	0	0	0	0	1	0	0	126	64	0	0	0	3	0	0
+fsh-generated/resources/CapabilityStatement-GAP-DeclarantRDV.json	1632	19	1	0	0	0	0	0	0	21	0	0	0	0	0	0	0	0	0	0	23	14	0	0	0	1	0	0
+fsh-generated/resources/CapabilityStatement-GAP-GestionnaireAgenda.json	9863	27	0	0	0	0	0	0	0	50	0	0	0	0	0	0	0	0	0	0	64	36	0	0	0	1	0	0
+fsh-generated/resources/CapabilityStatement-GAP-GestionnaireRessources.json	4118	23	0	0	0	0	0	0	1	31	0	0	0	0	0	0	0	0	0	0	55	31	0	0	0	1	0	0
+fsh-generated/resources/CapabilityStatement-Gap-Declarant.json	5034	19	0	0	0	0	0	0	0	32	0	0	0	0	0	0	0	0	0	0	59	24	0	0	0	2	0	0
+fsh-generated/resources/Schedule-example.json	2392	7	0	0	0	0	0	0	0	238	0	0	0	0	0	0	0	0	0	0	17	20	0	0	0	0	0	0
+fsh-generated/resources/SearchParameter-GAP-Appointment-created.json	412	2	0	0	0	0	0	0	0	17	0	0	0	0	0	0	0	0	0	0	10	9	0	0	0	0	0	0
+fsh-generated/resources/SearchParameter-GAP-Appointment-description.json	583	2	0	0	0	0	0	0	1	17	0	0	0	0	0	0	0	0	0	0	10	9	0	0	0	0	0	0
+fsh-generated/resources/SearchParameter-GAP-Appointment-earliestStart.json	677	2	0	0	0	0	0	0	0	18	0	0	0	0	0	0	0	0	0	0	10	9	0	0	0	1	0	0
+fsh-generated/resources/SearchParameter-GAP-Appointment-latestStart.json	649	3	1	0	0	0	0	0	0	10	0	0	0	0	0	0	0	0	0	0	9	8	0	0	0	0	0	0
+fsh-generated/resources/SearchParameter-GAP-Appointment-priority.json	508	2	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	10	8	0	0	0	0	0	0
+fsh-generated/resources/SearchParameter-GAP-Slot-earliestStart.json	617	3	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	9	8	0	0	0	0	0	0
+fsh-generated/resources/SearchParameter-GAP-Slot-latestStart.json	609	2	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	10	9	0	0	0	1	0	0
+fsh-generated/resources/Slot-example.json	999	3	0	0	0	0	0	0	0	13	0	0	0	0	0	0	0	0	0	0	9	16	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-dispo.json	10801	17	0	0	0	0	0	746	0	679	0	0	1	0	0	0	0	4	0	0	1864	4405	0	0	0	46	1	3
+fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-rdv.json	11399	29	0	0	0	0	0	726	0	584	0	0	0	0	0	0	0	3	0	0	1952	2413	0	0	0	49	0	2
+fsh-generated/resources/StructureDefinition-gap-fr-appointment.json	647	5	1	0	0	0	0	117	0	93	0	0	1	0	0	0	0	0	0	0	246	305	0	0	0	8	0	1
+fsh-generated/resources/StructureDefinition-gap-fr-schedule.json	618	5	0	0	0	0	0	79	0	56	0	0	0	0	0	0	0	1	0	0	145	193	0	0	0	4	0	0
+fsh-generated/resources/StructureDefinition-gap-fr-slot.json	579	5	0	0	0	0	0	68	0	51	0	0	0	0	0	0	0	0	0	0	141	164	0	0	0	4	0	0

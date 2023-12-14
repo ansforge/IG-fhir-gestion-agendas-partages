@@ -1,0 +1,36 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "GAP-Appointment-description",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GAP_Appointment_description</h2><p>Parameter <code>description</code>:<code>string</code></p><div><p>Comment or title of the appointment</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/appointment.html\">Appointment</a></td></tr><tr><td>Expression</td><td><code>Appointment.comment | Appointment.description</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may only appear once</li><li>multipleOr: The parameter may only have one value (no comma separators)</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-description",
+  "version" : "3.0.0-ballot",
+  "name" : "GAP_Appointment_description",
+  "status" : "active",
+  "date" : "2023-12-14T10:33:08+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Comment or title of the appointment",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "code" : "description",
+  "base" : ["Appointment"],
+  "type" : "string",
+  "expression" : "Appointment.comment | Appointment.description",
+  "xpathUsage" : "normal",
+  "multipleOr" : false,
+  "multipleAnd" : false
+}
