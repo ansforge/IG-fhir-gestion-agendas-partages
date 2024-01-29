@@ -1,4 +1,4 @@
-name: Workflow Init
+name: Workflow Init ANS
 on:
   workflow_call:
   push:
@@ -8,4 +8,5 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3    
       - uses: M-Priour/IG-workflows@main
