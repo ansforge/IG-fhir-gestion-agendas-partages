@@ -8,8 +8,9 @@
   "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-slot",
   "version" : "3.0.0-ballot",
   "name" : "GAP_FrSlot",
+  "title" : "GAP-FrSlot",
   "status" : "draft",
-  "date" : "2023-12-14T11:29:24+00:00",
+  "date" : "2024-01-29T14:34:40+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -18,6 +19,7 @@
       "value" : "https://esante.gouv.fr"
     }]
   }],
+  "description" : "Profil décrivant un créneau",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -799,7 +801,7 @@
         "human" : "If present, start SHALL have a lower value than end",
         "expression" : "start.hasValue().not() or end.hasValue().not() or (start <= end)",
         "xpath" : "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Encounter"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -859,7 +861,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Encounter"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
       "isSummary" : true,
       "mapping" : [{
@@ -1136,7 +1138,7 @@
         "human" : "SHALL have a contained resource if a local reference is provided",
         "expression" : "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))",
         "xpath" : "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])",
-        "source" : "http://hl7.org/fhir/StructureDefinition/Encounter"
+        "source" : "http://hl7.org/fhir/StructureDefinition/Schedule"
       }],
       "isSummary" : true,
       "mapping" : [{

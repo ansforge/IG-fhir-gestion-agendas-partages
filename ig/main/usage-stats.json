@@ -8,29 +8,29 @@
     "Bundle": [
       {
         "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-dispo",
-        "title": "GAP_BundleResultatReponseADemandeConsultationDisponibilites"
+        "title": "GAP-BundleResultatReponseADemandeConsultationDisponibilites"
       },
       {
         "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-rdv",
-        "title": "GAP_BundleResultatReponseADemandeConsultationRDV"
+        "title": "GAP-BundleResultatReponseADemandeConsultationRDV"
       }
     ],
     "Appointment": [
       {
         "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-appointment",
-        "title": "GAP_FrAppointment"
+        "title": "GAP-FrAppointment"
       }
     ],
     "Schedule": [
       {
         "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-schedule",
-        "title": "GAP_FrSchedule"
+        "title": "GAP-FrSchedule"
       }
     ],
     "Slot": [
       {
         "url": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-slot",
-        "title": "GAP_FrSlot"
+        "title": "GAP-FrSlot"
       }
     ]
   },
