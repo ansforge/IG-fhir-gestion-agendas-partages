@@ -14,7 +14,7 @@ Les ressources concernées par ce guide sont : Patient, Practitioner, Practition
 
 # CI/CD
 
-Les workflows associés à ce repository (.github/workflows) permettent : 
+Les workflows associés à ce repository (.github/workflows) permettent :
 
 * D'executer Sushi pour vérifier la grammaire
 * De faire les tests avec le validator_cli
