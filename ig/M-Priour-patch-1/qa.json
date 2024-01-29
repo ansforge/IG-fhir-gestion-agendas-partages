@@ -1,0 +1,16 @@
+{
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap",
+  "name" : "GestionAgendasPartages",
+  "title" : "Gestion d'Agendas Partagés (GAP)",
+  "description" : null,
+  "status" : "draft",
+  "package-id" : "ans.fhir.fr.gap",
+  "ig-ver" : "3.0.0-ballot",
+  "date" : "Mon, 29 Jan, 2024 14:38:21 +0000",
+  "errs" : 12,
+  "warnings" : 27,
+  "hints" : 9,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 2053757688
+}
