@@ -12,4 +12,6 @@ jobs:
         with:      
           path: igSource
       - uses: M-Priour/IG-workflows@main
+        with:      
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       
