@@ -14,4 +14,8 @@ jobs:
       - uses: M-Priour/IG-workflows@main
         with:      
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_ig: igSource
+          bake: "true"
+          nos: "true"
+          validator_cli: "true"
       
