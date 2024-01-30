@@ -2,8 +2,8 @@ GestionAgendasPartages : Validation Results
 =========================================
 
 err = 12, warn = 15, info = 9
-IG Publisher Version: 1.5.15 Out of date - current version is 1.5.16
-Generated Tue Jan 30 12:43:17 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
+IG Publisher Version: 1.5.16
+Generated Tue Jan 30 13:19:54 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
  Build Errors : 0 / 6 / 0
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Appointment-example-req-appointment : 5 / 0 / 5
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 1 / 1 / 1
