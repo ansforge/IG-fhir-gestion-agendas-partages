@@ -3,13 +3,13 @@
 The purpose of this implementation guide is to allow the management of resources (people, places or objects), the management of the availability of these resources, the consultation and synchronization of calendars and the making of appointments.
 </p>
 
-<blockquote class="stu-note">
+<!-- <blockquote class="stu-note">
 <p>
   <b>Attention !</b>
   <br>
  Cet Implementation Guide est actuellement en concertation.
 </p>
-</blockquote>
+</blockquote> -->
 
 <div class="figure">
     <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
