@@ -1,0 +1,6 @@
+{
+  "version" : "3.0.0-ballot",
+  "fhirVersion" : ["4.0.1"],
+  "date" : "20240131140905",
+  "name" : "ans.fhir.fr.gap"
+}
