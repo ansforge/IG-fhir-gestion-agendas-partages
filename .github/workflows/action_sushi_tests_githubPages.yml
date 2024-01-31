@@ -1,11 +1,11 @@
-name: Workflow Init ANS
+name: Workflow Sushi Tests gitHubpages
 on:
   workflow_call:
   push:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 jobs:
-  tests_githubPages:
+  run-sushi-tests_gitHubPages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,6 +19,4 @@ jobs:
           bake: "true"
           nos: "true"
           validator_cli: "true"
-          publish_repo: "ansforge/IG-website-release"
-          publish_repo_token :  ${{ secrets.ANS_IG_API_TOKEN }} 
 
