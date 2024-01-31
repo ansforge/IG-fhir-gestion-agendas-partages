@@ -11,7 +11,7 @@
   "derivedFrom" : "http://hl7.org/fhir/SearchParameter/Slot-start",
   "status" : "active",
   "experimental" : false,
-  "date" : "2024-01-31T13:22:28+00:00",
+  "date" : "2024-01-31T13:26:05+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

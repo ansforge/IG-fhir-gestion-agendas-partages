@@ -134,10 +134,10 @@
       "uses" : {
       },
       "StructureDefinition-gap-bundle-reponse-demande-consult-dispo.html" : "GAP-BundleResultatReponseADemandeConsultationDisponibilites",
-      "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
       "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule",
-      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot",
-      "StructureDefinition-gap-bundle-reponse-demande-consult-rdv.html" : "GAP-BundleResultatReponseADemandeConsultationRDV"
+      "StructureDefinition-gap-bundle-reponse-demande-consult-rdv.html" : "GAP-BundleResultatReponseADemandeConsultationRDV",
+      "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
+      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/participantrequired",
@@ -194,8 +194,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.516"],
       "uses" : {
       },
-      "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
       "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule",
+      "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
       "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot"
     },
     {
@@ -210,8 +210,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.518"],
       "uses" : {
       },
-      "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
       "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule",
+      "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
       "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot"
     },
     {
@@ -240,8 +240,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
       "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule",
+      "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
       "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot"
     },
     {
