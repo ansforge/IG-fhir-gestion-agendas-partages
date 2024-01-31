@@ -18,4 +18,5 @@ jobs:
           bake: "true"
           nos: "true"
           validator_cli: "true"
+          publish_repo: "ansforge/IG-website-release"
 
