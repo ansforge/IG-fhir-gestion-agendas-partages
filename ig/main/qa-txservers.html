@@ -11,7 +11,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for GestionAgendasPartages</h1>
- <p>Generated Mon Feb 05 16:14:19 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/gap">https://interop.esante.gouv.fr/ig/fhir/gap</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/gap/history.html">history</a>))</p>
+ <p>Generated Mon Feb 05 16:20:15 UTC 2024, FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/gap">https://interop.esante.gouv.fr/ig/fhir/gap</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/gap/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -20,18 +20,13 @@
 :     <code>dc8fd4bc-091a-424a-8a3b-6198ef146891</code>
   </li>
 </ul>
-<h2>Tx Manager report for 'https://smt.esante.gouv.fr/tx-reg'</h2>
+<h2>Tx Manager report for 'http://tx.fhir.org/tx-reg'</h2>
 <ul>
-  <li>Error resolving system http://terminology.interopsante.org/CodeSystem/v2-3315: Not Found (https://smt.esante.gouv.fr/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fterminology.interopsante.org%2FCodeSystem%2Fv2-3315&amp;usage=publication)</li>
-  <li>Error resolving system http://unitsofmeasure.org: Not Found (https://smt.esante.gouv.fr/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org&amp;usage=publication)</li>
-  <li>Error resolving system urn:iso:std:iso:3166: Not Found (https://smt.esante.gouv.fr/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication)</li>
-  <li>Error resolving system urn:ietf:bcp:13: Not Found (https://smt.esante.gouv.fr/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aietf%3Abcp%3A13&amp;usage=publication)</li>
-  <li>Error resolving system http://example.org/ValueSet/ServiceType: Not Found (https://smt.esante.gouv.fr/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fexample.org%2FValueSet%2FServiceType&amp;usage=publication)</li>
-  <li>Error resolving system http://interopsante.org/fhir/CodeSystem/fr-schedule-type|1.0.1: Not Found (https://smt.esante.gouv.fr/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Finteropsante.org%2Ffhir%2FCodeSystem%2Ffr-schedule-type%7C1.0.1&amp;usage=publication)</li>
-  <li>Error resolving valueSet http://interopsante.org/fhir/valueset/fr-schedule-unavailability-reason: Not Found (https://smt.esante.gouv.fr/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Finteropsante.org%2Ffhir%2Fvalueset%2Ffr-schedule-unavailability-reason&amp;usage=publication)</li>
+  <li>Request for system [http://terminology.interopsante.org/CodeSystem/v2-3315] not handled by any servers. Using master @ 'http://tx.fhir.org/r4'</li>
+  <li>Request for system [http://example.org/ValueSet/ServiceType] not handled by any servers. Using master @ 'http://tx.fhir.org/r4'</li>
 </ul>
-<h2>Primary Server: https://smt.esante.gouv.fr/fhir</h2>
-<p>Use Count: 10. Code Systems used: </p>
+<h2>Primary Server: http://tx.fhir.org/r4</h2>
+<p>Use Count: 14. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -54,17 +49,9 @@
     <td/>
   </tr>
   <tr>
-    <td>http://interopsante.org/fhir/CodeSystem/fr-schedule-type|1.0.1</td>
-    <td>0</td>
-    <td>1</td>
-    <td>
-      <a href="https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&amp;canonical=http://interopsante.org/fhir/CodeSystem/fr-schedule-type">fr-schedule-type</a>
-    </td>
-  </tr>
-  <tr>
     <td>http://terminology.interopsante.org/CodeSystem/v2-3315</td>
     <td>0</td>
-    <td>2</td>
+    <td>1</td>
     <td/>
   </tr>
   <tr>
@@ -76,6 +63,12 @@
     </td>
   </tr>
   <tr>
+    <td>http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>0</td>
+    <td>1</td>
+    <td/>
+  </tr>
+  <tr>
     <td>urn:ietf:bcp:13</td>
     <td>0</td>
     <td>2</td>
@@ -83,10 +76,18 @@
   </tr>
   <tr>
     <td>urn:iso:std:iso:3166</td>
-    <td>0</td>
-    <td>4</td>
+    <td>3</td>
+    <td>5</td>
     <td>
       <a href="http://terminology.hl7.org/5.0.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+    </td>
+  </tr>
+  <tr>
+    <td>urn:iso:std:iso:3166:-2</td>
+    <td>1</td>
+    <td>1</td>
+    <td>
+      <a href="http://terminology.hl7.org/5.0.0/CodeSystem-ISO3166Part2.html">ISO 3166 Part 2 Country Subdivision Codes</a>
     </td>
   </tr>
 </table>
