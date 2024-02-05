@@ -19,4 +19,5 @@ jobs:
           bake: "true"
           nos: "true"
           validator_cli: "true"
+          termino_server : "https://smt.esante.gouv.fr/fhir"
 
