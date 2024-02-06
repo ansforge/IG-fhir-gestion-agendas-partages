@@ -11,7 +11,7 @@
   "derivedFrom" : "http://hl7.org/fhir/SearchParameter/Appointment-start",
   "status" : "active",
   "experimental" : false,
-  "date" : "2024-02-05T16:17:14+00:00",
+  "date" : "2024-02-06T08:08:39+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
