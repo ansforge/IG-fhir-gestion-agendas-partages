@@ -4,3 +4,5 @@
 Profile: GAP_FrSchedule
 Parent: FrSchedule
 Id: gap-fr-schedule
+Title: "GAP-FrSchedule"
+Description: "Profil décrivant un agenda médical"

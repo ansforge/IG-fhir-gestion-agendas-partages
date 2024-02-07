@@ -3,4 +3,6 @@
 
 Profile: GAP_FrAppointment
 Parent: FrAppointment
+Title: "GAP-FrAppointment"
 Id: gap-fr-appointment
+Description: "Profil décrivant un rendez-vous médical"

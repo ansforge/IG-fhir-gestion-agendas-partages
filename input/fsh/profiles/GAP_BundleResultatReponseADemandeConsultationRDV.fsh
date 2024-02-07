@@ -1,8 +1,8 @@
 Profile: GAP_BundleResultatReponseADemandeConsultationRDV
 Parent: Bundle
 Id: gap-bundle-reponse-demande-consult-rdv
-Title: "GAP_BundleResultatReponseADemandeConsultationRDV"
-Description: "Il s’agit du flux de réponse à la recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande"
+Title: "GAP-BundleResultatReponseADemandeConsultationRDV"
+Description: "Profil du bundle de réponse à la recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande"
 * type = #searchset
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
