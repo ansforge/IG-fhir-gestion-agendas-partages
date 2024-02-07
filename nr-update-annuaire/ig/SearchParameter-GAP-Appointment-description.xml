@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="GAP-Appointment-description"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>GAP_Appointment_description</h2><p>Parameter <code>description</code>:<code>string</code></p><div><p>Comment or title of the appointment</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a></td></tr><tr><td>Expression</td><td><code>Appointment.comment | Appointment.description</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may only appear once</li><li>multipleOr: The parameter may only have one value (no comma separators)</li></ul></td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-description"/>
+  <version value="3.0.0-ballot"/>
+  <name value="GAP_Appointment_description"/>
+  <status value="active"/>
+  <date value="2024-02-07T14:09:08+00:00"/>
+  <publisher value="ANS"/>
+  <contact>
+    <name value="ANS"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Comment or title of the appointment"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <code value="description"/>
+  <base value="Appointment"/>
+  <type value="string"/>
+  <expression value="Appointment.comment | Appointment.description"/>
+  <xpathUsage value="normal"/>
+  <multipleOr value="false"/>
+  <multipleAnd value="false"/>
+</SearchParameter>
