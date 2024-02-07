@@ -37,15 +37,8 @@ Dans ce scénario le système initiateur peut gérer, par délégation du gestio
 
 D'autres ressources mentionnés dans ce document n'ont pas été profilées (liste non exhaustive).
 
-| **Ressource** | **Profil** | **Package** | **Description** |
-| ----- | ----- | ----- |
-| Patient | FrPatient | hl7.fhir.fr.core | Ce profil spécifie les identifiants de patient utilisés en France. Il utilise des extensions internationales (birthplace et nationalité) et ajoute des extensions propres à la France. |
-| Practitioner | FrPractitioner | hl7.fhir.fr.core | Ce profil contraint les types d'identifiants du professionnel en France. |
-| PractitionerRole | AsPractitionerRoleProfile | ans.fhir.fr.annuaire | Ce profil permet de spécifier l’exercice professionel et la situation d’exercice. |
-| Location | FrLocation | hl7.fhir.fr.core | Ce profil spécifie les rôles joués par un lieu en France. |
-| HealthcareService | FrHealthcareService | hl7.fhir.fr.core | Ce profil spécifie les services en France. |
-| Organization | FrOrganization | hl7.fhir.fr.core | Ce profil spécifie les types d'identifiants pour l'organisation en France, et ajoute des extensions françaises. |
-| RelatedPerson | FrRelatedPerson | hl7.fhir.fr.core | Ce profil spécifie les personnes reliées à un patient. |
+{% sql SELECT '[' || Title ||'](StructureDefinition-' || id || '.html)' as "Titre du profil", Description, json_extract(Json, '$.baseDefinition') as "Parent" FROM Resources WHERE Type = 'StructureDefinition' and Description like "Profil%" %}
+
 
 Dans l’ensemble de cet IG, lorsqu’il est fait référence à ces ressources, les profils associés doivent être utilisés.
 
