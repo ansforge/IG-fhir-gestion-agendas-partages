@@ -299,60 +299,12 @@ The purpose of this implementation guide is to allow the management of resources
 
 <p>D’autres ressources mentionnés dans ce document n’ont pas été profilées (liste non exhaustive).</p>
 
-<table>
-  <thead>
-    <tr>
-      <th><strong>Ressource</strong></th>
-      <th><strong>Profil</strong></th>
-      <th><strong>Package</strong></th>
-      <th> <strong>Description</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Patient</td>
-      <td>FrPatient</td>
-      <td>hl7.fhir.fr.core</td>
-      <td>Ce profil spécifie les identifiants de patient utilisés en France. Il utilise des extensions internationales (birthplace et nationalité) et ajoute des extensions propres à la France.</td>
-    </tr>
-    <tr>
-      <td>Practitioner</td>
-      <td>FrPractitioner</td>
-      <td>hl7.fhir.fr.core</td>
-      <td>Ce profil contraint les types d’identifiants du professionnel en France.</td>
-    </tr>
-    <tr>
-      <td>PractitionerRole</td>
-      <td>AsPractitionerRoleProfile</td>
-      <td>ans.fhir.fr.annuaire</td>
-      <td>Ce profil permet de spécifier l’exercice professionel et la situation d’exercice.</td>
-    </tr>
-    <tr>
-      <td>Location</td>
-      <td>FrLocation</td>
-      <td>hl7.fhir.fr.core</td>
-      <td>Ce profil spécifie les rôles joués par un lieu en France.</td>
-    </tr>
-    <tr>
-      <td>HealthcareService</td>
-      <td>FrHealthcareService</td>
-      <td>hl7.fhir.fr.core</td>
-      <td>Ce profil spécifie les services en France.</td>
-    </tr>
-    <tr>
-      <td>Organization</td>
-      <td>FrOrganization</td>
-      <td>hl7.fhir.fr.core</td>
-      <td>Ce profil spécifie les types d’identifiants pour l’organisation en France, et ajoute des extensions françaises.</td>
-    </tr>
-    <tr>
-      <td>RelatedPerson</td>
-      <td>FrRelatedPerson</td>
-      <td>hl7.fhir.fr.core</td>
-      <td>Ce profil spécifie les personnes reliées à un patient.</td>
-    </tr>
-  </tbody>
-</table>
+<table class="grid"><tr><td style="background-color: #eeeeee">Titre du profil</td><td style="background-color: #eeeeee">Description</td><td style="background-color: #eeeeee">Parent</td></tr><tr><td><div><p><a href="StructureDefinition-gap-bundle-reponse-demande-consult-dispo.html">GAP-BundleResultatReponseADemandeConsultationDisponibilites</a></p>
+</div></td><td>Profil du bundle de réponse à la demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, elle devra contenir les informations sur le temps libre ou occupé de chacune des ressources. La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande. Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris</td><td><a href="http://hl7.org/fhir/StructureDefinition/Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a></td></tr><tr><td><div><p><a href="StructureDefinition-gap-bundle-reponse-demande-consult-rdv.html">GAP-BundleResultatReponseADemandeConsultationRDV</a></p>
+</div></td><td>Profil du bundle de réponse à la recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande</td><td><a href="http://hl7.org/fhir/StructureDefinition/Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a></td></tr><tr><td><div><p><a href="StructureDefinition-gap-fr-appointment.html">GAP-FrAppointment</a></p>
+</div></td><td>Profil décrivant un rendez-vous médical</td><td><a href="http://interopsante.org/fhir/StructureDefinition/FrAppointment">http://interopsante.org/fhir/StructureDefinition/FrAppointment</a></td></tr><tr><td><div><p><a href="StructureDefinition-gap-fr-schedule.html">GAP-FrSchedule</a></p>
+</div></td><td>Profil décrivant un agenda médical</td><td><a href="http://interopsante.org/fhir/StructureDefinition/FrSchedule">http://interopsante.org/fhir/StructureDefinition/FrSchedule</a></td></tr><tr><td><div><p><a href="StructureDefinition-gap-fr-slot.html">GAP-FrSlot</a></p>
+</div></td><td>Profil décrivant un créneau</td><td><a href="http://interopsante.org/fhir/StructureDefinition/FrSlot">http://interopsante.org/fhir/StructureDefinition/FrSlot</a></td></tr></table>
 
 <p>Dans l’ensemble de cet IG, lorsqu’il est fait référence à ces ressources, les profils associés doivent être utilisés.</p>
 
@@ -437,7 +389,7 @@ The purpose of this implementation guide is to allow the management of resources
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 7, 2024 14:09+0000">2024-02-07</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 7, 2024 14:17+0000">2024-02-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
