@@ -11,7 +11,7 @@
   <name value="GAP_FrAppointment"/>
   <title value="GAP-FrAppointment"/>
   <status value="draft"/>
-  <date value="2024-02-07T10:51:16+00:00"/>
+  <date value="2024-02-07T12:41:41+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -2297,7 +2297,7 @@
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Identifier"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -2342,7 +2342,7 @@
         <human value="If present, start SHALL have a lower value than end"/>
         <expression value="start.hasValue().not() or end.hasValue().not() or (start &lt;= end)"/>
         <xpath value="not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) &lt;= xs:dateTime(f:end/@value))"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Identifier"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
