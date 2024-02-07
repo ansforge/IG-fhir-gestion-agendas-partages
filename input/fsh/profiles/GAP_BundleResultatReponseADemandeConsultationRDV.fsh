@@ -75,7 +75,7 @@ Description: "Profil du bundle de réponse à la recherche de rendez-vous dans l
 * entry[HealthcareService].response ..0
 
 * entry[Organization].resource 1..
-* entry[Organization].resource only $FrOrganization
+* entry[Organization].resource only as-organization
 * entry[Organization].search.mode = #include
 * entry[Organization].request ..0
 * entry[Organization].response ..0

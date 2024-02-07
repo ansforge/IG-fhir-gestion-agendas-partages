@@ -69,7 +69,7 @@ Description: "Profil du bundle de réponse à la demande de consultation des dis
 * entry[HealthcareService].response ..0
 
 * entry[Organization].resource 1..
-* entry[Organization].resource only $FrOrganization
+* entry[Organization].resource only as-organization
 * entry[Organization].search.mode = #include
 * entry[Organization].request ..0
 * entry[Organization].response ..0

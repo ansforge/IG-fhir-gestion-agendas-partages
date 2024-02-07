@@ -40,11 +40,11 @@ D'autres ressources mentionnés dans ce document n'ont pas été profilées (lis
 | **Ressource** | **Profil** | **Package** | **Description** |
 | ----- | ----- | ----- |
 | Patient | FrPatient | hl7.fhir.fr.core | Ce profil spécifie les identifiants de patient utilisés en France. Il utilise des extensions internationales (birthplace et nationalité) et ajoute des extensions propres à la France. |
-| Practitioner | AsPractitioner | ans.fhir.fr.annuaire | Profil du praticien français. |
+| Practitioner | AsPractitionerProfile | ans.fhir.fr.annuaire | Profil du praticien français. |
 | PractitionerRole | AsPractitionerRoleProfile | ans.fhir.fr.annuaire | Profil de la situation d'exercice du praticien français. |
+| Organization | AsOrganizationProfile | ans.fhir.fr.annuaire | Ce profil spécifie les types d'identifiants pour l'organisation en France, et ajoute des extensions françaises. |
 | Location | FrLocation | hl7.fhir.fr.core | Ce profil spécifie les rôles joués par un lieu en France. |
 | HealthcareService | FrHealthcareService | hl7.fhir.fr.core | Ce profil spécifie les services en France. |
-| Organization | FrOrganization | hl7.fhir.fr.core | Ce profil spécifie les types d'identifiants pour l'organisation en France, et ajoute des extensions françaises. |
 | RelatedPerson | FrRelatedPerson | hl7.fhir.fr.core | Ce profil spécifie les personnes reliées à un patient. |
 
 Dans l’ensemble de cet IG, lorsqu’il est fait référence à ces ressources, les profils associés doivent être utilisés.
