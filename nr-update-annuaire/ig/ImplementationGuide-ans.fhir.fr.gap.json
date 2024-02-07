@@ -3,14 +3,14 @@
   "id" : "ans.fhir.fr.gap",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GestionAgendasPartages</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GAP</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap",
   "version" : "3.0.0-ballot",
-  "name" : "GestionAgendasPartages",
+  "name" : "GAP",
   "title" : "Gestion d'Agendas Partagés (GAP)",
   "status" : "draft",
-  "date" : "2024-02-07T15:05:03+00:00",
+  "date" : "2024-02-07T15:55:12+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
