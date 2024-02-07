@@ -10,14 +10,14 @@
   fhir:id [ fhir:v "ans.fhir.fr.gap"] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GestionAgendasPartages</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap</pre></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GAP</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap</pre></div>"
   ] ; # 
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "3.0.0-ballot"] ; # 
-  fhir:name [ fhir:v "GestionAgendasPartages"] ; # 
+  fhir:name [ fhir:v "GAP"] ; # 
   fhir:title [ fhir:v "Gestion d'Agendas Partagés (GAP)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-02-07T15:08:37+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-02-07T15:59:24+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;

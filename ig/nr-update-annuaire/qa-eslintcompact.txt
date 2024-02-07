@@ -1,4 +1,4 @@
-GestionAgendasPartages
+GAP
 =========================================
 
 Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource Schedule/example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
