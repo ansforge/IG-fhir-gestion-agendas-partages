@@ -6,11 +6,11 @@
   "status" : "draft",
   "package-id" : "ans.fhir.fr.gap",
   "ig-ver" : "3.0.0-ballot",
-  "date" : "Wed, 07 Feb, 2024 14:20:58 +0000",
+  "date" : "Wed, 07 Feb, 2024 15:05:03 +0000",
   "errs" : 12,
   "warnings" : 15,
   "hints" : 9,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1452958208
+  "maxMemory" : 1402536576
 }
