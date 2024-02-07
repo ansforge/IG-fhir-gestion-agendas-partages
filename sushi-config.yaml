@@ -1,6 +1,6 @@
 id: ans.fhir.fr.gap
 canonical: https://interop.esante.gouv.fr/ig/fhir/gap
-name: GestionAgendasPartages
+name: GAP
 title: Gestion d'Agendas Partagés (GAP)
 publisher:
   name: ANS
