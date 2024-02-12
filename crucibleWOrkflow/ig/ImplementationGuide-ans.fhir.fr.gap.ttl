@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "GestionAgendasPartages"] ; # 
   fhir:title [ fhir:v "Gestion d'Agendas Partagés (GAP)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-02-12T14:50:40+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-02-12T15:11:39+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
