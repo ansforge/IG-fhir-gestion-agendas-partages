@@ -1,0 +1,80 @@
+{
+  "id": "Package-Slot-Search_by-Type",
+  "url": "https://github.com/fhir-crucible/testscript-generator",
+  "version": "0.0",
+  "name": "Package_Slot_Search_by_Type",
+  "title": "package slot search_by type",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-02-12T16:21:17+00:00",
+  "publisher": "The MITRE Corporation",
+  "fixture": [
+    {
+      "id": "example_slot",
+      "autocreate": false,
+      "autodelete": false,
+      "resource": {
+        "reference": "fixtures/example_slot.json"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "name": "SxBLtUj6sOSse3Yv",
+      "expression": "Slot.id",
+      "sourceId": "YTK4Ut5VT7C8UlAs"
+    }
+  ],
+  "setup": {
+    "action": [
+      {
+        "operation": {
+          "type": {
+            "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+            "code": "create"
+          },
+          "label": "Operation_1",
+          "encodeRequestUrl": false,
+          "responseId": "YTK4Ut5VT7C8UlAs",
+          "sourceId": "example_slot"
+        }
+      }
+    ]
+  },
+  "test": [
+    {
+      "name": "Test_1",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "search"
+            },
+            "resource": "Slot",
+            "label": "Operation_2",
+            "encodeRequestUrl": false,
+            "params": "?_type"
+          }
+        }
+      ]
+    }
+  ],
+  "teardown": {
+    "action": [
+      {
+        "operation": {
+          "type": {
+            "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+            "code": "delete"
+          },
+          "resource": "Slot",
+          "label": "Operation_3",
+          "encodeRequestUrl": false,
+          "params": "/${SxBLtUj6sOSse3Yv}"
+        }
+      }
+    ]
+  },
+  "resourceType": "TestScript"
+}
