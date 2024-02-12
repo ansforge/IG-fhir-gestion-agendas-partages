@@ -1,0 +1,70 @@
+{
+  "id": "45cd3f166dd29ff349d7baf8722e4b7feaeab8a658df54888b33dc90aaaec9b3",
+  "url": "https://github.com/fhir-crucible/testscript-generator/45cd3f166dd29ff349d7baf8722e4b7feaeab8a658df54888b33dc90aaaec9b3",
+  "version": "0.0",
+  "name": "PackageGAPFrAppointmentReadProfile",
+  "title": "IG: package; Profile: GAP_FrAppointment; Case: Read Profile",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-02-12T16:08:38+00:00",
+  "publisher": "The MITRE Corporation",
+  "profile": [
+    {
+      "id": "targetProfileGAP_FrAppointment",
+      "reference": "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-appointment"
+    }
+  ],
+  "variable": [
+    {
+      "name": "targetResourceIdGAP_FrAppointment",
+      "defaultValue": "example",
+      "description": "Enter a known instance id on the destination system. Will be checked for conformance against profile GAP_FrAppointment.",
+      "hint": "[resource.id]"
+    }
+  ],
+  "test": [
+    {
+      "name": "Validate the identified resource conforms to the GAP_FrAppointment profile",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Appointment",
+            "label": "Read_Appointment_Instance",
+            "description": "Read Appointment Instance",
+            "encodeRequestUrl": false,
+            "params": "/${targetResourceIdGAP_FrAppointment}",
+            "responseId": "targetInstance"
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Response_OK",
+            "response": "okay",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Appointment_Returned",
+            "description": "Assert Appointment Returned",
+            "resource": "Appointment",
+            "warningOnly": false
+          }
+        },
+        {
+          "assert": {
+            "label": "Assert_Instance_Conforms_to_GAP_FrAppointment_Profile",
+            "description": "Assert returned instance conforms to the GAP_FrAppointment Profile",
+            "validateProfileId": "targetProfileGAP_FrAppointment",
+            "warningOnly": false
+          }
+        }
+      ]
+    }
+  ],
+  "resourceType": "TestScript"
+}
