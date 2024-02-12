@@ -6,7 +6,7 @@
   "title": "package appointment search_by has",
   "status": "draft",
   "experimental": true,
-  "date": "2024-02-12T17:31:01+00:00",
+  "date": "2024-02-12T17:43:36+00:00",
   "publisher": "The MITRE Corporation",
   "fixture": [
     {
@@ -20,9 +20,9 @@
   ],
   "variable": [
     {
-      "name": "zzVf3SDB0OR6IJXm",
+      "name": "7RsI59RQFORBoFMS",
       "expression": "Appointment.id",
-      "sourceId": "ACF2MwViw1OJ2XMO"
+      "sourceId": "GOxmbh2v4li3e0Ef"
     }
   ],
   "setup": {
@@ -35,7 +35,7 @@
           },
           "label": "Operation_1",
           "encodeRequestUrl": false,
-          "responseId": "ACF2MwViw1OJ2XMO",
+          "responseId": "GOxmbh2v4li3e0Ef",
           "sourceId": "example_appointment"
         }
       }
@@ -71,7 +71,7 @@
           "resource": "Appointment",
           "label": "Operation_3",
           "encodeRequestUrl": false,
-          "params": "/${zzVf3SDB0OR6IJXm}"
+          "params": "/${7RsI59RQFORBoFMS}"
         }
       }
     ]

@@ -6,7 +6,7 @@
   "title": "package appointment search_by security",
   "status": "draft",
   "experimental": true,
-  "date": "2024-02-12T17:31:01+00:00",
+  "date": "2024-02-12T17:43:36+00:00",
   "publisher": "The MITRE Corporation",
   "fixture": [
     {
@@ -20,9 +20,9 @@
   ],
   "variable": [
     {
-      "name": "fUZbNsVzP6dk4AFT",
+      "name": "JHjOkZneCrUvx6zM",
       "expression": "Appointment.meta.security",
-      "sourceId": "LvT6mVUmuv0tY6SJ"
+      "sourceId": "68zF7S9YY5wgMwe4"
     }
   ],
   "setup": {
@@ -35,7 +35,7 @@
           },
           "label": "Operation_1",
           "encodeRequestUrl": false,
-          "responseId": "LvT6mVUmuv0tY6SJ",
+          "responseId": "68zF7S9YY5wgMwe4",
           "sourceId": "example_appointment"
         }
       }
@@ -54,7 +54,7 @@
             "resource": "Appointment",
             "label": "Operation_2",
             "encodeRequestUrl": false,
-            "params": "?_security=${fUZbNsVzP6dk4AFT}"
+            "params": "?_security=${JHjOkZneCrUvx6zM}"
           }
         }
       ]
@@ -71,7 +71,7 @@
           "resource": "Appointment",
           "label": "Operation_3",
           "encodeRequestUrl": false,
-          "params": "/${fUZbNsVzP6dk4AFT}"
+          "params": "/${JHjOkZneCrUvx6zM}"
         }
       }
     ]
