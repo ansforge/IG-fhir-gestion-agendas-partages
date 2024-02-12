@@ -6,7 +6,7 @@
   "title": "package schedule search_by profile",
   "status": "draft",
   "experimental": true,
-  "date": "2024-02-12T17:02:13+00:00",
+  "date": "2024-02-12T17:16:09+00:00",
   "publisher": "The MITRE Corporation",
   "fixture": [
     {
@@ -20,9 +20,9 @@
   ],
   "variable": [
     {
-      "name": "YRF9MUwJqs3OR3ax",
+      "name": "V3hhmEobmbr5pkJj",
       "expression": "Schedule.meta.profile",
-      "sourceId": "KvaEZcXTSLp0nBXA"
+      "sourceId": "gq6Q66TBsw71YFJg"
     }
   ],
   "setup": {
@@ -35,7 +35,7 @@
           },
           "label": "Operation_1",
           "encodeRequestUrl": false,
-          "responseId": "KvaEZcXTSLp0nBXA",
+          "responseId": "gq6Q66TBsw71YFJg",
           "sourceId": "example_schedule"
         }
       }
@@ -54,7 +54,7 @@
             "resource": "Schedule",
             "label": "Operation_2",
             "encodeRequestUrl": false,
-            "params": "?_profile=${YRF9MUwJqs3OR3ax}"
+            "params": "?_profile=${V3hhmEobmbr5pkJj}"
           }
         }
       ]
@@ -71,7 +71,7 @@
           "resource": "Schedule",
           "label": "Operation_3",
           "encodeRequestUrl": false,
-          "params": "/${YRF9MUwJqs3OR3ax}"
+          "params": "/${V3hhmEobmbr5pkJj}"
         }
       }
     ]
