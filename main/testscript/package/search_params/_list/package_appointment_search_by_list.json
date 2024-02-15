@@ -1,0 +1,80 @@
+{
+  "id": "Package-Appointment-Search_by-List",
+  "url": "https://github.com/fhir-crucible/testscript-generator",
+  "version": "0.0",
+  "name": "Package_Appointment_Search_by_List",
+  "title": "package appointment search_by list",
+  "status": "draft",
+  "experimental": true,
+  "date": "2024-02-15T16:56:49+00:00",
+  "publisher": "The MITRE Corporation",
+  "fixture": [
+    {
+      "id": "example_appointment",
+      "autocreate": false,
+      "autodelete": false,
+      "resource": {
+        "reference": "fixtures/example_appointment.json"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "name": "mxlDFVkm0yu0VbzM",
+      "expression": "Appointment.id",
+      "sourceId": "N1ceCVv0bHoGopHx"
+    }
+  ],
+  "setup": {
+    "action": [
+      {
+        "operation": {
+          "type": {
+            "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+            "code": "create"
+          },
+          "label": "Operation_1",
+          "encodeRequestUrl": false,
+          "responseId": "N1ceCVv0bHoGopHx",
+          "sourceId": "example_appointment"
+        }
+      }
+    ]
+  },
+  "test": [
+    {
+      "name": "Test_1",
+      "action": [
+        {
+          "operation": {
+            "type": {
+              "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+              "code": "search"
+            },
+            "resource": "Appointment",
+            "label": "Operation_2",
+            "encodeRequestUrl": false,
+            "params": "?_list"
+          }
+        }
+      ]
+    }
+  ],
+  "teardown": {
+    "action": [
+      {
+        "operation": {
+          "type": {
+            "system": "http://terminology.hl7.org/CodeSystem/testscript-operation-codes",
+            "code": "delete"
+          },
+          "resource": "Appointment",
+          "label": "Operation_3",
+          "encodeRequestUrl": false,
+          "params": "/${mxlDFVkm0yu0VbzM}"
+        }
+      }
+    ]
+  },
+  "resourceType": "TestScript"
+}
