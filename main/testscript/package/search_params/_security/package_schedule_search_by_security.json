@@ -6,7 +6,7 @@
   "title": "package schedule search_by security",
   "status": "draft",
   "experimental": true,
-  "date": "2024-02-15T16:56:49+00:00",
+  "date": "2024-02-23T13:21:30+00:00",
   "publisher": "The MITRE Corporation",
   "fixture": [
     {
@@ -20,9 +20,9 @@
   ],
   "variable": [
     {
-      "name": "z9muKCcgaveICzJs",
+      "name": "iE6ZXlikIiafOl8g",
       "expression": "Schedule.meta.security",
-      "sourceId": "r8hD7pHfNj7OYDbh"
+      "sourceId": "uVuMiio8hpbq4I2q"
     }
   ],
   "setup": {
@@ -35,7 +35,7 @@
           },
           "label": "Operation_1",
           "encodeRequestUrl": false,
-          "responseId": "r8hD7pHfNj7OYDbh",
+          "responseId": "uVuMiio8hpbq4I2q",
           "sourceId": "example_schedule"
         }
       }
@@ -54,7 +54,7 @@
             "resource": "Schedule",
             "label": "Operation_2",
             "encodeRequestUrl": false,
-            "params": "?_security=${z9muKCcgaveICzJs}"
+            "params": "?_security=${iE6ZXlikIiafOl8g}"
           }
         }
       ]
@@ -71,7 +71,7 @@
           "resource": "Schedule",
           "label": "Operation_3",
           "encodeRequestUrl": false,
-          "params": "/${z9muKCcgaveICzJs}"
+          "params": "/${iE6ZXlikIiafOl8g}"
         }
       }
     ]

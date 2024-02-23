@@ -6,7 +6,7 @@
   "title": "package slot search_by source",
   "status": "draft",
   "experimental": true,
-  "date": "2024-02-15T16:56:49+00:00",
+  "date": "2024-02-23T13:21:30+00:00",
   "publisher": "The MITRE Corporation",
   "fixture": [
     {
@@ -20,9 +20,9 @@
   ],
   "variable": [
     {
-      "name": "pS8gegGY4mgGkfJ2",
+      "name": "YNM36etwBZl61o8L",
       "expression": "Slot.meta.source",
-      "sourceId": "EHR68j5B4op0HVxE"
+      "sourceId": "O10y9CEfFxExMkei"
     }
   ],
   "setup": {
@@ -35,7 +35,7 @@
           },
           "label": "Operation_1",
           "encodeRequestUrl": false,
-          "responseId": "EHR68j5B4op0HVxE",
+          "responseId": "O10y9CEfFxExMkei",
           "sourceId": "example_slot"
         }
       }
@@ -54,7 +54,7 @@
             "resource": "Slot",
             "label": "Operation_2",
             "encodeRequestUrl": false,
-            "params": "?_source=${pS8gegGY4mgGkfJ2}"
+            "params": "?_source=${YNM36etwBZl61o8L}"
           }
         }
       ]
@@ -71,7 +71,7 @@
           "resource": "Slot",
           "label": "Operation_3",
           "encodeRequestUrl": false,
-          "params": "/${pS8gegGY4mgGkfJ2}"
+          "params": "/${YNM36etwBZl61o8L}"
         }
       }
     ]
