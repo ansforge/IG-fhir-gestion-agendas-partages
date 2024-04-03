@@ -2,7 +2,7 @@
 // De plus, cela permet une uniformité sur les url canoniques de l'ensemble des profils GAP.
 
 Profile: GAP_FrAppointment
-Parent: FrAppointment
+Parent: fr-core-appointment
 Title: "GAP-FrAppointment"
 Id: gap-fr-appointment
 Description: "Profil décrivant un rendez-vous médical"

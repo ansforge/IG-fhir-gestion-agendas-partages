@@ -18,13 +18,13 @@ Usage: #definition
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)"
 
 * rest.resource[0].type = #Patient
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrPatient"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
 
 * rest.resource[+].type = #Practitioner
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrPractitioner"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
@@ -36,25 +36,25 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #delete
 
 * rest.resource[+].type = #RelatedPerson
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
 
 * rest.resource[+].type = #Location
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrLocation"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
 
 * rest.resource[+].type = #HealthcareService
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrHealthcareService"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
 
 * rest.resource[+].type = #Organization
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrOrganization"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
@@ -66,7 +66,7 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #delete
 
 * rest.resource[+].type = #Schedule
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrSchedule"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete

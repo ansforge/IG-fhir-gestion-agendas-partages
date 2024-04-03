@@ -18,14 +18,14 @@ Usage: #definition
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
 
 * rest.resource[0].type = #Schedule
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrSchedule"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].interaction[+].code = #patch
 
 * rest.resource[+].type = #Slot
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrSlot"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "GAP_Slot_earliestStart"
@@ -74,7 +74,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "The free/busy status of the appointment"
 
 * rest.resource[+].type = #Appointment
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrAppointment"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #read

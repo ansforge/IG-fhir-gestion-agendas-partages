@@ -1,7 +1,7 @@
 Instance: example-req-appointment
 InstanceOf: gap-fr-appointment
 Usage: #example
-* meta.profile = "http://interopsante.org/fhir/StructureDefinition/FrAppointment"
+* meta.profile = Canonical(gap-fr-appointment)
 * extension.url = "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator"
 * extension.valueReference = Reference(https://exampleserver.org/fhir/Patient/1)
 * identifier.system = "http://example.org/sampleappointment-identifier"
