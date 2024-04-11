@@ -16,7 +16,7 @@ parameters:
   shownav: 'true'
 
 dependencies:
-  ans.fhir.fr.annuaire: 1.0.0-ballot-4
+  ans.fhir.fr.annuaire: 1.0.0
   hl7.fhir.fr.core: 2.0.0
   ans.fr.nos: 1.1.0
 
