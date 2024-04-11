@@ -1,6 +1,7 @@
 {
   "version" : "3.0.0-ballot",
   "fhirVersion" : ["4.0.1"],
-  "date" : "20240207155850",
-  "name" : "ans.fhir.fr.gap"
+  "date" : "20240411121443",
+  "name" : "ans.fhir.fr.gap",
+  "jurisdiction" : "urn:iso:std:iso:3166#FR"
 }

@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "GAP"] ; # 
   fhir:title [ fhir:v "Gestion d'Agendas Partagés (GAP)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-02-07T15:59:24+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-04-11T12:15:18+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -67,15 +67,15 @@
        fhir:link <https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire>
      ] ;
      fhir:packageId [ fhir:v "ans.fhir.fr.annuaire" ] ;
-     fhir:version [ fhir:v "1.0.0-ballot-3" ]
+     fhir:version [ fhir:v "1.0.0" ]
   ] [
      fhir:id [ fhir:v "hl7_fhir_fr_core" ] ;
      fhir:uri [
-       fhir:v "http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core"^^xsd:anyURI ;
-       fhir:link <http://fhir.org/packages/hl7.fhir.fr.core/ImplementationGuide/hl7.fhir.fr.core>
+       fhir:v "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core>
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
-     fhir:version [ fhir:v "1.1.0" ]
+     fhir:version [ fhir:v "2.0.0" ]
   ] [
      fhir:id [ fhir:v "ans_fr_nos" ] ;
      fhir:uri [

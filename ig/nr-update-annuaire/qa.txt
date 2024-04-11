@@ -1,18 +1,18 @@
 GAP : Validation Results
 =========================================
 
-err = 12, warn = 15, info = 9
-IG Publisher Version: 1.5.16
-Generated Wed Feb 07 16:02:22 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
+err = 14, warn = 15, info = 10
+IG Publisher Version: 1.6.4
+Generated Thu Apr 11 12:18:21 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0-ballot (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
  Build Errors : 0 / 6 / 0
- /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Appointment-example-req-appointment : 5 / 0 / 5
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Appointment-example-req-appointment : 6 / 0 / 4
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 1 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-DeclarantRDV : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireAgenda : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireRessources : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/CapabilityStatement-Gap-Declarant : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.gap : 0 / 0 / 1
- /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Schedule-example : 3 / 0 / 6
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Schedule-example : 4 / 0 / 6
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Appointment-created : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Appointment-description : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Appointment-earliestStart : 1 / 1 / 1
@@ -20,12 +20,12 @@ Generated Wed Feb 07 16:02:22 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.gap#3
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Appointment-priority : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Slot-earliestStart : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/SearchParameter-GAP-Slot-latestStart : 0 / 0 / 1
- /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Slot-example : 1 / 0 / 5
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/Slot-example : 1 / 0 / 3
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-dispo : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-rdv : 0 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-fr-appointment : 0 / 0 / 3
- /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-fr-schedule : 0 / 0 / 3
- /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-fr-slot : 0 / 0 / 2
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-fr-appointment : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-fr-schedule : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/fsh-generated/resources/StructureDefinition-gap-fr-slot : 0 / 0 / 1
 </table>
 == n/a ==
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Schedule/example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -35,6 +35,9 @@ WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in 
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/Appointment-example-req-appointment.json ==
+INFORMATION: Appointment/example-req-appointment: Appointment.extension[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-appointment|3.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Appointment/example-req-appointment: Appointment.meta.profile[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-appointment|3.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+ERROR: Appointment/example-req-appointment: Appointment.extension[0]: The extension http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator could not be found so is not allowed here
 ERROR: Appointment/example-req-appointment: Appointment.extension[0].value.ofType(Reference): Unable to resolve resource with reference 'https://exampleserver.org/fhir/Patient/1'
 INFORMATION: Appointment/example-req-appointment: Appointment.serviceType[0].coding[0].system: A definition for CodeSystem 'http://example.org/ValueSet/ServiceType' could not be found, so the code cannot be validated
 ERROR: Appointment/example-req-appointment: Appointment.slot[0]: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Slot/example'
@@ -54,8 +57,12 @@ WARNING: CapabilityStatement/GAP-GestionnaireRessources: CapabilityStatement: Co
 WARNING: CapabilityStatement/Gap-Declarant: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.gap.json ==
 == fsh-generated/resources/Schedule-example.json ==
+INFORMATION: Schedule/example: Schedule.extension[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-schedule|3.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Schedule/example: Schedule.extension[1]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-schedule|3.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Schedule/example: Schedule.meta.profile[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-schedule|3.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+ERROR: Schedule/example: Schedule.extension[0]: The extension http://interopsante.org/fhir/StructureDefinition/FrScheduleAvailabiltyTime could not be found so is not allowed here
 INFORMATION: Schedule/example: Schedule.extension[0].extension[1].value.ofType(Coding): A definition for CodeSystem 'http://terminology.interopsante.org/CodeSystem/v2-3315' could not be found, so the code cannot be validated
-ERROR: Schedule/example: Schedule.extension[0].extension[1].value.ofType(Coding).system: Value is 'http://terminology.interopsante.org/CodeSystem/v2-3315' but must be 'http://interopsante.org/fhir/CodeSystem/fr-schedule-type'
+ERROR: Schedule/example: Schedule.extension[1]: The extension http://interopsante.org/fhir/StructureDefinition/FrServiceTypeDuration could not be found so is not allowed here
 INFORMATION: Schedule/example: Schedule.extension[1].extension[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://example.org/ValueSet/ServiceType' could not be found, so the code cannot be validated
 ERROR: Schedule/example: Schedule.actor[0]: Unable to resolve resource with reference 'https://exampleserver.org/fhir/PractitionerRole/1'
 ERROR: Schedule/example: Schedule.actor[1]: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Practitioner/1'
@@ -71,6 +78,7 @@ WARNING: SearchParameter/GAP-Appointment-latestStart: SearchParameter: Unable to
 == fsh-generated/resources/SearchParameter-GAP-Slot-earliestStart.json ==
 == fsh-generated/resources/SearchParameter-GAP-Slot-latestStart.json ==
 == fsh-generated/resources/Slot-example.json ==
+INFORMATION: Slot/example: Slot.meta.profile[0]: This element does not match any known slice defined in the profile https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-slot|3.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Slot/example: Slot.serviceType[0].coding[0].system: A definition for CodeSystem 'http://example.org/ValueSet/ServiceType' could not be found, so the code cannot be validated
 ERROR: Slot/example: Slot.schedule: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Schedule/example'
 == fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-dispo.json ==
@@ -78,10 +86,5 @@ WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir
 == fsh-generated/resources/StructureDefinition-gap-bundle-reponse-demande-consult-rdv.json ==
 WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-bundle-reponse-demande-consult-rdv'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-gap-fr-appointment.json ==
-INFORMATION: StructureDefinition/gap-fr-appointment: StructureDefinition.snapshot.element[43].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-INFORMATION: StructureDefinition/gap-fr-appointment: StructureDefinition.snapshot.element[44].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 == fsh-generated/resources/StructureDefinition-gap-fr-schedule.json ==
-INFORMATION: StructureDefinition/gap-fr-schedule: StructureDefinition.snapshot.element[18].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-INFORMATION: StructureDefinition/gap-fr-schedule: StructureDefinition.snapshot.element[25].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 == fsh-generated/resources/StructureDefinition-gap-fr-slot.json ==
-INFORMATION: StructureDefinition/gap-fr-slot: StructureDefinition.snapshot.element[16].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk

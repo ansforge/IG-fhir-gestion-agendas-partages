@@ -121,6 +121,18 @@
       "http://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html" : "Appointment cancellation reason"
     },
     {
+      "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CommonTags",
+      "title" : "Common Tags",
+      "description" : "Common Tag Codes defined by FHIR project",
+      "oids" : ["2.16.840.1.113883.4.642.1.1067"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-common-tags.html" : "Common Tags"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/participant-type",
       "version" : "0.5.0",
       "status" : "draft",
@@ -194,7 +206,7 @@
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-      "version" : "1.1.0",
+      "version" : "1.2.0",
       "status" : "active",
       "name" : "TRE_R38-SpecialiteOrdinale",
       "title" : null,
@@ -202,7 +214,7 @@
       "oids" : ["1.2.250.1.213.2.28"],
       "uses" : {
       },
-      "https://simplifier.net/resolve?scope=hl7.fhir.fr.core@1.1.0&canonical=http://interopsante.org/fhir/ValueSet/fr-practitioner-specialty" : "fr-practitioner-specialty"
+      "https://hl7.fr/ig/fhir/core/2.0.0/ValueSet-fr-core-vs-practitioner-specialty.html" : "FR Core ValueSet Practitioner specialty"
     },
     {
       "url" : "urn:ietf:bcp:47",
