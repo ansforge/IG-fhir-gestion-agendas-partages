@@ -2,7 +2,7 @@
 // De plus, cela permet une uniformité sur les url canoniques de l'ensemble des profils GAP.
 
 Profile: GAP_FrSchedule
-Parent: FrSchedule
+Parent: fr-core-schedule
 Id: gap-fr-schedule
 Title: "GAP-FrSchedule"
 Description: "Profil décrivant un agenda médical"
