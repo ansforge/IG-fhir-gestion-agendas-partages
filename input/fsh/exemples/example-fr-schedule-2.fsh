@@ -1,7 +1,7 @@
 Instance: example-fr-schedule-2
 InstanceOf: gap-fr-schedule
 Usage: #inline
-* meta.profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule"
+* meta.profile = Canonical(gap-fr-schedule)
 * extension.url = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-service-type-duration"
 * extension.extension[0].url = "serviceType"
 * extension.extension[=].valueCodeableConcept = $ServiceType#1 "suivi"

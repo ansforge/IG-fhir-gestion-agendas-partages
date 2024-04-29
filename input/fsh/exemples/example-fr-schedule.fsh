@@ -2,7 +2,7 @@ Instance: example-fr-schedule
 InstanceOf: gap-fr-schedule
 Usage: #example
 * id = "example"
-* meta.profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule"
+* meta.profile = Canonical(gap-fr-schedule)
 * extension[0].url = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule-availability-time"
 * extension[=].extension[0].url = "identifier"
 * extension[=].extension[=].valueIdentifier.value = "dispo09112020"
