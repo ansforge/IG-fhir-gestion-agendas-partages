@@ -48,13 +48,13 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #delete
 
 * rest.resource[+].type = #HealthcareService
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrHealthcareService"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
 
 * rest.resource[+].type = #Organization
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrOrganization"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #delete
