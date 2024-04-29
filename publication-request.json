@@ -5,10 +5,7 @@
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "trial-use",
-    "title" : "Gestion d'Agendas Partagés (GAP)",
     "desc" : "Première version de la documentation du volet CI-SIS Gestion d'Agendas Partagés au format IG.",
     "descmd" : "Première version de la documentation du volet CI-SIS Gestion d'Agendas Partagés au format IG.\n-  Ajout mapping iCal / MOS [#21](https://github.com/ansforge/IG-fhir-gestion-agendas-partages/pull/21).\n-  Mise à jour de l'héritage de l'IG annuaire et du NOS [#28](https://github.com/ansforge/IG-fhir-gestion-agendas-partages/pull/28)",
-    "ci-build" : "https://ansforge.github.io/IG-fhir-gestion-agenda-partage/ig/main/",
-    "category" : "Care Planning",
-    "introduction" : "Gestion d'Agendas Partagés (GAP)"
+    "ci-build" : "https://ansforge.github.io/IG-fhir-gestion-agenda-partage/main/ig",
   }
