@@ -11,7 +11,7 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/agenda"
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/gap"
 * rest.mode = #client
 * rest.documentation = "Crée, modifie et supprime une ressource - déclare les disponibilités d'une ressource"
 * rest.security.cors = false

@@ -11,7 +11,7 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/agenda"
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/gap"
 * rest.mode = #server
 * rest.documentation = "Déclaration, modification et suppression des disponibilités d'une ressource"
 * rest.security.cors = false
@@ -36,8 +36,14 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_latestStart"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur la date et l'heure de disponibilité souhaité, date au plus tard"
+<<<<<<< Updated upstream
 * rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor_AsDevice"
 * rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsDevice"
+=======
+
+* rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Schedule-actor"
+>>>>>>> Stashed changes
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur les caractéristiques de la ressource Device qui est l'acteur d'agenda (identifiant, nom, modèle, type)"
 * rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor_AsHealthcareService"

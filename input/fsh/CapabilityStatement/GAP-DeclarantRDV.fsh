@@ -11,7 +11,7 @@ Usage: #definition
 * kind = #requirements
 * format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/agenda"
+* implementationGuide = "https://interop.esante.gouv.fr/ig/fhir/gap"
 * rest.mode = #client
 * rest.documentation = "Création mise à jour de RDV"
 * rest.security.cors = false
