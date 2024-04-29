@@ -289,12 +289,12 @@ The purpose of this implementation guide is to allow the management of resources
 
 <h3 id="profils-définis-dans-le-guide-dimplémentation">Profils définis dans le guide d’implémentation</h3>
 
-<table class="grid"><tr><td style="background-color: #eeeeee">Titre du profil</td><td style="background-color: #eeeeee">Description</td><td style="background-color: #eeeeee">Parent</td></tr><tr><td><div><p><a href="StructureDefinition-gap-bundle-reponse-demande-consult-dispo.html">GAP-BundleResultatReponseADemandeConsultationDisponibilites</a></p>
-</div></td><td>Profil du bundle de réponse à la demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, elle devra contenir les informations sur le temps libre ou occupé de chacune des ressources. La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande. Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris</td><td><a href="http://hl7.org/fhir/StructureDefinition/Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a></td></tr><tr><td><div><p><a href="StructureDefinition-gap-bundle-reponse-demande-consult-rdv.html">GAP-BundleResultatReponseADemandeConsultationRDV</a></p>
-</div></td><td>Profil du bundle de réponse à la recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande</td><td><a href="http://hl7.org/fhir/StructureDefinition/Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a></td></tr><tr><td><div><p><a href="StructureDefinition-gap-fr-appointment.html">GAP-FrAppointment</a></p>
-</div></td><td>Profil décrivant un rendez-vous médical</td><td><a href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment</a></td></tr><tr><td><div><p><a href="StructureDefinition-gap-fr-schedule.html">GAP-FrSchedule</a></p>
-</div></td><td>Profil décrivant un agenda médical</td><td><a href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule</a></td></tr><tr><td><div><p><a href="StructureDefinition-gap-fr-slot.html">GAP-FrSlot</a></p>
-</div></td><td>Profil décrivant un créneau</td><td><a href="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot</a></td></tr></table>
+<table class="grid"><tr><td style="background-color: #eeeeee">Titre du profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><div><p><a href="StructureDefinition-gap-bundle-reponse-demande-consult-dispo.html">GAP-BundleResultatReponseADemandeConsultationDisponibilites</a></p>
+</div></td><td>Profil du bundle de réponse à la demande de consultation des disponibilités d’une ou de plusieurs ressources. Sur la durée demandée, elle devra contenir les informations sur le temps libre ou occupé de chacune des ressources. La réponse contient donc les disponibilités (Slot) des ressources répondant aux critères de recherche de la demande. Les Slot portant le statut free représentent les disponibilités (status=free). Status=busy pour les indisponibilités correspondant à des rendez-vous pris</td></tr><tr><td><div><p><a href="StructureDefinition-gap-bundle-reponse-demande-consult-rdv.html">GAP-BundleResultatReponseADemandeConsultationRDV</a></p>
+</div></td><td>Profil du bundle de réponse à la recherche de rendez-vous dans l’agenda d’une ressource. Sur la durée demandée, il devra contenir les informations sur les rendez-vous répondant aux critères de recherche envoyés dans la demande</td></tr><tr><td><div><p><a href="StructureDefinition-gap-fr-appointment.html">GAP-FrAppointment</a></p>
+</div></td><td>Profil décrivant un rendez-vous médical</td></tr><tr><td><div><p><a href="StructureDefinition-gap-fr-schedule.html">GAP-FrSchedule</a></p>
+</div></td><td>Profil décrivant un agenda médical</td></tr><tr><td><div><p><a href="StructureDefinition-gap-fr-slot.html">GAP-FrSlot</a></p>
+</div></td><td>Profil décrivant un créneau</td></tr></table>
 <!-- like "%Profil%" rajouté car induit une erreur si vide -->
 
 <p>D’autres ressources mentionnés dans ce document n’ont pas été profilées (liste non exhaustive).</p>
@@ -439,7 +439,7 @@ The purpose of this implementation guide is to allow the management of resources
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 29, 2024 12:06+0000">2024-04-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.gap#3.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 29, 2024 12:16+0000">2024-04-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
