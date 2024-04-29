@@ -3,7 +3,6 @@ InstanceOf: SearchParameter
 Usage: #definition
 * version = "2.0"
 * name = "GAP_Appointment_earliestStart"
-* derivedFrom = "http://hl7.org/fhir/SearchParameter/Appointment-start"
 * status = #active
 * experimental = false
 * description = "Earliest start of an appointment"

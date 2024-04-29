@@ -1,7 +1,7 @@
 Instance: GAP-GestionnaireAgenda
 InstanceOf: CapabilityStatement
 Usage: #definition
-* name = "GAP-GestionnaireAgenda"
+* name = "GAP_GestionnaireAgenda"
 * title = "CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP"
 * status = #active
 * experimental = false
@@ -28,48 +28,29 @@ Usage: #definition
 * rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
+
 * rest.resource[=].searchParam[0].name = "GAP_Slot_earliestStart"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_earliestStart"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Slot-earliestStart"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur la date et l'heure de la disponibilité souhaité, date au plus tôt"
+
 * rest.resource[=].searchParam[+].name = "GAP_Slot_latestStart"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_latestStart"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Slot-latestStart"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur la date et l'heure de disponibilité souhaité, date au plus tard"
-<<<<<<< Updated upstream
-* rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor_AsDevice"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsDevice"
-=======
 
 * rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Schedule-actor"
 >>>>>>> Stashed changes
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur les caractéristiques de la ressource Device qui est l'acteur d'agenda (identifiant, nom, modèle, type)"
-* rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor_AsHealthcareService"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsHealthcareService"
+
+* rest.resource[=].searchParam[+].name = "Schedule-actor"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Schedule-actor"
 * rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur les caractéristiques de la ressource HealthcareService qui est l'acteur d'agenda (identifiant, nom, type, identifiant-nom-type de l'organization)"
-* rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor_AsLocation"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsLocation"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur les caractéristiques du lieu d'exercice de la ressource (Location) qui est l'acteur d'agenda (nom, adresse, proximité et code postal)"
-* rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor_AsPatient"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPatient"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur les caractéristiques de la ressource Patient qui est l'acteur d'agenda (identifiant, nom, prénom)"
-* rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor_AsPractitioner"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPractitioner"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur les caractéristiques de la ressource Practitioner qui est l'acteur d'agenda (identifiant, nom, prénom)"
-* rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor_AsPractitionerRole"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsPractitionerRole"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur sur les caractéristiques de la ressource PractitionerRole qui est l'acteur d'agenda (profession, spécialité, adresse, telecom, nom-prénom du professionnel)"
-* rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor_AsRelatedPerson"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Schedule_Actor_AsRelatedPerson"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "sur sur les caractéristiques de la ressource RelatedPerson qui est l'acteur d'agenda (identifiant, nom, adresse, telecom)"
+* rest.resource[=].searchParam[=].documentation = "Recherche d'un acteur de l'agenda"
+
+
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Slot-identifier"
 * rest.resource[=].searchParam[=].type = #token
@@ -86,30 +67,37 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].conditionalUpdate = true
+
 * rest.resource[=].searchParam[0].name = "GAP_Appointment_priority"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_priority"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-priority"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Priority of the appointment"
+
 * rest.resource[=].searchParam[+].name = "GAP_Appointment_description"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_description"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-description"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Comment or title of the appointment"
+
 * rest.resource[=].searchParam[+].name = "GAP_Appointment_created"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_created"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-created"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date that this appointment was initially created"
+
 * rest.resource[=].searchParam[+].name = "GAP_Appointment_Actor"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_Actor"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Appointment-actor"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Recherche d'un rendez-vous sur l'identifiant de l'acteur, la ressource pouvant être Patient, Practitioner, PractitionerRole, RelatedPerson, Location, Device ou HealthcareService"
 * rest.resource[=].searchParam[+].name = "GAP_Appointment_earliestStart"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_earliestStart"
+
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-earliestStart"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Recherche d'un rendez-vous sur la date et heure de rendez-vous, date au plus tôt"
+
 * rest.resource[=].searchParam[+].name = "GAP_Appointment_latestStart"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_latestStart"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-latestStart"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Recherche d'un rendez-vous sur la date et heure de rendez-vous, date au plus tard"
+
 * rest.resource[=].searchParam[+].name = "date"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Appointment-date"
 * rest.resource[=].searchParam[=].type = #date

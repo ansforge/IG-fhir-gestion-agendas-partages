@@ -1,7 +1,7 @@
 Instance: Gap-Declarant
 InstanceOf: CapabilityStatement
 Usage: #definition
-* name = "GAP-Declarant"
+* name = "GAP_Declarant"
 * title = "CI-SIS Gestion-d-Agendas-Partages - DeclarantGAP"
 * status = #active
 * experimental = false

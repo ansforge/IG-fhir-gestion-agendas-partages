@@ -6,5 +6,5 @@ Usage: #definition
 * description = "Date that this appointment was initially created"
 * code = #created
 * base = #Appointment
-* type = #token
+* type = #date
 * expression = "Appointment.created"

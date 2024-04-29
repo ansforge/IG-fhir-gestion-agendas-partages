@@ -42,4 +42,4 @@ Une mise en correspondance est faite entre :
 * Les objets métier identifiés à l’issue des spécifications fonctionnelles du volet Gestion d’agendas partagés (cf. CI-SIS Spécifications fonctionnelles – Gestion d’agendas Partagés)
 * Et les ressources et éléments du standard HL7 FHIR
 
-Pour chaque objet métier, les tableaux ci-dessous reprennent l’ensemble des éléments métier identifiés dans l’étude métier du cas d’usage. Pour chaque attribut de chaque classe métier, la ressource FHIR et plus particulièrement l’élément de cette ressource utilisé pour véhiculer l’information est identifié. Lorsqu’un profil existant est identifié, les caractéristiques de l’élément FHIR de ce profil sont rapportées.
+Pour chaque objet métier, les tableaux indiqués dans les pages de description des flux reprennent l’ensemble des éléments métier identifiés dans l’étude métier du cas d’usage. Pour chaque attribut de chaque classe métier, la ressource FHIR et plus particulièrement l’élément de cette ressource utilisé pour véhiculer l’information est identifié.

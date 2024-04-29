@@ -5,19 +5,19 @@ title: Gestion d'Agendas Partagés (GAP)
 publisher:
   name: ANS
   url: https://esante.gouv.fr
-status: draft
-version: 3.0.0-ballot
+status: active
+version: 3.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: 3.0.0-ballot
+releaseLabel: trial-use
 jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
 parameters:
   shownav: 'true'
 
 dependencies:
-  ans.fhir.fr.annuaire: 1.0.0
-  hl7.fhir.fr.core: 2.0.0
+  ans.fhir.fr.annuaire: 1.0.1
+  hl7.fhir.fr.core: 2.0.1
   ans.fr.nos: 1.1.0
 
 pages:

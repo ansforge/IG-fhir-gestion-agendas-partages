@@ -1,14 +1,11 @@
 {
     "package-id" : "ans.fhir.fr.gap",
-    "version" : "3.0.0-ballot",
-    "path" : "https://interop.esante.gouv.fr/ig/fhir/gap/3.0.0-ballot",
+    "version" : "3.0.0",
+    "path" : "https://interop.esante.gouv.fr/ig/fhir/gap/3.0.0",
     "mode" : "milestone",
     "status" : "release",
-    "sequence" : "3.0.0-ballot",
-    "title" : "Gestion d'Agendas Partagés (GAP)",
+    "sequence" : "trial-use",
     "desc" : "Première version de la documentation du volet CI-SIS Gestion d'Agendas Partagés au format IG.",
-    "descmd" : "Première version de la documentation du volet CI-SIS Gestion d'Agendas Partagés au format IG.\n-  Passage de spécifications PDF à spécifications sours forme d'IG.\n-  Ajout des spécifications fonctionnelles (jointes).\n-  Eclaircissement de l'usage de la ressource Slot.\n-  Profilage des ressources GAP (Appointment, Slot, Schedule).\n-  Ajout d'exemples.\n-  Ajout des SearchParameters.\n-  Ajout de la dépendance vers le nouvel IG annuaire.",
-    "ci-build" : "https://ansforge.github.io/IG-fhir-gestion-agenda-partage/ig/main/",
-    "category" : "Care Planning",
-    "introduction" : "Gestion d'Agendas Partagés (GAP)"
+    "descmd" : "Première version de la documentation du volet CI-SIS Gestion d'Agendas Partagés au format IG.\n-  Ajout mapping iCal / MOS [#21](https://github.com/ansforge/IG-fhir-gestion-agendas-partages/pull/21).\n-  Mise à jour de l'héritage de l'IG annuaire et du NOS [#28](https://github.com/ansforge/IG-fhir-gestion-agendas-partages/pull/28)",
+    "ci-build" : "https://ansforge.github.io/IG-fhir-gestion-agenda-partage/main/ig",
   }
