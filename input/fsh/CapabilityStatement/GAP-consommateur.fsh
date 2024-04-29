@@ -148,8 +148,8 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-role"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Profession du professionnel"
-* rest.resource[=].searchParam[+].name = "speciality"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-speciality"
+* rest.resource[=].searchParam[+].name = "specialty"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-specialty"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Spécialité du professionnel"
 * rest.resource[=].searchParam[+].name = "location"
