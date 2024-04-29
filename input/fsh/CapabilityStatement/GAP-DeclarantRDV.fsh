@@ -1,7 +1,7 @@
 Instance: GAP-DeclarantRDV
 InstanceOf: CapabilityStatement
 Usage: #definition
-* name = "GAP-DeclarantRDV"
+* name = "GAP_DeclarantRDV"
 * title = "CI-SIS Gestion-d-Agendas-Partages - DeclarantRDVGAP"
 * status = #active
 * experimental = false

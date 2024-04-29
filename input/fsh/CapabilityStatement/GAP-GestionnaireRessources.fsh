@@ -1,7 +1,7 @@
 Instance: GAP-GestionnaireRessources
 InstanceOf: CapabilityStatement
 Usage: #definition
-* name = "GAP-GestionnaireRessources"
+* name = "GAP_GestionnaireRessources"
 * title = "CI-SIS Gestion-d-Agendas-Partages - GestionnaireRessourcesGAP"
 * status = #active
 * experimental = false

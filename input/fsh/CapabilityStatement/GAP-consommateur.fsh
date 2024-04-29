@@ -1,7 +1,7 @@
 Instance: GAP-Consommateur
 InstanceOf: CapabilityStatement
 Usage: #definition
-* name = "GAP-consommateur"
+* name = "GAP_consommateur"
 * title = "CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP"
 * status = #active
 * experimental = false

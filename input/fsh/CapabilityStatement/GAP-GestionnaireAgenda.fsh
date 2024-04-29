@@ -1,7 +1,7 @@
 Instance: GAP-GestionnaireAgenda
 InstanceOf: CapabilityStatement
 Usage: #definition
-* name = "GAP-GestionnaireAgenda"
+* name = "GAP_GestionnaireAgenda"
 * title = "CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP"
 * status = #active
 * experimental = false
