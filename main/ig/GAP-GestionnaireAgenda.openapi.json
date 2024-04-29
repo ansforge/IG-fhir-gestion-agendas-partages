@@ -425,9 +425,9 @@
             }
           },
           {
-            "name": "GAP_Schedule_Actor_AsDevice",
+            "name": "GAP_Schedule_Actor",
             "in": "query",
-            "description": "Recherche d\u0027une disponibilité sur les caractéristiques de la ressource Device qui est l\u0027acteur d\u0027agenda (identifiant, nom, modèle, type)",
+            "description": "The individual(HealthcareService, Practitioner, Location, ...) to find a Schedule for",
             "schema": {
               "type": "string"
             }

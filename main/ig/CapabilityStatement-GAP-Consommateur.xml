@@ -3,7 +3,7 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
   <id value="GAP-Consommateur"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP</h2><ul><li>Implementation Guide Version: 3.0.0</li><li>FHIR Version: 4.0.1</li><li>Supported Formats: <code>application/fhir+xml</code>, <code>application/fhir+json</code></li><li>Supported Patch Formats: </li><li>Published on: 2023-08-02</li><li>Published by: ANS</li></ul><blockquote class="impl-note"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as &quot;SHALL NOT&quot;. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h3 id="shallIGs">SHALL Support the Following Implementation Guides</h3><ul><li>https://interop.esante.gouv.fr/ig/fhir/agenda</li></ul><h2 id="rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>client</code></h3></div><div class="panel-body"><div><p>consultation de disponibilités</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP</h2><ul><li>Implementation Guide Version: 3.0.0</li><li>FHIR Version: 4.0.1</li><li>Supported Formats: <code>application/fhir+xml</code>, <code>application/fhir+json</code></li><li>Supported Patch Formats: </li><li>Published on: 2023-08-02</li><li>Published by: ANS</li></ul><blockquote class="impl-note"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as &quot;SHALL NOT&quot;. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h3 id="shallIGs">SHALL Support the Following Implementation Guides</h3><ul><li>https://interop.esante.gouv.fr/ig/fhir/gap</li></ul><h2 id="rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>client</code></h3></div><div class="panel-body"><div><p>consultation de disponibilités</p>
 </div><div class="lead"><em>Security</em></div><blockquote><div><p>L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S
 ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes
 d’information de santé (CI-SIS)</p>
@@ -80,7 +80,7 @@ d’information de santé (CI-SIS)</p>
   <fhirVersion value="4.0.1"/>
   <format value="application/fhir+xml"/>
   <format value="application/fhir+json"/>
-  <implementationGuide value="https://interop.esante.gouv.fr/ig/fhir/agenda"/>
+  <implementationGuide value="https://interop.esante.gouv.fr/ig/fhir/gap"/>
   <rest>
     <mode value="client"/>
     <documentation value="consultation de disponibilités"/>
