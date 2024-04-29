@@ -57,9 +57,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.79"],
       "uses" : {
       },
-      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule",
+      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot",
       "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
-      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot"
+      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/encounter-participant-type",
@@ -147,11 +147,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule",
+      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot",
       "StructureDefinition-gap-bundle-reponse-demande-consult-rdv.html" : "GAP-BundleResultatReponseADemandeConsultationRDV",
       "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
-      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot",
-      "StructureDefinition-gap-bundle-reponse-demande-consult-dispo.html" : "GAP-BundleResultatReponseADemandeConsultationDisponibilites"
+      "StructureDefinition-gap-bundle-reponse-demande-consult-dispo.html" : "GAP-BundleResultatReponseADemandeConsultationDisponibilites",
+      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/participantrequired",
@@ -214,9 +214,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.47"],
       "uses" : {
       },
-      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule",
+      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot",
       "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
-      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot"
+      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/service-category",
@@ -230,9 +230,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.516"],
       "uses" : {
       },
-      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule",
+      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot",
       "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
-      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot"
+      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/service-type",
@@ -246,9 +246,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.518"],
       "uses" : {
       },
-      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule",
+      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot",
       "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
-      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot"
+      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/slotstatus",
@@ -276,8 +276,8 @@
       "sources" : ["2.16.840.1.113883.21.181"],
       "uses" : {
       },
-      "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
-      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot"
+      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot",
+      "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment"
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-specialty",
@@ -291,9 +291,9 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule",
+      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot",
       "StructureDefinition-gap-fr-appointment.html" : "GAP-FrAppointment",
-      "StructureDefinition-gap-fr-slot.html" : "GAP-FrSlot"
+      "StructureDefinition-gap-fr-schedule.html" : "GAP-FrSchedule"
     }
   ]
 }
