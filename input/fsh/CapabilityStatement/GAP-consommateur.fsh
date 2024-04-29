@@ -1,7 +1,7 @@
 Instance: GAP-Consommateur
 InstanceOf: CapabilityStatement
 Usage: #definition
-* name = "GAP-consommateur"
+* name = "GAP_consommateur"
 * title = "CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP"
 * status = #active
 * experimental = false
@@ -21,22 +21,27 @@ Usage: #definition
 * rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
+
 * rest.resource[=].searchParam[0].name = "GAP_Slot_earliestStart"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_earliestStart"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Slot-earliestStart"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur la date et l'heure de début de disponibilité souhaité"
+
 * rest.resource[=].searchParam[+].name = "GAP_Slot_latestStart"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Slot_latestStart"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Slot-latestStart"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur la date et l'heure de fin de disponibilité souhaité"
+
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Slot-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Identifiant du slot"
+
 * rest.resource[=].searchParam[+].name = "status"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Slot-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Statut (occupé/libre) d'un slot"
+
 * rest.resource[=].searchParam[+].name = "schedule"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Slot-schedule"
 * rest.resource[=].searchParam[=].type = #reference
@@ -46,38 +51,47 @@ Usage: #definition
 * rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
+
 * rest.resource[=].searchParam[0].name = "GAP_Appointment_priority"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_priority"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-priority"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Priorité du rendez vous"
+
 * rest.resource[=].searchParam[+].name = "GAP_Appointment_description"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_description"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-description"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Description du rendez vous (titre ou commentaire)"
+
 * rest.resource[=].searchParam[+].name = "GAP_Appointment_created"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/GAP_Appointment_created"
+* rest.resource[=].searchParam[=].definition = "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-created"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Date de création du rendez vous"
+
 * rest.resource[=].searchParam[+].name = "actor"
-* rest.resource[=].searchParam[=].definition = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/Appointment-actor"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Appointment-actor"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Recherche d'un rendez-vous sur l'identifiant de l'acteur"
+
 * rest.resource[=].searchParam[+].name = "date"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Appointment-date"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "date et heure du rendez-vous"
+
 * rest.resource[=].searchParam[+].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Appointment-identifier"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "identifiant du rendez-vous"
+
 * rest.resource[=].searchParam[+].name = "service-type"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Appointment-service-type"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "serivce spécifique qui doit être réslisé pandant le rendez-vous"
+
 * rest.resource[=].searchParam[+].name = "status"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Appointment-status"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "status générale du rendez vous"
+
 * rest.resource[=].searchParam[+].name = "supporting-info"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Appointment-supporting-info"
 * rest.resource[=].searchParam[=].type = #reference
@@ -134,8 +148,8 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-role"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Profession du professionnel"
-* rest.resource[=].searchParam[+].name = "speciality"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-speciality"
+* rest.resource[=].searchParam[+].name = "specialty"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-specialty"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Spécialité du professionnel"
 * rest.resource[=].searchParam[+].name = "location"

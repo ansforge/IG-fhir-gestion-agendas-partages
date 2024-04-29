@@ -32,7 +32,7 @@ Dans ce scénario le système initiateur peut gérer, par délégation du gestio
 
 ### Profils définis dans le guide d'implémentation
 
-{% sql SELECT '[' || Title ||'](StructureDefinition-' || id || '.html)' as "Titre du profil", Description, json_extract(Json, '$.baseDefinition') as "Parent" FROM Resources WHERE Type = 'StructureDefinition' and Description like "Profil%" %}
+{% sql SELECT '[' || Title ||'](StructureDefinition-' || id || '.html)' as "Titre du profil", Description FROM Resources WHERE Type = 'StructureDefinition' and Description like "Profil%" %}
 <!-- like "%Profil%" rajouté car induit une erreur si vide -->
 
 D'autres ressources mentionnés dans ce document n'ont pas été profilées (liste non exhaustive).
