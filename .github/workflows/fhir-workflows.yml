@@ -14,7 +14,7 @@ jobs:
 
       - uses: ansforge/IG-workflows@v0.2.0
         with:      
-          bake: "false"
+          bake: "true"
           nos: "true"
           validator_cli: "true"     
           generate_plantuml : "true"
