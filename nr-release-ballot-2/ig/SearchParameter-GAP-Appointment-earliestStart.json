@@ -8,10 +8,9 @@
   "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-earliestStart",
   "version" : "3.0.0",
   "name" : "GAP_Appointment_earliestStart",
-  "derivedFrom" : "http://hl7.org/fhir/SearchParameter/Appointment-start",
   "status" : "active",
   "experimental" : false,
-  "date" : "2024-04-29T09:02:17+00:00",
+  "date" : "2024-04-29T09:05:31+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

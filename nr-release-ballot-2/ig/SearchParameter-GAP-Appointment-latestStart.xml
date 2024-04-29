@@ -9,10 +9,9 @@
   <url value="https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-latestStart"/>
   <version value="3.0.0"/>
   <name value="GAP_Appointment_latestStart"/>
-  <derivedFrom value="http://hl7.org/fhir/SearchParameter/Appointment-start"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2024-04-29T09:02:17+00:00"/>
+  <date value="2024-04-29T09:05:31+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>

@@ -1,22 +1,22 @@
 GAP : Validation Results
 =========================================
 
-err = 16, warn = 15, info = 8
+err = 11, warn = 13, info = 8
 IG Publisher Version: 1.6.6
-Generated Mon Apr 29 09:05:21 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
+Generated Mon Apr 29 09:08:42 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
  Build Errors : 3 / 6 / 0
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/Appointment-example-req-appointment : 5 / 0 / 7
- /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 2 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/CapabilityStatement-GAP-DeclarantRDV : 0 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireAgenda : 1 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireAgenda : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/CapabilityStatement-GAP-GestionnaireRessources : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/CapabilityStatement-Gap-Declarant : 0 / 1 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.gap : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/Schedule-example : 2 / 0 / 4
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/SearchParameter-GAP-Appointment-created : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/SearchParameter-GAP-Appointment-description : 0 / 0 / 1
- /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/SearchParameter-GAP-Appointment-earliestStart : 1 / 1 / 1
- /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/SearchParameter-GAP-Appointment-latestStart : 1 / 1 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/SearchParameter-GAP-Appointment-earliestStart : 0 / 0 / 1
+ /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/SearchParameter-GAP-Appointment-latestStart : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/SearchParameter-GAP-Appointment-priority : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/SearchParameter-GAP-Slot-earliestStart : 0 / 0 / 1
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/SearchParameter-GAP-Slot-latestStart : 0 / 0 / 1
@@ -47,14 +47,11 @@ ERROR: Appointment/example-req-appointment: Appointment.participant[1].actor: Un
 ERROR: Appointment/example-req-appointment: Appointment.participant[2].actor: Unable to resolve resource with reference 'https://exampleserver.org/fhir/Practitioner/1'
 INFORMATION: Appointment/example-req-appointment: Appointment.meta.profile[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment|2.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/CapabilityStatement-GAP-Consommateur.json ==
-ERROR: CapabilityStatement/GAP-Consommateur: CapabilityStatement.rest[0].resource[5].searchParam[1].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/PractitionerRole-speciality' does not resolve
 WARNING: CapabilityStatement/GAP-Consommateur: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
-ERROR: CapabilityStatement/GAP-Consommateur: CapabilityStatement.rest[0].resource[1].searchParam[2]: Type mismatch - SearchParameter 'https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-created|3.0.0' type is token, but type here is date
 == fsh-generated/resources/CapabilityStatement-GAP-DeclarantRDV.json ==
 WARNING: CapabilityStatement/GAP-DeclarantRDV: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 == fsh-generated/resources/CapabilityStatement-GAP-GestionnaireAgenda.json ==
 WARNING: CapabilityStatement/GAP-GestionnaireAgenda: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
-ERROR: CapabilityStatement/GAP-GestionnaireAgenda: CapabilityStatement.rest[0].resource[2].searchParam[2]: Type mismatch - SearchParameter 'https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-created|3.0.0' type is token, but type here is date
 == fsh-generated/resources/CapabilityStatement-GAP-GestionnaireRessources.json ==
 WARNING: CapabilityStatement/GAP-GestionnaireRessources: CapabilityStatement: Constraint failed: cpb-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/CapabilityStatement)
 == fsh-generated/resources/CapabilityStatement-Gap-Declarant.json ==
@@ -69,11 +66,7 @@ ERROR: Schedule/example: Schedule.actor[1]: Unable to resolve resource with refe
 == fsh-generated/resources/SearchParameter-GAP-Appointment-created.json ==
 == fsh-generated/resources/SearchParameter-GAP-Appointment-description.json ==
 == fsh-generated/resources/SearchParameter-GAP-Appointment-earliestStart.json ==
-ERROR: SearchParameter/GAP-Appointment-earliestStart: SearchParameter.derivedFrom: Canonical URL 'http://hl7.org/fhir/SearchParameter/Appointment-start' does not resolve
-WARNING: SearchParameter/GAP-Appointment-earliestStart: SearchParameter: Unable to find the base Search Parameter http://hl7.org/fhir/SearchParameter/Appointment-start so can't check that this SearchParameter is a proper derivation from it
 == fsh-generated/resources/SearchParameter-GAP-Appointment-latestStart.json ==
-ERROR: SearchParameter/GAP-Appointment-latestStart: SearchParameter.derivedFrom: Canonical URL 'http://hl7.org/fhir/SearchParameter/Appointment-start' does not resolve
-WARNING: SearchParameter/GAP-Appointment-latestStart: SearchParameter: Unable to find the base Search Parameter http://hl7.org/fhir/SearchParameter/Appointment-start so can't check that this SearchParameter is a proper derivation from it
 == fsh-generated/resources/SearchParameter-GAP-Appointment-priority.json ==
 == fsh-generated/resources/SearchParameter-GAP-Slot-earliestStart.json ==
 == fsh-generated/resources/SearchParameter-GAP-Slot-latestStart.json ==
