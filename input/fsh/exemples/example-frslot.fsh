@@ -2,7 +2,7 @@ Instance: example-frslot
 InstanceOf: gap-fr-slot
 Usage: #example
 * id = "example"
-* meta.profile = "http://interopsante.org/fhir/StructureDefinition/FrSlot"
+* meta.profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot"
 * identifier.use = #usual
 * identifier.system = "http://example.org/slots"
 * identifier.value = "451"
