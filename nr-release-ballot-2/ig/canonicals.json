@@ -4,35 +4,35 @@
     "type" : "CapabilityStatement",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-Consommateur",
     "version" : "3.0.0",
-    "name" : "GAP-consommateur"
+    "name" : "GAP_consommateur"
   },
   {
     "id" : "GAP-DeclarantRDV",
     "type" : "CapabilityStatement",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-DeclarantRDV",
     "version" : "3.0.0",
-    "name" : "GAP-DeclarantRDV"
+    "name" : "GAP_DeclarantRDV"
   },
   {
     "id" : "GAP-GestionnaireAgenda",
     "type" : "CapabilityStatement",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-GestionnaireAgenda",
     "version" : "3.0.0",
-    "name" : "GAP-GestionnaireAgenda"
+    "name" : "GAP_GestionnaireAgenda"
   },
   {
     "id" : "GAP-GestionnaireRessources",
     "type" : "CapabilityStatement",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-GestionnaireRessources",
     "version" : "3.0.0",
-    "name" : "GAP-GestionnaireRessources"
+    "name" : "GAP_GestionnaireRessources"
   },
   {
     "id" : "Gap-Declarant",
     "type" : "CapabilityStatement",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/Gap-Declarant",
     "version" : "3.0.0",
-    "name" : "GAP-Declarant"
+    "name" : "GAP_Declarant"
   },
   {
     "id" : "ans.fhir.fr.gap",

@@ -9,7 +9,7 @@
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-GestionnaireRessources"/>
   <version value="3.0.0"/>
-  <name value="GAP-GestionnaireRessources"/>
+  <name value="GAP_GestionnaireRessources"/>
   <title value="CI-SIS Gestion-d-Agendas-Partages - GestionnaireRessourcesGAP"/>
   <status value="active"/>
   <experimental value="false"/>

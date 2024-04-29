@@ -14,7 +14,7 @@
   ] ; # 
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-GestionnaireRessources"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "3.0.0"] ; # 
-  fhir:name [ fhir:v "GAP-GestionnaireRessources"] ; # 
+  fhir:name [ fhir:v "GAP_GestionnaireRessources"] ; # 
   fhir:title [ fhir:v "CI-SIS Gestion-d-Agendas-Partages - GestionnaireRessourcesGAP"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 

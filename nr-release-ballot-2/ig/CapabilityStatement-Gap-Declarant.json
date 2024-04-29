@@ -7,7 +7,7 @@
   },
   "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/Gap-Declarant",
   "version" : "3.0.0",
-  "name" : "GAP-Declarant",
+  "name" : "GAP_Declarant",
   "title" : "CI-SIS Gestion-d-Agendas-Partages - DeclarantGAP",
   "status" : "active",
   "experimental" : false,

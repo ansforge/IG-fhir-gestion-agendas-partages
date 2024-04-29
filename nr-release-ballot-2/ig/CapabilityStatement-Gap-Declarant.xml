@@ -11,7 +11,7 @@ d’information de santé (CI-SIS)</p>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/Gap-Declarant"/>
   <version value="3.0.0"/>
-  <name value="GAP-Declarant"/>
+  <name value="GAP_Declarant"/>
   <title value="CI-SIS Gestion-d-Agendas-Partages - DeclarantGAP"/>
   <status value="active"/>
   <experimental value="false"/>

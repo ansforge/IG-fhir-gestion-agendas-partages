@@ -7,7 +7,7 @@
   },
   "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-DeclarantRDV",
   "version" : "3.0.0",
-  "name" : "GAP-DeclarantRDV",
+  "name" : "GAP_DeclarantRDV",
   "title" : "CI-SIS Gestion-d-Agendas-Partages - DeclarantRDVGAP",
   "status" : "active",
   "experimental" : false,

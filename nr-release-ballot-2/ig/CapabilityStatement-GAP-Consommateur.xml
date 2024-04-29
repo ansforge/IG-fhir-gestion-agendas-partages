@@ -55,7 +55,7 @@ d’information de santé (CI-SIS)</p>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-Consommateur"/>
   <version value="3.0.0"/>
-  <name value="GAP-consommateur"/>
+  <name value="GAP_consommateur"/>
   <title value="CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP"/>
   <status value="active"/>
   <experimental value="false"/>
