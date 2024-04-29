@@ -1,7 +1,7 @@
 Instance: example-slot
 InstanceOf: gap-fr-slot
 Usage: #inline
-* meta.profile = "http://interopsante.org/fhir/StructureDefinition/FrSlot"
+* meta.profile = Canonical(gap-fr-slot)
 * identifier.use = #usual
 * identifier.system = "http://example.org/slots"
 * identifier.value = "451"

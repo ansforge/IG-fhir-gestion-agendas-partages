@@ -8,6 +8,7 @@ Description: "Profil du bundle de réponse à la demande de consultation des dis
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
+
 * entry contains
     Slot 0..* and
     Schedule 0..* and
@@ -33,19 +34,19 @@ Description: "Profil du bundle de réponse à la demande de consultation des dis
 * entry[Schedule].response ..0
 
 * entry[Patient].resource 1..
-* entry[Patient].resource only $FrPatient
+* entry[Patient].resource only fr-core-patient
 * entry[Patient].search.mode = #include
 * entry[Patient].request ..0
 * entry[Patient].response ..0
 
 * entry[Practitioner].resource 1..
-* entry[Practitioner].resource only $FrPractitioner
+* entry[Practitioner].resource only as-practitioner
 * entry[Practitioner].search.mode = #include
 * entry[Practitioner].request ..0
 * entry[Practitioner].response ..0
 
 * entry[PractitionerRole].resource 1..
-* entry[PractitionerRole].resource only AsPractitionerRoleProfile
+* entry[PractitionerRole].resource only as-practitionerrole
 * entry[PractitionerRole].search.mode = #include
 * entry[PractitionerRole].request ..0
 * entry[PractitionerRole].response ..0
@@ -69,7 +70,7 @@ Description: "Profil du bundle de réponse à la demande de consultation des dis
 * entry[HealthcareService].response ..0
 
 * entry[Organization].resource 1..
-* entry[Organization].resource only $FrOrganization
+* entry[Organization].resource only as-organization
 * entry[Organization].search.mode = #include
 * entry[Organization].request ..0
 * entry[Organization].response ..0

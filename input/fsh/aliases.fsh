@@ -12,3 +12,5 @@ Alias: $FrAppointment = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-
 // Examples
 Alias: $ServiceType = http://example.org/ValueSet/ServiceType
 Alias: $TRE-R38-SpecialiteOrdinale = https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale
+
+Alias: $as-practitioner = https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner

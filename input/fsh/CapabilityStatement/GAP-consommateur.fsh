@@ -18,7 +18,7 @@ Usage: #definition
 * rest.security.description = "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)"
 
 * rest.resource[0].type = #Slot
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrSlot"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "GAP_Slot_earliestStart"
@@ -43,7 +43,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Reference vers la ressource schedule correspondant à notre disponibilité"
 
 * rest.resource[+].type = #Appointment
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrAppointment"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "GAP_Appointment_priority"
@@ -84,7 +84,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "information supplémentaire sur le rendez vous"
 
 * rest.resource[+].type = #Schedule
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrSchedule"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam.name = "actor"
@@ -93,7 +93,7 @@ Usage: #definition
 * rest.resource[=].searchParam.documentation = "Reference vers la ressource participant au creneau"
 
 * rest.resource[+].type = #Patient
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrPatient"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "identifier"
@@ -110,7 +110,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Prenom du patient"
 
 * rest.resource[+].type = #Practitioner
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrPractitioner"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "identifier"
@@ -148,7 +148,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Telecommunication de la situation d'exercice"
 
 * rest.resource[+].type = #RelatedPerson
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "identifier"
@@ -169,7 +169,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Nom de la personne de contact"
 
 * rest.resource[+].type = #Location
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrLocation"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "address"
@@ -211,7 +211,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Modele de l'équipement opérationnel'"
 
 * rest.resource[+].type = #HealthcareService
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrHealthcareService"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "identifier"
@@ -232,7 +232,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].documentation = "Référence vers l'entite géographique de l'organisation interne"
 
 * rest.resource[+].type = #Organization
-* rest.resource[=].profile = "http://interopsante.org/fhir/StructureDefinition/FrOrganization"
+* rest.resource[=].profile = "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].searchParam[0].name = "identifier"
