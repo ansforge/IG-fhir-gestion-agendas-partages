@@ -1,6 +1,7 @@
 {
   "version" : "3.0.0",
   "fhirVersion" : ["4.0.1"],
-  "date" : "20240207142913",
-  "name" : "ans.fhir.fr.gap"
+  "date" : "20240429084638",
+  "name" : "ans.fhir.fr.gap",
+  "jurisdiction" : "urn:iso:std:iso:3166#FR"
 }

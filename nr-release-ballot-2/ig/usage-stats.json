@@ -73,13 +73,13 @@
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator": [
       "Appointment"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrScheduleAvailabiltyTime": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule-availability-time": [
       "Schedule"
     ],
-    "http://interopsante.org/fhir/StructureDefinition/FrServiceTypeDuration": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-service-type-duration": [
       "Schedule"
     ]
   }
