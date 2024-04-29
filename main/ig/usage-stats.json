@@ -1,6 +1,6 @@
 {
   "package": "ans.fhir.fr.gap",
-  "version": "3.0.0-ballot",
+  "version": "3.0.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "FR",
   "extensions": [],
@@ -72,15 +72,6 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
-    ],
-    "http://interopsante.org/fhir/StructureDefinition/FrAppointmentOperator": [
-      "Appointment"
-    ],
-    "http://interopsante.org/fhir/StructureDefinition/FrScheduleAvailabiltyTime": [
-      "Schedule"
-    ],
-    "http://interopsante.org/fhir/StructureDefinition/FrServiceTypeDuration": [
-      "Schedule"
     ],
     "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator": [
       "Appointment"

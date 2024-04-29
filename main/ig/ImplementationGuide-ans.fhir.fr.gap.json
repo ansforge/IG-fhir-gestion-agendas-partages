@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GAP</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/ImplementationGuide/ans.fhir.fr.gap",
-  "version" : "3.0.0-ballot",
+  "version" : "3.0.0",
   "name" : "GAP",
   "title" : "Gestion d'Agendas Partagés (GAP)",
-  "status" : "draft",
-  "date" : "2024-04-29T09:01:38+00:00",
+  "status" : "active",
+  "date" : "2024-04-29T12:18:11+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -53,13 +53,13 @@
     "id" : "ans_fhir_fr_annuaire",
     "uri" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire",
     "packageId" : "ans.fhir.fr.annuaire",
-    "version" : "1.0.0"
+    "version" : "1.0.1"
   },
   {
     "id" : "hl7_fhir_fr_core",
     "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
-    "version" : "2.0.0"
+    "version" : "2.0.1"
   },
   {
     "id" : "ans_fr_nos",
@@ -86,7 +86,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "3.0.0-ballot"
+        "valueString" : "trial-use"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -376,7 +376,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "3.0.0-ballot"
+        "valueString" : "trial-use"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
