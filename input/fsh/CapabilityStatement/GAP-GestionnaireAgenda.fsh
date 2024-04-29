@@ -41,7 +41,6 @@ Usage: #definition
 
 * rest.resource[=].searchParam[+].name = "GAP_Schedule_Actor"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Schedule-actor"
->>>>>>> Stashed changes
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Recherche d'une disponibilité sur les caractéristiques de la ressource Device qui est l'acteur d'agenda (identifiant, nom, modèle, type)"
 
