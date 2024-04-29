@@ -3,13 +3,11 @@
 The purpose of this implementation guide is to allow the management of resources (people, places or objects), the management of the availability of these resources, the consultation and synchronization of calendars and the making of appointments.
 </p>
 
-<!-- <blockquote class="stu-note">
+<blockquote class="stu-note">
 <p>
-  <b>Attention !</b>
-  <br>
- Cet Implementation Guide est actuellement en concertation.
+  <b>Attention !</b> Cette version de l'Implementation Guide est en intégration continue et est soumise à des changements réguliers. La version officielle est accessible à l'adresse https://interop.esante.gouv.fr/ig/fhir/gap
 </p>
-</blockquote> -->
+</blockquote>
 
 <div class="figure">
     <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
