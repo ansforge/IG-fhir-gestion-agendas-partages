@@ -1,13 +1,13 @@
-Alias: $FrSlot = http://interopsante.org/fhir/StructureDefinition/FrSlot
-Alias: $FrSchedule = http://interopsante.org/fhir/StructureDefinition/FrSchedule
-Alias: $FrPatient = http://interopsante.org/fhir/StructureDefinition/FrPatient
-Alias: $FrPractitioner = http://interopsante.org/fhir/StructureDefinition/FrPractitioner
+Alias: $FrSlot = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot
+Alias: $FrSchedule = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule
+Alias: $FrPatient = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient
+Alias: $FrPractitioner = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner
 
-Alias: $FrLocation = http://interopsante.org/fhir/StructureDefinition/FrLocation
-Alias: $FrHealthcareService = http://interopsante.org/fhir/StructureDefinition/FrHealthcareService
-Alias: $FrOrganization = http://interopsante.org/fhir/StructureDefinition/FrOrganization
-Alias: $FrRelatedPerson = http://interopsante.org/fhir/StructureDefinition/FrRelatedPerson
-Alias: $FrAppointment = http://interopsante.org/fhir/StructureDefinition/FrAppointment
+Alias: $FrLocation = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location
+Alias: $FrHealthcareService = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service
+Alias: $FrOrganization = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization
+Alias: $FrRelatedPerson = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person
+Alias: $FrAppointment = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment
 
 // Examples
 Alias: $ServiceType = http://example.org/ValueSet/ServiceType
