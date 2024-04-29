@@ -1,0 +1,36 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "GAP-Appointment-priority",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GAP_Appointment_priority</h2><p>Parameter <code>priority</code>:<code>token</code></p><div><p>Priority of the appointment</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/appointment.html\">Appointment</a></td></tr><tr><td>Expression</td><td><code>Appointment.priority</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may only appear once</li><li>multipleOr: The parameter may only have one value (no comma separators)</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-priority",
+  "version" : "3.0.0",
+  "name" : "GAP_Appointment_priority",
+  "status" : "active",
+  "date" : "2024-04-29T15:04:57+00:00",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Priority of the appointment",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "code" : "priority",
+  "base" : ["Appointment"],
+  "type" : "token",
+  "expression" : "Appointment.priority",
+  "xpathUsage" : "normal",
+  "multipleOr" : false,
+  "multipleAnd" : false
+}
