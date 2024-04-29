@@ -18,12 +18,12 @@ Les workflows associés à ce repository (.github/workflows) permettent :
 
 * D'executer Sushi pour vérifier la grammaire
 * De faire les tests avec le validator_cli
-* De publier les pages : https://ansforge.github.io/IG-fhir-gestion-agendas-partages/ig/{nom de la branche}
-Exemple : [https://ansforge.github.io/IG-fhir-gestion-agendas-partages/ig/main]
+* De publier les pages : https://ansforge.github.io/IG-fhir-gestion-agendas-partages/{nom de la branche}/ig
+Exemple : [https://ansforge.github.io/IG-fhir-gestion-agendas-partages/main/ig]
 
 ## Acronymes
 
 * IG : Implementation Guide
 * FHIR : Fast Healthcare Interoperability Resources
-* FIG : FHIR Implementation Guide
+* GAP : Gestion d'Agendas Partagés
 * HL7 : Health Level Seven
