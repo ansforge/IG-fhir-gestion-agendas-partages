@@ -158,16 +158,16 @@ package "Ressources de base" #palegreen {
 
     class94c51f19c37f96ed231f5a0ae512b2a8 --> GAP_BundleResultatReponseADemandeConsultationRDV
 
- class "http://interopsante.org/fhir/StructureDefinition/FrAppointment" as  class659762428c9192e4f39a709a90b89755 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment" as  class5b3e4ec90388039f3b23e1c44137e12e 
 
-    class659762428c9192e4f39a709a90b89755 --> GAP_FrAppointment
+    class5b3e4ec90388039f3b23e1c44137e12e --> GAP_FrAppointment
 
- class "http://interopsante.org/fhir/StructureDefinition/FrSchedule" as  classb622660bfabd924a2e1a86fb95e2ca04 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule" as  class7c912eb91080e8d9a809e267903ad8a9 
 
-    classb622660bfabd924a2e1a86fb95e2ca04 --> GAP_FrSchedule
+    class7c912eb91080e8d9a809e267903ad8a9 --> GAP_FrSchedule
 
- class "http://interopsante.org/fhir/StructureDefinition/FrSlot" as  class86363a39b418154a968adc9b5da3fe9c 
+ class "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot" as  classf72d01e910d5b05afa3e849c0230ac33 
 
-    class86363a39b418154a968adc9b5da3fe9c --> GAP_FrSlot
+    classf72d01e910d5b05afa3e849c0230ac33 --> GAP_FrSlot
 }
 @enduml
