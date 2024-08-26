@@ -1,0 +1,232 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/appointmentstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AppointmentStatus",
+      "title" : "AppointmentStatus",
+      "description" : "The free/busy status of an appointment.",
+      "oids" : ["2.16.840.1.113883.4.642.4.485"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-appointmentstatus.html" : "AppointmentStatus"
+    },
+    {
+      "url" : "http://hl7.org/fhir/bundle-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "BundleType",
+      "title" : "BundleType",
+      "description" : "Indicates the purpose of a bundle - how it is intended to be used.",
+      "oids" : ["2.16.840.1.113883.4.642.4.621"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-bundle-type.html" : "BundleType"
+    },
+    {
+      "url" : "http://hl7.org/fhir/http-verb",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "HTTPVerb",
+      "title" : "HTTPVerb",
+      "description" : "HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.",
+      "oids" : ["2.16.840.1.113883.4.642.4.625"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-http-verb.html" : "HTTPVerb"
+    },
+    {
+      "url" : "http://hl7.org/fhir/identifier-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "IdentifierUse",
+      "title" : "IdentifierUse",
+      "description" : "Identifies the purpose for this identifier, if known .",
+      "oids" : ["2.16.840.1.113883.4.642.4.58"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-identifier-use.html" : "IdentifierUse"
+    },
+    {
+      "url" : "http://hl7.org/fhir/participantrequired",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipantRequired",
+      "title" : "ParticipantRequired",
+      "description" : "Is the Participant required to attend the appointment.",
+      "oids" : ["2.16.840.1.113883.4.642.4.489"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-participantrequired.html" : "ParticipantRequired"
+    },
+    {
+      "url" : "http://hl7.org/fhir/participationstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ParticipationStatus",
+      "title" : "ParticipationStatus",
+      "description" : "The Participation status of an appointment.",
+      "oids" : ["2.16.840.1.113883.4.642.4.487"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-participationstatus.html" : "ParticipationStatus"
+    },
+    {
+      "url" : "http://hl7.org/fhir/search-entry-mode",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "SearchEntryMode",
+      "title" : "SearchEntryMode",
+      "description" : "Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
+      "oids" : ["2.16.840.1.113883.4.642.4.623"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-search-entry-mode.html" : "SearchEntryMode"
+    },
+    {
+      "url" : "http://hl7.org/fhir/slotstatus",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SlotStatus",
+      "title" : "SlotStatus",
+      "description" : "The free/busy status of the slot.",
+      "oids" : ["2.16.840.1.113883.4.642.4.483"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-slotstatus.html" : "SlotStatus"
+    },
+    {
+      "url" : "http://snomed.info/sct",
+      "version" : null,
+      "status" : "active",
+      "name" : "SNOMED_CT",
+      "title" : "SNOMED CT (all versions)",
+      "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+      "oids" : ["2.16.840.1.113883.6.96"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason",
+      "version" : "2.1.0",
+      "status" : "draft",
+      "name" : "AppointmentCancellationReason",
+      "title" : "Appointment cancellation reason",
+      "description" : "This example value set defines a set of reasons for the cancellation of an appointment.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1382"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html" : "Appointment cancellation reason"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "CommonTags",
+      "title" : "Common Tags",
+      "description" : "Common Tag Codes defined by FHIR project",
+      "oids" : ["2.16.840.1.113883.4.642.1.1067"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-common-tags.html" : "Common Tags"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/participant-type",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "ParticipantType",
+      "title" : "Participant type",
+      "description" : "This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1089"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/service-category",
+      "version" : "1.1.0",
+      "status" : "draft",
+      "name" : "ServiceCategory",
+      "title" : "Service category",
+      "description" : "This value set defines an example set of codes that can be used to classify groupings of service-types/specialties.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1144"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-service-category.html" : "Service category"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/service-type",
+      "version" : "1.1.0",
+      "status" : "draft",
+      "name" : "ServiceType",
+      "title" : "Service type",
+      "description" : "This value set defines an example set of codes of service-types.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1145"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-service-type.html" : "Service type"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "version" : "4.0.0",
+      "status" : "active",
+      "name" : "IdentifierType",
+      "title" : "identifierType",
+      "description" : "HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON.",
+      "oids" : ["2.16.840.1.113883.18.108"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v2-0276",
+      "version" : "2.1.0",
+      "status" : "active",
+      "name" : "AppointmentReason",
+      "title" : "appointmentReason",
+      "description" : "Code system of concepts used to describe the kind of appointment or the reason why an appointment has been scheduled.  Used in HL7 Version 2.x messaging in the ARQ segment.",
+      "oids" : ["2.16.840.1.113883.18.169"],
+      "uses" : {
+      },
+      "http://terminology.hl7.org/5.3.0/ValueSet-v2-0276.html" : "hl7VS-appointmentReasonCodes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "ParticipationType",
+      "title" : "ParticipationType",
+      "description" : "A code specifying the meaning and purpose of every Participation instance. Each of its values implies specific constraints on the Roles undertaking the participation.",
+      "oids" : ["2.16.840.1.113883.5.90"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "version" : "1.2.0",
+      "status" : "active",
+      "name" : "TRE_R38-SpecialiteOrdinale",
+      "title" : null,
+      "description" : "Spécialité ordinale",
+      "oids" : ["1.2.250.1.213.2.28"],
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.0.1/ValueSet-fr-core-vs-practitioner-specialty.html" : "FR Core ValueSet Practitioner specialty"
+    },
+    {
+      "url" : "urn:ietf:bcp:47",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "Ietf3066",
+      "title" : "Tags for the Identification of Languages",
+      "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
+      "oids" : ["2.16.840.1.113883.6.121"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages"
+    }
+  ]
+}

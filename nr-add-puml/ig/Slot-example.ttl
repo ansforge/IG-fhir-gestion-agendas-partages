@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/gap/Slot/example> a fhir:Slot ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-slot"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/gap/StructureDefinition/gap-fr-slot>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Slot example</b></p><a name=\"example\"> </a><a name=\"hcexample\"> </a><a name=\"example-fr-FR\"> </a><p><b>identifier</b>: <code>http://example.org/slots</code>/451 (use: usual, )</p><p><b>serviceType</b>: <span title=\"Codes:{http://example.org/ValueSet/ServiceType 1}\">suivi</span></p><p><b>specialty</b>: <span title=\"Codes:{https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale SM54}\">Médecine générale (SM)</span></p><p><b>schedule</b>: <a href=\"https://exampleserver.org/fhir/Schedule/example\">https://exampleserver.org/fhir/Schedule/example</a></p><p><b>status</b>: Free</p><p><b>start</b>: 2019-01-04 09:15:00+0000</p><p><b>end</b>: 2019-01-04 09:30:00+0000</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [ fhir:v "http://example.org/slots"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "451" ]
+  ] ) ; # 
+  fhir:serviceType ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/ValueSet/ServiceType"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1" ] ;
+       fhir:display [ fhir:v "suivi" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SM54" ] ;
+       fhir:display [ fhir:v "Médecine générale (SM)" ]
+     ] )
+  ] ) ; # 
+  fhir:schedule [
+     fhir:link <https://exampleserver.org/fhir/Schedule/example> ;
+     fhir:reference [ fhir:v "https://exampleserver.org/fhir/Schedule/example" ]
+  ] ; # 
+  fhir:status [ fhir:v "free"] ; # 
+  fhir:start [ fhir:v "2019-01-04T09:15:00Z"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2019-01-04T09:30:00Z"^^xsd:dateTime] . # 
+
+# -------------------------------------------------------------------------------------
+

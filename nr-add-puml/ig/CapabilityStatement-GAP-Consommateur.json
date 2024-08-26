@@ -1,0 +1,418 @@
+{
+  "resourceType" : "CapabilityStatement",
+  "id" : "GAP-Consommateur",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CapabilityStatement GAP-Consommateur</b></p><a name=\"GAP-Consommateur\"> </a><a name=\"hcGAP-Consommateur\"> </a><a name=\"GAP-Consommateur-fr-FR\"> </a><h2 id=\"title\">CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP</h2><ul><li>Implementation Guide Version: 3.0.0 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>application/fhir+xml</code>, <code>application/fhir+json</code></li><li>Supported Patch Formats: </li><li>Published on: 2023-08-02 </li><li>Published by: ANS </li></ul><blockquote class=\"impl-note\"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h3 id=\"shallIGs\">SHALL Support the Following Implementation Guides</h3><ul><li>https://interop.esante.gouv.fr/ig/fhir/gap</li></ul><h2 id=\"rest\">FHIR RESTful Capabilities</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"mode1\" class=\"panel-title\">Mode: <code>client</code></h3></div><div class=\"panel-body\"><div><p>consultation de disponibilités</p>\n</div><div class=\"lead\"><em>Security</em></div><blockquote><div><p>L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)</p>\n</div></blockquote><div class=\"lead\"><em>Summary of System-wide Interactions</em></div></div></div><h3 id=\"resourcesCap1\">Capabilities by Resource/Profile</h3><h4 id=\"resourcesSummary1\">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class=\"bg-info\">R</span></b>ead, <b><span class=\"bg-info\">S</span></b>earch, <b><span class=\"bg-info\">U</span></b>pdate, and <b><span class=\"bg-info\">C</span></b>reate, are always shown, while <b><span class=\"bg-info\">VR</span></b>ead, <b><span class=\"bg-info\">P</span></b>atch, <b><span class=\"bg-info\">D</span></b>elete, <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">I</span></b>nstance, or <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class=\"table-responsive\"><table class=\"table table-condensed table-hover\"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class=\"text-center\"><b title=\"GET a resource (read interaction)\">R</b></th><th class=\"text-center\"><b title=\"GET all set of resources of the type (search interaction)\">S</b></th><th class=\"text-center\"><b title=\"PUT a new resource version (update interaction)\">U</b></th><th class=\"text-center\"><b title=\"POST a new resource (create interaction)\">C</b></th><th><b title=\"Required and recommended search parameters\">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href=\"#Slot1-1\">Slot</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-slot.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>GAP_Slot_earliestStart, GAP_Slot_latestStart, identifier, status, schedule</td><td/><td/><td/></tr><tr><td><a href=\"#Appointment1-2\">Appointment</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-appointment.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>GAP_Appointment_priority, GAP_Appointment_description, GAP_Appointment_created, actor, date, identifier, service-type, status, supporting-info</td><td/><td/><td/></tr><tr><td><a href=\"#Schedule1-3\">Schedule</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-schedule.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>actor</td><td/><td/><td/></tr><tr><td><a href=\"#Patient1-4\">Patient</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-patient.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>identifier, family, given</td><td/><td/><td/></tr><tr><td><a href=\"#Practitioner1-5\">Practitioner</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-practitioner.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>identifier, family, given</td><td/><td/><td/></tr><tr><td><a href=\"#PractitionerRole1-6\">PractitionerRole</a></td><td><a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.0.1/StructureDefinition-as-dp-practitionerrole.html\">https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>role, specialty, location, telecom</td><td/><td/><td/></tr><tr><td><a href=\"#RelatedPerson1-7\">RelatedPerson</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-related-person.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>identifier, address, telecom, name</td><td/><td/><td/></tr><tr><td><a href=\"#Location1-8\">Location</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-location.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>address, near, name, identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Device1-9\">Device</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html\">http://hl7.org/fhir/StructureDefinition/Device</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>identifier, type, device-name, model</td><td/><td/><td/></tr><tr><td><a href=\"#HealthcareService1-10\">HealthcareService</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-healthcare-service.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>identifier, name, service-type, organization</td><td/><td/><td/></tr><tr><td><a href=\"#Organization1-11\">Organization</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-organization.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>identifier, name, address</td><td/><td/><td/></tr></tbody></table></div><hr/><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Slot1-1\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Slot</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-slot.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Slot-earliestStart.html\">GAP_Slot_earliestStart</a></td><td><code>date</code></td><td><div><p>Recherche d'une disponibilité sur la date et l'heure de début de disponibilité souhaité</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Slot-latestStart.html\">GAP_Slot_latestStart</a></td><td><code>date</code></td><td><div><p>Recherche d'une disponibilité sur la date et l'heure de fin de disponibilité souhaité</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/slot.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant du slot</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/slot.html#search\">status</a></td><td><code>token</code></td><td><div><p>Statut (occupé/libre) d'un slot</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/slot.html#search\">schedule</a></td><td><code>reference</code></td><td><div><p>Reference vers la ressource schedule correspondant à notre disponibilité</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Appointment1-2\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Appointment</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-appointment.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Appointment-priority.html\">GAP_Appointment_priority</a></td><td><code>token</code></td><td><div><p>Priorité du rendez vous</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Appointment-description.html\">GAP_Appointment_description</a></td><td><code>string</code></td><td><div><p>Description du rendez vous (titre ou commentaire)</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Appointment-created.html\">GAP_Appointment_created</a></td><td><code>date</code></td><td><div><p>Date de création du rendez vous</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">actor</a></td><td><code>reference</code></td><td><div><p>Recherche d'un rendez-vous sur l'identifiant de l'acteur</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">date</a></td><td><code>date</code></td><td><div><p>date et heure du rendez-vous</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>identifiant du rendez-vous</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">service-type</a></td><td><code>token</code></td><td><div><p>serivce spécifique qui doit être réslisé pandant le rendez-vous</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">status</a></td><td><code>token</code></td><td><div><p>status générale du rendez vous</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">supporting-info</a></td><td><code>reference</code></td><td><div><p>information supplémentaire sur le rendez vous</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Schedule1-3\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Schedule</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-schedule.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/schedule.html#search\">actor</a></td><td><code>reference</code></td><td><div><p>Reference vers la ressource participant au creneau</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Patient1-4\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Patient</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-patient.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/patient.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant du patient (matricule INS ou autre identifiant)</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/patient.html#search\">family</a></td><td><code>string</code></td><td><div><p>Nom du patient</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/patient.html#search\">given</a></td><td><code>string</code></td><td><div><p>Prenom du patient</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Practitioner1-5\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Practitioner</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-practitioner.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitioner.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant du professionnel</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitioner.html#search\">family</a></td><td><code>string</code></td><td><div><p>Nom du patient</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitioner.html#search\">given</a></td><td><code>string</code></td><td><div><p>Prenom du patient</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"PractitionerRole1-6\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>PractitionerRole</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.0.1/StructureDefinition-as-dp-practitionerrole.html\">https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitionerrole.html#search\">role</a></td><td><code>token</code></td><td><div><p>Profession du professionnel</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitionerrole.html#search\">specialty</a></td><td><code>token</code></td><td><div><p>Spécialité du professionnel</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitionerrole.html#search\">location</a></td><td><code>reference</code></td><td><div><p>Adresse situation exercice</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitionerrole.html#search\">telecom</a></td><td><code>token</code></td><td><div><p>Telecommunication de la situation d'exercice</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"RelatedPerson1-7\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>RelatedPerson</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-related-person.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/relatedperson.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant de la personne de contact</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/relatedperson.html#search\">address</a></td><td><code>string</code></td><td><div><p>Adresse de la personne de contact</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/relatedperson.html#search\">telecom</a></td><td><code>token</code></td><td><div><p>Telecom de la personne de contact</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/relatedperson.html#search\">name</a></td><td><code>string</code></td><td><div><p>Nom de la personne de contact</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Location1-8\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Location</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-location.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">address</a></td><td><code>string</code></td><td><div><p>Adresse situation exercice</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">near</a></td><td><code>special</code></td><td><div><p>Adresse situation exercice via les coordonnées géographiques</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">name</a></td><td><code>string</code></td><td><div><p>Nom du lieu</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/location.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant du lieu</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Device1-9\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Device</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"http://hl7.org/fhir/R4/device.html\">http://hl7.org/fhir/StructureDefinition/Device</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/device.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant de l'équipement opérationnel'</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/device.html#search\">type</a></td><td><code>token</code></td><td><div><p>Type de l'équipement opérationnel'</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/device.html#search\">device-name</a></td><td><code>string</code></td><td><div><p>Libelle de l'équipement opérationnel'</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/device.html#search\">model</a></td><td><code>string</code></td><td><div><p>Modele de l'équipement opérationnel'</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"HealthcareService1-10\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>HealthcareService</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-healthcare-service.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant de l'organisation interne</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html#search\">name</a></td><td><code>string</code></td><td><div><p>Nom de l'organisation interne</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html#search\">service-type</a></td><td><code>token</code></td><td><div><p>Champ d'activite de l'organisation interne</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/healthcareservice.html#search\">organization</a></td><td><code>reference</code></td><td><div><p>Référence vers l'entite géographique de l'organisation interne</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Organization1-11\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Organization</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-organization.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/organization.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant de l'entite geographique (idNatStruct)</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/organization.html#search\">name</a></td><td><code>string</code></td><td><div><p>Nom de l'entite geographique</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/organization.html#search\">address</a></td><td><code>string</code></td><td><div><p>Adresse de l'entite geographique</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-Consommateur",
+  "version" : "3.0.0",
+  "name" : "GAP_consommateur",
+  "title" : "CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-08-02",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Un consommateur consulte l’agenda d’une ressource gérée par un gestionnaire d’agenda. La consultation de l’agenda indique les éventuelles plages de disponibilité déclarées pour la  \nressource ainsi que ses indisponibilités et les détails des rendez-vous existants (types, durées, etc., cf. section 2.3.3). Le consommateur peut être la personne prise en charge, un  \nprofessionnel intervenant dans la prise en charge d’une personne ou tout autre tiers autorisé à consulter l’agenda de la ressource concernée.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "kind" : "requirements",
+  "fhirVersion" : "4.0.1",
+  "format" : ["application/fhir+xml",
+  "application/fhir+json"],
+  "implementationGuide" : ["https://interop.esante.gouv.fr/ig/fhir/gap"],
+  "rest" : [{
+    "mode" : "client",
+    "documentation" : "consultation de disponibilités",
+    "security" : {
+      "cors" : false,
+      "description" : "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S\n) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes\nd’information de santé (CI-SIS)"
+    },
+    "resource" : [{
+      "type" : "Slot",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "GAP_Slot_earliestStart",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Slot-earliestStart",
+        "type" : "date",
+        "documentation" : "Recherche d'une disponibilité sur la date et l'heure de début de disponibilité souhaité"
+      },
+      {
+        "name" : "GAP_Slot_latestStart",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Slot-latestStart",
+        "type" : "date",
+        "documentation" : "Recherche d'une disponibilité sur la date et l'heure de fin de disponibilité souhaité"
+      },
+      {
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Slot-identifier",
+        "type" : "token",
+        "documentation" : "Identifiant du slot"
+      },
+      {
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Slot-status",
+        "type" : "token",
+        "documentation" : "Statut (occupé/libre) d'un slot"
+      },
+      {
+        "name" : "schedule",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Slot-schedule",
+        "type" : "reference",
+        "documentation" : "Reference vers la ressource schedule correspondant à notre disponibilité"
+      }]
+    },
+    {
+      "type" : "Appointment",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "GAP_Appointment_priority",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-priority",
+        "type" : "token",
+        "documentation" : "Priorité du rendez vous"
+      },
+      {
+        "name" : "GAP_Appointment_description",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-description",
+        "type" : "string",
+        "documentation" : "Description du rendez vous (titre ou commentaire)"
+      },
+      {
+        "name" : "GAP_Appointment_created",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-created",
+        "type" : "date",
+        "documentation" : "Date de création du rendez vous"
+      },
+      {
+        "name" : "actor",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-actor",
+        "type" : "reference",
+        "documentation" : "Recherche d'un rendez-vous sur l'identifiant de l'acteur"
+      },
+      {
+        "name" : "date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-date",
+        "type" : "date",
+        "documentation" : "date et heure du rendez-vous"
+      },
+      {
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-identifier",
+        "type" : "token",
+        "documentation" : "identifiant du rendez-vous"
+      },
+      {
+        "name" : "service-type",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-service-type",
+        "type" : "token",
+        "documentation" : "serivce spécifique qui doit être réslisé pandant le rendez-vous"
+      },
+      {
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-status",
+        "type" : "token",
+        "documentation" : "status générale du rendez vous"
+      },
+      {
+        "name" : "supporting-info",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-supporting-info",
+        "type" : "reference",
+        "documentation" : "information supplémentaire sur le rendez vous"
+      }]
+    },
+    {
+      "type" : "Schedule",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "actor",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Schedule-actor",
+        "type" : "reference",
+        "documentation" : "Reference vers la ressource participant au creneau"
+      }]
+    },
+    {
+      "type" : "Patient",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Patient-identifier",
+        "type" : "token",
+        "documentation" : "Identifiant du patient (matricule INS ou autre identifiant)"
+      },
+      {
+        "name" : "family",
+        "definition" : "http://hl7.org/fhir/SearchParameter/individual-family",
+        "type" : "string",
+        "documentation" : "Nom du patient"
+      },
+      {
+        "name" : "given",
+        "definition" : "http://hl7.org/fhir/SearchParameter/individual-given",
+        "type" : "string",
+        "documentation" : "Prenom du patient"
+      }]
+    },
+    {
+      "type" : "Practitioner",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Practitioner-identifier",
+        "type" : "token",
+        "documentation" : "Identifiant du professionnel"
+      },
+      {
+        "name" : "family",
+        "definition" : "http://hl7.org/fhir/SearchParameter/individual-family",
+        "type" : "string",
+        "documentation" : "Nom du patient"
+      },
+      {
+        "name" : "given",
+        "definition" : "http://hl7.org/fhir/SearchParameter/individual-given",
+        "type" : "string",
+        "documentation" : "Prenom du patient"
+      }]
+    },
+    {
+      "type" : "PractitionerRole",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-dp-practitionerrole",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "role",
+        "definition" : "http://hl7.org/fhir/SearchParameter/PractitionerRole-role",
+        "type" : "token",
+        "documentation" : "Profession du professionnel"
+      },
+      {
+        "name" : "specialty",
+        "definition" : "http://hl7.org/fhir/SearchParameter/PractitionerRole-specialty",
+        "type" : "token",
+        "documentation" : "Spécialité du professionnel"
+      },
+      {
+        "name" : "location",
+        "definition" : "http://hl7.org/fhir/SearchParameter/PractitionerRole-location",
+        "type" : "reference",
+        "documentation" : "Adresse situation exercice"
+      },
+      {
+        "name" : "telecom",
+        "definition" : "http://hl7.org/fhir/SearchParameter/individual-telecom",
+        "type" : "token",
+        "documentation" : "Telecommunication de la situation d'exercice"
+      }]
+    },
+    {
+      "type" : "RelatedPerson",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/RelatedPerson-identifier",
+        "type" : "token",
+        "documentation" : "Identifiant de la personne de contact"
+      },
+      {
+        "name" : "address",
+        "definition" : "http://hl7.org/fhir/SearchParameter/individual-address",
+        "type" : "string",
+        "documentation" : "Adresse de la personne de contact"
+      },
+      {
+        "name" : "telecom",
+        "definition" : "http://hl7.org/fhir/SearchParameter/individual-telecom",
+        "type" : "token",
+        "documentation" : "Telecom de la personne de contact"
+      },
+      {
+        "name" : "name",
+        "definition" : "http://hl7.org/fhir/SearchParameter/RelatedPerson-name",
+        "type" : "string",
+        "documentation" : "Nom de la personne de contact"
+      }]
+    },
+    {
+      "type" : "Location",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "address",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Location-address",
+        "type" : "string",
+        "documentation" : "Adresse situation exercice"
+      },
+      {
+        "name" : "near",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Location-near",
+        "type" : "special",
+        "documentation" : "Adresse situation exercice via les coordonnées géographiques"
+      },
+      {
+        "name" : "name",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Location-name",
+        "type" : "string",
+        "documentation" : "Nom du lieu"
+      },
+      {
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Location-identifier",
+        "type" : "token",
+        "documentation" : "Identifiant du lieu"
+      }]
+    },
+    {
+      "type" : "Device",
+      "profile" : "http://hl7.org/fhir/StructureDefinition/Device",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Device-identifier",
+        "type" : "token",
+        "documentation" : "Identifiant de l'équipement opérationnel'"
+      },
+      {
+        "name" : "type",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Device-type",
+        "type" : "token",
+        "documentation" : "Type de l'équipement opérationnel'"
+      },
+      {
+        "name" : "device-name",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Device-device-name",
+        "type" : "string",
+        "documentation" : "Libelle de l'équipement opérationnel'"
+      },
+      {
+        "name" : "model",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Device-model",
+        "type" : "string",
+        "documentation" : "Modele de l'équipement opérationnel'"
+      }]
+    },
+    {
+      "type" : "HealthcareService",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier",
+        "type" : "token",
+        "documentation" : "Identifiant de l'organisation interne"
+      },
+      {
+        "name" : "name",
+        "definition" : "http://hl7.org/fhir/SearchParameter/HealthcareService-name",
+        "type" : "string",
+        "documentation" : "Nom de l'organisation interne"
+      },
+      {
+        "name" : "service-type",
+        "definition" : "http://hl7.org/fhir/SearchParameter/HealthcareService-service-type",
+        "type" : "token",
+        "documentation" : "Champ d'activite de l'organisation interne"
+      },
+      {
+        "name" : "organization",
+        "definition" : "http://hl7.org/fhir/SearchParameter/HealthcareService-organization",
+        "type" : "reference",
+        "documentation" : "Référence vers l'entite géographique de l'organisation interne"
+      }]
+    },
+    {
+      "type" : "Organization",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Organization-identifier",
+        "type" : "token",
+        "documentation" : "Identifiant de l'entite geographique (idNatStruct)"
+      },
+      {
+        "name" : "name",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Organization-name",
+        "type" : "string",
+        "documentation" : "Nom de l'entite geographique"
+      },
+      {
+        "name" : "address",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Organization-address",
+        "type" : "string",
+        "documentation" : "Adresse de l'entite geographique"
+      }]
+    }]
+  }]
+}

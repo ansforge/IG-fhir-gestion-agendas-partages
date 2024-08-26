@@ -1,0 +1,189 @@
+{
+  "resourceType" : "CapabilityStatement",
+  "id" : "GAP-GestionnaireAgenda",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CapabilityStatement GAP-GestionnaireAgenda</b></p><a name=\"GAP-GestionnaireAgenda\"> </a><a name=\"hcGAP-GestionnaireAgenda\"> </a><a name=\"GAP-GestionnaireAgenda-fr-FR\"> </a><h2 id=\"title\">CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP</h2><ul><li>Implementation Guide Version: 3.0.0 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>application/fhir+xml</code>, <code>application/fhir+json</code></li><li>Supported Patch Formats: </li><li>Published on: 2023-08-02 </li><li>Published by: ANS </li></ul><blockquote class=\"impl-note\"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h3 id=\"shallIGs\">SHALL Support the Following Implementation Guides</h3><ul><li>https://interop.esante.gouv.fr/ig/fhir/gap</li></ul><h2 id=\"rest\">FHIR RESTful Capabilities</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"mode1\" class=\"panel-title\">Mode: <code>server</code></h3></div><div class=\"panel-body\"><div><p>Déclaration, modification et suppression des disponibilités d'une ressource</p>\n</div><div class=\"lead\"><em>Security</em></div><blockquote><div><p>L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)</p>\n</div></blockquote><div class=\"lead\"><em>Summary of System-wide Interactions</em></div></div></div><h3 id=\"resourcesCap1\">Capabilities by Resource/Profile</h3><h4 id=\"resourcesSummary1\">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class=\"bg-info\">R</span></b>ead, <b><span class=\"bg-info\">S</span></b>earch, <b><span class=\"bg-info\">U</span></b>pdate, and <b><span class=\"bg-info\">C</span></b>reate, are always shown, while <b><span class=\"bg-info\">VR</span></b>ead, <b><span class=\"bg-info\">P</span></b>atch, <b><span class=\"bg-info\">D</span></b>elete, <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">I</span></b>nstance, or <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class=\"table-responsive\"><table class=\"table table-condensed table-hover\"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class=\"text-center\"><b title=\"GET a resource (read interaction)\">R</b></th><th class=\"text-center\"><b title=\"GET all set of resources of the type (search interaction)\">S</b></th><th class=\"text-center\"><b title=\"PUT a new resource version (update interaction)\">U</b></th><th class=\"text-center\"><b title=\"PATCH a new resource version (patch interaction)\">P</b></th><th class=\"text-center\"><b title=\"POST a new resource (create interaction)\">C</b></th><th class=\"text-center\"><b title=\"DELETE a resource (delete interaction)\">D</b></th><th><b title=\"Required and recommended search parameters\">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href=\"#Schedule1-1\">Schedule</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-schedule.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule</a></td><td></td><td class=\"text-center\"></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td></td><td/><td/><td/></tr><tr><td><a href=\"#Slot1-2\">Slot</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-slot.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\"></td><td class=\"text-center\"></td><td class=\"text-center\"></td><td>GAP_Slot_earliestStart, GAP_Slot_latestStart, GAP_Schedule_Actor, Schedule-actor, identifier, status</td><td/><td/><td/></tr><tr><td><a href=\"#Appointment1-3\">Appointment</a></td><td><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-appointment.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment</a></td><td>y</td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td class=\"text-center\">y</td><td class=\"text-center\"></td><td>GAP_Appointment_priority, GAP_Appointment_description, GAP_Appointment_created, GAP_Appointment_Actor, GAP_Appointment_earliestStart, GAP_Appointment_latestStart, date, identifier, service-type, status, supporting-info</td><td/><td/><td/></tr></tbody></table></div><hr/><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Schedule1-1\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Schedule</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-schedule.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>create</code>, <code>update</code>, <code>delete</code>, <code>patch</code>.</li></ul></div></div><p/></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Slot1-2\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Slot</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-slot.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Slot-earliestStart.html\">GAP_Slot_earliestStart</a></td><td><code>date</code></td><td><div><p>Recherche d'une disponibilité sur la date et l'heure de la disponibilité souhaité, date au plus tôt</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Slot-latestStart.html\">GAP_Slot_latestStart</a></td><td><code>date</code></td><td><div><p>Recherche d'une disponibilité sur la date et l'heure de disponibilité souhaité, date au plus tard</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/slot.html#search\">GAP_Schedule_Actor</a></td><td><code>reference</code></td><td><div><p>Recherche d'une disponibilité sur les caractéristiques de la ressource Device qui est l'acteur d'agenda (identifiant, nom, modèle, type)</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/slot.html#search\">Schedule-actor</a></td><td><code>reference</code></td><td><div><p>Recherche d'un acteur de l'agenda</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/slot.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>A Slot Identifier</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/slot.html#search\">status</a></td><td><code>token</code></td><td><div><p>The free/busy status of the appointment</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Appointment1-3\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: supported </span>Appointment</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Base System Profile</span><br/><a href=\"https://hl7.fr/ig/fhir/core/2.0.1/StructureDefinition-fr-core-appointment.html\">https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment</a></div><div class=\"col-lg-3\"><span class=\"lead\">Profile Conformance</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Reference Policy</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>create</code>, <code>update</code>, <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Appointment-priority.html\">GAP_Appointment_priority</a></td><td><code>token</code></td><td><div><p>Priority of the appointment</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Appointment-description.html\">GAP_Appointment_description</a></td><td><code>string</code></td><td><div><p>Comment or title of the appointment</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Appointment-created.html\">GAP_Appointment_created</a></td><td><code>date</code></td><td><div><p>Date that this appointment was initially created</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">GAP_Appointment_Actor</a></td><td><code>reference</code></td><td><div><p>Recherche d'un rendez-vous sur l'identifiant de l'acteur, la ressource pouvant être Patient, Practitioner, PractitionerRole, RelatedPerson, Location, Device ou HealthcareService</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Appointment-earliestStart.html\">GAP_Appointment_earliestStart</a></td><td><code>date</code></td><td><div><p>Recherche d'un rendez-vous sur la date et heure de rendez-vous, date au plus tôt</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-GAP-Appointment-latestStart.html\">GAP_Appointment_latestStart</a></td><td><code>date</code></td><td><div><p>Recherche d'un rendez-vous sur la date et heure de rendez-vous, date au plus tard</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">date</a></td><td><code>date</code></td><td><div><p>date et heure du rendez-vous</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>identifiant du rendez-vous</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">service-type</a></td><td><code>token</code></td><td><div><p>serivce spécifique qui doit être réslisé pandant le rendez-vous</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">status</a></td><td><code>token</code></td><td><div><p>The overall status of the appointment</p>\n</div></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/appointment.html#search\">supporting-info</a></td><td><code>reference</code></td><td><div><p>Additional information to support the appointment</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/gap/CapabilityStatement/GAP-GestionnaireAgenda",
+  "version" : "3.0.0",
+  "name" : "GAP_GestionnaireAgenda",
+  "title" : "CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-08-02",
+  "publisher" : "ANS",
+  "contact" : [{
+    "name" : "ANS",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Le gestionnaire d’agenda gère les demandes de déclaration, de modification ou de   suppression de rendez-vous.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "kind" : "requirements",
+  "fhirVersion" : "4.0.1",
+  "format" : ["application/fhir+xml",
+  "application/fhir+json"],
+  "implementationGuide" : ["https://interop.esante.gouv.fr/ig/fhir/gap"],
+  "rest" : [{
+    "mode" : "server",
+    "documentation" : "Déclaration, modification et suppression des disponibilités d'une ressource",
+    "security" : {
+      "cors" : false,
+      "description" : "L’ANS propose des référentiels dédiés à la politique de sécurité (la PGSSI-S ) et des mécanismes de sécurisation sont définis dans les volets de la couche Transport du Cadre d’Interopérabilité des systèmes d’information de santé (CI-SIS)"
+    },
+    "resource" : [{
+      "type" : "Schedule",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-schedule",
+      "interaction" : [{
+        "code" : "create"
+      },
+      {
+        "code" : "update"
+      },
+      {
+        "code" : "delete"
+      },
+      {
+        "code" : "patch"
+      }]
+    },
+    {
+      "type" : "Slot",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot",
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "GAP_Slot_earliestStart",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Slot-earliestStart",
+        "type" : "date",
+        "documentation" : "Recherche d'une disponibilité sur la date et l'heure de la disponibilité souhaité, date au plus tôt"
+      },
+      {
+        "name" : "GAP_Slot_latestStart",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Slot-latestStart",
+        "type" : "date",
+        "documentation" : "Recherche d'une disponibilité sur la date et l'heure de disponibilité souhaité, date au plus tard"
+      },
+      {
+        "name" : "GAP_Schedule_Actor",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Schedule-actor",
+        "type" : "reference",
+        "documentation" : "Recherche d'une disponibilité sur les caractéristiques de la ressource Device qui est l'acteur d'agenda (identifiant, nom, modèle, type)"
+      },
+      {
+        "name" : "Schedule-actor",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Schedule-actor",
+        "type" : "reference",
+        "documentation" : "Recherche d'un acteur de l'agenda"
+      },
+      {
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Slot-identifier",
+        "type" : "token",
+        "documentation" : "A Slot Identifier"
+      },
+      {
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Slot-status",
+        "type" : "token",
+        "documentation" : "The free/busy status of the appointment"
+      }]
+    },
+    {
+      "type" : "Appointment",
+      "profile" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment",
+      "interaction" : [{
+        "code" : "create"
+      },
+      {
+        "code" : "update"
+      },
+      {
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "conditionalUpdate" : true,
+      "searchParam" : [{
+        "name" : "GAP_Appointment_priority",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-priority",
+        "type" : "token",
+        "documentation" : "Priority of the appointment"
+      },
+      {
+        "name" : "GAP_Appointment_description",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-description",
+        "type" : "string",
+        "documentation" : "Comment or title of the appointment"
+      },
+      {
+        "name" : "GAP_Appointment_created",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-created",
+        "type" : "date",
+        "documentation" : "Date that this appointment was initially created"
+      },
+      {
+        "name" : "GAP_Appointment_Actor",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-actor",
+        "type" : "reference",
+        "documentation" : "Recherche d'un rendez-vous sur l'identifiant de l'acteur, la ressource pouvant être Patient, Practitioner, PractitionerRole, RelatedPerson, Location, Device ou HealthcareService"
+      },
+      {
+        "name" : "GAP_Appointment_earliestStart",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-earliestStart",
+        "type" : "date",
+        "documentation" : "Recherche d'un rendez-vous sur la date et heure de rendez-vous, date au plus tôt"
+      },
+      {
+        "name" : "GAP_Appointment_latestStart",
+        "definition" : "https://interop.esante.gouv.fr/ig/fhir/gap/SearchParameter/GAP-Appointment-latestStart",
+        "type" : "date",
+        "documentation" : "Recherche d'un rendez-vous sur la date et heure de rendez-vous, date au plus tard"
+      },
+      {
+        "name" : "date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-date",
+        "type" : "date",
+        "documentation" : "date et heure du rendez-vous"
+      },
+      {
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-identifier",
+        "type" : "token",
+        "documentation" : "identifiant du rendez-vous"
+      },
+      {
+        "name" : "service-type",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-service-type",
+        "type" : "token",
+        "documentation" : "serivce spécifique qui doit être réslisé pandant le rendez-vous"
+      },
+      {
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-status",
+        "type" : "token",
+        "documentation" : "The overall status of the appointment"
+      },
+      {
+        "name" : "supporting-info",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Appointment-supporting-info",
+        "type" : "reference",
+        "documentation" : "Additional information to support the appointment"
+      }]
+    }]
+  }]
+}
