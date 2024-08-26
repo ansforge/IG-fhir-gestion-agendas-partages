@@ -3,7 +3,7 @@ GAP : Validation Results
 
 err = 8, warn = 8, info = 8
 IG Publisher Version: 1.6.20
-Generated Mon Aug 26 14:28:53 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
+Generated Mon Aug 26 14:40:11 UTC 2024. FHIR version 4.0.1 for ans.fhir.fr.gap#3.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/gap)
  Build Errors : 0 / 6 / 0
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/Appointment-example-req-appointment : 5 / 0 / 7
  /home/runner/work/IG-fhir-gestion-agendas-partages/IG-fhir-gestion-agendas-partages/igSource/fsh-generated/resources/CapabilityStatement-GAP-Consommateur : 0 / 0 / 1
