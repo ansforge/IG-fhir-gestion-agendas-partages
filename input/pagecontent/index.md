@@ -47,6 +47,10 @@ D'autres ressources mentionnés dans ce document n'ont pas été profilées (lis
 
 Dans l’ensemble de cet IG, lorsqu’il est fait référence à ces ressources, les profils associés doivent être utilisés.
 
+<div class="figure" style="width:100%;">
+    <p>{% include document-overview.svg %}</p>
+</div>
+
 ### Dépendances
 
 {% include dependency-table.xhtml %}

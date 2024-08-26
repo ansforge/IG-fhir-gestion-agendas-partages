@@ -1,0 +1,69 @@
+@startuml
+
+hide circle
+hide empty members
+skinparam linetype ortho
+
+package "Objets d'agenda" as OA #text:red {
+
+    class Schedule #line:black {
+        actor [1..*]
+    }
+
+    class Slot #line:black {
+        schedule [1..1]
+    }
+
+    class Appointment #line:black {
+        slot [0..*]
+        participant.actor [1..*]
+    }
+
+    class AppointmentResponse #line:black {
+        appointment [1..1]
+    }
+}
+     
+package "Ressources d'agenda" as RA #text:blue{
+
+    class Patient #line:black
+
+    class RelatedPerson #line:black
+
+    class Practitioner #line:black
+
+    class PractitionerRole #line:black {
+        practitioner [0..1]
+    }
+    
+
+    class Organization #line:black
+
+    class HealthcareService #line:black {
+        providedBy [0..1]
+    }
+
+    class Device #line:black
+   
+    class Location #line:black
+
+    PractitionerRole -[#black]--> Practitioner
+    HealthcareService -[#black]--> Organization
+}
+
+
+
+Schedule  <---[#black] Slot
+Slot <---[#black] Appointment
+Appointment <--[#black] AppointmentResponse
+
+Schedule -[#black]--> Patient
+Schedule -[#black]--> RelatedPerson
+Schedule -[#black]--> Practitioner
+Schedule -[#black]--> PractitionerRole
+Schedule -[#black]--> HealthcareService
+Schedule -[#black]--> Device
+Schedule -[#black]--> Location
+
+
+@enduml
