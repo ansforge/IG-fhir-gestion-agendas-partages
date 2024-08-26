@@ -6,17 +6,17 @@ skinparam linetype ortho
 
 package "Objets d'agenda" as OA #text:red {
 
-    class Schedule #line:red {
+    class Schedule #line:black {
         actor [1..*]
     }
 
-    class Slot #line:red {
+    class Slot #line:black {
         schedule [1..1]
     }
 
-    class Appointment #line:red {
+    class Appointment #line:black {
         slot [0..*]
-    participant.actor [1..*]
+        participant.actor [1..*]
     }
 
     class AppointmentResponse #line:black {
@@ -30,40 +30,40 @@ package "Ressources d'agenda" as RA #text:blue{
 
     class RelatedPerson #line:black
 
-    class Practitioner #line:blue
+    class Practitioner #line:black
 
-    class PractitionerRole #line:blue {
+    class PractitionerRole #line:black {
         practitioner [0..1]
     }
     
 
-    class Organization #line:blue
+    class Organization #line:black
 
-    class HealthcareService #line:blue {
+    class HealthcareService #line:black {
         providedBy [0..1]
     }
 
     class Device #line:black
    
-    class Location #line:blue
+    class Location #line:black
 
-    PractitionerRole -[#blue]--> Practitioner
-    HealthcareService -[#blue]--> Organization
+    PractitionerRole -[#black]--> Practitioner
+    HealthcareService -[#black]--> Organization
 }
 
 
 
-Schedule  <---[#red] Slot
-Slot <---[#red] Appointment
+Schedule  <---[#black] Slot
+Slot <---[#black] Appointment
 Appointment <--[#black] AppointmentResponse
 
 Schedule -[#black]--> Patient
 Schedule -[#black]--> RelatedPerson
-Schedule -[#red]--> Practitioner
-Schedule -[#red]--> PractitionerRole
-Schedule -[#red]--> HealthcareService
+Schedule -[#black]--> Practitioner
+Schedule -[#black]--> PractitionerRole
+Schedule -[#black]--> HealthcareService
 Schedule -[#black]--> Device
-Schedule -[#red]--> Location
+Schedule -[#black]--> Location
 
 
 @enduml
