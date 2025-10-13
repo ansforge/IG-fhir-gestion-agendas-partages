@@ -16,9 +16,9 @@ parameters:
   shownav: 'true'
 
 dependencies:
-  ans.fhir.fr.annuaire: 1.0.1
-  hl7.fhir.fr.core: 2.0.1
-  ans.fr.nos: 1.1.0
+  ans.fhir.fr.annuaire: 1.1.0
+  hl7.fhir.fr.core: 2.1.0
+  ans.fr.terminologies: latest
 
 pages:
     index.md:
