@@ -1,0 +1,56 @@
+# ans.fhir.fr.gap#3.0.0: Gestion d'Agendas Partagés (GAP)(en)
+
+## Pages
+
+* [Accueil](index.md)
+* [Téléchargements et usages](downloads.md)
+* [Mappings](mapping.md)
+* [Flux 03 - Gestion disponibilités](flux-gestion-dispo.md)
+* [Flux 02 - Gestion agenda](flux-gestion-agenda.md)
+* [Flux 06 - Gestion rendez-vous](flux-gestion-rdv.md)
+* [Autres Ressources](autres_ressources.md)
+* [Artifacts Summary](artifacts.md)
+* [Sécurité](securite.md)
+* [Flux 01 - Gestion ressources](flux-gestion-ressources.md)
+* [Spécifications fonctionnelles](specifications_fonctionnelles.md)
+* [Flux 04 et 05 - Demande consultation](flux-demande-consultation.md)
+* [Vue d'ensemble](construction_des_flux.md)
+* [Specifications Techniques](specifications_techniques.md)
+
+## Resources
+
+### Resource Profiles
+
+* [GAP-BundleResultatReponseADemandeConsultationDisponibilites](StructureDefinition-gap-bundle-reponse-demande-consult-dispo.md)
+* [GAP-BundleResultatReponseADemandeConsultationRDV](StructureDefinition-gap-bundle-reponse-demande-consult-rdv.md)
+* [GAP-FrAppointment](StructureDefinition-gap-fr-appointment.md)
+* [GAP-FrSchedule](StructureDefinition-gap-fr-schedule.md)
+* [GAP-FrSlot](StructureDefinition-gap-fr-slot.md)
+
+### CapabilityStatements
+
+* [CI-SIS Gestion-d-Agendas-Partages - ConsommateurGAP](CapabilityStatement-GAP-Consommateur.md)
+* [CI-SIS Gestion-d-Agendas-Partages - DeclarantRDVGAP](CapabilityStatement-GAP-DeclarantRDV.md)
+* [CI-SIS Gestion-d-Agendas-Partages - GestionnaireAgendaGAP](CapabilityStatement-GAP-GestionnaireAgenda.md)
+* [CI-SIS Gestion-d-Agendas-Partages - GestionnaireRessourcesGAP](CapabilityStatement-GAP-GestionnaireRessources.md)
+* [CI-SIS Gestion-d-Agendas-Partages - DeclarantGAP](CapabilityStatement-Gap-Declarant.md)
+
+### ImplementationGuides
+
+* [Gestion d'Agendas Partagés (GAP)](ImplementationGuide-ans.fhir.fr.gap.md)
+
+### SearchParameters
+
+* [GAP_Appointment_created](SearchParameter-GAP-Appointment-created.md)
+* [GAP_Appointment_description](SearchParameter-GAP-Appointment-description.md)
+* [GAP_Appointment_earliestStart](SearchParameter-GAP-Appointment-earliestStart.md)
+* [GAP_Appointment_latestStart](SearchParameter-GAP-Appointment-latestStart.md)
+* [GAP_Appointment_priority](SearchParameter-GAP-Appointment-priority.md)
+* [GAP_Slot_earliestStart](SearchParameter-GAP-Slot-earliestStart.md)
+* [GAP_Slot_latestStart](SearchParameter-GAP-Slot-latestStart.md)
+
+### Examples
+
+* [example-req-appointment (Appointment)](Appointment-example-req-appointment.md)
+* [example (Schedule)](Schedule-example.md)
+* [example (Slot)](Slot-example.md)
